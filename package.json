@@ -1,0 +1,32 @@
+{
+  "name": "fixpro",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@ramonak/react-progress-bar": "^5.4.0",
+    "framer-motion": "^12.36.0",
+    "jarallax": "^2.2.1",
+    "next": "16.2.4",
+    "react": "19.2.3",
+    "react-countup": "^6.5.3",
+    "react-dom": "19.2.3",
+    "react-fast-marquee": "^1.6.5",
+    "sweetalert2": "^11.26.22",
+    "swiper": "^12.1.2",
+    "typescript": "^5",
+    "yet-another-react-lightbox": "^3.29.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.4"
+  }
+}

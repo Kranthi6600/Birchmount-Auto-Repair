@@ -1,0 +1,129 @@
+"use client";
+
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import testimonialShape1 from '@/assets/images/shapes/testimonial-one-shape-1.png';
+import testimonialShape2 from '@/assets/images/shapes/testimonial-one-shape-2.png';
+import testimonialImg1 from '@/assets/images/testimonial/testimonial-1-1.jpg';
+import testimonialImg2 from '@/assets/images/testimonial/testimonial-1-2.jpg';
+import testimonialImg3 from '@/assets/images/testimonial/testimonial-1-3.jpg';
+import TextAnimation from '@/components/elements/TextAnimation';
+import Image, { StaticImageData } from 'next/image';
+import Link from 'next/link';
+
+interface Testimonial {
+    id: number;
+    name: string;
+    role: string;
+    image: string | StaticImageData;
+    rating: number;
+    text: string;
+}
+
+const testimonials: Testimonial[] = [
+    {
+        id: 1,
+        name: 'Adam Smith',
+        role: 'Co-Founder',
+        image: testimonialImg1,
+        rating: 5,
+        text: '"Adipiscing elit, sed do eiusmod tempor incididunt ut labored etos dolore magna aliquant. Ut enim ad minim veniam nostrud exercitation ullamco laboris nisi ut aliquip',
+    },
+    {
+        id: 2,
+        name: 'Robert Son',
+        role: 'Co-Founder',
+        image: testimonialImg2,
+        rating: 5,
+        text: '"Adipiscing elit, sed do eiusmod tempor incididunt ut labored etos dolore magna aliquant. Ut enim ad minim veniam nostrud exercitation ullamco laboris nisi ut aliquip',
+    },
+    {
+        id: 3,
+        name: 'Alisha Martin',
+        role: 'Co-Founder',
+        image: testimonialImg3,
+        rating: 5,
+        text: '"Adipiscing elit, sed do eiusmod tempor incididunt ut labored etos dolore magna aliquant. Ut enim ad minim veniam nostrud exercitation ullamco laboris nisi ut aliquip',
+    },
+];
+
+const TestimonialOne: React.FC = () => {
+    return (
+        <section className="testimonial-one">
+            <div className="testimonial-one__bg" ></div>
+            <div className="testimonial-one__shape-1 float-bob-x">
+                <Image src={testimonialShape1} style={{ width: "auto", height: "auto" }} alt="shape 1" />
+            </div>
+            <div className="testimonial-one__shape-2 float-bob-y">
+                <Image src={testimonialShape2} style={{ width: "auto", height: "auto" }} alt="shape 2" />
+            </div>
+            <div className="container">
+                <div className="section-title text-center sec-title-animation animation-style1">
+                    <h6 className="section-title__tagline">
+                        <span className="section-title__tagline-border"></span>Testimonials
+                    </h6>
+                    <h3 className="section-title__title title-animation"><TextAnimation animationStyle='style2'>What Our Customer Says?</TextAnimation></h3>
+                </div>
+                <div className="testimonial-one__carousel  ">
+                    <Swiper modules={[Autoplay]}
+                        spaceBetween={30}
+                        slidesPerView={2}
+                        loop={true}
+                        autoplay={{
+                            delay: 4000,
+                            disableOnInteraction: false,
+                            pauseOnMouseEnter: false,
+                        }}
+                        speed={1000}
+                        breakpoints={{
+                            0: {
+                                slidesPerView: 1,
+                            },
+                            992: {
+                                slidesPerView: 2,
+                            },
+                        }}>
+
+
+                        {testimonials.map((testimonial) => (
+                            <SwiperSlide key={testimonial.id}>
+                                <div className="item" >
+                                    <div className="testimonial-one__single">
+                                        <div className="testimonial-one__single-bdr"></div>
+                                        <div className="testimonial-one__quote">
+                                            <span className="fas fa-quote-right"></span>
+                                        </div>
+                                        <div className="testimonial-one__client-info-box">
+                                            <div className="testimonial-one__client-info">
+                                                <div className="testimonial-one__client-img-box">
+                                                    <div className="testimonial-one__client-img">
+                                                        <Image src={testimonial.image} width={80} height={80} alt={testimonial.name} />
+                                                    </div>
+                                                </div>
+                                                <div className="testimonial-one__client-content">
+                                                    <h3 className="testimonial-one__client-name">
+                                                        <Link href="/testimonials">{testimonial.name}</Link>
+                                                    </h3>
+                                                    <p className="testimonial-one__client-sub-title">{testimonial.role}</p>
+                                                </div>
+                                            </div>
+                                            <div className="testimonial-one__client-ratting">
+                                                {Array.from({ length: testimonial.rating }).map((_, i) => (
+                                                    <span key={i} className="fas fa-star"></span>
+                                                ))}
+                                            </div>
+                                        </div>
+                                        <p className="testimonial-one__text">{testimonial.text}</p>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default TestimonialOne;
