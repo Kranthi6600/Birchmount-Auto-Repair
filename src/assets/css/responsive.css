@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1200px) and (max-width: 1319px) {
+﻿@media only screen and (min-width: 1200px) and (max-width: 1319px) {
     .services-one__carousel .owl-nav {
         left: -435px;
     }
@@ -1121,7 +1121,7 @@
         bottom: inherit;
         right: inherit;
         padding: 34px 20px 35px;
-        border-radius: var(--fixpro-bdr-radius);
+        border-radius: var(--birchmountAutoRepair-bdr-radius);
         position: relative;
         display: block;
         margin-top: 30px;
@@ -2737,7 +2737,7 @@
     }
 
     .main-menu-two .mobile-nav__toggler:hover {
-        color: var(--fixpro-white);
+        color: var(--birchmountAutoRepair-white);
     }
 
 
@@ -2793,7 +2793,7 @@
     }
 
     .main-menu-two .mobile-nav__toggler:hover {
-        color: var(--fixpro-white);
+        color: var(--birchmountAutoRepair-white);
     }
 
     .main-menu-two__call {
@@ -2857,7 +2857,7 @@
     }
 
     .main-menu-two .mobile-nav__toggler:hover {
-        color: var(--fixpro-white);
+        color: var(--birchmountAutoRepair-white);
     }
 
     .main-menu-two__right {

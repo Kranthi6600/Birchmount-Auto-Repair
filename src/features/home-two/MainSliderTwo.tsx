@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from 'react';
 import shapeOne from "@/assets/images/shapes/main-slider-two-shape-1.png"
@@ -14,13 +14,13 @@ import slideImgSmallThree from "@/assets/images/resources/main-slider-two-small-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import type { Swiper as SwiperType } from 'swiper';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import useFixproContext from '@/components/context/useFixproContext';
+import useBirchmountAutoRepairContext from '@/components/context/useBirchmountAutoRepairContext';
 import SectionWrapper from '@/components/elements/SectionWrapper';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const MainSliderTwo: React.FC = () => {
-    const { handleVideoClick } = useFixproContext();
+    const { handleVideoClick } = useBirchmountAutoRepairContext();
     const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
     const [activeIndex, setActiveIndex] = useState(0);
 

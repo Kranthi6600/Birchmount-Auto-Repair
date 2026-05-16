@@ -1,16 +1,16 @@
-"use client";
+﻿"use client";
 
 import React from 'react';
 import MenuList from './MenuList'; 
 import logo from "@/assets/images/resources/logo-1.png"
-import useFixproContext from '../context/useFixproContext';
+import useBirchmountAutoRepairContext from '../context/useBirchmountAutoRepairContext';
 import SinglePageManuList from './SinglePageManuList';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const MenuThree: React.FC = () => {
-    const { setIsSearch, setIsSidebar, setIsMobileManu, cartCount } = useFixproContext();
+    const { setIsSearch, setIsSidebar, setIsMobileManu, cartCount } = useBirchmountAutoRepairContext();
     const currentPath = usePathname();
     const isOnePage = currentPath.includes("single-page");
     const handleSearch = () => {

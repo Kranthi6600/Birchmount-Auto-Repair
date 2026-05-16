@@ -1,7 +1,7 @@
-"use client";
+﻿"use client";
 
 import React, { useEffect, useCallback } from "react"; 
-import useFixproContext from "../context/useFixproContext";
+import useBirchmountAutoRepairContext from "../context/useBirchmountAutoRepairContext";
 
 const VideoPopup: React.FC = () => {
     const {
@@ -9,7 +9,7 @@ const VideoPopup: React.FC = () => {
         setCurrentVideoUrl,
         showVideoPopup,
         currentVideoUrl,
-    } = useFixproContext();
+    } = useBirchmountAutoRepairContext();
 
     // Close popup function (memoized)
     const onClose = useCallback((): void => {
@@ -84,7 +84,7 @@ const VideoPopup: React.FC = () => {
         <div className="video-popup-overlay active" onClick={handleOverlayClick}>
             <div className="video-popup-content" onClick={handleContentClick}>
                 <button className="video-popup-close" onClick={onClose}>
-                    ×
+                    Ã—
                 </button>
 
                 <iframe

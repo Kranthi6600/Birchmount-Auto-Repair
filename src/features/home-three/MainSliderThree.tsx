@@ -1,16 +1,16 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
 import shape1 from "@/assets/images/shapes/main-slider-three-shape-1.png"
 import shape2 from "@/assets/images/shapes/main-slider-three-shape-2.png"
-import useFixproContext from '@/components/context/useFixproContext';
+import useBirchmountAutoRepairContext from '@/components/context/useBirchmountAutoRepairContext';
 import SectionWrapper from '@/components/elements/SectionWrapper';
 import Image from 'next/image';
 import Link from 'next/link';
 const MainSliderThree: React.FC = () => {
-    const { handleVideoClick } = useFixproContext();
+    const { handleVideoClick } = useBirchmountAutoRepairContext();
     const [activeIndex, setActiveIndex] = useState(0);
     return (
         <SectionWrapper id='home' className="main-slider-three">
@@ -44,7 +44,7 @@ const MainSliderThree: React.FC = () => {
                             </div>
                             <div className="container">
                                 <div className="main-slider-three__content">
-                                    <p className="main-slider-three__sub-title">Welcome to Fixpro Quality Repairs Services</p>
+                                    <p className="main-slider-three__sub-title">Welcome to Birchmount Auto Repair Quality Repairs Services</p>
                                     <h2 className="main-slider-three__title">Lighting the Way to <br />
                                         <span>Quality Repairs</span></h2>
                                     <p className="main-slider-three__text">We honestly want our clients to succeed online in their
@@ -81,7 +81,7 @@ const MainSliderThree: React.FC = () => {
                             </div>
                             <div className="container">
                                 <div className="main-slider-three__content">
-                                    <p className="main-slider-three__sub-title">Welcome to Fixpro Quality Repairs Services</p>
+                                    <p className="main-slider-three__sub-title">Welcome to Birchmount Auto Repair Quality Repairs Services</p>
                                     <h2 className="main-slider-three__title">Your Brightest <br />
                                         Choice <span>in Repairs</span></h2>
                                     <p className="main-slider-three__text">We honestly want our clients to succeed online in their
@@ -118,7 +118,7 @@ const MainSliderThree: React.FC = () => {
                             </div>
                             <div className="container">
                                 <div className="main-slider-three__content">
-                                    <p className="main-slider-three__sub-title">Welcome to Fixpro Quality Repairs Services</p>
+                                    <p className="main-slider-three__sub-title">Welcome to Birchmount Auto Repair Quality Repairs Services</p>
                                     <h2 className="main-slider-three__title">General Auto <span>Repair Service</span> <br />
                                         This Maintenance Place</h2>
                                     <p className="main-slider-three__text">We honestly want our clients to succeed online in their

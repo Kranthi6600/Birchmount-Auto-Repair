@@ -1,14 +1,14 @@
-"use client";
+﻿"use client";
 import React, { useState } from 'react';
 import { motion } from "framer-motion"
-import useFixproContext from '../context/useFixproContext';
+import useBirchmountAutoRepairContext from '../context/useBirchmountAutoRepairContext';
 import { blogList, homeList, pagesList, servicesList, shopList, type MenuItem } from './menuContent';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
 
 const MobileManuList: React.FC = () => {
-    const { setIsMobileManu } = useFixproContext();
+    const { setIsMobileManu } = useBirchmountAutoRepairContext();
     const [isHome, setIsHome] = useState<boolean>(false);
     const [isPages, setIsPages] = useState<boolean>(false);
     const [isCars, setIsCars] = useState<boolean>(false);

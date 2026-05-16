@@ -1,4 +1,4 @@
-/*==============================================
+﻿/*==============================================
     Process One
 ===============================================*/
 .process-one {
@@ -6,12 +6,12 @@
     display: block;
     counter-reset: count;
     padding: 120px 0 90px;
-    background-color: var(--fixpro-black);
+    background-color: var(--birchmountAutoRepair-black);
     z-index: 1;
 }
 
 .process-one .section-title__tagline-border::after {
-    background: var(--fixpro-black);
+    background: var(--birchmountAutoRepair-black);
 }
 
 .process-one__bg {
@@ -29,7 +29,7 @@
 }
 
 .process-one .section-title__title {
-    color: var(--fixpro-white);
+    color: var(--birchmountAutoRepair-white);
 }
 
 .process-one__single {
@@ -53,7 +53,7 @@
     left: -15px;
     height: 35px;
     width: 35px;
-    border-radius: var(--fixpro-bdr-radius);
+    border-radius: var(--birchmountAutoRepair-bdr-radius);
     z-index: 2;
 }
 
@@ -69,9 +69,9 @@
     font-size: 16px;
     line-height: 16px;
     font-weight: 500;
-    color: var(--fixpro-white);
-    background-color: var(--fixpro-base);
-    border-radius: var(--fixpro-bdr-radius);
+    color: var(--birchmountAutoRepair-white);
+    background-color: var(--birchmountAutoRepair-base);
+    border-radius: var(--birchmountAutoRepair-bdr-radius);
     counter-increment: count;
     content: "0" counter(count);
     transition: all 200ms linear;
@@ -79,8 +79,8 @@
 }
 
 .process-one__single:hover .process-one__count:before {
-    color: var(--fixpro-base);
-    background-color: var(--fixpro-white);
+    color: var(--birchmountAutoRepair-base);
+    background-color: var(--birchmountAutoRepair-white);
     box-shadow: 0px 0px 5px 1px #F7F7F7;
 }
 
@@ -92,8 +92,8 @@
     height: 100px;
     width: 100px;
     margin: 0 auto 0;
-    border-radius: var(--fixpro-bdr-radius);
-    background-color: rgba(var(--fixpro-base-rgb), .20);
+    border-radius: var(--birchmountAutoRepair-bdr-radius);
+    background-color: rgba(var(--birchmountAutoRepair-base-rgb), .20);
     z-index: 1;
 }
 
@@ -104,8 +104,8 @@
     right: 0;
     bottom: 0;
     content: "";
-    border-radius: var(--fixpro-bdr-radius);
-    background-color: var(--fixpro-base);
+    border-radius: var(--birchmountAutoRepair-bdr-radius);
+    background-color: var(--birchmountAutoRepair-base);
     transform: scale(0);
     transform-origin: center;
     transform-style: preserve-3d;
@@ -121,14 +121,14 @@
     position: relative;
     display: inline-block;
     font-size: 40px;
-    color: var(--fixpro-base);
+    color: var(--birchmountAutoRepair-base);
     transition: all 500ms linear;
     transition-delay: 0.1s;
     transform: scale(1);
 }
 
 .process-one__single:hover .process-one__icon span {
-    color: var(--fixpro-white);
+    color: var(--birchmountAutoRepair-white);
     transform: scale(1.2);
 }
 
@@ -144,7 +144,7 @@
     line-height: 30px;
     text-transform: capitalize;
     margin-bottom: 4px;
-    color: var(--fixpro-white);
+    color: var(--birchmountAutoRepair-white);
 }
 
 .process-one__single--two .process-one__content {
@@ -153,7 +153,7 @@
 }
 
 .process-one__text {
-    color: rgba(var(--fixpro-white-rgb), .80);
+    color: rgba(var(--birchmountAutoRepair-white-rgb), .80);
 }
 
 /*--------------------------------------------------------------
@@ -208,7 +208,7 @@
     left: 50%;
     width: 3px;
     height: 100px;
-    background-color: rgba(var(--fixpro-base-rgb), .30);
+    background-color: rgba(var(--birchmountAutoRepair-base-rgb), .30);
     transform: translateX(-50%);
     z-index: -1;
 }
@@ -220,7 +220,7 @@
     left: 50%;
     width: 3px;
     height: 100px;
-    background-color: rgba(var(--fixpro-base-rgb), .30);
+    background-color: rgba(var(--birchmountAutoRepair-base-rgb), .30);
     transform: translateX(-50%);
     z-index: -1;
 }
@@ -232,7 +232,7 @@
     left: -220px;
     width: 1100px;
     height: 3px;
-    background-color: rgba(var(--fixpro-base-rgb), .30);
+    background-color: rgba(var(--birchmountAutoRepair-base-rgb), .30);
     z-index: -1;
     right: -200px;
     margin: 0 auto;
@@ -259,18 +259,18 @@
     font-size: 14px;
     line-height: 14px;
     font-weight: 600;
-    color: var(--fixpro-white);
-    background-color: var(--fixpro-base);
-    border-radius: var(--fixpro-bdr-radius);
+    color: var(--birchmountAutoRepair-white);
+    background-color: var(--birchmountAutoRepair-base);
+    border-radius: var(--birchmountAutoRepair-bdr-radius);
     counter-increment: count;
     content: "0" counter(count);
     transition: all 200ms linear;
     transition-delay: 0.1s;
-    border: 5px solid var(--fixpro-white);
+    border: 5px solid var(--birchmountAutoRepair-white);
 }
 
 .process-two__single:hover .process-two__count:before {
-    background-color: var(--fixpro-black);
+    background-color: var(--birchmountAutoRepair-black);
 }
 
 .process-two__icon {
@@ -280,8 +280,8 @@
     justify-content: center;
     height: 80px;
     width: 80px;
-    background-color: var(--fixpro-white);
-    border: 10px solid rgba(var(--fixpro-base-rgb), .20);
+    background-color: var(--birchmountAutoRepair-white);
+    border: 10px solid rgba(var(--birchmountAutoRepair-base-rgb), .20);
     border-radius: 20px;
     margin: -5px auto 0;
     overflow: hidden;
@@ -292,7 +292,7 @@
     position: relative;
     display: inline-block;
     font-size: 40px;
-    color: var(--fixpro-base);
+    color: var(--birchmountAutoRepair-base);
     -webkit-transition: all 0.90s ease;
     -o-transition: all 0.90s ease;
     transition: all 0.90s ease;

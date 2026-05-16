@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React, { useState } from 'react';
 
 import videoOneBg from '@/assets/images/backgrounds/video-one-bg.jpg';
@@ -8,7 +8,7 @@ import CustomSelect from '@/components/elements/CustomSelect';
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced';
 import TextAnimation from '@/components/elements/TextAnimation';
 import SectionWrapper from '@/components/elements/SectionWrapper';
-import useFixproContext from '@/components/context/useFixproContext';
+import useBirchmountAutoRepairContext from '@/components/context/useBirchmountAutoRepairContext';
 import Image from 'next/image';
 
 interface ContactInfo {
@@ -48,7 +48,7 @@ const contactInfoItems: ContactInfo[] = [
 ];
 
 const VideoOne: React.FC = () => {
-    const { handleVideoClick } = useFixproContext();
+    const { handleVideoClick } = useBirchmountAutoRepairContext();
     const [formData, setFormData] = useState({
         name: '',
         email: '',

@@ -1,4 +1,4 @@
-/*==============================================
+﻿/*==============================================
     FAQ One
 ===============================================*/
 .faq-one {
@@ -26,7 +26,7 @@
 
 .faq-one__img img {
     width: 100%;
-    border-radius: var(--fixpro-bdr-radius);
+    border-radius: var(--birchmountAutoRepair-bdr-radius);
 }
 
 .faq-one__ratting-box {
@@ -34,10 +34,10 @@
     left: 80px;
     right: 80px;
     bottom: 0;
-    background-color: var(--fixpro-black);
+    background-color: var(--birchmountAutoRepair-black);
     text-align: center;
-    border: 5px solid rgba(var(--fixpro-base-rgb), .70);
-    border-radius: var(--fixpro-bdr-radius);
+    border: 5px solid rgba(var(--birchmountAutoRepair-base-rgb), .70);
+    border-radius: var(--birchmountAutoRepair-bdr-radius);
     padding: 30px 30px 30px;
 }
 
@@ -53,18 +53,18 @@
     position: relative;
     display: inline-block;
     font-size: 16px;
-    color: var(--fixpro-base);
+    color: var(--birchmountAutoRepair-base);
 }
 
 .faq-one__ratting-text {
     margin-top: 17px;
     font-weight: 500;
-    color: rgba(var(--fixpro-white-rgb), .80);
+    color: rgba(var(--birchmountAutoRepair-white-rgb), .80);
 }
 
 .faq-one__ratting-text span {
-    font-family: var(--fixpro-font) !important;
-    color: var(--fixpro-base);
+    font-family: var(--birchmountAutoRepair-font) !important;
+    color: var(--birchmountAutoRepair-base);
     font-weight: 700;
 }
 
@@ -74,7 +74,7 @@
     right: -20px;
     width: 300px;
     height: 300px;
-    background-color: rgba(var(--fixpro-base-rgb), .20);
+    background-color: rgba(var(--birchmountAutoRepair-base-rgb), .20);
     border-radius: 25px;
     animation: leftRight 4s ease-in-out infinite;
     z-index: -1;
@@ -86,7 +86,7 @@
     right: -30px;
     width: 10px;
     height: 200px;
-    background-color: var(--fixpro-black);
+    background-color: var(--birchmountAutoRepair-black);
     border-radius: 10px;
 }
 
@@ -103,8 +103,8 @@
 .faq-one-accrodion .accrodion {
     position: relative;
     display: block;
-    background-color: var(--fixpro-primary);
-    border-radius: var(--fixpro-bdr-radius);
+    background-color: var(--birchmountAutoRepair-primary);
+    border-radius: var(--birchmountAutoRepair-bdr-radius);
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
 }
@@ -124,14 +124,14 @@
     font-size: 20px;
     font-weight: 700;
     line-height: 20px;
-    color: var(--fixpro-black);
+    color: var(--birchmountAutoRepair-black);
     position: relative;
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
 }
 
 .faq-one-accrodion .accrodion.active .accrodion-title h4 {
-    color: var(--fixpro-base);
+    color: var(--birchmountAutoRepair-base);
 }
 
 .faq-one-accrodion .accrodion+.accrodion {
@@ -142,7 +142,7 @@
     content: "\e927";
     font-family: 'icomoon' !important;
     font-size: 15px;
-    color: var(--fixpro-black);
+    color: var(--birchmountAutoRepair-black);
     position: absolute;
     top: 50%;
     right: 0;
@@ -164,7 +164,7 @@
 
 .faq-one-accrodion .accrodion.active .accrodion-title h4::before {
     content: "\e924";
-    color: var(--fixpro-base);
+    color: var(--birchmountAutoRepair-base);
 }
 
 .faq-one-accrodion .accrodion-content {
@@ -189,7 +189,7 @@
     font-size: 18px;
     font-weight: 600;
     line-height: 28px;
-    color: var(--fixpro-black);
+    color: var(--birchmountAutoRepair-black);
     margin-bottom: 25px;
 }
 

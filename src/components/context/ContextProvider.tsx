@@ -1,7 +1,7 @@
-"use client";
+﻿"use client";
 import React, { useCallback, useMemo, useRef, useState } from 'react';
 import type { contextType } from './contextType';
-import FixproContext from './FixproContext';
+import BirchmountAutoRepairContext from './BirchmountAutoRepairContext';
 
 
 const ContextProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -64,9 +64,9 @@ const ContextProvider: React.FC<{ children: React.ReactNode }> = ({ children }) 
     ])
 
     return (
-        <FixproContext.Provider value={info}>
+        <BirchmountAutoRepairContext.Provider value={info}>
             {children}
-        </FixproContext.Provider>
+        </BirchmountAutoRepairContext.Provider>
     );
 };
 

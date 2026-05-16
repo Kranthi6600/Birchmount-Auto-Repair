@@ -1,13 +1,13 @@
-"use client";
+﻿"use client";
 
 import React from 'react';
 import Swal from 'sweetalert2'
 import logo from "@/assets/images/resources/logo-2.png" 
-import useFixproContext from '../context/useFixproContext';
+import useBirchmountAutoRepairContext from '../context/useBirchmountAutoRepairContext';
 import Link from 'next/link';
 import Image from 'next/image';
 const SideBar: React.FC = () => {
-    const { isSidebar, setIsSidebar } = useFixproContext();
+    const { isSidebar, setIsSidebar } = useBirchmountAutoRepairContext();
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
             e.preventDefault();
             const form = e.currentTarget;

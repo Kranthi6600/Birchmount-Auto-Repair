@@ -1,6 +1,6 @@
-"use client";
+﻿"use client";
 import React from 'react'; 
-import useFixproContext from '../context/useFixproContext';
+import useBirchmountAutoRepairContext from '../context/useBirchmountAutoRepairContext';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 interface SinglePageMenuItem {
@@ -38,7 +38,7 @@ const singlePageMenuListHomeThree: SinglePageMenuItem[] = [
 
 
 const SinglePageManuList: React.FC = () => {
-    const { activeSection, setIsMobileManu, scrollToSection } = useFixproContext();
+    const { activeSection, setIsMobileManu, scrollToSection } = useBirchmountAutoRepairContext();
     const currentPath = usePathname();
 
     const handleScrollClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string): void => {

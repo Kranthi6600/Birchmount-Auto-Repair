@@ -1,7 +1,7 @@
-"use client";
+﻿"use client";
 
 import React, { useEffect, useRef } from 'react';
-import useFixproContext from '../context/useFixproContext';
+import useBirchmountAutoRepairContext from '../context/useBirchmountAutoRepairContext';
 interface Props {
     id: string;
     children: React.ReactNode;
@@ -10,7 +10,7 @@ interface Props {
 }
 
 const SectionWrapper: React.FC<Props> = ({ id, children, className, thresHold = 0.6 }) => {
-    const { registerSection, setActiveSection } = useFixproContext();
+    const { registerSection, setActiveSection } = useBirchmountAutoRepairContext();
     const ref = useRef<HTMLElement | null>(null);
 
     useEffect(() => {

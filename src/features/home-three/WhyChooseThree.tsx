@@ -1,8 +1,8 @@
-"use client";
+﻿"use client";
 
 import React from 'react';
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced';
-import useFixproContext from '@/components/context/useFixproContext';
+import useBirchmountAutoRepairContext from '@/components/context/useBirchmountAutoRepairContext';
 import Progresbar from '@/components/elements/Progressbar';
 import TextAnimation from '@/components/elements/TextAnimation';
 import Link from 'next/link';
@@ -55,7 +55,7 @@ const buttonItems: ButtonItem[] = [
 ];
 
 const WhyChooseThree: React.FC = () => {
-    const { handleVideoClick } = useFixproContext()
+    const { handleVideoClick } = useBirchmountAutoRepairContext()
     return (
         <section className="why-choose-three">
             <FadeInAdvanced

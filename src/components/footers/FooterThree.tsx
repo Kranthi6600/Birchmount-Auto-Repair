@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React from 'react'; 
 import footerShape1 from '@/assets/images/shapes/site-footer-two-shape-1.png';
 import logo2 from '@/assets/images/resources/logo-2.png';
@@ -81,7 +81,7 @@ const FooterThree: React.FC = () => {
                             <div className="footer-widget-two__column footer-widget-two__about">
                                 <div className="footer-widget-two__logo">
                                     <Link href="/">
-                                        <Image src={logo2} width={138} height={40} alt="Fixpro logo" />
+                                        <Image src={logo2} width={138} height={40} alt="Birchmount Auto Repair logo" />
                                     </Link>
                                 </div>
                                 <p className="footer-widget-two__about-text">
@@ -181,7 +181,7 @@ const FooterThree: React.FC = () => {
                 <div className="container">
                     <div className="site-footer-two__bottom-inner">
                         <p className="site-footer-two__bottom-text">
-                            © Copywright 2026 by <Link href="/">Fixpro</Link> All Rights Reserved.
+                            Â© Copywright 2026 by <Link href="/">Birchmount Auto Repair</Link> All Rights Reserved.
                         </p>
                         <ul className="list-unstyled site-footer-two__bottom-menu">
                             {bottomMenuLinks.map((link) => (

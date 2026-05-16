@@ -1,11 +1,11 @@
-"use client";
+﻿"use client";
 import React from 'react';
 
 import whyChooseOneImg1 from '@/assets/images/resources/why-choose-one-img-1.jpg';
 import whyChooseOneImg2 from '@/assets/images/resources/why-choose-one-img-2.jpg';
 import TextAnimation from '@/components/elements/TextAnimation';
 import FadeInAdvanced, { type AnimationVariant } from '@/components/elements/FadeInAdvanced';
-import useFixproContext from '@/components/context/useFixproContext';
+import useBirchmountAutoRepairContext from '@/components/context/useBirchmountAutoRepairContext';
 import Image from 'next/image';
 
 interface ChooseItem {
@@ -56,7 +56,7 @@ const rightColumnItems: ChooseItem[] = [
 ];
 
 const WhyChooseOne: React.FC = () => {
-    const { handleVideoClick } = useFixproContext();
+    const { handleVideoClick } = useBirchmountAutoRepairContext();
     return (
         <section className="why-choose-one">
             <div className="container">

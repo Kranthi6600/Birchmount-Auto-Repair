@@ -1,10 +1,10 @@
-"use client";
+﻿"use client";
 
 import React from 'react';   
-import useFixproContext from '../context/useFixproContext';
+import useBirchmountAutoRepairContext from '../context/useBirchmountAutoRepairContext';
 
 const SearchProp: React.FC = () => { 
-    const { setIsSearch } = useFixproContext(); 
+    const { setIsSearch } = useBirchmountAutoRepairContext(); 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         const form = e.currentTarget;

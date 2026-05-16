@@ -1,14 +1,14 @@
-"use client";
+﻿"use client";
 import React from 'react';
 import Logo from "@/assets/images/resources/logo-2.png"
-import useFixproContext from '../context/useFixproContext';
+import useBirchmountAutoRepairContext from '../context/useBirchmountAutoRepairContext';
 import MobileManuList from '../menu/MobileManuList';
 import SinglePageManuList from '../menu/SinglePageManuList';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 const MobileNav: React.FC = () => {
-    const { isMobileManu, setIsMobileManu } = useFixproContext();
+    const { isMobileManu, setIsMobileManu } = useBirchmountAutoRepairContext();
     const currentPath = usePathname();
     const isOnePage = currentPath.includes("single-page");
 
@@ -32,7 +32,7 @@ const MobileNav: React.FC = () => {
                 <ul className="mobile-nav__contact list-unstyled">
                     <li>
                         <i className="fa fa-envelope"></i>
-                        <a href="mailto:needhelp@packageName__.com">needhelp@Fixpro</a>
+                        <a href="mailto:needhelp@packageName__.com">needhelp@Birchmount Auto Repair</a>
                     </li>
                     <li>
                         <i className="fas fa-phone"></i>

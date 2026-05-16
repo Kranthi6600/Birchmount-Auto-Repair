@@ -1,4 +1,4 @@
-/***
+﻿/***
 =============================================
 Error Page
 =============================================
@@ -6,7 +6,7 @@ Error Page
 .error-page {
     position: relative;
     display: block;
-    background: var(--fixpro-white);
+    background: var(--birchmountAutoRepair-white);
     padding: 120px 0px 120px;
     z-index: 1;
 }
@@ -33,7 +33,7 @@ Error Page
 }
 
 .error-page__content h2 {
-    color: var(--fixpro-base);
+    color: var(--birchmountAutoRepair-base);
     font-size: 40px;
     line-height: 1.5em;
     font-weight: 700;
@@ -42,7 +42,7 @@ Error Page
 }
 
 .error-page__content p {
-    color: var(--fixpro-black);
+    color: var(--birchmountAutoRepair-black);
     margin: 0;
 }
 

@@ -1,4 +1,4 @@
-/*==============================================
+﻿/*==============================================
    Team One
 ===============================================*/
 .team-one {
@@ -17,20 +17,20 @@
 .team-one__img-box {
     position: relative;
     display: block;
-    border: 1px dashed var(--fixpro-base);
-    border-radius: var(--fixpro-bdr-radius);
+    border: 1px dashed var(--birchmountAutoRepair-base);
+    border-radius: var(--birchmountAutoRepair-bdr-radius);
     padding: 10px;
 }
 
 .team-one__img {
     position: relative;
     display: block;
-    border-radius: var(--fixpro-bdr-radius);
+    border-radius: var(--birchmountAutoRepair-bdr-radius);
 }
 
 .team-one__img img {
     width: 100%;
-    border-radius: var(--fixpro-bdr-radius);
+    border-radius: var(--birchmountAutoRepair-bdr-radius);
     transform: scale3d(1, 1, 1);
     transition: transform 1s ease-in-out;
 }
@@ -44,8 +44,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(var(--fixpro-base-rgb), .10);
-    border-radius: var(--fixpro-bdr-radius);
+    background-color: rgba(var(--birchmountAutoRepair-base-rgb), .10);
+    border-radius: var(--birchmountAutoRepair-bdr-radius);
     margin-top: 10px;
     padding: 21px 30px 22px;
 }
@@ -62,11 +62,11 @@
 }
 
 .team-one__title a {
-    color: var(--fixpro-black);
+    color: var(--birchmountAutoRepair-black);
 }
 
 .team-one__title a:hover {
-    color: var(--fixpro-base);
+    color: var(--birchmountAutoRepair-base);
 }
 
 .team-one__sub-title {
@@ -88,7 +88,7 @@
     justify-content: center;
     width: 40px;
     height: 40px;
-    background-color: var(--fixpro-base);
+    background-color: var(--birchmountAutoRepair-base);
     border-radius: 50%;
     cursor: pointer;
 }
@@ -97,7 +97,7 @@
     position: relative;
     display: inline-block;
     font-size: 16px;
-    color: var(--fixpro-white);
+    color: var(--birchmountAutoRepair-white);
 }
 
 .team-one__social {
@@ -131,14 +131,14 @@
     justify-content: center;
     width: 40px;
     height: 40px;
-    background-color: var(--fixpro-base);
+    background-color: var(--birchmountAutoRepair-base);
     border-radius: 50%;
     font-size: 16px;
-    color: var(--fixpro-white);
+    color: var(--birchmountAutoRepair-white);
 }
 
 .team-one__social a:hover {
-    background-color: var(--fixpro-black);
+    background-color: var(--birchmountAutoRepair-black);
 }
 
 /*--------------------------------------------------------------
@@ -148,7 +148,7 @@
     position: relative;
     display: block;
     padding: 120px 0 90px;
-    background-color: var(--fixpro-primary);
+    background-color: var(--birchmountAutoRepair-primary);
     z-index: 1;
 }
 
@@ -179,8 +179,8 @@
 .team-two__img {
     position: relative;
     display: block;
-    border-top-left-radius: var(--fixpro-bdr-radius);
-    border-top-right-radius: var(--fixpro-bdr-radius);
+    border-top-left-radius: var(--birchmountAutoRepair-bdr-radius);
+    border-top-right-radius: var(--birchmountAutoRepair-bdr-radius);
     overflow: hidden;
 }
 
@@ -194,9 +194,9 @@
     transition-timing-function: ease-in-out;
     transition-duration: .7s;
     transition-property: all;
-    background: rgba(var(--fixpro-black-rgb), 0.8);
-    border-top-left-radius: var(--fixpro-bdr-radius);
-    border-top-right-radius: var(--fixpro-bdr-radius);
+    background: rgba(var(--birchmountAutoRepair-black-rgb), 0.8);
+    border-top-left-radius: var(--birchmountAutoRepair-bdr-radius);
+    border-top-right-radius: var(--birchmountAutoRepair-bdr-radius);
     opacity: 0;
     z-index: 1;
     content: "";
@@ -208,8 +208,8 @@
 
 .team-two__img img {
     width: 100%;
-    border-top-left-radius: var(--fixpro-bdr-radius);
-    border-top-right-radius: var(--fixpro-bdr-radius);
+    border-top-left-radius: var(--birchmountAutoRepair-bdr-radius);
+    border-top-right-radius: var(--birchmountAutoRepair-bdr-radius);
     transition: .5s ease;
     transform: scale(1.05);
 }
@@ -222,9 +222,9 @@
     position: relative;
     display: block;
     text-align: center;
-    border-bottom-left-radius: var(--fixpro-bdr-radius);
-    border-bottom-right-radius: var(--fixpro-bdr-radius);
-    background-color: var(--fixpro-white);
+    border-bottom-left-radius: var(--birchmountAutoRepair-bdr-radius);
+    border-bottom-right-radius: var(--birchmountAutoRepair-bdr-radius);
+    background-color: var(--birchmountAutoRepair-white);
     box-shadow: 0px 10px 39.2px 0.8px rgba(0, 0, 0, 0.1);
     padding: 30px 25px 22px;
 }
@@ -237,11 +237,11 @@
 }
 
 .team-two__title a {
-    color: var(--fixpro-black);
+    color: var(--birchmountAutoRepair-black);
 }
 
 .team-two__title a:hover {
-    color: var(--fixpro-base);
+    color: var(--birchmountAutoRepair-base);
 }
 
 .team-two__social {
@@ -259,14 +259,14 @@
     justify-content: center;
     width: 30px;
     height: 30px;
-    background-color: var(--fixpro-base);
+    background-color: var(--birchmountAutoRepair-base);
     border-radius: 10px;
     font-size: 14px;
-    color: var(--fixpro-white);
+    color: var(--birchmountAutoRepair-white);
 }
 
 .team-two__social a:hover {
-    background-color: var(--fixpro-black);
+    background-color: var(--birchmountAutoRepair-black);
 }
 
 /*--------------------------------------------------------------
@@ -308,7 +308,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--fixpro-white);
+    background-color: var(--birchmountAutoRepair-white);
     box-shadow: 0px 10px 39.2px 0.8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     z-index: -1;
@@ -334,7 +334,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: var(--fixpro-black);
+    background: var(--birchmountAutoRepair-black);
     opacity: 0;
     transition: background-color 0.5s ease;
     transition: all 0.5s ease;
@@ -377,11 +377,11 @@
 }
 
 .team-three__title a {
-    color: var(--fixpro-black);
+    color: var(--birchmountAutoRepair-black);
 }
 
 .team-three__title a:hover {
-    color: var(--fixpro-base);
+    color: var(--birchmountAutoRepair-base);
 }
 
 .team-three__arrow-and-social {
@@ -399,8 +399,8 @@
     justify-content: center;
     width: 60px;
     height: 60px;
-    background-color: var(--fixpro-white);
-    border: 1px solid rgba(var(--fixpro-base-rgb), .30);
+    background-color: var(--birchmountAutoRepair-white);
+    border: 1px solid rgba(var(--birchmountAutoRepair-base-rgb), .30);
     border-radius: 50%;
     cursor: pointer;
     -webkit-transition: all 500ms ease;
@@ -409,20 +409,20 @@
 
 .team-three__arrow:hover {
     transform: rotate(-45deg);
-    background-color: var(--fixpro-base);
+    background-color: var(--birchmountAutoRepair-base);
 }
 
 .team-three__arrow span {
     position: relative;
     display: inline-block;
     font-size: 20px;
-    color: var(--fixpro-black);
+    color: var(--birchmountAutoRepair-black);
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
 }
 
 .team-three__arrow:hover span {
-    color: var(--fixpro-white);
+    color: var(--birchmountAutoRepair-white);
 }
 
 .team-three__social {
@@ -433,9 +433,9 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: var(--fixpro-white);
+    background-color: var(--birchmountAutoRepair-white);
     box-shadow: 0px 10px 39.2px 0.8px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(var(--fixpro-black-rgb), .10);
+    border: 1px solid rgba(var(--birchmountAutoRepair-black-rgb), .10);
     gap: 15px;
     padding: 20px 5px 20px;
     border-radius: 18px;
@@ -459,11 +459,11 @@
     display: flex;
     align-items: center;
     font-size: 16px;
-    color: var(--fixpro-black);
+    color: var(--birchmountAutoRepair-black);
 }
 
 .team-three__social a:hover {
-    color: var(--fixpro-base);
+    color: var(--birchmountAutoRepair-base);
 }
 
 
@@ -481,7 +481,7 @@
     position: relative;
     display: block;
     padding-bottom: 40px;
-    border-bottom: 1px solid rgba(var(--fixpro-black-rgb), .10);
+    border-bottom: 1px solid rgba(var(--birchmountAutoRepair-black-rgb), .10);
     margin-bottom: 37px;
 }
 
@@ -548,19 +548,19 @@
     -webkit-box-pack: center;
     justify-content: center;
     text-align: center;
-    color: var(--fixpro-base);
+    color: var(--birchmountAutoRepair-base);
     font-size: 16px;
-    border-radius: var(--fixpro-bdr-radius);
+    border-radius: var(--birchmountAutoRepair-bdr-radius);
     overflow: hidden;
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
-    border: 1px solid var(--fixpro-base);
+    border: 1px solid var(--birchmountAutoRepair-base);
     z-index: 1;
 }
 
 .team-details__social a:hover {
-    color: var(--fixpro-white);
-    border: 1px solid var(--fixpro-base);
+    color: var(--birchmountAutoRepair-white);
+    border: 1px solid var(--birchmountAutoRepair-base);
 }
 
 .team-details__social a:before {
@@ -570,7 +570,7 @@
     right: 0;
     bottom: 0;
     content: "";
-    background-color: var(--fixpro-base);
+    background-color: var(--birchmountAutoRepair-base);
     border-radius: 0%;
     transform: scale(0);
     transform-origin: center;
@@ -590,7 +590,7 @@
 .team-details__client-address {
     position: relative;
     display: block;
-    border-top: 1px solid rgba(var(--fixpro-black-rgb), .10);
+    border-top: 1px solid rgba(var(--birchmountAutoRepair-black-rgb), .10);
     margin-top: 19px;
     padding-top: 20px;
 }
@@ -609,11 +609,11 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    color: var(--fixpro-black);
+    color: var(--birchmountAutoRepair-black);
 }
 
 .team-details__client-address li p span {
-    color: var(--fixpro-black);
+    color: var(--birchmountAutoRepair-black);
 }
 
 .team-details__client-address li h5 {
@@ -621,15 +621,15 @@
     font-weight: 700;
     line-height: 28px;
     margin-top: 10px;
-    font-family: var(--fixpro-font);
+    font-family: var(--birchmountAutoRepair-font);
 }
 
 .team-details__client-address li h5 a {
-    color: var(--fixpro-black);
+    color: var(--birchmountAutoRepair-black);
 }
 
 .team-details__client-address li h5 a:hover {
-    color: var(--fixpro-base);
+    color: var(--birchmountAutoRepair-base);
 }
 
 .team-details__bottom {
@@ -691,7 +691,7 @@
     justify-content: center;
     height: 6px;
     width: 6px;
-    background-color: var(--fixpro-base);
+    background-color: var(--birchmountAutoRepair-base);
 }
 
 .team-details__practice-area-list li .text {
@@ -702,7 +702,7 @@
 
 .team-details__practice-area-list li .text p {
     font-weight: 500;
-    color: var(--fixpro-base);
+    color: var(--birchmountAutoRepair-base);
 }
 
 
@@ -741,7 +741,7 @@
     font-size: 20px;
     font-weight: 700;
     line-height: 30px;
-    color: var(--fixpro-black);
+    color: var(--birchmountAutoRepair-black);
     margin-bottom: 11px;
 }
 
@@ -749,7 +749,7 @@
     position: relative;
     width: 100%;
     height: 10px;
-    background-color: var(--fixpro-primary);
+    background-color: var(--birchmountAutoRepair-primary);
     border-radius: 6px;
 }
 
@@ -759,7 +759,7 @@
     width: 0px;
     height: 10px;
     border-radius: 5px;
-    background-color: var(--fixpro-base);
+    background-color: var(--birchmountAutoRepair-base);
     -webkit-transition: all 1500ms ease;
     -ms-transition: all 1500ms ease;
     -o-transition: all 1500ms ease;
@@ -771,12 +771,12 @@
     position: absolute;
     right: -18px;
     bottom: 22px;
-    color: var(--fixpro-black);
+    color: var(--birchmountAutoRepair-black);
     line-height: 26px;
     font-size: 18px;
     text-align: center;
     font-weight: 600;
-    font-family: var(--fixpro-font);
+    font-family: var(--birchmountAutoRepair-font);
     opacity: 0;
     -webkit-transition: all 500ms ease;
     -ms-transition: all 500ms ease;
@@ -829,15 +829,15 @@
     height: 60px;
     width: 100%;
     background-color: transparent;
-    border: 1px solid rgba(var(--fixpro-black-rgb), .10);
+    border: 1px solid rgba(var(--birchmountAutoRepair-black-rgb), .10);
     padding-left: 30px;
     padding-right: 30px;
     outline: none;
     font-size: 16px;
     font-weight: 400;
-    color: var(--fixpro-gray);
+    color: var(--birchmountAutoRepair-gray);
     display: block;
-    border-radius: var(--fixpro-bdr-radius);
+    border-radius: var(--birchmountAutoRepair-bdr-radius);
 }
 
 .team-details-contact__input-box .select-box {
@@ -848,14 +848,14 @@
     height: 60px;
     width: 100%;
     background-color: transparent;
-    border: 1px solid rgba(var(--fixpro-black-rgb), .10);
+    border: 1px solid rgba(var(--birchmountAutoRepair-black-rgb), .10);
     padding-left: 30px;
     padding-right: 30px;
     outline: none;
     font-size: 16px;
-    color: var(--fixpro-gray);
+    color: var(--birchmountAutoRepair-gray);
     font-weight: 400;
-    border-radius: var(--fixpro-bdr-radius);
+    border-radius: var(--birchmountAutoRepair-bdr-radius);
     line-height: 60px;
     display: block;
     float: none;
@@ -867,8 +867,8 @@
     right: 30px;
     width: 8px;
     height: 8px;
-    border-bottom: 2px solid var(--fixpro-gray);
-    border-right: 2px solid var(--fixpro-gray);
+    border-bottom: 2px solid var(--birchmountAutoRepair-gray);
+    border-right: 2px solid var(--birchmountAutoRepair-gray);
     margin-top: 0px;
     z-index: 10;
 }
@@ -877,15 +877,15 @@
     height: 200px;
     width: 100%;
     background-color: transparent;
-    border: 1px solid rgba(var(--fixpro-black-rgb), .10);
+    border: 1px solid rgba(var(--birchmountAutoRepair-black-rgb), .10);
     padding: 15px 30px 30px;
     outline: none;
     font-size: 16px;
     font-weight: 400;
-    color: var(--fixpro-gray);
+    color: var(--birchmountAutoRepair-gray);
     position: relative;
     display: block;
-    border-radius: var(--fixpro-bdr-radius);
+    border-radius: var(--birchmountAutoRepair-bdr-radius);
 }
 
 .team-details-contact__input-box.text-message-box {

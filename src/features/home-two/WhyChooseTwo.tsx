@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from 'react'; 
 import whyChooseTwoShape2 from '@/assets/images/shapes/why-choose-two-shape-2.png';
@@ -6,7 +6,7 @@ import whyChooseTwoShape3 from '@/assets/images/shapes/why-choose-two-shape-3.pn
 import whyChooseTwoImg1 from '@/assets/images/resources/why-choose-two-img-1.jpg';
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced'; 
 import TextAnimation from '@/components/elements/TextAnimation';
-import useFixproContext from '@/components/context/useFixproContext';
+import useBirchmountAutoRepairContext from '@/components/context/useBirchmountAutoRepairContext';
 import Progresbar from '@/components/elements/Progressbar';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -42,7 +42,7 @@ const progressItems: ProgressItem[] = [
 ];
 
 const WhyChooseTwo: React.FC = () => {
-    const { handleVideoClick } = useFixproContext()
+    const { handleVideoClick } = useBirchmountAutoRepairContext()
     return (
         <section className="why-choose-two">
             <div className="why-choose-two__shape-2 rotate-me">

@@ -1,11 +1,11 @@
-/*==============================================
+﻿/*==============================================
     Brand One
 ===============================================*/
 .brand-one {
     position: relative;
     display: block;
     padding: 60px 0 51px;
-    border-top: 1px solid rgba(var(--fixpro-black-rgb), .10);
+    border-top: 1px solid rgba(var(--birchmountAutoRepair-black-rgb), .10);
     z-index: 1;
 }
 
@@ -51,7 +51,7 @@
 .brand-two__inner {
     position: relative;
     display: block;
-    background-color: rgba(var(--fixpro-base-rgb), .30);
+    background-color: rgba(var(--birchmountAutoRepair-base-rgb), .30);
     border-radius: 20px;
     padding: 53px 65px 53px;
 }

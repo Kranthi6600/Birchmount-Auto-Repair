@@ -1,11 +1,11 @@
-"use client";
+﻿"use client";
 
 import React from 'react';
 import aboutThreeImg1 from '@/assets/images/resources/about-three-img-1.jpg';
 import aboutThreeImg2 from '@/assets/images/resources/about-three-img-2.jpg';
 import aboutThreeShape1 from '@/assets/images/shapes/about-three-shape-1.png';
 import aboutThreeClientImg1 from '@/assets/images/resources/about-three-client-img-1.jpg';
-import useFixproContext from '@/components/context/useFixproContext';
+import useBirchmountAutoRepairContext from '@/components/context/useBirchmountAutoRepairContext';
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced';
 import TextAnimation from '@/components/elements/TextAnimation';
 import CounterUp from '@/components/elements/CounterUp';
@@ -64,7 +64,7 @@ const clientInfo: ClientInfo = {
 };
 
 const AboutThree: React.FC = () => {
-    const { handleVideoClick } = useFixproContext();
+    const { handleVideoClick } = useBirchmountAutoRepairContext();
     return (
         <SectionWrapper id='about' className="about-three">
             <div className="container">

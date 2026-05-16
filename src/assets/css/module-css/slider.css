@@ -1,10 +1,10 @@
-/*--------------------------------------------------------------
+﻿/*--------------------------------------------------------------
 # Main Slider Three
 --------------------------------------------------------------*/
 .main-slider {
     position: relative;
     display: block;
-    background-color: var(--fixpro-black);
+    background-color: var(--birchmountAutoRepair-black);
     z-index: 10;
 }
 
@@ -12,7 +12,7 @@
     position: relative;
     padding-top: 217px;
     padding-bottom: 221px;
-    background-color: var(--fixpro-black);
+    background-color: var(--birchmountAutoRepair-black);
     overflow: hidden;
     z-index: 10;
 }
@@ -133,7 +133,7 @@
 .main-slider__sub-title {
     font-size: 18px;
     line-height: 24px;
-    color: var(--fixpro-base);
+    color: var(--birchmountAutoRepair-base);
     font-weight: 400;
     text-transform: capitalize;
 }
@@ -143,14 +143,14 @@
     display: block;
     height: 1px;
     width: 40px;
-    background-color: var(--fixpro-base);
+    background-color: var(--birchmountAutoRepair-base);
 }
 
 .main-slider__title {
     position: relative;
     display: block;
     font-size: 55px;
-    color: var(--fixpro-white);
+    color: var(--birchmountAutoRepair-white);
     font-weight: 700;
     line-height: 1.3em;
     text-transform: capitalize;
@@ -171,7 +171,7 @@
 }
 
 .main-slider__title span {
-    color: var(--fixpro-base);
+    color: var(--birchmountAutoRepair-base);
 }
 
 .active .main-slider__title {
@@ -187,7 +187,7 @@
 }
 
 .main-slider__text {
-    color: rgba(var(--fixpro-white-rgb), .80);
+    color: rgba(var(--birchmountAutoRepair-white-rgb), .80);
     opacity: 0;
     -webkit-transform: perspective(400px) rotateY(0deg) translateY(80px);
     -ms-transform: perspective(400px) rotateY(0deg) translateY(80px);
@@ -252,12 +252,12 @@
 }
 
 .main-slider__btn .thm-btn:hover {
-    color: var(--fixpro-base);
+    color: var(--birchmountAutoRepair-base);
 }
 
 .main-slider__btn .thm-btn::before,
 .main-slider__btn .thm-btn::after {
-    background-color: var(--fixpro-white);
+    background-color: var(--birchmountAutoRepair-white);
 }
 
 .main-slider__video-link {
@@ -281,8 +281,8 @@
     line-height: 60px;
     text-align: center;
     font-size: 18px;
-    color: var(--fixpro-white);
-    background-color: rgba(var(--fixpro-base-rgb), 1);
+    color: var(--birchmountAutoRepair-white);
+    background-color: rgba(var(--birchmountAutoRepair-base-rgb), 1);
     border-radius: 50%;
     margin: 0 auto 0;
     transition: all 0.5s ease;
@@ -293,8 +293,8 @@
 }
 
 .main-slider__video-icon:hover {
-    background-color: var(--fixpro-white);
-    color: var(--fixpro-base);
+    background-color: var(--birchmountAutoRepair-white);
+    color: var(--birchmountAutoRepair-base);
 }
 
 .main-slider__video-link .ripple,
@@ -308,10 +308,10 @@
     border-radius: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    -ms-box-shadow: 0 0 0 0 rgba(var(--fixpro-white-rgb), 0.6);
-    -o-box-shadow: 0 0 0 0 rgba(var(--fixpro-white-rgb), 0.6);
-    -webkit-box-shadow: 0 0 0 0 rgba(var(--fixpro-white-rgb), 0.6);
-    box-shadow: 0 0 0 0 rgba(var(--fixpro-white-rgb), 0.6);
+    -ms-box-shadow: 0 0 0 0 rgba(var(--birchmountAutoRepair-white-rgb), 0.6);
+    -o-box-shadow: 0 0 0 0 rgba(var(--birchmountAutoRepair-white-rgb), 0.6);
+    -webkit-box-shadow: 0 0 0 0 rgba(var(--birchmountAutoRepair-white-rgb), 0.6);
+    box-shadow: 0 0 0 0 rgba(var(--birchmountAutoRepair-white-rgb), 0.6);
     -webkit-animation: ripple 3s infinite;
     animation: ripple 3s infinite;
 }
@@ -358,7 +358,7 @@
     width: 60px;
     height: 60px;
     font-size: 20px !important;
-    color: rgba(var(--fixpro-white-rgb), .30) !important;
+    color: rgba(var(--birchmountAutoRepair-white-rgb), .30) !important;
     opacity: 1;
     margin: 0;
     text-align: center;
@@ -366,12 +366,12 @@
     border-radius: 50%;
     padding: 18px 0px !important;
     background-color: transparent !important;
-    border: 2px solid rgba(var(--fixpro-white-rgb), .30) !important;
+    border: 2px solid rgba(var(--birchmountAutoRepair-white-rgb), .30) !important;
 }
 
 .main-slider .owl-nav [class*=owl-]:hover {
-    color: rgba(var(--fixpro-white-rgb), 1) !important;
-    border: 2px solid rgba(var(--fixpro-white-rgb), 1) !important;
+    color: rgba(var(--birchmountAutoRepair-white-rgb), 1) !important;
+    border: 2px solid rgba(var(--birchmountAutoRepair-white-rgb), 1) !important;
 }
 
 .main-slider .owl-nav [class*=owl-]+[class*=owl-] {
@@ -390,7 +390,7 @@
 --------------------------------------------------------------*/
 .main-slider-two {
     position: relative;
-    background-color: var(--fixpro-black);
+    background-color: var(--birchmountAutoRepair-black);
     z-index: 10;
 }
 
@@ -398,7 +398,7 @@
     position: relative;
     padding-top: 335px;
     padding-bottom: 250px;
-    background-color: var(--fixpro-black);
+    background-color: var(--birchmountAutoRepair-black);
     overflow: hidden;
     z-index: 10;
 }
@@ -429,7 +429,7 @@
     bottom: 0;
     right: 0;
     left: 0;
-    background-color: var(--fixpro-black);
+    background-color: var(--birchmountAutoRepair-black);
     opacity: 0.9;
     z-index: -1;
 }
@@ -552,7 +552,7 @@
 .main-slider-two__small-img img {
     width: 100%;
     border-radius: 50%;
-    border: 15px solid var(--fixpro-base);
+    border: 15px solid var(--birchmountAutoRepair-base);
 }
 
 .main-slider-two__content {
@@ -596,7 +596,7 @@
 .main-slider-two__sub-title {
     font-size: 18px;
     line-height: 24px;
-    color: var(--fixpro-base);
+    color: var(--birchmountAutoRepair-base);
     font-weight: 500;
     text-transform: capitalize;
 }
@@ -606,14 +606,14 @@
     display: block;
     height: 1px;
     width: 40px;
-    background-color: var(--fixpro-base);
+    background-color: var(--birchmountAutoRepair-base);
 }
 
 .main-slider-two__title {
     position: relative;
     display: block;
     font-size: 60px;
-    color: var(--fixpro-white);
+    color: var(--birchmountAutoRepair-white);
     font-weight: 700;
     line-height: 1.3em;
     text-transform: capitalize;
@@ -634,7 +634,7 @@
 }
 
 .main-slider-two__title span {
-    color: var(--fixpro-base);
+    color: var(--birchmountAutoRepair-base);
 }
 
 .active .main-slider-two__title {
@@ -650,7 +650,7 @@
 }
 
 .main-slider-two__text {
-    color: var(--fixpro-white);
+    color: var(--birchmountAutoRepair-white);
     opacity: 0;
     -webkit-transform: perspective(400px) rotateY(0deg) translateY(80px);
     -ms-transform: perspective(400px) rotateY(0deg) translateY(80px);
@@ -716,11 +716,11 @@
 
 .main-slider-two__btn .thm-btn:before,
 .main-slider-two__btn .thm-btn:after {
-    background-color: var(--fixpro-white);
+    background-color: var(--birchmountAutoRepair-white);
 }
 
 .main-slider-two__btn .thm-btn:hover {
-    color: var(--fixpro-black);
+    color: var(--birchmountAutoRepair-black);
 }
 
 .main-slider-two__video-link {
@@ -744,8 +744,8 @@
     line-height: 60px;
     text-align: center;
     font-size: 20px;
-    color: var(--fixpro-base);
-    background-color: rgba(var(--fixpro-white-rgb), .30);
+    color: var(--birchmountAutoRepair-base);
+    background-color: rgba(var(--birchmountAutoRepair-white-rgb), .30);
     border-radius: 50%;
     margin: 0 auto 0;
     transition: all 0.5s ease;
@@ -756,8 +756,8 @@
 }
 
 .main-slider-two__video-icon:hover {
-    background-color: var(--fixpro-base);
-    color: var(--fixpro-white);
+    background-color: var(--birchmountAutoRepair-base);
+    color: var(--birchmountAutoRepair-white);
 }
 
 .main-slider-two__video-link .ripple,
@@ -771,10 +771,10 @@
     border-radius: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    -ms-box-shadow: 0 0 0 0 rgba(var(--fixpro-white-rgb), 0.6);
-    -o-box-shadow: 0 0 0 0 rgba(var(--fixpro-white-rgb), 0.6);
-    -webkit-box-shadow: 0 0 0 0 rgba(var(--fixpro-white-rgb), 0.6);
-    box-shadow: 0 0 0 0 rgba(var(--fixpro-white-rgb), 0.6);
+    -ms-box-shadow: 0 0 0 0 rgba(var(--birchmountAutoRepair-white-rgb), 0.6);
+    -o-box-shadow: 0 0 0 0 rgba(var(--birchmountAutoRepair-white-rgb), 0.6);
+    -webkit-box-shadow: 0 0 0 0 rgba(var(--birchmountAutoRepair-white-rgb), 0.6);
+    box-shadow: 0 0 0 0 rgba(var(--birchmountAutoRepair-white-rgb), 0.6);
     -webkit-animation: ripple 3s infinite;
     animation: ripple 3s infinite;
 }
@@ -820,7 +820,7 @@
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background-color: rgba(var(--fixpro-white-rgb), .30);
+    background-color: rgba(var(--birchmountAutoRepair-white-rgb), .30);
     border: 2px solid transparent;
     margin: 0;
     -webkit-transition: all 300ms ease;
@@ -829,8 +829,8 @@
 
 .main-slider-two .owl-dots .owl-dot:hover span,
 .main-slider-two .owl-dots .owl-dot.active span {
-    background-color: rgba(var(--fixpro-white-rgb), 0);
-    border: 2px solid var(--fixpro-white);
+    background-color: rgba(var(--birchmountAutoRepair-white-rgb), 0);
+    border: 2px solid var(--birchmountAutoRepair-white);
 }
 
 .main-slider-two .owl-nav {
@@ -861,7 +861,7 @@
     width: 60px;
     height: 60px;
     font-size: 20px !important;
-    color: rgba(var(--fixpro-white-rgb), .30) !important;
+    color: rgba(var(--birchmountAutoRepair-white-rgb), .30) !important;
     opacity: 1;
     margin: 0;
     text-align: center;
@@ -869,12 +869,12 @@
     border-radius: 50%;
     padding: 18px 0px !important;
     background-color: transparent !important;
-    border: 2px solid rgba(var(--fixpro-white-rgb), .30) !important;
+    border: 2px solid rgba(var(--birchmountAutoRepair-white-rgb), .30) !important;
 }
 
 .main-slider-two .owl-nav [class*=owl-]:hover {
-    color: rgba(var(--fixpro-white-rgb), 1) !important;
-    border: 2px solid rgba(var(--fixpro-white-rgb), 1) !important;
+    color: rgba(var(--birchmountAutoRepair-white-rgb), 1) !important;
+    border: 2px solid rgba(var(--birchmountAutoRepair-white-rgb), 1) !important;
 }
 
 .main-slider-two .owl-nav [class*=owl-]+[class*=owl-] {
@@ -898,7 +898,7 @@
     position: relative;
     padding-top: 185px;
     padding-bottom: 190px;
-    background-color: var(--fixpro-black);
+    background-color: var(--birchmountAutoRepair-black);
     overflow: hidden;
     z-index: 10;
 }
@@ -941,7 +941,7 @@
     bottom: 0;
     right: 0;
     left: 0;
-    background-color: var(--fixpro-black);
+    background-color: var(--birchmountAutoRepair-black);
     opacity: 0.8;
     z-index: -1;
 }
@@ -1009,7 +1009,7 @@
     display: block;
     font-size: 18px;
     line-height: 24px;
-    color: var(--fixpro-base);
+    color: var(--birchmountAutoRepair-base);
     text-transform: capitalize;
     font-weight: 400;
     opacity: 0;
@@ -1043,7 +1043,7 @@
     position: relative;
     display: block;
     font-size: 70px;
-    color: var(--fixpro-white);
+    color: var(--birchmountAutoRepair-white);
     font-weight: 700;
     line-height: 1.2em;
     text-transform: capitalize;
@@ -1065,7 +1065,7 @@
 }
 
 .main-slider-three__title span {
-    color: var(--fixpro-base);
+    color: var(--birchmountAutoRepair-base);
 }
 
 .active .main-slider-three__title {
@@ -1085,7 +1085,7 @@
     display: block;
     font-size: 18px;
     line-height: 28px;
-    color: rgba(var(--fixpro-white-rgb), .80);
+    color: rgba(var(--birchmountAutoRepair-white-rgb), .80);
     opacity: 0;
     -webkit-transform: perspective(400px) rotateY(0deg) translateY(80px);
     -ms-transform: perspective(400px) rotateY(0deg) translateY(80px);
@@ -1132,12 +1132,12 @@
 }
 
 .main-slider-three__btn-box .thm-btn:hover {
-    color: var(--fixpro-black);
+    color: var(--birchmountAutoRepair-black);
 }
 
 .main-slider-three__btn-box .thm-btn::before,
 .main-slider-three__btn-box .thm-btn::after {
-    background-color: var(--fixpro-white);
+    background-color: var(--birchmountAutoRepair-white);
 }
 
 .active .main-slider-three__btn-box {
@@ -1187,8 +1187,8 @@
     line-height: 90px;
     text-align: center;
     font-size: 22px;
-    color: var(--fixpro-black);
-    background-color: rgba(var(--fixpro-white-rgb), .90);
+    color: var(--birchmountAutoRepair-black);
+    background-color: rgba(var(--birchmountAutoRepair-white-rgb), .90);
     border-radius: 50%;
     transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -1198,8 +1198,8 @@
 }
 
 .main-slider-three__video-icon:hover {
-    background-color: var(--fixpro-base);
-    color: var(--fixpro-white);
+    background-color: var(--birchmountAutoRepair-base);
+    color: var(--birchmountAutoRepair-white);
 }
 
 .main-slider-three__video-link .ripple,
@@ -1213,10 +1213,10 @@
     border-radius: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    -ms-box-shadow: 0 0 0 0 rgba(var(--fixpro-base-rgb), 0.6);
-    -o-box-shadow: 0 0 0 0 rgba(var(--fixpro-base-rgb), 0.6);
-    -webkit-box-shadow: 0 0 0 0 rgba(var(--fixpro-base-rgb), 0.6);
-    box-shadow: 0 0 0 0 rgba(var(--fixpro-base-rgb), 0.6);
+    -ms-box-shadow: 0 0 0 0 rgba(var(--birchmountAutoRepair-base-rgb), 0.6);
+    -o-box-shadow: 0 0 0 0 rgba(var(--birchmountAutoRepair-base-rgb), 0.6);
+    -webkit-box-shadow: 0 0 0 0 rgba(var(--birchmountAutoRepair-base-rgb), 0.6);
+    box-shadow: 0 0 0 0 rgba(var(--birchmountAutoRepair-base-rgb), 0.6);
     -webkit-animation: ripple 3s infinite;
     animation: ripple 3s infinite;
 }
@@ -1286,7 +1286,7 @@
     display: block;
     width: 10px;
     height: 10px;
-    background: rgba(var(--fixpro-white-rgb), 0.4);
+    background: rgba(var(--birchmountAutoRepair-white-rgb), 0.4);
     border-radius: 50%;
     transition: all 200ms linear;
     transition-delay: 0.1s;
@@ -1294,7 +1294,7 @@
 
 .main-slider-three .owl-dots .owl-dot.active span,
 .main-slider-three .owl-dots .owl-dot:hover span {
-    background: rgba(var(--fixpro-white-rgb), 1.0);
+    background: rgba(var(--birchmountAutoRepair-white-rgb), 1.0);
 }
 
 .main-slider-three .owl-dots .owl-dot span::before {
@@ -1303,7 +1303,7 @@
     left: -8px;
     bottom: -8px;
     right: -8px;
-    border: 1px solid rgba(var(--fixpro-white-rgb), 0.4);
+    border: 1px solid rgba(var(--birchmountAutoRepair-white-rgb), 0.4);
     border-radius: 50%;
     transform: scaleX(0);
     transition: all 200ms linear;
@@ -1314,7 +1314,7 @@
 .main-slider-three .owl-dots .owl-dot.active span::before,
 .main-slider-three .owl-dots .owl-dot:hover span::before {
     transform: scaleX(1.0);
-    border: 1px solid rgba(var(--fixpro-white-rgb), 1.0);
+    border: 1px solid rgba(var(--birchmountAutoRepair-white-rgb), 1.0);
 }
 
 
@@ -1335,7 +1335,7 @@
     display: block;
     width: 10px;
     height: 10px;
-    background: rgba(var(--fixpro-white-rgb), 0.4);
+    background: rgba(var(--birchmountAutoRepair-white-rgb), 0.4);
     border-radius: 50%;
     transition: all 200ms linear;
     transition-delay: 0.1s;

@@ -1,4 +1,4 @@
-
+﻿
 import React from 'react';
 import CustomCursor from '../elements/CustomCursor';
 import SideBar from '../elements/SideBar';
@@ -8,7 +8,7 @@ import ScrollToTop from '../elements/ScrollToTop';
 import VideoPopup from '../elements/VideoPopup';
 import ContextProvider from '../context/ContextProvider';
 
-const FixproLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const BirchmountAutoRepairLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
     return (
         <ContextProvider>
@@ -25,4 +25,4 @@ const FixproLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => 
     );
 };
 
-export default FixproLayout;
+export default BirchmountAutoRepairLayout;

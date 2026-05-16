@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React from 'react';
 import aboutTwoShape1 from '@/assets/images/shapes/about-two-shape-1.png';
 import aboutTwoShape2 from '@/assets/images/shapes/about-two-shape-2.png';
@@ -7,7 +7,7 @@ import aboutTwoImg2 from '@/assets/images/resources/about-two-img-2.jpg';
 import TextAnimation from '@/components/elements/TextAnimation';
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced';
 import CounterUp from '@/components/elements/CounterUp';
-import useFixproContext from '@/components/context/useFixproContext';
+import useBirchmountAutoRepairContext from '@/components/context/useBirchmountAutoRepairContext';
 import SectionWrapper from '@/components/elements/SectionWrapper';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -25,7 +25,7 @@ const pointsList: PointItem[] = [
 ];
 
 const AboutTwo: React.FC = () => {
-    const { handleVideoClick } = useFixproContext()
+    const { handleVideoClick } = useBirchmountAutoRepairContext()
     return (
         <SectionWrapper id='about' className="about-two">
             <div className="about-two__shape-1 rotate-me">
@@ -60,7 +60,7 @@ const AboutTwo: React.FC = () => {
                                 ))}
                             </ul>
                             <p className="about-two__text-2">
-                                At <span>Fixpro</span>, we are a team of highly skilled technicians with years of
+                                At <span>Birchmount Auto Repair</span>, we are a team of highly skilled technicians with years of
                                 experience in the tech repair industry. Our expertise covers a broad spectrum of
                                 devices, including Ac, laptops, desktops, smartphones, tablets, and more..
                             </p>

@@ -1,10 +1,10 @@
-/*==============================================
+﻿/*==============================================
    Testimonial One
 ===============================================*/
 .testimonial-one {
     position: relative;
     display: block;
-    background-color: var(--fixpro-black);
+    background-color: var(--birchmountAutoRepair-black);
     padding: 120px 0 120px;
     overflow: hidden;
     z-index: 1;
@@ -50,11 +50,11 @@
 }
 
 .testimonial-one .section-title__title {
-    color: var(--fixpro-white);
+    color: var(--birchmountAutoRepair-white);
 }
 
 .testimonial-one .section-title__tagline-border::after {
-    background: var(--fixpro-black);
+    background: var(--birchmountAutoRepair-black);
 }
 
 .testimonial-one__carousel {
@@ -66,7 +66,7 @@
     position: relative;
     display: block;
     background-color: #0a0b0c;
-    border-radius: var(--fixpro-bdr-radius);
+    border-radius: var(--birchmountAutoRepair-bdr-radius);
     padding: 40px 40px 41px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
@@ -80,7 +80,7 @@
     left: 0;
     right: 150px;
     height: 3px;
-    background-color: var(--fixpro-base);
+    background-color: var(--birchmountAutoRepair-base);
     clip-path: polygon(0 0, 98% 0, 100% 100%, 0% 100%);
 }
 
@@ -105,7 +105,7 @@
     justify-content: center;
     width: 90px;
     height: 90px;
-    border: 1px solid rgba(var(--fixpro-base-rgb), .40);
+    border: 1px solid rgba(var(--birchmountAutoRepair-base-rgb), .40);
     border-radius: 5px;
 }
 
@@ -134,15 +134,15 @@
 }
 
 .testimonial-one__client-name a {
-    color: var(--fixpro-base);
+    color: var(--birchmountAutoRepair-base);
 }
 
 .testimonial-one__client-name a:hover {
-    color: var(--fixpro-white);
+    color: var(--birchmountAutoRepair-white);
 }
 
 .testimonial-one__client-sub-title {
-    color: rgba(var(--fixpro-white-rgb), .80);
+    color: rgba(var(--birchmountAutoRepair-white-rgb), .80);
     margin-top: 5px;
 }
 
@@ -157,13 +157,13 @@
     position: relative;
     display: inline-block;
     font-size: 14px;
-    color: var(--fixpro-base);
+    color: var(--birchmountAutoRepair-base);
 }
 
 .testimonial-one__text {
     font-size: 20px;
     line-height: 30px;
-    color: rgba(var(--fixpro-white-rgb), .80);
+    color: rgba(var(--birchmountAutoRepair-white-rgb), .80);
     margin-top: 32px;
 }
 
@@ -177,7 +177,7 @@
     position: relative;
     display: inline-block;
     font-size: 125px;
-    color: rgba(var(--fixpro-base-rgb), .05);
+    color: rgba(var(--birchmountAutoRepair-base-rgb), .05);
 }
 
 /*--------------------------------------------------------------
@@ -224,12 +224,12 @@
 .testimonial-two__single {
     position: relative;
     display: block;
-    background-color: var(--fixpro-white);
+    background-color: var(--birchmountAutoRepair-white);
     box-shadow: none;
     padding: 49px 49px 41px;
-    border-radius: var(--fixpro-bdr-radius);
-    border: 1px solid rgba(var(--fixpro-base-rgb), .20);
-    border-top: 5px solid var(--fixpro-base);
+    border-radius: var(--birchmountAutoRepair-bdr-radius);
+    border: 1px solid rgba(var(--birchmountAutoRepair-base-rgb), .20);
+    border-top: 5px solid var(--birchmountAutoRepair-base);
     transition: all 500ms ease;
     z-index: 1;
 }
@@ -246,7 +246,7 @@
 }
 
 .testimonial-two__img:before {
-    background-color: var(--fixpro-base);
+    background-color: var(--birchmountAutoRepair-base);
     border-radius: 101px 101px 0 0;
     content: "";
     height: 50%;
@@ -282,11 +282,11 @@
 }
 
 .testimonial-two__client-name a {
-    color: var(--fixpro-black);
+    color: var(--birchmountAutoRepair-black);
 }
 
 .testimonial-two__client-name a:hover {
-    color: var(--fixpro-base);
+    color: var(--birchmountAutoRepair-base);
 }
 
 .testimonial-two__rating {
@@ -303,7 +303,7 @@
     position: relative;
     display: inline-block;
     font-size: 16px;
-    color: var(--fixpro-base);
+    color: var(--birchmountAutoRepair-base);
 }
 
 .testimonial-two__quote {
@@ -318,7 +318,7 @@
     display: inline-block;
     font-size: 120px;
     line-height: 120px;
-    color: var(--fixpro-gray);
+    color: var(--birchmountAutoRepair-gray);
     opacity: .05;
     font-weight: 900;
 }
@@ -346,8 +346,8 @@
     justify-content: center;
     align-items: center;
     font-size: 18px !important;
-    color: var(--fixpro-white) !important;
-    background-color: rgba(var(--fixpro-base-rgb), 1) !important;
+    color: var(--birchmountAutoRepair-white) !important;
+    background-color: rgba(var(--birchmountAutoRepair-base-rgb), 1) !important;
     border-radius: 50%;
     margin: 0;
     text-align: center;
@@ -375,8 +375,8 @@
 
 .testimonial-two__carousel .owl-nav .owl-next:hover,
 .testimonial-two__carousel .owl-nav .owl-prev:hover {
-    background-color: var(--fixpro-black) !important;
-    color: var(--fixpro-white) !important;
+    background-color: var(--birchmountAutoRepair-black) !important;
+    color: var(--birchmountAutoRepair-white) !important;
 }
 
 /*--------------------------------------------------------------
@@ -422,10 +422,10 @@
     position: relative;
     display: block;
     text-align: center;
-    background-color: var(--fixpro-white);
+    background-color: var(--birchmountAutoRepair-white);
     box-shadow: none;
-    border: 1px solid rgba(var(--fixpro-base-rgb), .15);
-    border-radius: var(--fixpro-bdr-radius);
+    border: 1px solid rgba(var(--birchmountAutoRepair-base-rgb), .15);
+    border-radius: var(--birchmountAutoRepair-bdr-radius);
     padding: 90px 30px 52px;
     margin-top: -80px;
 }
@@ -442,11 +442,11 @@
 }
 
 .testimonial-three__name-box h3 a {
-    color: var(--fixpro-black);
+    color: var(--birchmountAutoRepair-black);
 }
 
 .testimonial-three__name-box h3 a:hover {
-    color: var(--fixpro-base);
+    color: var(--birchmountAutoRepair-base);
 }
 
 .testimonial-three__ratting {
@@ -462,7 +462,7 @@
     position: relative;
     display: inline-block;
     font-size: 14px;
-    color: var(--fixpro-base);
+    color: var(--birchmountAutoRepair-base);
 }
 
 .testimonial-three__quote {
@@ -472,8 +472,8 @@
     justify-content: center;
     width: 50px;
     height: 50px;
-    background-color: var(--fixpro-white);
-    border: 7px solid rgba(var(--fixpro-base-rgb), .30);
+    background-color: var(--birchmountAutoRepair-white);
+    border: 7px solid rgba(var(--birchmountAutoRepair-base-rgb), .30);
     border-radius: 50%;
     margin: -25px auto 0;
 }
@@ -482,7 +482,7 @@
     position: relative;
     display: inline-block;
     font-size: 16px;
-    color: var(--fixpro-base);
+    color: var(--birchmountAutoRepair-base);
 }
 
 .testimonial-three__carousel .owl-stage-outer {

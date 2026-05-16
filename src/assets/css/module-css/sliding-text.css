@@ -1,4 +1,4 @@
-/*==============================================
+﻿/*==============================================
     Sliding Text
 ===============================================*/
 .sliding-text {
@@ -10,7 +10,7 @@
 .sliding-text__inner {
     position: relative;
     display: block;
-    background-color: var(--fixpro-black);
+    background-color: var(--birchmountAutoRepair-black);
     padding: 35px 0 35px;
 }
 
@@ -48,8 +48,8 @@
     font-size: 35px;
     font-weight: 600;
     line-height: 35px;
-    color: var(--fixpro-white);
-    font-family: var(--fixpro-font-two);
+    color: var(--birchmountAutoRepair-white);
+    font-family: var(--birchmountAutoRepair-font-two);
     text-transform: uppercase;
     letter-spacing: -0.72px;
     position: relative;
@@ -60,7 +60,7 @@
 }
 
 .sliding-text__list li:hover>p {
-    color: var(--fixpro-base);
+    color: var(--birchmountAutoRepair-base);
 }
 
 /*--------------------------------------------------------------

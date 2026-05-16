@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React from 'react';
 import footerShape1 from '@/assets/images/shapes/footer-widget-shape-1.png';
 import footerLogo from '@/assets/images/resources/footer-logo.png';
@@ -109,7 +109,7 @@ const FooterOne: React.FC = () => {
                         <FadeInAdvanced className="col-xl-3" variant='fadeInUp' delay={100}>
                             <div className="footer-widget__column footer-widget__about">
                                 <div className="footer-widget__logo">
-                                    <Link href="/"><Image src={footerLogo} width={138} height={40} alt="Fixpro Logo" /></Link>
+                                    <Link href="/"><Image src={footerLogo} width={138} height={40} alt="Birchmount Auto Repair Logo" /></Link>
                                 </div>
                                 <p className="footer-widget__about-text">
                                     Secure other greater pleasures, or else he endures pains to avoid worse pains selection
@@ -232,7 +232,7 @@ const FooterOne: React.FC = () => {
                 <div className="container">
                     <div className="site-footer__bottom-inner">
                         <p className="site-footer__bottom-text">
-                            © Copywright 2026 by <Link href="/">Fixpro</Link> All Rights Reserved.
+                            Â© Copywright 2026 by <Link href="/">Birchmount Auto Repair</Link> All Rights Reserved.
                         </p>
                         <ul className="list-unstyled site-footer__bottom-menu">
                             {bottomMenuLinks.map((link) => (

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from 'react';
 import aboutOneImg1 from '@/assets/images/resources/about-one-img-1.jpg';
@@ -7,7 +7,7 @@ import aboutOneShape2 from '@/assets/images/shapes/about-one-shape-2.png';
 
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced';
 import SectionWrapper from '@/components/elements/SectionWrapper';
-import useFixproContext from '@/components/context/useFixproContext';
+import useBirchmountAutoRepairContext from '@/components/context/useBirchmountAutoRepairContext';
 import CounterUp from '@/components/elements/CounterUp';
 import TextAnimation from '@/components/elements/TextAnimation';
 import Link from 'next/link';
@@ -51,7 +51,7 @@ export type SecProp = {
     secClass?: string
 }
 const AboutOne: React.FC<SecProp> = ({ secClass = "" }) => {
-    const { handleVideoClick } = useFixproContext();
+    const { handleVideoClick } = useBirchmountAutoRepairContext();
     return (
         <SectionWrapper id='about' className={`about-one ${secClass}`}>
             <div className="container">

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useEffect, useState } from 'react';
 import productImg1 from "@/assets/images/shop/cart-page-img-1.jpg"
@@ -6,7 +6,7 @@ import productImg2 from "@/assets/images/shop/cart-page-img-2.jpg"
 import productImg3 from "@/assets/images/shop/cart-page-img-3.jpg"
 import productImg4 from "@/assets/images/shop/cart-page-img-4.jpg"
 import { StaticImageData } from 'next/image';
-import useFixproContext from '@/components/context/useFixproContext';
+import useBirchmountAutoRepairContext from '@/components/context/useBirchmountAutoRepairContext';
 import CartProduct from './CartProduct';
 import CustomSelect from '@/components/elements/CustomSelect';
 import Link from 'next/link';
@@ -51,7 +51,7 @@ export interface CartPro {
 
 
 const CartMain: React.FC = () => {
-    const { setCartCount } = useFixproContext();
+    const { setCartCount } = useBirchmountAutoRepairContext();
     const [cartProduct, setCartProduct] = useState<CartPro[]>(cartProducts);
     const removeProduct = (id: number) => {
         setCartProduct((pre) => pre.filter((p) => p.id !== id));

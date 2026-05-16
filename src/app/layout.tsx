@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Archivo, Titillium_Web } from "next/font/google";
-import FixproLayout from "@/components/layout/FixproLayout";
+import BirchmountAutoRepairLayout from "@/components/layout/BirchmountAutoRepairLayout";
 import "swiper/swiper-bundle.css";
 import 'yet-another-react-lightbox/styles.css';
 import '@/assets/css/combined.css' 
@@ -20,8 +20,8 @@ const titilliumWeb = Titillium_Web({
 });
 
 export const metadata: Metadata = {
-  title: "Fixpro - Electronics & Gadgets Repair Services NextJs Template",
-  description: "Fixpro – Modern Next Js template for gadgets, mobile, AC & computer repair services. Clean, responsive & fully documented",
+  title: "Birchmount Auto Repair - Electronics & Gadgets Repair Services NextJs Template",
+  description: "Birchmount Auto Repair â€“ Modern Next Js template for gadgets, mobile, AC & computer repair services. Clean, responsive & fully documented",
 };
 
 export default function RootLayout({
@@ -32,9 +32,9 @@ export default function RootLayout({
   return (
     <html lang="en" data-scroll-behavior="smooth">
       <body className={`${archivo.variable} ${titilliumWeb.variable}`}>
-        <FixproLayout>
+        <BirchmountAutoRepairLayout>
           {children}
-        </FixproLayout>
+        </BirchmountAutoRepairLayout>
       </body>
     </html>
   );

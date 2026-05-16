@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useEffect, useState } from 'react';
 import MenuOne from '../menu/MenuOne';
@@ -37,7 +37,7 @@ const HeaderOne: React.FC = () => {
                                     <i className="icon-envelope"></i>
                                 </div>
                                 <div className="text">
-                                    <p><a href="mailto:info@Fixpro24.com">info@Fixpro24.com</a>
+                                    <p><a href="mailto:info@Birchmount Auto Repair24.com">info@Birchmount Auto Repair24.com</a>
                                     </p>
                                 </div>
                             </li>
@@ -50,7 +50,7 @@ const HeaderOne: React.FC = () => {
                                 </div>
                             </li>
                         </ul>
-                        <p className="main-menu__top-welcome-text">Welcome to Our Fixpro Office</p>
+                        <p className="main-menu__top-welcome-text">Welcome to Our Birchmount Auto Repair Office</p>
                         <div className="main-menu__top-right">
                             <div className="main-menu__top-time">
                                 <div className="main-menu__top-time-icon">
