@@ -18,39 +18,55 @@ interface PricingPlan {
     animationDelay: string;
 }
 
-const pricingFeatures: PricingFeature[] = [
-    { id: 1, label: 'Air filter replacement' },
-    { id: 2, label: 'Thermostat replacement' },
-    { id: 3, label: 'Clean condenser coil' },
-    { id: 4, label: 'Contactor replacement' },
-    { id: 5, label: 'AC fan replacement' },
+const oilChangeFeatures: PricingFeature[] = [
+    { id: 1, label: 'Conventional or synthetic oil' },
+    { id: 2, label: 'New oil filter included' },
+    { id: 3, label: 'Fluid top-up check' },
+    { id: 4, label: 'Tire pressure inspection' },
+    { id: 5, label: 'Quick multi-point inspection' },
+];
+
+const brakeFeatures: PricingFeature[] = [
+    { id: 1, label: 'Brake pad replacement' },
+    { id: 2, label: 'Rotor inspection & resurfacing' },
+    { id: 3, label: 'Brake fluid check' },
+    { id: 4, label: 'Caliper inspection' },
+    { id: 5, label: 'Road-test after service' },
+];
+
+const diagnosticFeatures: PricingFeature[] = [
+    { id: 1, label: 'Full computer scan' },
+    { id: 2, label: 'Check-engine code analysis' },
+    { id: 3, label: 'Written inspection report' },
+    { id: 4, label: 'Safety systems check' },
+    { id: 5, label: 'No-obligation repair estimate' },
 ];
 
 const pricingPlans: PricingPlan[] = [
     {
         id: 1,
-        title: 'Basic Plan',
-        price: '$59.66',
-        period: '/ Month',
-        features: pricingFeatures,
+        title: 'Oil Change Service',
+        price: 'Call for',
+        period: 'Pricing',
+        features: oilChangeFeatures,
         animation: 'fadeInLeft',
         animationDelay: '100ms',
     },
     {
         id: 2,
-        title: 'Standard Plan',
-        price: '$80',
-        period: '/ Month',
-        features: pricingFeatures,
+        title: 'Brake Service',
+        price: 'Call for',
+        period: 'Estimate',
+        features: brakeFeatures,
         animation: 'fadeInUp',
         animationDelay: '300ms',
     },
     {
         id: 3,
-        title: 'Premium Plan',
-        price: '$140',
-        period: '/ Month',
-        features: pricingFeatures,
+        title: 'Full Diagnostic',
+        price: 'Call for',
+        period: 'Appointment',
+        features: diagnosticFeatures,
         animation: 'fadeInRight',
         animationDelay: '500ms',
     },
@@ -65,7 +81,7 @@ const PricingOne: React.FC<SecProp> = ({ secClass = "" }) => {
                         <span className="section-title__tagline-border"></span>Pricing Plan
                     </h6>
                     <h3 className="section-title__title title-animation">
-                        <TextAnimation animationStyle='style2'>Our Maintenance Cost</TextAnimation>
+                        <TextAnimation animationStyle='style2'>Transparent, Fair Pricing</TextAnimation>
                     </h3>
                 </div>
                 <div className="row">
@@ -93,8 +109,8 @@ const PricingOne: React.FC<SecProp> = ({ secClass = "" }) => {
                                     ))}
                                 </ul>
                                 <div className="pricing-one__btn-box">
-                                    <Link href="/pricing" className="thm-btn">
-                                        Choose Plan<span className="icon-arrow-right"></span>
+                                    <Link href="/contact" className="thm-btn">
+                                        Book Now<span className="icon-arrow-right"></span>
                                     </Link>
                                 </div>
                             </div>

@@ -40,40 +40,40 @@ const mapPoints: MapPoint[] = [
         pointClass: 'contact-one__point-1',
         markerClass: 'contact-one__markar',
         image: contactPopupImg1,
-        address: 'Suite 567 Springfield, IL 62701',
-        street: '1234 Elm Street,',
+        address: 'Scarborough, ON M1K 1S4',
+        street: '1064 Birchmount Rd,',
     },
     {
         id: 2,
         pointClass: 'contact-one__point-1 contact-one__point-2',
         markerClass: 'contact-one__markar contact-one__markar-2',
         image: contactPopupImg2,
-        address: 'Suite 567 Springfield, IL 62701',
-        street: '1234 Elm Street,',
+        address: 'Scarborough, ON M1K 1S4',
+        street: '1064 Birchmount Rd,',
     },
     {
         id: 3,
         pointClass: 'contact-one__point-1 contact-one__point-3',
         markerClass: 'contact-one__markar contact-one__markar-3',
         image: contactPopupImg3,
-        address: 'Suite 567 Springfield, IL 62701',
-        street: '1234 Elm Street,',
+        address: 'Scarborough, ON M1K 1S4',
+        street: '1064 Birchmount Rd,',
     },
     {
         id: 4,
         pointClass: 'contact-one__point-1 contact-one__point-4',
         markerClass: 'contact-one__markar contact-one__markar-4',
         image: contactPopupImg4,
-        address: 'Suite 567 Springfield, IL 62701',
-        street: '1234 Elm Street,',
+        address: 'Scarborough, ON M1K 1S4',
+        street: '1064 Birchmount Rd,',
     },
     {
         id: 5,
         pointClass: 'contact-one__point-1 contact-one__point-5',
         markerClass: 'contact-one__markar contact-one__markar-5',
         image: contactPopupImg5,
-        address: 'Suite 567 Springfield, IL 62701',
-        street: '1234 Elm Street,',
+        address: 'Scarborough, ON M1K 1S4',
+        street: '1064 Birchmount Rd,',
     },
 ];
 
@@ -82,24 +82,24 @@ const contactItems: ContactItem[] = [
         id: 1,
         iconClass: 'icon-call',
         label: 'Call Us Any Time:',
-        value: '+088 (246) 642-27-10',
-        href: 'tel:0882466422710',
+        value: '(416) 757-8368',
+        href: 'tel:4167578368',
     },
     {
         id: 2,
         iconClass: 'icon-envelope',
         label: 'Email Us:',
-        value: 'example@mail.com',
-        href: 'mailto:example@mail.com',
+        value: 'info@birchmountautorepair.ca',
+        href: 'mailto:info@birchmountautorepair.ca',
     },
 ];
 
 const serviceOptions: ServiceOption[] = [
-    { id: 1, value: "Type Of Service 01", label: 'Type Of Service 01' },
-    { id: 2, value: "Type Of Service 02", label: 'Type Of Service 02' },
-    { id: 3, value: "Type Of Service 03", label: 'Type Of Service 03' },
-    { id: 4, value: "Type Of Service 04", label: 'Type Of Service 04' },
-    { id: 5, value: "Type Of Service 05", label: 'Type Of Service 05' },
+    { id: 1, value: "Brake Repair & Service", label: 'Brake Repair & Service' },
+    { id: 2, value: "Oil Change & Lube", label: 'Oil Change & Lube' },
+    { id: 3, value: "Engine Diagnostics", label: 'Engine Diagnostics' },
+    { id: 4, value: "Transmission Service", label: 'Transmission Service' },
+    { id: 5, value: "Electrical Repair", label: 'Electrical Repair' },
 ];
 
 type ContactTwoProp = {
@@ -199,7 +199,7 @@ const ContactTwo: React.FC<ContactTwoProp> = ({ sectionClass = "" }) => {
                                     <span className="section-title__tagline-border"></span>Contact Us
                                 </h6>
                                 <h3 className="section-title__title title-animation">
-                                    <TextAnimation>Get Quick Appointment & Technical Support</TextAnimation>
+                                    <TextAnimation>Book an Appointment or Get a Free Estimate</TextAnimation>
                                 </h3>
                             </div>
                             <FadeInAdvanced

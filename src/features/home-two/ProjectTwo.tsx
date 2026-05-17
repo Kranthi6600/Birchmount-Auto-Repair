@@ -24,17 +24,17 @@ interface ProjectItem {
 }
 
 const projectItems: ProjectItem[] = [
-    { id: 1, image: projectImg1.src, title: 'AC Dust Cleaning', subTitle: 'Cleaning', to: '/project-details' },
-    { id: 2, image: projectImg2.src, title: 'Heating Service', subTitle: 'Maintenance', to: '/project-details' },
-    { id: 3, image: projectImg3.src, title: 'AC Repairing', subTitle: 'Repair', to: '/project-details' },
-    { id: 4, image: projectImg4.src, title: 'AC Installation', subTitle: 'Technology', to: '/project-details' },
-    { id: 5, image: projectImg5.src, title: 'AC Checking', subTitle: 'Maintenance', to: '/project-details' },
-    { id: 6, image: projectImg1.src, title: 'AC Dust Cleaning', subTitle: 'Cleaning', to: '/project-details' },
-    { id: 7, image: projectImg2.src, title: 'Heating Service', subTitle: 'Maintenance', to: '/project-details' },
-    { id: 8, image: projectImg3.src, title: 'AC Repairing', subTitle: 'Repair', to: '/project-details' },
-    { id: 9, image: projectImg4.src, title: 'AC Installation', subTitle: 'Technology', to: '/project-details' },
-    { id: 10, image: projectImg5.src, title: 'AC Checking', subTitle: 'Maintenance', to: '/project-details' },
-    { id: 11, image: projectImg1.src, title: 'AC Dust Cleaning', subTitle: 'Cleaning', to: '/project-details' },
+    { id: 1, image: projectImg1.src, title: '2018 Honda Civic', subTitle: 'Brake System', to: '/project-details' },
+    { id: 2, image: projectImg2.src, title: '2015 Ford F-150', subTitle: 'Engine Tune-Up', to: '/project-details' },
+    { id: 3, image: projectImg3.src, title: '2017 Toyota Camry', subTitle: 'Transmission', to: '/project-details' },
+    { id: 4, image: projectImg4.src, title: '2016 Chevy Equinox', subTitle: 'Electrical Repair', to: '/project-details' },
+    { id: 5, image: projectImg5.src, title: '2019 Hyundai Elantra', subTitle: 'Tire & Wheel', to: '/project-details' },
+    { id: 6, image: projectImg1.src, title: '2014 Dodge Ram 1500', subTitle: 'Oil & Fluid Service', to: '/project-details' },
+    { id: 7, image: projectImg2.src, title: '2020 Kia Sportage', subTitle: 'Suspension Repair', to: '/project-details' },
+    { id: 8, image: projectImg3.src, title: '2018 Honda Accord', subTitle: 'Brake Service', to: '/project-details' },
+    { id: 9, image: projectImg4.src, title: '2016 Nissan Altima', subTitle: 'Engine Diagnostics', to: '/project-details' },
+    { id: 10, image: projectImg5.src, title: '2019 Mazda CX-5', subTitle: 'Full Inspection', to: '/project-details' },
+    { id: 11, image: projectImg1.src, title: '2021 Ford Escape', subTitle: 'Transmission Service', to: '/project-details' },
 ];
 
 const ProjectTwo: React.FC = () => {
@@ -47,10 +47,10 @@ const ProjectTwo: React.FC = () => {
                 <div className="project-two__top">
                     <div className="section-title text-left sec-title-animation animation-style2">
                         <h6 className="section-title__tagline">
-                            <span className="section-title__tagline-border"></span>Our Successful Project
+                            <span className="section-title__tagline-border"></span>Recent Repairs
                         </h6>
                         <h3 className="section-title__title title-animation">
-                            <TextAnimation>We Have Completed Our <br /> Commercial Project</TextAnimation>
+                            <TextAnimation>Recent Repairs We&apos;re <br /> Proud Of</TextAnimation>
                         </h3>
                     </div>
                     <div className="project-two__btn-box">

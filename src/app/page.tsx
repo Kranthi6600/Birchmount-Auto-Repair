@@ -1,38 +1,32 @@
-import FooterOne from '@/components/footers/FooterOne';
-import HeaderOne from '@/components/headers/HeaderOne';
-import AboutOne from '@/features/home-one/AboutOne';
-import BlogOne from '@/features/home-one/BlogOne';
-import BrandOne from '@/features/home-one/BrandOne';
-import CounterOne from '@/features/home-one/CounterOne';
-import FeatureOne from '@/features/home-one/FeatureOne';
-import MainSlider from '@/features/home-one/MainSlider';
-import PricingOne from '@/features/home-one/PricingOne';
-import ProjectOne from '@/features/home-one/ProjectOne';
-import ServiceOne from '@/features/home-one/ServiceOne';
-import TeamOne from '@/features/home-one/TeamOne';
-import TestimonialOne from '@/features/home-one/TestimonialOne';
-import VideoOne from '@/features/home-one/VideoOne';
-import WhyChooseOne from '@/features/home-one/WhyChooceOne';
+import FooterTwo from '@/components/footers/FooterTwo';
+import HeaderTwo from '@/components/headers/HeaderTwo';
+import AboutTwo from '@/features/home-two/AboutTwo';
+import BlogTwo from '@/features/home-two/BlogTwo';
+import FeatureTwo from '@/features/home-two/FeatureTwo';
+import MainSliderTwo from '@/features/home-two/MainSliderTwo';
+import PricingTwo from '@/features/home-two/PricingTwo';
+import ProjectTwo from '@/features/home-two/ProjectTwo';
+import ServiceTwo from '@/features/home-two/ServiceTwo';
+import TeamTwo from '@/features/home-two/TeamTwo';
+import TestimonialTwo from '@/features/home-two/TestimonialTwo';
+import WhyChooseTwo from '@/features/home-two/WhyChooseTwo';
 import React from 'react';
 
 const page: React.FC = () => {
   return (
     <div className='page-wrapper'>
-      <HeaderOne />
-      <MainSlider />
-      <FeatureOne />
-      <AboutOne />
-      <ServiceOne />
-      <WhyChooseOne />
-      <CounterOne />
-      <ProjectOne />
-      <VideoOne />
-      <TeamOne />
-      <BrandOne />
-      <PricingOne />
-      <TestimonialOne />
-      <BlogOne />
-      <FooterOne />
+      <HeaderTwo />
+      <MainSliderTwo />
+      <FeatureTwo />
+      <AboutTwo />
+      <ServiceTwo />
+      <WhyChooseTwo />
+      <ProjectTwo />
+      <TeamTwo />
+      <PricingTwo />
+      <TestimonialTwo />
+      <BlogTwo />
+      <FooterTwo />
     </div>
   );
 };

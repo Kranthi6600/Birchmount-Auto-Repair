@@ -21,16 +21,16 @@ const leftColumnItems: ChooseItem[] = [
     {
         id: 1,
         iconClass: 'icon-product-return',
-        title: 'Warranty Service',
-        text: 'Duis aute irure dolor in repreh enderit.',
+        title: 'Warranty on All Work',
+        text: 'Every repair is backed by our parts-and-labour warranty — we stand behind what we do.',
         animationType: 'fadeInLeft',
         animationDelay: 100,
     },
     {
         id: 2,
         iconClass: 'icon-setting',
-        title: 'Secured Device',
-        text: 'Duis aute irure dolor in repreh enderit.',
+        title: 'Fast Turnaround',
+        text: 'Most repairs are completed the same day or next — because your time matters.',
         animationType: 'fadeInLeft',
         animationDelay: 400,
     },
@@ -40,16 +40,16 @@ const rightColumnItems: ChooseItem[] = [
     {
         id: 3,
         iconClass: 'icon-happy-customer',
-        title: 'Customer Service',
-        text: 'Duis aute irure dolor in repreh enderit.',
+        title: 'Honest Estimates',
+        text: 'We quote before we start, so you always know the cost upfront — no hidden fees.',
         animationType: 'fadeInRight',
         animationDelay: 200,
     },
     {
         id: 4,
         iconClass: 'icon-like',
-        title: 'No Virus Threat',
-        text: 'Duis aute irure dolor in repreh enderit.',
+        title: 'Local Expertise',
+        text: 'We know Scarborough roads and conditions — our advice is built on real local experience.',
         animationType: 'fadeInRight',
         animationDelay: 300,
     },
@@ -69,14 +69,13 @@ const WhyChooseOne: React.FC = () => {
                                 </h6>
                                 <h3 className="section-title__title title-animation">
                                     <TextAnimation animationStyle='style2'>
-                                        When You Need Repair We Are Always Here
+                                        Birchmount&apos;s Most Trusted Auto Repair Shop
                                     </TextAnimation>
                                 </h3>
                             </div>
                             <p className="why-choose-one__text">
-                                At our company, we are committed to providing excellent customer service, transparent
-                                pricing, and fast, reliable service. We understand the importance of keeping your home
-                                or business cool and comfortable.
+                                We&apos;ve built our reputation one honest repair at a time. Here&apos;s why Scarborough
+                                drivers keep coming back to us.
                             </p>
                             <div className="why-choose-one__list-box">
                                 <div className="row">

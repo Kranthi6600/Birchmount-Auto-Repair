@@ -17,32 +17,32 @@ interface ContactInfo {
     lines: { text: string; href?: string }[];
 }
 const serviceItems = [
-    { id: 1, value: "Service type", label: "Service type" },
-    { id: 2, value: "Type Of Service 01", label: "Type Of Service 01" },
-    { id: 3, value: "Type Of Service 02", label: "Type Of Service 02" },
-    { id: 4, value: "Type Of Service 03", label: "Type Of Service 03" },
-    { id: 5, value: "Type Of Service 04", label: "Type Of Service 04" },
+    { id: 1, value: "Select a Service", label: "Select a Service" },
+    { id: 2, value: "Brake Repair & Service", label: "Brake Repair & Service" },
+    { id: 3, value: "Oil Change & Lube", label: "Oil Change & Lube" },
+    { id: 4, value: "Engine Diagnostics", label: "Engine Diagnostics" },
+    { id: 5, value: "Transmission Service", label: "Transmission Service" },
+    { id: 6, value: "Tire Sales & Rotation", label: "Tire Sales & Rotation" },
+    { id: 7, value: "Electrical Repair", label: "Electrical Repair" },
 ]
 const contactInfoItems: ContactInfo[] = [
     {
         id: 1,
         iconClass: 'icon-location',
-        lines: [{ text: '3060 Commercial Street Road Fratton, Australia' }],
+        lines: [{ text: '1064 Birchmount Rd, Scarborough, ON M1K 1S4' }],
     },
     {
         id: 2,
         iconClass: 'icon-call',
         lines: [
-            { text: '+088 (246) 642-27-10', href: 'tel:0882466422710' },
-            { text: '+088 (246) 642-27-10', href: 'tel:0882466422710' },
+            { text: '(416) 757-8368', href: 'tel:4167578368' },
         ],
     },
     {
         id: 3,
         iconClass: 'icon-envelope',
         lines: [
-            { text: 'example@mail.com', href: 'mailto:example@mail.com' },
-            { text: 'example@mail.com', href: 'mailto:example@mail.com' },
+            { text: 'info@birchmountautorepair.ca', href: 'mailto:info@birchmountautorepair.ca' },
         ],
     },
 ];
@@ -85,18 +85,17 @@ const VideoOne: React.FC = () => {
                 <div className="video-one__inner wow fadeInUp" data-wow-delay="300ms">
                     <div className="section-title text-center sec-title-animation animation-style1">
                         <h6 className="section-title__tagline">
-                            <span className="section-title__tagline-border"></span>Latest Video
+                            <span className="section-title__tagline-border"></span>Watch &amp; Contact Us
                         </h6>
                         <h3 className="section-title__title title-animation">
                             <TextAnimation animationStyle='style1'>
-                                Let Us Know Or Contact Us
+                                Why Scarborough Trusts Birchmount Auto Repair
                             </TextAnimation>
                         </h3>
                     </div>
                     <p className="video-one__text">
-                        There are many variations of passages available but the majority have suffered alteration
-                        <br /> in some form by injected humour randomised words look even going
-                        <br /> to use a passage believable.
+                        Have a question or ready to book? Send us a message or call us directly —
+                        <br /> we&apos;re always happy to help Scarborough drivers get back on the road.
                     </p>
                     <div className="video-one__video-link">
                         <span onClick={(e) => handleVideoClick(e, "https://www.youtube.com/watch?v=Get7rqXYrbQ")}

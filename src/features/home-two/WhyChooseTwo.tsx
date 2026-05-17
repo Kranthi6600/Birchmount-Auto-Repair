@@ -23,22 +23,22 @@ interface ProgressItem {
 }
 
 const pointsListOne: PointItem[] = [
-    { id: 1, label: 'Expert Technicians' },
-    { id: 2, label: 'Quick Turnaround' },
-    { id: 3, label: 'Affordable Pricing' },
+    { id: 1, label: 'Certified Technicians' },
+    { id: 2, label: 'Same-Day Service' },
+    { id: 3, label: 'Upfront Pricing' },
 ];
 
 const pointsListTwo: PointItem[] = [
-    { id: 4, label: 'Comprehensive Services' },
-    { id: 5, label: 'Quality Assurance' },
-    { id: 6, label: 'Customer Satisfaction' },
+    { id: 4, label: 'All Makes & Models' },
+    { id: 5, label: 'Warranty on All Work' },
+    { id: 6, label: '5,000+ Happy Customers' },
 ];
 
 const progressItems: ProgressItem[] = [
-    { id: 1, title: 'Active Users Product', percent: 76,},
-    { id: 2, title: 'Skilled Professionals', percent: 90,},
-    { id: 3, title: 'Replacment Device', percent: 92, },
-    { id: 4, title: 'Repairing & Testing', percent: 85,},
+    { id: 1, title: 'Brake & Safety Systems', percent: 96 },
+    { id: 2, title: 'Engine & Transmission', percent: 92 },
+    { id: 3, title: 'Electrical Diagnostics', percent: 88 },
+    { id: 4, title: 'Customer Satisfaction', percent: 98 },
 ];
 
 const WhyChooseTwo: React.FC = () => {
@@ -76,10 +76,10 @@ const WhyChooseTwo: React.FC = () => {
                                     </div>
                                 </div>
                                 <div className="why-choose-two__improve-box">
-                                    <p className="why-choose-two__improve-sub-title">(Based On 5K Reviews)</p>
-                                    <h3 className="why-choose-two__title">Bring or Courier Device</h3>
+                                    <p className="why-choose-two__improve-sub-title">(Based on 4,800+ Reviews)</p>
+                                    <h3 className="why-choose-two__title">Serving Scarborough Drivers</h3>
                                     <p className="why-choose-two__improve-text">
-                                        Improve gadget a/c smartphone<br /> laptop repair services.
+                                        Honest auto repair with<br /> guaranteed results.
                                     </p>
                                 </div>
                                 <div className="why-choose-two__shape-1"></div>
@@ -93,7 +93,7 @@ const WhyChooseTwo: React.FC = () => {
                                     <span className="section-title__tagline-border"></span>Why Choose Us
                                 </h6>
                                 <h3 className="section-title__title title-animation">
-                                    <TextAnimation>Trust An Electrician When You<br /> Don't Know What To Do</TextAnimation>
+                                    <TextAnimation>Birchmount&apos;s Most Trusted<br /> Auto Repair Shop</TextAnimation>
                                 </h3>
                             </div>
                             <div className="why-choose-two__points-box">

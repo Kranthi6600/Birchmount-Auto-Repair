@@ -24,42 +24,58 @@ interface PricingPlan {
     hasPremiumExtras?: boolean;
 }
 
-const defaultFeatures: PricingFeature[] = [
-    { id: 1, label: 'AC replacement' },
-    { id: 2, label: 'Air filter replacement' },
-    { id: 3, label: 'Winning Metric for Your Startup' },
-    { id: 4, label: '20% Off All Service' },
-    { id: 5, label: '24/7 Supports' },
+const oilChangeFeatures: PricingFeature[] = [
+    { id: 1, label: 'Conventional or synthetic oil' },
+    { id: 2, label: 'New oil filter included' },
+    { id: 3, label: 'Fluid top-up check' },
+    { id: 4, label: 'Tire pressure inspection' },
+    { id: 5, label: 'Quick multi-point check' },
+];
+
+const brakeFeatures: PricingFeature[] = [
+    { id: 1, label: 'Brake pad replacement' },
+    { id: 2, label: 'Rotor inspection & resurfacing' },
+    { id: 3, label: 'Brake fluid check' },
+    { id: 4, label: 'Caliper inspection' },
+    { id: 5, label: 'Road-test after service' },
+];
+
+const diagnosticFeatures: PricingFeature[] = [
+    { id: 1, label: 'Full computer scan' },
+    { id: 2, label: 'Check-engine code analysis' },
+    { id: 3, label: 'Written inspection report' },
+    { id: 4, label: 'Safety systems check' },
+    { id: 5, label: 'No-obligation repair estimate' },
 ];
 
 const pricingPlans: PricingPlan[] = [
     {
         id: 1,
-        planName: 'Basic Plan',
-        price: '$215.5',
-        pricePeriod: 'Per Month',
-        features: defaultFeatures,
-        to: '/pricing',
+        planName: 'Oil Change Service',
+        price: 'Call for',
+        pricePeriod: 'Pricing',
+        features: oilChangeFeatures,
+        to: '/contact',
         animationClass: 'fadeInLeft',
         animationDelay: 100,
     },
     {
         id: 2,
-        planName: 'Standard Plan',
-        price: '$320.2',
-        pricePeriod: '6 Month',
-        features: defaultFeatures,
-        to: '/pricing',
+        planName: 'Brake Service',
+        price: 'Call for',
+        pricePeriod: 'Estimate',
+        features: brakeFeatures,
+        to: '/contact',
         animationClass: 'fadeInUp',
         animationDelay: 300,
     },
     {
         id: 3,
-        planName: 'Premium Plan',
-        price: '$450.3',
-        pricePeriod: 'Annual',
-        features: defaultFeatures,
-        to: '/pricing',
+        planName: 'Full Diagnostic',
+        price: 'Call for',
+        pricePeriod: 'Appointment',
+        features: diagnosticFeatures,
+        to: '/contact',
         animationClass: 'fadeInRight',
         animationDelay: 500,
         hasPremiumExtras: true,
@@ -78,7 +94,7 @@ const PricingTwo: React.FC = () => {
                         <span className="section-title__tagline-border"></span>Pricing Plan
                     </h6>
                     <h3 className="section-title__title title-animation">
-                        <TextAnimation>Our Maintenance Perfect <br /> Pricing Plan.</TextAnimation>
+                        <TextAnimation>Transparent, Fair <br /> Pricing on All Services.</TextAnimation>
                     </h3>
                 </div>
                 <div className="row">
@@ -112,7 +128,7 @@ const PricingTwo: React.FC = () => {
                                             </ul>
                                             <div className="pricing-two__btn-box">
                                                 <Link href={plan.to} className="thm-btn">
-                                                    Choose Package
+                                                    Book Now
                                                     <span className="icon-arrow-right"></span>
                                                 </Link>
                                             </div>

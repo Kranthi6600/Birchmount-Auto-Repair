@@ -19,9 +19,9 @@ interface PointItem {
 }
 
 const pointsList: PointItem[] = [
-    { id: 1, iconClass: 'icon-setting', label: 'Planning' },
-    { id: 2, iconClass: 'icon-setting', label: 'Replacing' },
-    { id: 3, iconClass: 'icon-setting', label: 'Installing' },
+    { id: 1, iconClass: 'icon-setting', label: 'Diagnostics' },
+    { id: 2, iconClass: 'icon-setting', label: 'Repair & Parts' },
+    { id: 3, iconClass: 'icon-setting', label: 'Quality Testing' },
 ];
 
 const AboutTwo: React.FC = () => {
@@ -43,11 +43,11 @@ const AboutTwo: React.FC = () => {
                                     <span className="section-title__tagline-border"></span>About Our Company
                                 </h6>
                                 <h3 className="section-title__title title-animation">
-                                    <TextAnimation> Heating & AC Installation <br /> Repair Company</TextAnimation>
+                                    <TextAnimation>Scarborough&apos;s Trusted <br /> Auto Repair Shop</TextAnimation>
                                 </h3>
                             </div>
                             <p className="about-two__text-1">
-                                Our Company Provide The Best <span>A/C</span> Service.
+                                Our shop provides the best <span>auto repair</span> service in Scarborough.
                             </p>
                             <ul className="about-two__points-list list-unstyled">
                                 {pointsList.map((point) => (
@@ -61,8 +61,8 @@ const AboutTwo: React.FC = () => {
                             </ul>
                             <p className="about-two__text-2">
                                 At <span>Birchmount Auto Repair</span>, we are a team of highly skilled technicians with years of
-                                experience in the tech repair industry. Our expertise covers a broad spectrum of
-                                devices, including Ac, laptops, desktops, smartphones, tablets, and more..
+                                experience in automotive repair. We work on all makes and models — from routine oil
+                                changes to complex engine rebuilds.
                             </p>
                             <div className="about-two__btn-box">
                                 <Link href="/about" className="thm-btn">

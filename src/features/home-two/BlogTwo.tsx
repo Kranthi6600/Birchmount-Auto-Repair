@@ -15,7 +15,7 @@ const BlogTwo: React.FC = () => {
                         <span className="section-title__tagline-border"></span>Blog & News
                     </h6>
                     <h3 className="section-title__title title-animation">
-                        <TextAnimation> Get Latest News & Updates</TextAnimation>
+                        <TextAnimation>Auto Tips &amp; Advice from Our Team</TextAnimation>
                     </h3>
                 </div>
                 <div className="row">

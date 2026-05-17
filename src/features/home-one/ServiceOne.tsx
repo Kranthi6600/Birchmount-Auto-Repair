@@ -21,38 +21,45 @@ interface ServiceItem {
 const serviceItems: ServiceItem[] = [
     {
         id: 1,
-        iconClass: 'icon-mobile-phone',
-        title: 'Smart Phone Repair\nService',
-        to: '/commercial-services',
-        text: 'There are many variations available majority of word have in some form suffered.',
+        iconClass: 'icon-setting',
+        title: 'Brake Repair\n& Service',
+        to: '/services',
+        text: 'Pads, rotors, calipers, and brake fluid flushes — we keep your stopping power in top shape.',
     },
     {
         id: 2,
-        iconClass: 'icon-chirger',
-        title: 'Gadget Repair\nService',
-        to: '/installing-ceiling-fan',
-        text: 'There are many variations available majority of word have in some form suffered.',
+        iconClass: 'icon-services',
+        title: 'Oil Change\n& Lube',
+        to: '/services',
+        text: 'Quick, thorough oil and filter changes using quality conventional or synthetic oils.',
     },
     {
         id: 3,
-        iconClass: 'icon-lamp',
-        title: 'Hardware Update\nService',
-        to: '/lighting-fixtures',
-        text: 'There are many variations available majority of word have in some form suffered.',
+        iconClass: 'icon-technician-1',
+        title: 'Engine\nDiagnostics',
+        to: '/services',
+        text: 'Advanced scan tools pinpoint check-engine issues fast so you\'re not guessing at the cause.',
     },
     {
         id: 4,
-        iconClass: 'icon-air-conditioning',
-        title: 'Tablets & iPad\nServices',
-        to: '/maintenance-service',
-        text: 'There are many variations available majority of word have in some form suffered.',
+        iconClass: 'icon-product-return',
+        title: 'Transmission\nService',
+        to: '/services',
+        text: 'Fluid changes, filter replacements, and full rebuild service to keep your drivetrain running smoothly.',
     },
     {
         id: 5,
-        iconClass: 'icon-laptop',
-        title: 'Laptop & Desktop\nRepair',
-        to: '/commercial-services',
-        text: 'There are many variations available majority of word have in some form suffered.',
+        iconClass: 'icon-like',
+        title: 'Tire Sales\n& Rotation',
+        to: '/services',
+        text: 'Balancing, rotation, and new-tire installation on all makes — get the grip you need year-round.',
+    },
+    {
+        id: 6,
+        iconClass: 'icon-affordable-price',
+        title: 'Electrical\nRepair',
+        to: '/services',
+        text: 'Batteries, alternators, starters, and wiring diagnosis — we trace and fix electrical faults accurately.',
     },
 ];
 
@@ -78,13 +85,13 @@ const ServiceOne: React.FC = () => {
                                 </h6>
                                 <h3 className="section-title__title title-animation">
                                     <TextAnimation animationStyle='style1'>
-                                        Let's Check Our Best<br />Repair Services In City
+                                        Complete Auto Repair<br />Services in Scarborough
                                     </TextAnimation>
                                 </h3>
                             </div>
                             <p className="services-one__text">
-                                At our company, we are committed to providing excellent customer service, transparent
-                                pricing, and fast, reliable service importance of keeping.
+                                From routine maintenance to complex repairs, our certified technicians handle it all
+                                with speed, honesty, and skill.
                             </p>
                         </div>
                     </div>

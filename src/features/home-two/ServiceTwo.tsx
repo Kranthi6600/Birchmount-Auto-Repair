@@ -27,42 +27,42 @@ const serviceItems: ServiceItem[] = [
     {
         id: 1,
         image: servicesImg1,
-        iconClass: 'icon-ac1',
-        title: 'A/C Installation',
-        to: '/installing-ceiling-fan',
-        hoverText: 'There are many variations of passages of Lorem Ipsum available, but the majority',
+        iconClass: 'icon-setting',
+        title: 'Brake Repair & Service',
+        to: '/services',
+        hoverText: 'Pads, rotors, calipers, and brake fluid flushes — we keep your stopping power in top shape.',
     },
     {
         id: 2,
         image: servicesImg2,
-        iconClass: 'icon-air-conditioning',
-        title: 'Heating Service',
-        to: '/short-circuit-repair',
-        hoverText: 'There are many variations of passages of Lorem Ipsum available, but the majority',
+        iconClass: 'icon-services',
+        title: 'Oil Change & Lube',
+        to: '/services',
+        hoverText: 'Quick, thorough oil and filter changes using quality conventional or synthetic oils.',
     },
     {
         id: 3,
         image: servicesImg3,
-        iconClass: 'icon-ac',
-        title: 'Dust Cleaning',
-        to: '/maintenance-service',
-        hoverText: 'There are many variations of passages of Lorem Ipsum available, but the majority',
+        iconClass: 'icon-technician-1',
+        title: 'Engine Diagnostics',
+        to: '/services',
+        hoverText: 'Advanced scan tools pinpoint check-engine issues fast so you\'re not guessing at the cause.',
     },
     {
         id: 4,
         image: servicesImg4,
         iconClass: 'icon-customer-support',
-        title: 'Coolling Services',
-        to: '/lighting-fixtures',
-        hoverText: 'There are many variations of passages of Lorem Ipsum available, but the majority',
+        title: 'Transmission Service',
+        to: '/services',
+        hoverText: 'Fluid changes, filter replacements, and rebuild service to keep your drivetrain running smoothly.',
     },
     {
         id: 5,
         image: servicesImg5,
         iconClass: 'icon-settings-1',
-        title: 'A/C Repairing',
-        to: '/installing-ceiling-fan',
-        hoverText: 'There are many variations of passages of Lorem Ipsum available, but the majority',
+        title: 'Electrical Repair',
+        to: '/services',
+        hoverText: 'Batteries, alternators, starters, and wiring diagnosis — we trace and fix electrical faults accurately.',
     },
 ];
 
@@ -80,7 +80,7 @@ const ServiceTwo: React.FC = () => {
                         <span className="section-title__tagline-border"></span>Our Service
                     </h6>
                     <h3 className="section-title__title title-animation">
-                        <TextAnimation>Keeping Your AC Running <br /> With Smoothly</TextAnimation>
+                        <TextAnimation>Complete Auto Repair Services <br /> in Scarborough</TextAnimation>
                     </h3>
                 </div>
                 <div className="services-two__carousel  ">

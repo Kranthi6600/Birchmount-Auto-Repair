@@ -22,32 +22,32 @@ interface TeamMember {
 const teamMembers: TeamMember[] = [
     {
         id: 1,
-        name: 'Adam Smith',
-        role: 'Technician',
+        name: 'Mike Kowalski',
+        role: 'Master Technician',
         image: team1,
         animationDirection: 'fadeInLeft',
         animationDelay: 100,
     },
     {
         id: 2,
-        name: 'Harbert Spin',
-        role: 'Technician',
+        name: 'James Osei',
+        role: 'Diagnostic Specialist',
         image: team2,
         animationDirection: 'fadeInLeft',
         animationDelay: 300,
     },
     {
         id: 3,
-        name: 'Robert Son',
-        role: 'Technician',
+        name: 'Tony Ferrara',
+        role: 'Brake & Suspension Expert',
         image: team3,
         animationDirection: 'fadeInRight',
         animationDelay: 500,
     },
     {
         id: 4,
-        name: 'Alisha Martin',
-        role: 'Technician',
+        name: 'Sandra Nguyen',
+        role: 'Service Advisor',
         image: team4,
         animationDirection: 'fadeInRight',
         animationDelay: 700,
@@ -64,7 +64,7 @@ const TeamOne: React.FC = () => {
                     </h6>
                     <h3 className="section-title__title title-animation">
                         <TextAnimation animationStyle='style2'>
-                            Meet The Expert Team Member
+                            Meet Our Certified Technicians
                         </TextAnimation>
                     </h3>
                 </div>

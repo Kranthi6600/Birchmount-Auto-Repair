@@ -31,50 +31,50 @@ const projectItems: ProjectItem[] = [
     {
         id: 1,
         image: project1.src,
-        subTitle: 'Express Electric',
-        title: 'Charging issues',
+        subTitle: 'Brake System',
+        title: '2018 Honda Civic',
         to: '/project-details',
     },
     {
         id: 2,
         image: project2.src,
-        subTitle: 'Computer Repair',
-        title: 'Hardware Update',
+        subTitle: 'Engine Tune-Up',
+        title: '2015 Ford F-150',
         to: '/project-details',
     },
     {
         id: 3,
         image: project3.src,
-        subTitle: 'Express Electric',
-        title: 'Charging issues',
+        subTitle: 'Transmission Service',
+        title: '2017 Toyota Camry',
         to: '/project-details',
     },
     {
         id: 4,
         image: project4.src,
-        subTitle: 'Recovery',
-        title: 'Hardware & Software',
+        subTitle: 'Electrical Repair',
+        title: '2016 Chevrolet Equinox',
         to: '/project-details',
     },
     {
         id: 5,
         image: project5.src,
-        subTitle: 'Mac Repair',
-        title: 'Apple Iphone Repair',
+        subTitle: 'Tire & Wheel Service',
+        title: '2019 Hyundai Elantra',
         to: '/project-details',
     },
     {
         id: 6,
         image: project6.src,
-        subTitle: 'Camera Repair',
-        title: 'Microphone Faults',
+        subTitle: 'Oil & Fluid Service',
+        title: '2014 Dodge Ram 1500',
         to: '/project-details',
     },
     {
         id: 7,
         image: project7.src,
-        subTitle: 'Express Electric',
-        title: 'Battery Replacement',
+        subTitle: 'Suspension Repair',
+        title: '2020 Kia Sportage',
         to: '/project-details',
     },
 ];
@@ -91,9 +91,9 @@ const ProjectOne: React.FC = () => {
             <div className="container">
                 <div className="section-title text-center sec-title-animation animation-style1">
                     <h6 className="section-title__tagline">
-                        <span className="section-title__tagline-border"></span>Latest Projects
+                        <span className="section-title__tagline-border"></span>Recent Repairs
                     </h6>
-                    <h3 className="section-title__title title-animation"><TextAnimation>Our Completed Projects</TextAnimation></h3>
+                    <h3 className="section-title__title title-animation"><TextAnimation>Work We&apos;re Proud Of</TextAnimation></h3>
                 </div>
                 <div className="project-one__carousel  ">
                     <Swiper

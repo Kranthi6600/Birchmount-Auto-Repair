@@ -48,17 +48,14 @@ const MainSlider: React.FC = () => {
                                 <div className="main-slider__content">
                                     <div className="main-slider__sub-title-box">
                                         <div className="main-slider__sub-title-shape"></div>
-                                        <p className="main-slider__sub-title">Find the Best support you need today.</p>
+                                        <p className="main-slider__sub-title">Scarborough&apos;s Trusted Auto Repair Shop</p>
                                     </div>
-                                    <h2 className="main-slider__title">Professional <span>repairs</span> for <br /> <span>computers &
-                                        mobiles</span>
+                                    <h2 className="main-slider__title">Expert Auto <span>Repairs</span> for <br /> <span>Every Vehicle</span>
                                     </h2>
-                                    <p className="main-slider__text">We help companies develop powerful corporate social
-                                        responsibility, grantmaking, <br /> and employee engagement strategies. Dicta sunt
-                                        explicabo. Nemo</p>
+                                    <p className="main-slider__text">Honest estimates, certified technicians, and fast turnaround — <br /> right here in Scarborough. Call us at (416) 757-8368.</p>
                                     <div className="main-slider__btn-box">
                                         <div className="main-slider__btn">
-                                            <Link href="/about" className="thm-btn">Discover More <span
+                                            <Link href="/contact" className="thm-btn">Book an Appointment <span
                                                 className="icon-arrow-right"></span></Link>
                                         </div>
                                         <div className="main-slider__video-link">
@@ -91,15 +88,13 @@ const MainSlider: React.FC = () => {
                                 <div className="main-slider__content">
                                     <div className="main-slider__sub-title-box">
                                         <div className="main-slider__sub-title-shape"></div>
-                                        <p className="main-slider__sub-title">Birchmount Auto Repair is the best service provider.</p>
+                                        <p className="main-slider__sub-title">Quality Repairs. Fair Prices. Zero Surprises.</p>
                                     </div>
-                                    <h2 className="main-slider__title">Bright Solutions <br /> for <span>Dark Problems</span></h2>
-                                    <p className="main-slider__text">We help companies develop powerful corporate social
-                                        responsibility, grantmaking, <br /> and employee engagement strategies. Dicta sunt
-                                        explicabo. Nemo</p>
+                                    <h2 className="main-slider__title">Get Back on the <br /> Road <span>Fast</span></h2>
+                                    <p className="main-slider__text">From brake jobs to full engine diagnostics, we get you back on the road <br /> without the dealership markup.</p>
                                     <div className="main-slider__btn-box">
                                         <div className="main-slider__btn">
-                                            <Link href="/about" className="thm-btn">Discover More <span
+                                            <Link href="/services" className="thm-btn">View Our Services <span
                                                 className="icon-arrow-right"></span></Link>
                                         </div>
                                         <div className="main-slider__video-link">
@@ -133,16 +128,13 @@ const MainSlider: React.FC = () => {
                                 <div className="main-slider__content">
                                     <div className="main-slider__sub-title-box">
                                         <div className="main-slider__sub-title-shape"></div>
-                                        <p className="main-slider__sub-title">Find the Best support you need today.</p>
+                                        <p className="main-slider__sub-title">Serving Scarborough Drivers Since Day One</p>
                                     </div>
-                                    <h2 className="main-slider__title">Current Solutions for <br /> Your
-                                        <span>Modern Problems</span></h2>
-                                    <p className="main-slider__text">We help companies develop powerful corporate social
-                                        responsibility, grantmaking, <br /> and employee engagement strategies. Dicta sunt
-                                        explicabo. Nemo</p>
+                                    <h2 className="main-slider__title">Trusted Mechanics <br /> Your <span>Neighbours Rely On</span></h2>
+                                    <p className="main-slider__text">We stand behind every repair with a service warranty and <br /> straightforward pricing — no surprises, no upsells.</p>
                                     <div className="main-slider__btn-box">
                                         <div className="main-slider__btn">
-                                            <Link href="/about" className="thm-btn">Discover More <span
+                                            <Link href="/contact" className="thm-btn">Get a Free Estimate <span
                                                 className="icon-arrow-right"></span></Link>
                                         </div>
                                         <div className="main-slider__video-link">

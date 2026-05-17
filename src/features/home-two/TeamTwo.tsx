@@ -37,8 +37,8 @@ const teamMembers: TeamMember[] = [
     {
         id: 1,
         image: teamImg1,
-        name: 'Wade Warren',
-        subTitle: 'A/C Technicians',
+        name: 'Mike Kowalski',
+        subTitle: 'Master Technician',
         to: '/team-details',
         animationClass: 'fadeInLeft',
         animationDelay: 100,
@@ -47,8 +47,8 @@ const teamMembers: TeamMember[] = [
     {
         id: 2,
         image: teamImg2,
-        name: 'Adam Smith',
-        subTitle: 'Senior Electrician',
+        name: 'James Osei',
+        subTitle: 'Diagnostic Specialist',
         to: '/team-details',
         animationClass: 'fadeInLeft',
         animationDelay: 300,
@@ -57,8 +57,8 @@ const teamMembers: TeamMember[] = [
     {
         id: 3,
         image: teamImg3,
-        name: 'Harbert Spin',
-        subTitle: 'Support Specialist',
+        name: 'Tony Ferrara',
+        subTitle: 'Brake & Suspension Expert',
         to: '/team-details',
         animationClass: 'fadeInRight',
         animationDelay: 500,
@@ -67,8 +67,8 @@ const teamMembers: TeamMember[] = [
     {
         id: 4,
         image: teamImg4,
-        name: 'Darrell Steward',
-        subTitle: 'A/C Specialist',
+        name: 'Sandra Nguyen',
+        subTitle: 'Service Advisor',
         to: '/team-details',
         animationClass: 'fadeInRight',
         animationDelay: 700,
@@ -86,7 +86,7 @@ const TeamTwo: React.FC = () => {
                         <span className="section-title__tagline-border"></span>Our Technicians
                     </h6>
                     <h3 className="section-title__title title-animation">
-                        <TextAnimation>Meet Our Skilled Technicians for <br /> Your Tech Needs</TextAnimation>
+                        <TextAnimation>Meet Our Certified <br /> Technicians</TextAnimation>
                     </h3>
                 </div>
                 <div className="row">

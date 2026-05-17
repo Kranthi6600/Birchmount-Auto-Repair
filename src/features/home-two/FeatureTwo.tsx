@@ -21,36 +21,36 @@ const featureItems: FeatureItem[] = [
     {
         id: 1,
         iconClass: 'icon-settings-1',
-        title: 'Indoor Repairing',
-        to: '/commercial-services',
-        text: 'The wise man therefore always holds in these matters to this principle of',
+        title: 'Free Estimates',
+        to: '/contact',
+        text: 'We assess your vehicle and provide a clear, no-obligation quote before any work begins.',
         animationClass: 'fadeInLeft',
         animationDelay: 100,
     },
     {
         id: 2,
-        iconClass: 'icon-ac',
-        title: 'Dust Cleaning',
-        to: '/maintenance-service',
-        text: 'The wise man therefore always holds in these matters to this principle of',
+        iconClass: 'icon-technician-1',
+        title: 'Certified Technicians',
+        to: '/team',
+        text: 'Our mechanics hold industry certifications and bring decades of hands-on experience to every repair.',
         animationClass: 'fadeInUp',
         animationDelay: 300,
     },
     {
         id: 3,
         iconClass: 'icon-customer-support',
-        title: 'Fixing And Installation',
-        to: '/lighting-fixtures',
-        text: 'The wise man therefore always holds in these matters to this principle of',
+        title: 'Same-Day Service',
+        to: '/services',
+        text: 'Many routine repairs and diagnostics can be completed the same day you bring your vehicle in.',
         animationClass: 'fadeInRight',
         animationDelay: 500,
     },
     {
         id: 4,
         iconClass: 'icon-affordable-price',
-        title: 'No Upfront Payments',
-        to: '/short-circuit-repair',
-        text: 'The wise man therefore always holds in these matters to this principle of',
+        title: 'Warranty on All Work',
+        to: '/services',
+        text: 'Every repair is backed by our parts-and-labour warranty — we stand behind what we do.',
         animationClass: 'fadeInUp',
         animationDelay: 600,
     },
@@ -67,7 +67,7 @@ const FeatureTwo: React.FC = () => {
                     <h6 className="section-title__tagline">
                         <span className="section-title__tagline-border"></span>Our Features
                     </h6>
-                    <h3 className="section-title__title title-animation"><TextAnimation animationStyle='style2'>Our Latest New And Articles</TextAnimation></h3>
+                    <h3 className="section-title__title title-animation"><TextAnimation animationStyle='style2'>Why Drivers Trust Birchmount Auto Repair</TextAnimation></h3>
                 </div>
                 <div className="row">
                     {featureItems.map((item) => (

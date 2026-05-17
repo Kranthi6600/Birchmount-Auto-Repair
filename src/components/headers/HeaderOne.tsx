@@ -29,7 +29,7 @@ const HeaderOne: React.FC = () => {
                                     <i className="icon-call"></i>
                                 </div>
                                 <div className="text">
-                                    <p><a href="tel:15502505260">+1 (550) 250 5260</a></p>
+                                    <p><a href="tel:4167578368">(416) 757-8368</a></p>
                                 </div>
                             </li>
                             <li>
@@ -37,7 +37,7 @@ const HeaderOne: React.FC = () => {
                                     <i className="icon-envelope"></i>
                                 </div>
                                 <div className="text">
-                                    <p><a href="mailto:info@Birchmount Auto Repair24.com">info@Birchmount Auto Repair24.com</a>
+                                    <p><a href="mailto:info@birchmountautorepair.ca">info@birchmountautorepair.ca</a>
                                     </p>
                                 </div>
                             </li>
@@ -46,17 +46,17 @@ const HeaderOne: React.FC = () => {
                                     <i className="icon-location"></i>
                                 </div>
                                 <div className="text">
-                                    <p>4124 Cimmaron Road, CA 92806</p>
+                                    <p>1064 Birchmount Rd, Scarborough, ON M1K 1S4</p>
                                 </div>
                             </li>
                         </ul>
-                        <p className="main-menu__top-welcome-text">Welcome to Our Birchmount Auto Repair Office</p>
+                        <p className="main-menu__top-welcome-text">Welcome to Birchmount Auto Repair — Scarborough&apos;s Trusted Mechanic</p>
                         <div className="main-menu__top-right">
                             <div className="main-menu__top-time">
                                 <div className="main-menu__top-time-icon">
                                     <span className="icon-clock"></span>
                                 </div>
-                                <p className="main-menu__top-text">Mon - Fri: 09:00 - 05:00</p>
+                                <p className="main-menu__top-text">Mon–Fri: 8am–6pm | Sat: 9am–3pm</p>
                             </div>
                             <div className="main-menu__social">
                                 <a href="#"><i className="fab fa-twitter"></i></a>

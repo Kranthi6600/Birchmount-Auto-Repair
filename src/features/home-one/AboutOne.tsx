@@ -29,21 +29,21 @@ const pointsData: PointItem[] = [
     {
         id: 1,
         iconClass: 'icon-affordable-price',
-        title: 'Our Affordable Price',
-        text: 'There are many variations of passage majority',
+        title: 'Fair, Upfront Pricing',
+        text: 'No hidden fees, no surprises — we quote before we wrench.',
     },
     {
         id: 2,
         iconClass: 'icon-happy-customer',
-        title: 'Customer Satisfied',
-        text: 'There are many variations of passage majority',
+        title: 'Locally Trusted',
+        text: 'Scarborough families count on us for everything from oil changes to engine rebuilds.',
     },
 ];
 
 const checkItems: CheckItem[] = [
-    { id: 1, text: 'Monotonically predominate next-generation.' },
-    { id: 2, text: 'Interactively predominate out-of-the-box best practices.' },
-    { id: 3, text: 'Skilled Technicians Invest in a quality phone case to protect device.' },
+    { id: 1, text: 'Certified technicians with decades of hands-on experience.' },
+    { id: 2, text: 'Warranty backed on all parts and labour.' },
+    { id: 3, text: 'Transparent diagnostics — we show you the problem before we fix it.' },
 ];
 
 
@@ -93,14 +93,14 @@ const AboutOne: React.FC<SecProp> = ({ secClass = "" }) => {
                                 </h6>
                                 <h3 className="section-title__title title-animation">
                                     <TextAnimation animationStyle='style2'>
-                                        Welcome To Repair & Installing Company
+                                        Scarborough&apos;s Trusted Auto Repair Shop
                                     </TextAnimation>
                                 </h3>
                             </div>
                             <p className="about-one__text">
-                                There are many variations of passages available randomised words which the majority
-                                have suffered alteration in some form, by injected humour look page when looking at
-                                its layout even slightly believable.
+                                Birchmount Auto Repair has been serving Scarborough drivers from our location at
+                                1064 Birchmount Rd. We&apos;re your neighbourhood shop — not a chain, not a dealership —
+                                just honest mechanics who treat your vehicle like their own.
                             </p>
                             <div className="about-one__points-box">
                                 <ul className="about-one__points list-unstyled">

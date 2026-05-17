@@ -65,17 +65,15 @@ const MainSliderTwo: React.FC = () => {
                                 <div className="main-slider-two__content">
                                     <div className="main-slider-two__sub-title-box">
                                         <div className="main-slider-two__sub-title-shape"></div>
-                                        <p className="main-slider-two__sub-title">Best Repairs Services</p>
+                                        <p className="main-slider-two__sub-title">Scarborough&apos;s Trusted Auto Repair Shop</p>
                                     </div>
-                                    <h2 className="main-slider-two__title">Cooling Comfort <span>One Repair</span> <br /> at Time In
-                                        Your Home
+                                    <h2 className="main-slider-two__title">Expert Auto <span>Repairs</span> <br /> You Can Count On
                                     </h2>
-                                    <p className="main-slider-two__text">We have been operating for over a decade, providing
-                                        top-notch services We have been <br /> operating for over a decade and delivering
-                                        exceptional results to our valued clients.</p>
+                                    <p className="main-slider-two__text">Honest estimates, certified technicians, and fast turnaround
+                                        — right here in Scarborough. <br /> Call us at (416) 757-8368.</p>
                                     <div className="main-slider-two__btn-box">
                                         <div className="main-slider-two__btn">
-                                            <Link href="/about" className="thm-btn">Discover More <span
+                                            <Link href="/contact" className="thm-btn">Book an Appointment <span
                                                 className="icon-arrow-right"></span></Link>
                                         </div>
                                         <div className="main-slider-two__video-link">
@@ -109,16 +107,15 @@ const MainSliderTwo: React.FC = () => {
                                 <div className="main-slider-two__content">
                                     <div className="main-slider-two__sub-title-box">
                                         <div className="main-slider-two__sub-title-shape"></div>
-                                        <p className="main-slider-two__sub-title">Best Repairs Services</p>
+                                        <p className="main-slider-two__sub-title">Quality Repairs. Fair Prices. Zero Surprises.</p>
                                     </div>
-                                    <h2 className="main-slider-two__title">Keeping Your <span>AC Running</span> <br /> With Smoothly
+                                    <h2 className="main-slider-two__title">Get Back on the <br /> Road <span>Fast</span>
                                     </h2>
-                                    <p className="main-slider-two__text">We have been operating for over a decade, providing
-                                        top-notch services We have been <br /> operating for over a decade and delivering
-                                        exceptional results to our valued clients.</p>
+                                    <p className="main-slider-two__text">From brake jobs to full engine diagnostics, we get you back
+                                        on the road <br /> without the dealership markup.</p>
                                     <div className="main-slider-two__btn-box">
                                         <div className="main-slider-two__btn">
-                                            <Link href="/about" className="thm-btn">Discover More <span
+                                            <Link href="/services" className="thm-btn">View Our Services <span
                                                 className="icon-arrow-right"></span></Link>
                                         </div>
                                         <div className="main-slider-two__video-link">
@@ -152,17 +149,16 @@ const MainSliderTwo: React.FC = () => {
                                 <div className="main-slider-two__content">
                                     <div className="main-slider-two__sub-title-box">
                                         <div className="main-slider-two__sub-title-shape"></div>
-                                        <p className="main-slider-two__sub-title">Best Repairs Services</p>
+                                        <p className="main-slider-two__sub-title">Serving Scarborough Drivers Since Day One</p>
                                     </div>
-                                    <h2 className="main-slider-two__title">Heating & <span>AC Installation</span> <br />
-                                        Repair Company <span>Since 2003.</span>
+                                    <h2 className="main-slider-two__title">Trusted Mechanics <br />
+                                        Your <span>Neighbours Rely On</span>
                                     </h2>
-                                    <p className="main-slider-two__text">We have been operating for over a decade, providing
-                                        top-notch services We have been <br /> operating for over a decade and delivering
-                                        exceptional results to our valued clients.</p>
+                                    <p className="main-slider-two__text">We stand behind every repair with a service warranty and
+                                        straightforward pricing — <br /> no surprises, no upsells.</p>
                                     <div className="main-slider-two__btn-box">
                                         <div className="main-slider-two__btn">
-                                            <Link href="/about" className="thm-btn">Discover More <span className="icon-arrow-right"></span></Link>
+                                            <Link href="/contact" className="thm-btn">Get a Free Estimate <span className="icon-arrow-right"></span></Link>
                                         </div>
                                         <div className="main-slider-two__video-link">
                                             <Link href="#" onClick={handleVideo} className="video-popup">

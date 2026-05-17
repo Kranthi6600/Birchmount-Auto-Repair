@@ -24,27 +24,27 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
     {
         id: 1,
-        name: 'Adam Smith',
-        role: 'Co-Founder',
+        name: 'Maria Santos',
+        role: 'Scarborough Resident',
         image: testimonialImg1,
         rating: 5,
-        text: '"Adipiscing elit, sed do eiusmod tempor incididunt ut labored etos dolore magna aliquant. Ut enim ad minim veniam nostrud exercitation ullamco laboris nisi ut aliquip',
+        text: '"Brought my Civic in for brake trouble and was out the same afternoon. The team was upfront about the cost before touching anything. I won\'t go anywhere else."',
     },
     {
         id: 2,
-        name: 'Robert Son',
-        role: 'Co-Founder',
+        name: 'David Mensah',
+        role: 'Ford F-150 Owner',
         image: testimonialImg2,
         rating: 5,
-        text: '"Adipiscing elit, sed do eiusmod tempor incididunt ut labored etos dolore magna aliquant. Ut enim ad minim veniam nostrud exercitation ullamco laboris nisi ut aliquip',
+        text: '"Finally found an honest mechanic in Scarborough. They diagnosed my truck\'s engine issue in under an hour and fixed it for less than the dealer quoted. Highly recommend."',
     },
     {
         id: 3,
-        name: 'Alisha Martin',
-        role: 'Co-Founder',
+        name: 'Priya Sharma',
+        role: 'Toyota Camry Owner',
         image: testimonialImg3,
         rating: 5,
-        text: '"Adipiscing elit, sed do eiusmod tempor incididunt ut labored etos dolore magna aliquant. Ut enim ad minim veniam nostrud exercitation ullamco laboris nisi ut aliquip',
+        text: '"The team at Birchmount Auto Repair is friendly, fast, and fair. They explained everything clearly and had my car ready by end of day. Five stars, no question."',
     },
 ];
 

@@ -31,8 +31,8 @@ interface SocialLink {
 }
 
 const workingHours: WorkingHour[] = [
-    { id: 1, day: 'Mon - Fri', hours: '9:00 AM - 5:00 PM' },
-    { id: 2, day: 'Saturday', hours: '8:00 AM - 6:00 PM' },
+    { id: 1, day: 'Mon - Fri', hours: '8:00 AM – 6:00 PM' },
+    { id: 2, day: 'Saturday', hours: '9:00 AM – 3:00 PM' },
     { id: 3, day: 'Sunday', hours: 'Closed' },
 ];
 
@@ -45,11 +45,11 @@ const quickLinks: NavLink[] = [
 ];
 
 const serviceLinks: NavLink[] = [
-    { id: 1, label: 'Electric Repair', to: '/electric-panel-repair' },
-    { id: 2, label: 'Smart Watch Repair', to: '/installing-ceiling-fan' },
-    { id: 3, label: 'Smartphone Repair', to: '/commercial-services' },
-    { id: 4, label: 'Laptop Repair', to: '/lighting-fixtures' },
-    { id: 5, label: 'Desktop Repair', to: '/short-circuit-repair' },
+    { id: 1, label: 'Brake Repair & Service', to: '/services' },
+    { id: 2, label: 'Oil Change & Lube', to: '/services' },
+    { id: 3, label: 'Engine Diagnostics', to: '/services' },
+    { id: 4, label: 'Transmission Service', to: '/services' },
+    { id: 5, label: 'Electrical Repair', to: '/services' },
 ];
 
 const contactItems: ContactItem[] = [
@@ -57,22 +57,20 @@ const contactItems: ContactItem[] = [
         id: 1,
         icon: 'icon-phone-call',
         lines: [
-            { text: '(88) 574 7546 027', href: 'tel:885747546027' },
-            { text: '(88) 574 7546 027', href: 'tel:885747546027' },
+            { text: '(416) 757-8368', href: 'tel:4167578368' },
         ],
     },
     {
         id: 2,
         icon: 'icon-envelope',
         lines: [
-            { text: 'example@gmail.com', href: 'mailto:example@gmail.com' },
-            { text: 'example@gmail.com', href: 'mailto:example@gmail.com' },
+            { text: 'info@birchmountautorepair.ca', href: 'mailto:info@birchmountautorepair.ca' },
         ],
     },
     {
         id: 3,
         icon: 'icon-location',
-        lines: [{ text: '4517 Washington Ave. Manchester, 95' }],
+        lines: [{ text: '1064 Birchmount Rd, Scarborough, ON M1K 1S4' }],
     },
 ];
 
@@ -112,7 +110,7 @@ const FooterOne: React.FC = () => {
                                     <Link href="/"><Image src={footerLogo} width={138} height={40} alt="Birchmount Auto Repair Logo" /></Link>
                                 </div>
                                 <p className="footer-widget__about-text">
-                                    Secure other greater pleasures, or else he endures pains to avoid worse pains selection
+                                    Your neighbourhood auto repair shop, proudly serving Scarborough with honest service, fair pricing, and guaranteed work.
                                 </p>
                                 <div className="footer-widget__working-box">
                                     <h3 className="footer-widget__working-title">Working Hours:</h3>
@@ -232,7 +230,7 @@ const FooterOne: React.FC = () => {
                 <div className="container">
                     <div className="site-footer__bottom-inner">
                         <p className="site-footer__bottom-text">
-                            Â© Copywright 2026 by <Link href="/">Birchmount Auto Repair</Link> All Rights Reserved.
+                            &copy; Copyright 2026 by <Link href="/">Birchmount Auto Repair</Link>. All Rights Reserved.
                         </p>
                         <ul className="list-unstyled site-footer__bottom-menu">
                             {bottomMenuLinks.map((link) => (

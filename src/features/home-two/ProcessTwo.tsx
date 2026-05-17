@@ -18,18 +18,18 @@ interface ProcessItem {
 const processItems: ProcessItem[] = [
     {
         id: 1,
-        iconClass: 'icon-ac1',
-        title: 'Damage Device',
-        text: 'Choose a Service: Like IT Support & Maintenance',
+        iconClass: 'icon-call',
+        title: 'Drive In or Call',
+        text: 'Call us at (416) 757-8368 or drop by — no appointment required for most services.',
         isReversed: false,
         animationClass: 'fadeInLeft',
         animationDelay: 100,
     },
     {
         id: 2,
-        iconClass: 'icon-send1',
-        title: 'Send it to Us',
-        text: 'Define Requirements: Like IT Support & Maintenance',
+        iconClass: 'icon-technician-1',
+        title: 'Free Inspection',
+        text: 'Our certified technicians diagnose your vehicle and provide a clear, no-obligation estimate.',
         isReversed: true,
         animationClass: 'fadeInLeft',
         animationDelay: 200,
@@ -37,8 +37,8 @@ const processItems: ProcessItem[] = [
     {
         id: 3,
         iconClass: 'icon-settings-1',
-        title: 'Repair Device',
-        text: 'Request A Meeting: Like IT Support & Maintenance',
+        title: 'We Get to Work',
+        text: 'Approved repairs are completed by our expert team using quality parts, often the same day.',
         isReversed: false,
         animationClass: 'fadeInRight',
         animationDelay: 100,
@@ -46,8 +46,8 @@ const processItems: ProcessItem[] = [
     {
         id: 4,
         iconClass: 'icon-product-return',
-        title: 'Quick Return',
-        text: 'Finial Solution: Like IT Support & Maintenance',
+        title: 'Back on the Road',
+        text: 'We quality-check every repair before you leave and back all work with our service warranty.',
         isReversed: true,
         animationClass: 'fadeInRight',
         animationDelay: 200,
@@ -66,7 +66,7 @@ const ProcessTwo: React.FC = () => {
                         <span className="section-title__tagline-border"></span>Work Process
                     </h6>
                     <h3 className="section-title__title title-animation">
-                        <TextAnimation>Explore Our Effortless <br /> Work Process.</TextAnimation>
+                        <TextAnimation>Simple Steps to Get <br /> Your Car Fixed Right.</TextAnimation>
                     </h3>
                 </div>
                 <div className="row">
