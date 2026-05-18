@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(rm -rf \"f:/Wehoware/projects/Birchmount Auto Repair/src/app/\\(pages\\)/wishlist\")",
+      "Bash(rm -rf \"f:/Wehoware/projects/Birchmount Auto Repair/src/features/wishlist\")"
+    ]
+  }
+}

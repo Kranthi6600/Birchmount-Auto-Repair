@@ -36,9 +36,8 @@ export const shopList: MenuItem[] = [
     { id: 2, menuItem: "Product Details", menuLink: "/product-details" },
     { id: 3, menuItem: "Cart", menuLink: "/cart" },
     { id: 4, menuItem: "Checkout", menuLink: "/checkout" },
-    { id: 5, menuItem: "Wishlist", menuLink: "/wishlist" },
-    { id: 6, menuItem: "Sign Up", menuLink: "/sign-up" },
-    { id: 7, menuItem: "Login", menuLink: "/login" },
+    { id: 5, menuItem: "Sign Up", menuLink: "/sign-up" },
+    { id: 6, menuItem: "Login", menuLink: "/login" },
 ];
 export const blogList: MenuItem[] = [
     { id: 1, menuItem: "Blog", menuLink: "/blog" },

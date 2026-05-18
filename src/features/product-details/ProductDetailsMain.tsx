@@ -13,12 +13,7 @@ const ProductDetailsMain: React.FC = () => {
         setSelectedSize(size);
     };
 
-    const handleAddToWishlist = () => { 
-        router.push("/wishlist")
-
-    };
-
-    const handleAddToCart = () => { 
+    const handleAddToCart = () => {
         router.push("/cart")
     };
     return (
@@ -88,17 +83,6 @@ const ProductDetailsMain: React.FC = () => {
                                 </div>
 
                                 <div className="product-details__buttons-boxes">
-                                    <div className="product-details__buttons-1">
-                                        <button
-                                            onClick={handleAddToWishlist}
-                                            className="thm-btn"
-                                            type="button"
-                                        >
-                                            Add to Wishlist
-                                            <span><i className="icon-right-arrow"></i></span>
-                                        </button>
-                                    </div>
-
                                     <div className="product-details__buttons-2">
                                         <button
                                             onClick={handleAddToCart}
