@@ -1,10 +1,10 @@
 "use client";
 import React from 'react';
-import brand2Img1 from '@/assets/images/brand/brand-2-1.png';
-import brand2Img2 from '@/assets/images/brand/brand-2-2.png';
-import brand2Img3 from '@/assets/images/brand/brand-2-3.png';
-import brand2Img4 from '@/assets/images/brand/brand-2-4.png';
-import brand2Img5 from '@/assets/images/brand/brand-2-5.png';
+const brand2Img1 = "/assets/images/brand/brand-2-1.png";
+const brand2Img2 = "/assets/images/brand/brand-2-2.png";
+const brand2Img3 = "/assets/images/brand/brand-2-3.png";
+const brand2Img4 = "/assets/images/brand/brand-2-4.png";
+const brand2Img5 = "/assets/images/brand/brand-2-5.png";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 import Image, { StaticImageData } from 'next/image';
@@ -51,7 +51,7 @@ const BrandThree: React.FC = () => {
                                 <SwiperSlide key={brand.id}>
                                     <div className="brand-two__single">
                                         <div className="brand-two__img">
-                                            <Image src={brand.image} style={{ width: "auto", height: "auto" }} alt={brand.alt} />
+                                            <Image src={brand.image} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt={brand.alt} />
                                         </div>
                                     </div>
                                 </SwiperSlide>

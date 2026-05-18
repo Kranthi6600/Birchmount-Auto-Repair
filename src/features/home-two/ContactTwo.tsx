@@ -1,11 +1,11 @@
 "use client";
 import React, { useState } from 'react';
-import contactOneMap from '@/assets/images/shapes/contact-one-map.png';
-import contactPopupImg1 from '@/assets/images/resources/contact-one-popup-img-1.jpg';
-import contactPopupImg2 from '@/assets/images/resources/contact-one-popup-img-2.jpg';
-import contactPopupImg3 from '@/assets/images/resources/contact-one-popup-img-3.jpg';
-import contactPopupImg4 from '@/assets/images/resources/contact-one-popup-img-4.jpg';
-import contactPopupImg5 from '@/assets/images/resources/contact-one-popup-img-5.jpg';
+const contactOneMap = "/assets/images/shapes/contact-one-map.png";
+const contactPopupImg1 = "/assets/images/resources/contact-one-popup-img-1.jpg";
+const contactPopupImg2 = "/assets/images/resources/contact-one-popup-img-2.jpg";
+const contactPopupImg3 = "/assets/images/resources/contact-one-popup-img-3.jpg";
+const contactPopupImg4 = "/assets/images/resources/contact-one-popup-img-4.jpg";
+const contactPopupImg5 = "/assets/images/resources/contact-one-popup-img-5.jpg";
 import TextAnimation from '@/components/elements/TextAnimation';
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced';
 import CustomSelect from '@/components/elements/CustomSelect';
@@ -148,7 +148,7 @@ const ContactTwo: React.FC<ContactTwoProp> = ({ sectionClass = "" }) => {
                         <div className="contact-one__left">
                             <div className="contact-one__map-box">
                                 <div className="contact-one__map-img">
-                                    <Image src={contactOneMap} style={{ width: "auto", height: "auto" }} alt="" />
+                                    <Image src={contactOneMap} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="" />
                                 </div>
                                 {mapPoints.map((point) => (
                                     <div key={point.id} className={point.pointClass}>
@@ -159,7 +159,7 @@ const ContactTwo: React.FC<ContactTwoProp> = ({ sectionClass = "" }) => {
                                             <div className="contact-one__popup">
                                                 <div className="contact-one__popup-inner">
                                                     <div className="contact-one__popup-img">
-                                                        <Image src={point.image} style={{ width: "auto", height: "auto" }} alt="" />
+                                                        <Image src={point.image} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="" />
                                                     </div>
                                                     <div className="contact-one__popup-content">
                                                         <p>

@@ -3,8 +3,8 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 
-import servicesOneShape1 from '@/assets/images/shapes/services-one-shape-1.png';
-import servicesOneShape2 from '@/assets/images/shapes/services-one-shape-2.png';
+const servicesOneShape1 = "/assets/images/shapes/services-one-shape-1.png";
+const servicesOneShape2 = "/assets/images/shapes/services-one-shape-2.png";
 import TextAnimation from '@/components/elements/TextAnimation';
 import SectionWrapper from '@/components/elements/SectionWrapper';
 import Image from 'next/image';
@@ -70,10 +70,10 @@ const ServiceOne: React.FC = () => {
                 <div className="services-one__bg"></div>
             </div>
             <div className="services-one__shape-1 float-bob-x">
-                <Image src={servicesOneShape1} style={{ width: "auto", height: "auto" }} alt="" />
+                <Image src={servicesOneShape1} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="" />
             </div>
             <div className="services-one__shape-2 float-bob-y">
-                <Image src={servicesOneShape2} style={{ width: "auto", height: "auto" }} alt="" />
+                <Image src={servicesOneShape2} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="" />
             </div>
             <div className="container">
                 <div className="row">

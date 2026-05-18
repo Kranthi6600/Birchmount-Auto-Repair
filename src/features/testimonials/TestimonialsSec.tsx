@@ -1,7 +1,7 @@
 import React from "react";
-import testimonialImg1 from "@/assets/images/testimonial/testimonial-1-1.jpg";
-import testimonialImg2 from "@/assets/images/testimonial/testimonial-1-2.jpg";
-import testimonialImg3 from "@/assets/images/testimonial/testimonial-1-3.jpg";
+const testimonialImg1 = "/assets/images/testimonial/testimonial-1-1.jpg";
+const testimonialImg2 = "/assets/images/testimonial/testimonial-1-2.jpg";
+const testimonialImg3 = "/assets/images/testimonial/testimonial-1-3.jpg";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 

@@ -18,7 +18,7 @@ const CartProduct: React.FC<Props> = ({ product, removeProduct }) => {
             <td>
                 <div className="product-box">
                     <div className="img-box">
-                        <Image src={product.image} width={120} alt={product.name} />
+                        <Image src={product.image} width={120} height={0} sizes="100vw" style={{ height: "auto" }} alt={product.name} />
                     </div>
                     <h3>
                         <Link href={product.link}>{product.name}</Link>

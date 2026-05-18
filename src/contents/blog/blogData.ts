@@ -1,19 +1,20 @@
 import { StaticImageData } from 'next/image';
-import blogImg1 from '@/assets/images/blog/blog-1-1.jpg';
-import blogImg2 from '@/assets/images/blog/blog-1-2.jpg';
-import blogImg7 from '@/assets/images/blog/blog-1-4.jpg';
-import blogImg8 from '@/assets/images/blog/blog-1-5.jpg';
-import blogImg9 from '@/assets/images/blog/blog-1-6.jpg';
-import blogImg10 from '@/assets/images/blog/blog-1-7.jpg';
-import blogImg11 from '@/assets/images/blog/blog-1-8.jpg';
 
-import blogImg4 from '@/assets/images/blog/blog-2-1.jpg';
-import blogImg5 from '@/assets/images/blog/blog-2-2.jpg';
-import blogImg6 from '@/assets/images/blog/blog-2-3.jpg';
+const blogImg1 = '/assets/images/blog/blog-1-1.jpg';
+const blogImg2 = '/assets/images/blog/blog-1-2.jpg';
+const blogImg7 = '/assets/images/blog/blog-1-4.jpg';
+const blogImg8 = '/assets/images/blog/blog-1-5.jpg';
+const blogImg9 = '/assets/images/blog/blog-1-6.jpg';
+const blogImg10 = '/assets/images/blog/blog-1-7.jpg';
+const blogImg11 = '/assets/images/blog/blog-1-8.jpg';
 
-import BlogList11 from '@/assets/images/blog/blog-list-1-1.jpg';
-import BlogList12 from '@/assets/images/blog/blog-list-1-2.jpg';
-import BlogList13 from '@/assets/images/blog/blog-list-1-3.jpg';
+const blogImg4 = '/assets/images/blog/blog-2-1.jpg';
+const blogImg5 = '/assets/images/blog/blog-2-2.jpg';
+const blogImg6 = '/assets/images/blog/blog-2-3.jpg';
+
+const BlogList11 = '/assets/images/blog/blog-list-1-1.jpg';
+const BlogList12 = '/assets/images/blog/blog-list-1-2.jpg';
+const BlogList13 = '/assets/images/blog/blog-list-1-3.jpg';
 
 import type { AnimationVariant } from '@/components/elements/FadeInAdvanced';
 

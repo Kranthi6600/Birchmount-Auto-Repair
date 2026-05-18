@@ -1,10 +1,10 @@
-﻿"use client";
+"use client";
 
 import React, { useEffect, useState } from 'react';
-import productImg1 from "@/assets/images/shop/cart-page-img-1.jpg"
-import productImg2 from "@/assets/images/shop/cart-page-img-2.jpg"
-import productImg3 from "@/assets/images/shop/cart-page-img-3.jpg"
-import productImg4 from "@/assets/images/shop/cart-page-img-4.jpg"
+const productImg1 = "/assets/images/shop/cart-page-img-1.jpg"
+const productImg2 = "/assets/images/shop/cart-page-img-2.jpg"
+const productImg3 = "/assets/images/shop/cart-page-img-3.jpg"
+const productImg4 = "/assets/images/shop/cart-page-img-4.jpg"
 import { StaticImageData } from 'next/image';
 import useBirchmountAutoRepairContext from '@/components/context/useBirchmountAutoRepairContext';
 import CartProduct from './CartProduct';

@@ -1,15 +1,15 @@
-﻿"use client";
+"use client";
 
 import React, { useState } from 'react';
-import shapeOne from "@/assets/images/shapes/main-slider-two-shape-1.png"
-import slideImg from "@/assets/images/resources/main-slider-two-img-1-1.jpg"
-import slideImgSmall from "@/assets/images/resources/main-slider-two-small-img-1-1.jpg"
+const shapeOne = "/assets/images/shapes/main-slider-two-shape-1.png"
+const slideImg = "/assets/images/banner-pop/pop1.jpeg"
+const slideImgSmall = "/assets/images/banner-pop/model1.jpeg"
 
-import slideImgTwo from "@/assets/images/resources/main-slider-two-img-1-2.jpg"
-import slideImgSmallTwo from "@/assets/images/resources/main-slider-two-small-img-1-2.jpg"
+const slideImgTwo = "/assets/images/banner-pop/pop2.jpeg"
+const slideImgSmallTwo = "/assets/images/banner-pop/model2.jpeg"
 
-import slideImgThree from "@/assets/images/resources/main-slider-two-img-1-3.jpg"
-import slideImgSmallThree from "@/assets/images/resources/main-slider-two-small-img-1-3.jpg"
+const slideImgThree = "/assets/images/banner-pop/pop3.jpeg"
+const slideImgSmallThree = "/assets/images/banner-pop/model3.jpeg"
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import type { Swiper as SwiperType } from 'swiper';
@@ -20,13 +20,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const MainSliderTwo: React.FC = () => {
-    const { handleVideoClick } = useBirchmountAutoRepairContext();
     const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
     const [activeIndex, setActiveIndex] = useState(0);
 
-    const handleVideo = (e: React.MouseEvent<HTMLAnchorElement>) => {
-        handleVideoClick(e, "https://www.youtube.com/watch?v=Get7rqXYrbQ");
-    }
     return (
         <SectionWrapper id='home' className="main-slider-two">
             <div className="main-slider-two__carousel  ">
@@ -53,13 +49,13 @@ const MainSliderTwo: React.FC = () => {
                             </div>
                             <div className="main-slider-two__overly"></div>
                             <div className="main-slider-two__shape-1">
-                                <Image src={shapeOne} style={{ width: "auto", height: "auto" }} alt="image" className="float-bob-x" />
+                                <Image src={shapeOne} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="image" className="float-bob-x" />
                             </div>
                             <div className="main-slider-two__img">
-                                <Image src={slideImg} style={{ width: "auto", height: "auto" }} alt="image" />
+                                <img src={slideImg} alt="image" />
                             </div>
                             <div className="main-slider-two__small-img">
-                                <Image src={slideImgSmall} style={{ width: "auto", height: "auto" }} alt="image" />
+                                <img src={slideImgSmall} alt="image" />
                             </div>
                             <div className="container">
                                 <div className="main-slider-two__content">
@@ -76,14 +72,6 @@ const MainSliderTwo: React.FC = () => {
                                             <Link href="/contact" className="thm-btn">Book an Appointment <span
                                                 className="icon-arrow-right"></span></Link>
                                         </div>
-                                        <div className="main-slider-two__video-link">
-                                            <Link href="#" onClick={handleVideo} className="video-popup">
-                                                <div className="main-slider-two__video-icon">
-                                                    <span className="fa fa-play"></span>
-                                                    <i className="ripple"></i>
-                                                </div>
-                                            </Link>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -95,13 +83,13 @@ const MainSliderTwo: React.FC = () => {
                             </div>
                             <div className="main-slider-two__overly"></div>
                             <div className="main-slider-two__shape-1">
-                                <Image src={shapeOne} style={{ width: "auto", height: "auto" }} alt="image" className="float-bob-x" />
+                                <Image src={shapeOne} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="image" className="float-bob-x" />
                             </div>
                             <div className="main-slider-two__img">
-                                <Image src={slideImgTwo} style={{ width: "auto", height: "auto" }} alt="image" />
+                                <img src={slideImgTwo} alt="image" />
                             </div>
                             <div className="main-slider-two__small-img">
-                                <Image src={slideImgSmallTwo} style={{ width: "auto", height: "auto" }} alt="image" />
+                                <img src={slideImgSmallTwo} alt="image" />
                             </div>
                             <div className="container">
                                 <div className="main-slider-two__content">
@@ -118,14 +106,6 @@ const MainSliderTwo: React.FC = () => {
                                             <Link href="/services" className="thm-btn">View Our Services <span
                                                 className="icon-arrow-right"></span></Link>
                                         </div>
-                                        <div className="main-slider-two__video-link">
-                                            <Link href="#" onClick={handleVideo} className="video-popup">
-                                                <div className="main-slider-two__video-icon">
-                                                    <span className="fa fa-play"></span>
-                                                    <i className="ripple"></i>
-                                                </div>
-                                            </Link>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -137,13 +117,13 @@ const MainSliderTwo: React.FC = () => {
                             </div>
                             <div className="main-slider-two__overly"></div>
                             <div className="main-slider-two__shape-1">
-                                <Image src={shapeOne} style={{ width: "auto", height: "auto" }} alt="image" className="float-bob-x" />
+                                <Image src={shapeOne} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="image" className="float-bob-x" />
                             </div>
                             <div className="main-slider-two__img">
-                                <Image src={slideImgThree} style={{ width: "auto", height: "auto" }} alt="image" />
+                                <img src={slideImgThree} alt="image" />
                             </div>
                             <div className="main-slider-two__small-img">
-                                <Image src={slideImgSmallThree} style={{ width: "auto", height: "auto" }} alt="image" />
+                                <img src={slideImgSmallThree} alt="image" />
                             </div>
                             <div className="container">
                                 <div className="main-slider-two__content">
@@ -159,14 +139,6 @@ const MainSliderTwo: React.FC = () => {
                                     <div className="main-slider-two__btn-box">
                                         <div className="main-slider-two__btn">
                                             <Link href="/contact" className="thm-btn">Get a Free Estimate <span className="icon-arrow-right"></span></Link>
-                                        </div>
-                                        <div className="main-slider-two__video-link">
-                                            <Link href="#" onClick={handleVideo} className="video-popup">
-                                                <div className="main-slider-two__video-icon">
-                                                    <span className="fa fa-play"></span>
-                                                    <i className="ripple"></i>
-                                                </div>
-                                            </Link>
                                         </div>
                                     </div>
                                 </div>

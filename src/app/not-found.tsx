@@ -2,7 +2,7 @@ import React from 'react';
 import HeaderOne from '@/components/headers/HeaderOne';
 import FooterOne from '@/components/footers/FooterOne';
 import Banner from '@/features/banner/Banner';
-import errorPageImg from '@/assets/images/resources/error-page-img1.png';
+const errorPageImg = "/assets/images/resources/error-page-img1.png";
 import Link from 'next/link';
 import Image from 'next/image';
 

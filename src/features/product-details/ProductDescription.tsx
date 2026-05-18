@@ -2,8 +2,8 @@
 
 import React, { useState, type FormEvent } from 'react';
 import type { ReactElement } from 'react';
-import reviewImg from "@/assets/images/shop/review-1-1.jpg"
-import reviewImg2 from "@/assets/images/shop/review-1-2.jpg"
+const reviewImg = "/assets/images/shop/review-1-1.jpg"
+const reviewImg2 = "/assets/images/shop/review-1-2.jpg"
 import Image, { StaticImageData } from 'next/image';
 
 interface Review {

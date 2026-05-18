@@ -1,6 +1,6 @@
 import React from 'react';
 
-import slidingTextImg1 from '@/assets/images/resources/sliding-text-img-1.png';
+const slidingTextImg1 = "/assets/images/resources/sliding-text-img-1.png";
 import MarqueeSlider from './MarqueeSlider';
 import Image from 'next/image';
 

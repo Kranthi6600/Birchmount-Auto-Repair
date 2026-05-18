@@ -1,8 +1,8 @@
-﻿"use client";
+"use client";
 
 import React, { useState } from 'react';
-import shape from "@/assets/images/shapes/main-slider-shape-1.png"
-import shapeTwo from "@/assets/images/shapes/main-slider-shape-2.png"
+const shape = "/assets/images/shapes/main-slider-shape-1.png"
+const shapeTwo = "/assets/images/shapes/main-slider-shape-2.png"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import type { Swiper as SwiperType } from 'swiper';
 import { Autoplay, Navigation } from 'swiper/modules';
@@ -35,10 +35,10 @@ const MainSlider: React.FC = () => {
                         <div className={`item ${activeIndex === 0 ? 'active' : ''}`}>
                             <div className="main-slider__shape-bg" ></div>
                             <div className="main-slider__shape-1 float-bob-x">
-                                <Image src={shape} style={{ width: "auto", height: "auto" }} alt="shapeImage" />
+                                <Image src={shape} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="shapeImage" />
                             </div>
                             <div className="main-slider__shape-2 float-bob-y">
-                                <Image src={shapeTwo} style={{ width: "auto", height: "auto" }} alt="shapeImage" />
+                                <Image src={shapeTwo} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="shapeImage" />
                             </div>
                             <div className="main-slider__bg-box">
                                 <div className="main-slider__bg one" >
@@ -75,10 +75,10 @@ const MainSlider: React.FC = () => {
                         <div className={`item ${activeIndex === 1 ? 'active' : ''}`}>
                             <div className="main-slider__shape-bg" ></div>
                             <div className="main-slider__shape-1 float-bob-x">
-                                <Image src={shape} style={{ width: "auto", height: "auto" }} alt="shapeImage" />
+                                <Image src={shape} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="shapeImage" />
                             </div>
                             <div className="main-slider__shape-2 float-bob-y">
-                                <Image src={shapeTwo} style={{ width: "auto", height: "auto" }} alt="shapeImage" />
+                                <Image src={shapeTwo} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="shapeImage" />
                             </div>
                             <div className="main-slider__bg-box">
                                 <div className="main-slider__bg two" >
@@ -115,10 +115,10 @@ const MainSlider: React.FC = () => {
                         <div className={`item ${activeIndex === 2 ? 'active' : ''}`}>
                             <div className="main-slider__shape-bg" ></div>
                             <div className="main-slider__shape-1 float-bob-x">
-                                <Image src={shape} style={{ width: "auto", height: "auto" }} alt="shapeImage" />
+                                <Image src={shape} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="shapeImage" />
                             </div>
                             <div className="main-slider__shape-2 float-bob-y">
-                                <Image src={shapeTwo} style={{ width: "auto", height: "auto" }} alt="shapeImage" />
+                                <Image src={shapeTwo} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="shapeImage" />
                             </div>
                             <div className="main-slider__bg-box">
                                 <div className="main-slider__bg three" >

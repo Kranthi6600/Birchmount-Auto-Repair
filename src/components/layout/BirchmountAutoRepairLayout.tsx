@@ -1,4 +1,4 @@
-﻿
+
 import React from 'react';
 import CustomCursor from '../elements/CustomCursor';
 import SideBar from '../elements/SideBar';

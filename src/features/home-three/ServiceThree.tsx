@@ -1,6 +1,6 @@
 import React from 'react'; 
-import servicesThreeShape1 from '@/assets/images/shapes/services-three-shape-1.png';
-import servicesThreeShape2 from '@/assets/images/shapes/services-three-shape-2.png';
+const servicesThreeShape1 = "/assets/images/shapes/services-three-shape-1.png";
+const servicesThreeShape2 = "/assets/images/shapes/services-three-shape-2.png";
 import TextAnimation from '@/components/elements/TextAnimation';
 import type { AnimationVariant } from '@/components/elements/FadeInAdvanced';
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced';
@@ -56,10 +56,10 @@ const ServiceThree: React.FC = () => {
     return (
         <SectionWrapper id='services' className="services-three">
             <div className="services-three__shape-1">
-                <Image src={servicesThreeShape1} style={{ width: "auto", height: "auto" }} alt="Imge" />
+                <Image src={servicesThreeShape1} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="Imge" />
             </div>
             <div className="services-three__shape-2 rotate-me">
-                <Image src={servicesThreeShape2} style={{ width: "auto", height: "auto" }} alt="image" />
+                <Image src={servicesThreeShape2} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="image" />
             </div>
             <div className="container">
                 <div className="section-title text-center sec-title-animation animation-style1">

@@ -3,9 +3,9 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
-import testimonial3Img1 from '@/assets/images/testimonial/testimonial-3-1.jpg';
-import testimonial3Img2 from '@/assets/images/testimonial/testimonial-3-2.jpg';
-import testimonial3Img3 from '@/assets/images/testimonial/testimonial-3-3.jpg';
+const testimonial3Img1 = "/assets/images/testimonial/testimonial-3-1.jpg";
+const testimonial3Img2 = "/assets/images/testimonial/testimonial-3-2.jpg";
+const testimonial3Img3 = "/assets/images/testimonial/testimonial-3-3.jpg";
 import TextAnimation from '@/components/elements/TextAnimation';
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';

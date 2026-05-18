@@ -3,11 +3,11 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
-import testimonialShape1 from '@/assets/images/shapes/testimonial-one-shape-1.png';
-import testimonialShape2 from '@/assets/images/shapes/testimonial-one-shape-2.png';
-import testimonialImg1 from '@/assets/images/testimonial/testimonial-1-1.jpg';
-import testimonialImg2 from '@/assets/images/testimonial/testimonial-1-2.jpg';
-import testimonialImg3 from '@/assets/images/testimonial/testimonial-1-3.jpg';
+const testimonialShape1 = "/assets/images/shapes/testimonial-one-shape-1.png";
+const testimonialShape2 = "/assets/images/shapes/testimonial-one-shape-2.png";
+const testimonialImg1 = "/assets/images/testimonial/testimonial-1-1.jpg";
+const testimonialImg2 = "/assets/images/testimonial/testimonial-1-2.jpg";
+const testimonialImg3 = "/assets/images/testimonial/testimonial-1-3.jpg";
 import TextAnimation from '@/components/elements/TextAnimation';
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
@@ -53,10 +53,10 @@ const TestimonialOne: React.FC = () => {
         <section className="testimonial-one">
             <div className="testimonial-one__bg" ></div>
             <div className="testimonial-one__shape-1 float-bob-x">
-                <Image src={testimonialShape1} style={{ width: "auto", height: "auto" }} alt="shape 1" />
+                <Image src={testimonialShape1} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="shape 1" />
             </div>
             <div className="testimonial-one__shape-2 float-bob-y">
-                <Image src={testimonialShape2} style={{ width: "auto", height: "auto" }} alt="shape 2" />
+                <Image src={testimonialShape2} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="shape 2" />
             </div>
             <div className="container">
                 <div className="section-title text-center sec-title-animation animation-style1">

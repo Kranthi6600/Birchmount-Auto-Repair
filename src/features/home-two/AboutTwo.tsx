@@ -1,9 +1,9 @@
-﻿"use client";
+"use client";
 import React from 'react';
-import aboutTwoShape1 from '@/assets/images/shapes/about-two-shape-1.png';
-import aboutTwoShape2 from '@/assets/images/shapes/about-two-shape-2.png';
-import aboutTwoImg1 from '@/assets/images/resources/about-two-img-1.jpg';
-import aboutTwoImg2 from '@/assets/images/resources/about-two-img-2.jpg';
+const aboutTwoShape1 = "/assets/images/shapes/about-two-shape-1.png";
+const aboutTwoShape2 = "/assets/images/shapes/about-two-shape-2.png";
+const aboutTwoImg1 = "/assets/images/shop/shop2.jpeg";
+const aboutTwoImg2 = "/assets/images/shop/shop1.jpeg";
 import TextAnimation from '@/components/elements/TextAnimation';
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced';
 import CounterUp from '@/components/elements/CounterUp';
@@ -29,10 +29,10 @@ const AboutTwo: React.FC = () => {
     return (
         <SectionWrapper id='about' className="about-two">
             <div className="about-two__shape-1 rotate-me">
-                <Image src={aboutTwoShape1} style={{ width: "auto", height: "auto" }} alt="" />
+                <Image src={aboutTwoShape1} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="" />
             </div>
             <div className="about-two__shape-2 float-bob-y">
-                <Image src={aboutTwoShape2} style={{ width: "auto", height: "auto" }} alt="" />
+                <Image src={aboutTwoShape2} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="" />
             </div>
             <div className="container">
                 <div className="row">
@@ -79,10 +79,10 @@ const AboutTwo: React.FC = () => {
                         >
                             <div className="about-two__img-box">
                                 <div className="about-two__img">
-                                    <Image src={aboutTwoImg1} width={330} height={465} alt="" />
+                                    <Image src={aboutTwoImg1} width={420} height={0} sizes="420px" style={{ width: "100%", height: "auto", maxHeight: "500px", objectFit: "cover" }} alt="" />
                                 </div>
                                 <div className="about-two__img-2">
-                                    <Image src={aboutTwoImg2} width={270} alt="" />
+                                    <Image src={aboutTwoImg2} width={180} height={0} sizes="180px" style={{ width: "180px", height: "auto" }} alt="" />
                                 </div>
                                 <div className="about-two__experience-box">
                                     <div className="about-two__count-box">
@@ -92,17 +92,6 @@ const AboutTwo: React.FC = () => {
                                     <p className="about-two__experience-text">Years Of Experience</p>
                                 </div>
                                 <div className="about-two__circle-bdr rotate-me"></div>
-                                <div className="about-two__video-link">
-                                    <Link href="#"
-                                        className="video-popup"
-                                        onClick={(e) => handleVideoClick(e, "https://www.youtube.com/watch?v=Get7rqXYrbQ")}
-                                    >
-                                        <div className="about-two__video-icon">
-                                            <span className="icon-play"></span>
-                                            <i className="ripple"></i>
-                                        </div>
-                                    </Link>
-                                </div>
                             </div>
                         </FadeInAdvanced>
                     </div>

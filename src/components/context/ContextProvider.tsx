@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React, { useCallback, useMemo, useRef, useState } from 'react';
 import type { contextType } from './contextType';
 import BirchmountAutoRepairContext from './BirchmountAutoRepairContext';

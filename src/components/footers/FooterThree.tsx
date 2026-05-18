@@ -1,7 +1,7 @@
-﻿"use client";
+"use client";
 import React from 'react'; 
-import footerShape1 from '@/assets/images/shapes/site-footer-two-shape-1.png';
-import logo2 from '@/assets/images/resources/logo-2.png';
+const footerShape1 = "/assets/images/shapes/site-footer-two-shape-1.png";
+const logo2 = "/assets/images/resources/logo-2.png";
 import FadeInAdvanced from '../elements/FadeInAdvanced';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -70,7 +70,7 @@ const FooterThree: React.FC = () => {
     return (
         <footer className="site-footer-two">
             <div className="site-footer-two__shape-1 float-bob-x">
-                <Image src={footerShape1} style={{ width: "auto", height: "auto" }} alt="Decorative footer shape" />
+                <Image src={footerShape1} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="Decorative footer shape" />
             </div>
 
             <div className="container">
@@ -181,7 +181,7 @@ const FooterThree: React.FC = () => {
                 <div className="container">
                     <div className="site-footer-two__bottom-inner">
                         <p className="site-footer-two__bottom-text">
-                            Â© Copywright 2026 by <Link href="/">Birchmount Auto Repair</Link> All Rights Reserved.
+                            © Copywright 2026 by <Link href="/">Birchmount Auto Repair</Link> All Rights Reserved.
                         </p>
                         <ul className="list-unstyled site-footer-two__bottom-menu">
                             {bottomMenuLinks.map((link) => (

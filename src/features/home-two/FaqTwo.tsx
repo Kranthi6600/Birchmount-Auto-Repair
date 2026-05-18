@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import { motion } from "framer-motion"; 
-import faqOneImg1 from '@/assets/images/resources/faq-one-img-1.jpg';
+const faqOneImg1 = "/assets/images/resources/faq-one-img-1.jpg";
 import CounterUp from '@/components/elements/CounterUp';
 import TextAnimation from '@/components/elements/TextAnimation';
 import Image from 'next/image';
@@ -55,7 +55,7 @@ const FaqTwo: React.FC = () => {
                         >
                             <div className="faq-one__img-box">
                                 <div className="faq-one__img">
-                                    <Image src={faqOneImg1} style={{ width: "auto", height: "auto" }} alt="" />
+                                    <Image src={faqOneImg1} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="" />
                                 </div>
                                 <div className="faq-one__ratting-box">
                                     <div className="faq-one__ratting">

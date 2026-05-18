@@ -2,11 +2,11 @@
 
 import React from 'react';
 import BlogSidebar from './BlogSidebar';
-import BlogDetailsImg1 from '@/assets/images/blog/blog-details-img-1.jpg';
-import BlogDetailsImgBoxImg1 from '@/assets/images/blog/blog-details-img-box-img-1.jpg';
-import BlogDetailsImgBoxImg2 from '@/assets/images/blog/blog-details-img-box-img-2.jpg';
-import Comment11 from '@/assets/images/blog/comment-1-1.jpg';
-import Comment12 from '@/assets/images/blog/comment-1-2.jpg';
+const BlogDetailsImg1 = "/assets/images/blog/blog-details-img-1.jpg";
+const BlogDetailsImgBoxImg1 = "/assets/images/blog/blog-details-img-box-img-1.jpg";
+const BlogDetailsImgBoxImg2 = "/assets/images/blog/blog-details-img-box-img-2.jpg";
+const Comment11 = "/assets/images/blog/comment-1-1.jpg";
+const Comment12 = "/assets/images/blog/comment-1-2.jpg";
 import Image from 'next/image';
 import Link from 'next/link';
 

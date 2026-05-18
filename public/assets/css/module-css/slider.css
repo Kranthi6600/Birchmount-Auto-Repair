@@ -484,8 +484,10 @@
 
 .main-slider-two__img {
     position: absolute;
-    bottom: 60px;
+    bottom: 0;
     right: 150px;
+    width: 420px;
+    height: 580px;
     opacity: 0;
     -webkit-transform: perspective(400px) rotateY(0deg) translateY(0px) scale(0.8);
     -ms-transform: perspective(400px) rotateY(0deg) translateY(0px) scale(0.8);
@@ -528,6 +530,9 @@
 
 .main-slider-two__img>img {
     width: 100% !important;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
 }
 
 .main-slider-two__small-img {

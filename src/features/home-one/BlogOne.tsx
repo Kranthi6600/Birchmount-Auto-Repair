@@ -1,7 +1,7 @@
 import React from 'react'; 
 
-import blogShape1 from '@/assets/images/shapes/blog-one-shape-1.png';
-import blogShape2 from '@/assets/images/shapes/blog-one-shape-2.png';
+const blogShape1 = "/assets/images/shapes/blog-one-shape-1.png";
+const blogShape2 = "/assets/images/shapes/blog-one-shape-2.png";
 
 import FadeInAdvanced  from '@/components/elements/FadeInAdvanced';
 import TextAnimation from '@/components/elements/TextAnimation';

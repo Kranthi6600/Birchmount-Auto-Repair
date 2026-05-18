@@ -3,20 +3,20 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
-import servicesTwoShape1 from '@/assets/images/shapes/services-two-shape-1.png';
-import servicesImg1 from '@/assets/images/services/services-1-1.jpg';
-import servicesImg2 from '@/assets/images/services/services-1-2.jpg';
-import servicesImg3 from '@/assets/images/services/services-1-3.jpg';
-import servicesImg4 from '@/assets/images/services/services-1-4.jpg';
-import servicesImg5 from '@/assets/images/services/services-1-5.jpg';
+const servicesTwoShape1 = "/assets/images/shapes/services-two-shape-1.png";
+const servicesImg1 = "/assets/images/services/services1.jpeg";
+const servicesImg2 = "/assets/images/services/services-1-2.jpg";
+const servicesImg3 = "/assets/images/services/services-1-3.jpg";
+const servicesImg4 = "/assets/images/services/services-1-4.jpg";
+const servicesImg5 = "/assets/images/services/services-1-5.jpg";
 import TextAnimation from '@/components/elements/TextAnimation';
 import SectionWrapper from '@/components/elements/SectionWrapper';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import Link from 'next/link';
 
 interface ServiceItem {
     id: number;
-    image: string | StaticImageData;
+    image: string;
     iconClass: string;
     title: string;
     to: string;
@@ -71,7 +71,7 @@ const ServiceTwo: React.FC = () => {
         <SectionWrapper id='services' className="services-two">
             <div className="services-two__bg-color">
                 <div className="services-two__shape-1">
-                    <Image src={servicesTwoShape1} style={{ width: "auto", height: "auto" }} alt="" />
+                    <Image src={servicesTwoShape1} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="" />
                 </div>
             </div>
             <div className="container">
@@ -106,7 +106,7 @@ const ServiceTwo: React.FC = () => {
                                     <div className="services-two__single">
                                         <div className="services-two__img-box">
                                             <div className="services-two__img">
-                                                <Image src={service.image} width={355} height={253} alt="" />
+                                                <img src={service.image as string} alt="" />
                                             </div>
                                             <div className="services-two__hover-content">
                                                 <p className="services-two__hover-text">{service.hoverText}</p>

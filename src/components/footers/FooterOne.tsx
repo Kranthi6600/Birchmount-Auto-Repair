@@ -1,7 +1,7 @@
-﻿"use client";
+"use client";
 import React from 'react';
-import footerShape1 from '@/assets/images/shapes/footer-widget-shape-1.png';
-import footerLogo from '@/assets/images/resources/footer-logo.png';
+const footerShape1 = "/assets/images/shapes/footer-widget-shape-1.png";
+const footerLogo = "/assets/images/resources/footer-logo.png";
 import FadeInAdvanced from '../elements/FadeInAdvanced';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -97,7 +97,7 @@ const FooterOne: React.FC = () => {
         <footer className="site-footer">
             <div className="site-footer__bg-color">
                 <div className="footer-widget__shape-1">
-                    <Image src={footerShape1} style={{ width: "auto", height: "auto" }} alt="footer shape" />
+                    <Image src={footerShape1} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="footer shape" />
                 </div>
             </div>
             <div className="container">

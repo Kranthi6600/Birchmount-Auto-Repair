@@ -1,8 +1,8 @@
-﻿"use client";
+"use client";
 import React, { useState } from 'react';
 
-import videoOneBg from '@/assets/images/backgrounds/video-one-bg.jpg';
-import videoOneContactImg1 from '@/assets/images/resources/video-one-contact-img-1.png';
+const videoOneBg = "/assets/images/backgrounds/video-one-bg.jpg";
+const videoOneContactImg1 = "/assets/images/resources/video-one-contact-img-1.png";
 import JarallaxSection from '@/components/elements/JarallaxSection';
 import CustomSelect from '@/components/elements/CustomSelect';
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced';
@@ -75,7 +75,7 @@ const VideoOne: React.FC = () => {
 
     return (
         <SectionWrapper id='contact' className="video-one">
-            <JarallaxSection className="video-one__bg-color" imgSrc={videoOneBg.src} overlayOpacity={0.8} >
+            <JarallaxSection className="video-one__bg-color" imgSrc={videoOneBg} overlayOpacity={0.8} >
 
                 <div >
                 </div>
@@ -110,7 +110,7 @@ const VideoOne: React.FC = () => {
                     </div>
                     <div className="video-one__contact-box">
                         <FadeInAdvanced className='video-one__img-1' variant='slideInRight' delay={100} threshold={0.05}>
-                            <Image src={videoOneContactImg1} style={{ width: "auto", height: "auto" }} alt="Image" className="float-bob-x" />
+                            <Image src={videoOneContactImg1} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="Image" className="float-bob-x" />
                         </FadeInAdvanced>
                         <div className="row">
                             <div className="col-xl-8 col-lg-7">

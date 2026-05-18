@@ -1,10 +1,10 @@
-﻿"use client";
+"use client";
 
 import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
-import shape1 from "@/assets/images/shapes/main-slider-three-shape-1.png"
-import shape2 from "@/assets/images/shapes/main-slider-three-shape-2.png"
+const shape1 = "/assets/images/shapes/main-slider-three-shape-1.png"
+const shape2 = "/assets/images/shapes/main-slider-three-shape-2.png"
 import useBirchmountAutoRepairContext from '@/components/context/useBirchmountAutoRepairContext';
 import SectionWrapper from '@/components/elements/SectionWrapper';
 import Image from 'next/image';
@@ -37,10 +37,10 @@ const MainSliderThree: React.FC = () => {
                             </div>
                             <div className="main-slider-three__overly"></div>
                             <div className="main-slider-three__shape-1">
-                                <Image src={shape1} style={{ width: "auto", height: "auto" }} alt="image" className="float-bob-x" />
+                                <Image src={shape1} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="image" className="float-bob-x" />
                             </div>
                             <div className="main-slider-three__shape-2">
-                                <Image src={shape2} style={{ width: "auto", height: "auto" }} alt="image" className="float-bob-x" />
+                                <Image src={shape2} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="image" className="float-bob-x" />
                             </div>
                             <div className="container">
                                 <div className="main-slider-three__content">
@@ -74,10 +74,10 @@ const MainSliderThree: React.FC = () => {
                             </div>
                             <div className="main-slider-three__overly"></div>
                             <div className="main-slider-three__shape-1">
-                                <Image src={shape1} style={{ width: "auto", height: "auto" }} alt="image" className="float-bob-x" />
+                                <Image src={shape1} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="image" className="float-bob-x" />
                             </div>
                             <div className="main-slider-three__shape-2">
-                                <Image src={shape2} style={{ width: "auto", height: "auto" }} alt="image" className="float-bob-x" />
+                                <Image src={shape2} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="image" className="float-bob-x" />
                             </div>
                             <div className="container">
                                 <div className="main-slider-three__content">
@@ -111,10 +111,10 @@ const MainSliderThree: React.FC = () => {
                             </div>
                             <div className="main-slider-three__overly"></div>
                             <div className="main-slider-three__shape-1">
-                                <Image src={shape1} style={{ width: "auto", height: "auto" }} alt="image" className="float-bob-x" />
+                                <Image src={shape1} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="image" className="float-bob-x" />
                             </div>
                             <div className="main-slider-three__shape-2">
-                                <Image src={shape2} style={{ width: "auto", height: "auto" }} alt="image" className="float-bob-x" />
+                                <Image src={shape2} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="image" className="float-bob-x" />
                             </div>
                             <div className="container">
                                 <div className="main-slider-three__content">

@@ -1,6 +1,6 @@
 import React from "react";
 
-import teamDetailsImg1 from "@/assets/images/team/team-details-img-1.jpg";
+const teamDetailsImg1 = "/assets/images/team/team-details-img-1.jpg";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import Progressbar from "@/components/elements/Progressbar";
@@ -113,7 +113,7 @@ const DetailsSecOne: React.FC = () => {
             <div className="col-xl-5 col-lg-5">
               <div className="team-details__top-left">
                 <div className="team-details__img-1">
-                  <Image src={image} style={{ width: "auto", height: "auto" }} alt={imageAlt} />
+                  <Image src={image} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt={imageAlt} />
                 </div>
               </div>
             </div>

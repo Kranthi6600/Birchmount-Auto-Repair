@@ -1,6 +1,6 @@
 import React from 'react'; 
-import pricingTwoShape2 from '@/assets/images/shapes/pricing-two-shape-2.png';
-import pricingTwoImg1 from '@/assets/images/resources/pricing-two-img-1.png';
+const pricingTwoShape2 = "/assets/images/shapes/pricing-two-shape-2.png";
+const pricingTwoImg1 = "/assets/images/resources/pricing-two-img-1.png";
 import type { AnimationVariant } from '@/components/elements/FadeInAdvanced';
 import TextAnimation from '@/components/elements/TextAnimation';
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced';
@@ -86,7 +86,7 @@ const PricingTwo: React.FC = () => {
     return (
         <section className="pricing-two">
             <div className="pricing-two__shape-2">
-                <Image src={pricingTwoShape2} style={{ width: "auto", height: "auto" }} alt="" />
+                <Image src={pricingTwoShape2} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="" />
             </div>
             <div className="container">
                 <div className="section-title text-center sec-title-animation animation-style1">
@@ -135,7 +135,7 @@ const PricingTwo: React.FC = () => {
                                             {plan.hasPremiumExtras && (
                                                 <>
                                                     <div className="pricing-two__img-1">
-                                                        <Image src={pricingTwoImg1} style={{ width: "auto", height: "auto" }} alt="" />
+                                                        <Image src={pricingTwoImg1} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="" />
                                                     </div>
                                                     <div className="pricing-two__shape-1"></div>
                                                 </>

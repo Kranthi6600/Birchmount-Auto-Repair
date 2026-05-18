@@ -1,11 +1,11 @@
-﻿"use client";
+"use client";
 
 import React from 'react';
-import footerPostImg1 from '@/assets/images/blog/footer-widget-post-img-1.jpg';
-import footerPostImg2 from '@/assets/images/blog/footer-widget-post-img-2.jpg';
+const footerPostImg1 = "/assets/images/blog/footer-widget-post-img-1.jpg";
+const footerPostImg2 = "/assets/images/blog/footer-widget-post-img-2.jpg";
 
-import footerShape1 from '@/assets/images/shapes/footer-widget-shape-1.png';
-import footerLogo from '@/assets/images/resources/footer-logo.png';
+const footerShape1 = "/assets/images/shapes/footer-widget-shape-1.png";
+const footerLogo = "/assets/images/resources/footer-logo.png";
 import FadeInAdvanced from '../elements/FadeInAdvanced';
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
@@ -99,7 +99,7 @@ const FooterTwo = () => {
         <footer className="site-footer">
             <div className="site-footer__bg-color">
                 <div className="footer-widget__shape-1">
-                    <Image src={footerShape1} style={{ width: "auto", height: "auto" }} alt="footer shape" />
+                    <Image src={footerShape1} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="footer shape" />
                 </div>
             </div>
             <div className="container">
@@ -231,7 +231,7 @@ const FooterTwo = () => {
                 <div className="container">
                     <div className="site-footer__bottom-inner">
                         <p className="site-footer__bottom-text">
-                            Â© Copywright 2026 by <Link href="/">Birchmount Auto Repair</Link> All Rights Reserved.
+                            © Copywright 2026 by <Link href="/">Birchmount Auto Repair</Link> All Rights Reserved.
                         </p>
                         <ul className="list-unstyled site-footer__bottom-menu">
                             {bottomMenuLinks.map((link) => (

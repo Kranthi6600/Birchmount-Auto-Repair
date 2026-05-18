@@ -1,6 +1,6 @@
 import React from 'react';
 
-import counterOneBg from '@/assets/images/backgrounds/counter-one-bg.jpg';
+const counterOneBg = "/assets/images/backgrounds/counter-one-bg.jpg";
 import CounterUp from '@/components/elements/CounterUp';
 import JarallaxSection from '@/components/elements/JarallaxSection'; 
 
@@ -46,7 +46,7 @@ const counterItems: CounterItem[] = [
 const CounterOne: React.FC = () => {
     return (
         <JarallaxSection className="counter-one"
-            imgSrc={counterOneBg.src}
+            imgSrc={counterOneBg}
             overlayOpacity={0.8}
         >
             <div className="container">

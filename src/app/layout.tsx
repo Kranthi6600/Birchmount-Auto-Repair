@@ -1,9 +1,8 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { Archivo, Titillium_Web } from "next/font/google";
 import BirchmountAutoRepairLayout from "@/components/layout/BirchmountAutoRepairLayout";
 import "swiper/swiper-bundle.css";
 import 'yet-another-react-lightbox/styles.css';
-import '@/assets/css/combined.css' 
 
 const archivo = Archivo({
   variable: "--font-archivo",
@@ -21,7 +20,7 @@ const titilliumWeb = Titillium_Web({
 
 export const metadata: Metadata = {
   title: "Birchmount Auto Repair - Electronics & Gadgets Repair Services NextJs Template",
-  description: "Birchmount Auto Repair â€“ Modern Next Js template for gadgets, mobile, AC & computer repair services. Clean, responsive & fully documented",
+  description: "Birchmount Auto Repair – Modern Next Js template for gadgets, mobile, AC & computer repair services. Clean, responsive & fully documented",
 };
 
 export default function RootLayout({
@@ -31,6 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-scroll-behavior="smooth">
+      <head>
+        <link rel="stylesheet" href="/assets/css/combined.css" />
+      </head>
       <body className={`${archivo.variable} ${titilliumWeb.variable}`}>
         <BirchmountAutoRepairLayout>
           {children}

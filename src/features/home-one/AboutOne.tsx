@@ -1,9 +1,9 @@
-﻿"use client";
+"use client";
 
 import React from 'react';
-import aboutOneImg1 from '@/assets/images/resources/about-one-img-1.jpg';
-import aboutOneImg2 from '@/assets/images/resources/about-one-img-2.jpg';
-import aboutOneShape2 from '@/assets/images/shapes/about-one-shape-2.png';
+const aboutOneImg1 = "/assets/images/resources/about-one-img-1.jpg";
+const aboutOneImg2 = "/assets/images/resources/about-one-img-2.jpg";
+const aboutOneShape2 = "/assets/images/shapes/about-one-shape-2.png";
 
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced';
 import SectionWrapper from '@/components/elements/SectionWrapper';

@@ -1,9 +1,9 @@
 "use client";
 import React, { useState } from 'react';
-import thumbImg1 from "@/assets/images/shop/product-thumb-1.jpg"
-import thumbImg2 from "@/assets/images/shop/product-thumb-2.jpg"
-import thumbImg3 from "@/assets/images/shop/product-thumb-3.jpg"
-import thumbImg4 from "@/assets/images/shop/product-thumb-4.jpg"
+const thumbImg1 = "/assets/images/shop/product-thumb-1.jpg"
+const thumbImg2 = "/assets/images/shop/product-thumb-2.jpg"
+const thumbImg3 = "/assets/images/shop/product-thumb-3.jpg"
+const thumbImg4 = "/assets/images/shop/product-thumb-4.jpg"
 import Image from 'next/image';
 const ProductSidebar: React.FC = () => {
     const [valueRange, setValueRange] = useState<number>(50);
@@ -71,7 +71,7 @@ const ProductSidebar: React.FC = () => {
                     <ul className="clearfix list-unstyled">
                         <li>
                             <div className="img">
-                                <Image src={thumbImg1} style={{width:"auto", height:"auto"}} alt="Product" />
+                                <Image src={thumbImg1} width={0} height={0} sizes="100vw" style={{width:"auto", height:"auto"}} alt="Product" />
                                 <a href="#"><i className="fa fa-link" aria-hidden="true"></i></a>
                             </div>
                             <div className="content">
@@ -92,7 +92,7 @@ const ProductSidebar: React.FC = () => {
                         </li>
                         <li>
                             <div className="img">
-                                <Image src={thumbImg2} style={{width:"auto", height:"auto"}} alt="Product" />
+                                <Image src={thumbImg2} width={0} height={0} sizes="100vw" style={{width:"auto", height:"auto"}} alt="Product" />
                                 <a href="#"><i className="fa fa-link" aria-hidden="true"></i></a>
                             </div>
                             <div className="content">
@@ -113,7 +113,7 @@ const ProductSidebar: React.FC = () => {
                         </li>
                         <li>
                             <div className="img">
-                                <Image src={thumbImg3} style={{width:"auto", height:"auto"}} alt="Product" />
+                                <Image src={thumbImg3} width={0} height={0} sizes="100vw" style={{width:"auto", height:"auto"}} alt="Product" />
                                 <a href="#"><i className="fa fa-link" aria-hidden="true"></i></a>
                             </div>
                             <div className="content">
@@ -134,7 +134,7 @@ const ProductSidebar: React.FC = () => {
                         </li>
                         <li>
                             <div className="img">
-                                <Image src={thumbImg4} style={{width:"auto", height:"auto"}} alt="Product" />
+                                <Image src={thumbImg4} width={0} height={0} sizes="100vw" style={{width:"auto", height:"auto"}} alt="Product" />
                                 <a href="#"><i className="fa fa-link" aria-hidden="true"></i></a>
                             </div>
                             <div className="content">

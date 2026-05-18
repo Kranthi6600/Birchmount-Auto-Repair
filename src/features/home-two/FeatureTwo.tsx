@@ -1,7 +1,7 @@
 
 import React from 'react'; 
-import featureTwoShape1 from '@/assets/images/shapes/feature-two-shape-1.png';
-import featureTwoSingleShape1 from '@/assets/images/shapes/feature-two-single-shape-1.png';
+const featureTwoShape1 = "/assets/images/shapes/feature-two-shape-1.png";
+const featureTwoSingleShape1 = "/assets/images/shapes/feature-two-single-shape-1.png";
 import FadeInAdvanced, { type AnimationVariant } from '@/components/elements/FadeInAdvanced';
 import TextAnimation from '@/components/elements/TextAnimation';
 import Image from 'next/image';
@@ -60,7 +60,7 @@ const FeatureTwo: React.FC = () => {
     return (
         <section className="feature-two">
             <div className="feature-two__shape-1 rotate-me">
-                <Image src={featureTwoShape1} style={{ width: "auto", height: "auto" }} alt="" className="float-bob-y" />
+                <Image src={featureTwoShape1} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="" className="float-bob-y" />
             </div>
             <div className="container">
                 <div className="section-title text-center sec-title-animation animation-style1">

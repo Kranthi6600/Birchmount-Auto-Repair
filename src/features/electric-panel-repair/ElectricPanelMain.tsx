@@ -1,7 +1,7 @@
 import React from 'react';
-import serviceDetailsImg1 from '@/assets/images/services/service-details-img-6.jpg';
-import serviceDetailsImgBox1 from '@/assets/images/services/service-details-img-box-img-1.jpg';
-import serviceDetailsImgBox2 from '@/assets/images/services/service-details-img-box-img-2.jpg';
+const serviceDetailsImg1 = "/assets/images/services/service-details-img-6.jpg";
+const serviceDetailsImgBox1 = "/assets/images/services/service-details-img-box-img-1.jpg";
+const serviceDetailsImgBox2 = "/assets/images/services/service-details-img-box-img-2.jpg";
 import ServiceDetailsSidebar from '../maintenance/ServiceDetailsSidebar';
 import ServiceDetailsFaq from '../maintenance/ServiceDetailsFaq';
 import Image  from 'next/image';
@@ -60,7 +60,7 @@ const ElectricPanelMain: React.FC = () => {
                         <div className="service-details__left">
 
                             <div className="service-details__img">
-                                <Image src={serviceDetailsImg1} width={850} alt="Electric Panel Repair" />
+                                <Image src={serviceDetailsImg1} width={850} height={0} sizes="100vw" style={{ height: "auto" }} alt="Electric Panel Repair" />
                             </div>
 
                             <h3 className="service-details__title-1">Electric Panel Repair</h3>
@@ -95,7 +95,7 @@ const ElectricPanelMain: React.FC = () => {
                                         <div key={item.id} className="col-xl-6">
                                             <div className="service-details__img-box-single">
                                                 <div className="service-details__img-box-img">
-                                                    <Image src={item.image} width={410} alt={item.imageAlt} />
+                                                    <Image src={item.image} width={410} height={0} sizes="100vw" style={{ height: "auto" }} alt={item.imageAlt} />
                                                 </div>
                                                 <div className="service-details__img-box-content">
                                                     <div className="service-details__img-box-content-icon-and-title">

@@ -1,6 +1,6 @@
 import React from 'react'; 
 
-import featureOneShape1 from '@/assets/images/shapes/feature-one-shape-1.png';
+const featureOneShape1 = "/assets/images/shapes/feature-one-shape-1.png";
 import FadeInAdvanced, { type AnimationVariant } from '@/components/elements/FadeInAdvanced';
 import Link from 'next/link';
 import Image from 'next/image';

@@ -2,7 +2,7 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
-import brand1 from "@/assets/images/brand/brand-1-1.png";
+const brand1 = "/assets/images/brand/brand-1-1.png";
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 type BrandItem = {
@@ -90,7 +90,7 @@ const BrandOne: React.FC = () => {
                                     <div className="brand-one__single">
                                         <div className="brand-one__img">
                                             <Link href={brand.link}>
-                                                <Image src={brand.image} style={{ width: "auto", height: "auto" }} alt={`brand-${brand.id}`} />
+                                                <Image src={brand.image} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt={`brand-${brand.id}`} />
                                             </Link>
                                         </div>
                                     </div>

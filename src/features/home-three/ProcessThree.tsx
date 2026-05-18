@@ -1,5 +1,5 @@
 import React from 'react';
-import processTwoShape1 from '@/assets/images/shapes/process-two-shape-1.png';
+const processTwoShape1 = "/assets/images/shapes/process-two-shape-1.png";
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced';
 import TextAnimation from '@/components/elements/TextAnimation';
 import Image from 'next/image';
@@ -44,7 +44,7 @@ const ProcessThree: React.FC = () => {
                 variant='slideInLeft'
                 delay={100}
             >
-                <Image src={processTwoShape1} style={{ width: "auto", height: "auto" }} alt="Decorative shape" className="float-bob-x" />
+                <Image src={processTwoShape1} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="Decorative shape" className="float-bob-x" />
             </FadeInAdvanced>
 
             <div className="container">

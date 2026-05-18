@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useEffect, useCallback } from "react"; 
 import useBirchmountAutoRepairContext from "../context/useBirchmountAutoRepairContext";
@@ -84,7 +84,7 @@ const VideoPopup: React.FC = () => {
         <div className="video-popup-overlay active" onClick={handleOverlayClick}>
             <div className="video-popup-content" onClick={handleContentClick}>
                 <button className="video-popup-close" onClick={onClose}>
-                    Ã—
+                    ×
                 </button>
 
                 <iframe

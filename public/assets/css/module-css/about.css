@@ -492,7 +492,8 @@
 }
 
 .about-two__img-2 img {
-   width: auto;
+   width: 260px !important;
+   height: auto;
    border-radius: var(--birchmountAutoRepair-bdr-radius);
 }
 

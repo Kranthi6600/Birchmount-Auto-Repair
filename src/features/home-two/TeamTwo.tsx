@@ -1,8 +1,8 @@
 import React from 'react';
-import teamImg1 from '@/assets/images/team/team-2-1.jpg';
-import teamImg2 from '@/assets/images/team/team-2-2.jpg';
-import teamImg3 from '@/assets/images/team/team-2-3.jpg';
-import teamImg4 from '@/assets/images/team/team-2-4.jpg';
+const teamImg1 = "/assets/images/team/team-2-1.jpg";
+const teamImg2 = "/assets/images/team/team-2-2.jpg";
+const teamImg3 = "/assets/images/team/team-2-3.jpg";
+const teamImg4 = "/assets/images/team/team-2-4.jpg";
 import type { AnimationVariant } from '@/components/elements/FadeInAdvanced';
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced';
 import TextAnimation from '@/components/elements/TextAnimation';

@@ -1,9 +1,9 @@
 import React from 'react'; 
 
-import team1 from '@/assets/images/team/team-1-1.jpg';
-import team2 from '@/assets/images/team/team-1-2.jpg';
-import team3 from '@/assets/images/team/team-1-3.jpg';
-import team4 from '@/assets/images/team/team-1-4.jpg';
+const team1 = "/assets/images/team/team-1-1.jpg";
+const team2 = "/assets/images/team/team-1-2.jpg";
+const team3 = "/assets/images/team/team-1-3.jpg";
+const team4 = "/assets/images/team/team-1-4.jpg";
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced';
 import TextAnimation from '@/components/elements/TextAnimation';
 import SectionWrapper from '@/components/elements/SectionWrapper';
@@ -78,7 +78,7 @@ const TeamOne: React.FC = () => {
                             <div className="team-one__single">
                                 <div className="team-one__img-box">
                                     <div className="team-one__img">
-                                        <Image src={member.image} width={278} alt={member.name} />
+                                        <Image src={member.image} width={278} height={0} sizes="100vw" style={{ height: "auto" }} alt={member.name} />
                                     </div>
                                 </div>
                                 <div className="team-one__content">

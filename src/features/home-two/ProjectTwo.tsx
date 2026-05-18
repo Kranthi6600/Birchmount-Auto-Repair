@@ -4,11 +4,11 @@ import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 
-import projectImg1 from '@/assets/images/project/project-2-1.jpg';
-import projectImg2 from '@/assets/images/project/project-2-2.jpg';
-import projectImg3 from '@/assets/images/project/project-2-3.jpg';
-import projectImg4 from '@/assets/images/project/project-2-4.jpg';
-import projectImg5 from '@/assets/images/project/project-2-5.jpg';
+const projectImg1 = "/assets/images/project/project-2-1.jpg";
+const projectImg2 = "/assets/images/project/project-2-2.jpg";
+const projectImg3 = "/assets/images/project/project-2-3.jpg";
+const projectImg4 = "/assets/images/project/project-2-4.jpg";
+const projectImg5 = "/assets/images/project/project-2-5.jpg";
 import TextAnimation from '@/components/elements/TextAnimation';
 import Lightbox from 'yet-another-react-lightbox';
 import SectionWrapper from '@/components/elements/SectionWrapper';
@@ -24,17 +24,17 @@ interface ProjectItem {
 }
 
 const projectItems: ProjectItem[] = [
-    { id: 1, image: projectImg1.src, title: '2018 Honda Civic', subTitle: 'Brake System', to: '/project-details' },
-    { id: 2, image: projectImg2.src, title: '2015 Ford F-150', subTitle: 'Engine Tune-Up', to: '/project-details' },
-    { id: 3, image: projectImg3.src, title: '2017 Toyota Camry', subTitle: 'Transmission', to: '/project-details' },
-    { id: 4, image: projectImg4.src, title: '2016 Chevy Equinox', subTitle: 'Electrical Repair', to: '/project-details' },
-    { id: 5, image: projectImg5.src, title: '2019 Hyundai Elantra', subTitle: 'Tire & Wheel', to: '/project-details' },
-    { id: 6, image: projectImg1.src, title: '2014 Dodge Ram 1500', subTitle: 'Oil & Fluid Service', to: '/project-details' },
-    { id: 7, image: projectImg2.src, title: '2020 Kia Sportage', subTitle: 'Suspension Repair', to: '/project-details' },
-    { id: 8, image: projectImg3.src, title: '2018 Honda Accord', subTitle: 'Brake Service', to: '/project-details' },
-    { id: 9, image: projectImg4.src, title: '2016 Nissan Altima', subTitle: 'Engine Diagnostics', to: '/project-details' },
-    { id: 10, image: projectImg5.src, title: '2019 Mazda CX-5', subTitle: 'Full Inspection', to: '/project-details' },
-    { id: 11, image: projectImg1.src, title: '2021 Ford Escape', subTitle: 'Transmission Service', to: '/project-details' },
+    { id: 1, image: projectImg1, title: '2018 Honda Civic', subTitle: 'Brake System', to: '/project-details' },
+    { id: 2, image: projectImg2, title: '2015 Ford F-150', subTitle: 'Engine Tune-Up', to: '/project-details' },
+    { id: 3, image: projectImg3, title: '2017 Toyota Camry', subTitle: 'Transmission', to: '/project-details' },
+    { id: 4, image: projectImg4, title: '2016 Chevy Equinox', subTitle: 'Electrical Repair', to: '/project-details' },
+    { id: 5, image: projectImg5, title: '2019 Hyundai Elantra', subTitle: 'Tire & Wheel', to: '/project-details' },
+    { id: 6, image: projectImg1, title: '2014 Dodge Ram 1500', subTitle: 'Oil & Fluid Service', to: '/project-details' },
+    { id: 7, image: projectImg2, title: '2020 Kia Sportage', subTitle: 'Suspension Repair', to: '/project-details' },
+    { id: 8, image: projectImg3, title: '2018 Honda Accord', subTitle: 'Brake Service', to: '/project-details' },
+    { id: 9, image: projectImg4, title: '2016 Nissan Altima', subTitle: 'Engine Diagnostics', to: '/project-details' },
+    { id: 10, image: projectImg5, title: '2019 Mazda CX-5', subTitle: 'Full Inspection', to: '/project-details' },
+    { id: 11, image: projectImg1, title: '2021 Ford Escape', subTitle: 'Transmission Service', to: '/project-details' },
 ];
 
 const ProjectTwo: React.FC = () => {

@@ -4,8 +4,8 @@ import React, { type FormEvent } from 'react';
 import Banner from '@/features/banner/Banner';
 import FooterOne from '@/components/footers/FooterOne';
 
-import googleIcon from '@/assets/images/icon/icon-google-2.png';
-import facebookIcon from '@/assets/images/icon/icon-facebook.png'; 
+const googleIcon = "/assets/images/icon/icon-google-2.png";
+const facebookIcon = "/assets/images/icon/icon-facebook.png"; 
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 

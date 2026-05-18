@@ -1,10 +1,10 @@
-﻿"use client";
+"use client";
 
 import React from 'react';
-import aboutThreeImg1 from '@/assets/images/resources/about-three-img-1.jpg';
-import aboutThreeImg2 from '@/assets/images/resources/about-three-img-2.jpg';
-import aboutThreeShape1 from '@/assets/images/shapes/about-three-shape-1.png';
-import aboutThreeClientImg1 from '@/assets/images/resources/about-three-client-img-1.jpg';
+const aboutThreeImg1 = "/assets/images/resources/about-three-img-1.jpg";
+const aboutThreeImg2 = "/assets/images/resources/about-three-img-2.jpg";
+const aboutThreeShape1 = "/assets/images/shapes/about-three-shape-1.png";
+const aboutThreeClientImg1 = "/assets/images/resources/about-three-client-img-1.jpg";
 import useBirchmountAutoRepairContext from '@/components/context/useBirchmountAutoRepairContext';
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced';
 import TextAnimation from '@/components/elements/TextAnimation';
@@ -60,7 +60,7 @@ const featurePoints: FeaturePoint[] = [
 const clientInfo: ClientInfo = {
     name: 'Mark Hander',
     role: 'Founder & CEO',
-    image: aboutThreeClientImg1.src,
+    image: aboutThreeClientImg1,
 };
 
 const AboutThree: React.FC = () => {
@@ -77,7 +77,7 @@ const AboutThree: React.FC = () => {
                         >
                             <div className="about-three__img-box">
                                 <div className="about-three__img">
-                                    <Image src={aboutThreeImg1} alt="About us main" />
+                                    <Image src={aboutThreeImg1} width={0} height={0} sizes="100vw" alt="About us main" />
                                     <div className="about-three__video-link">
                                         <Link
                                             href={"#"}
@@ -92,10 +92,10 @@ const AboutThree: React.FC = () => {
                                     </div>
                                 </div>
                                 <div className="about-three__img-2">
-                                    <Image src={aboutThreeImg2} alt="About us secondary" />
+                                    <Image src={aboutThreeImg2} width={0} height={0} sizes="100vw" alt="About us secondary" />
                                 </div>
                                 <div className="about-three__shape-1">
-                                    <Image src={aboutThreeShape1} alt="" />
+                                    <Image src={aboutThreeShape1} width={0} height={0} sizes="100vw" alt="" />
                                 </div>
                                 <div className="about-three__shape-2"></div>
                                 <div className="about-three__experience-box">

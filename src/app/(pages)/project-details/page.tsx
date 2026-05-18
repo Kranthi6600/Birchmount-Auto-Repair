@@ -1,7 +1,7 @@
 import React from "react";  
-import projectDetailsImg1 from "@/assets/images/project/project-details-img-1.jpg";
-import projectDetailsTextImg from "@/assets/images/project/project-details-text-img.jpg";
-import projectDetailsPointsImg from "@/assets/images/project/project-details-points-img.jpg";
+const projectDetailsImg1 = "/assets/images/project/project-details-img-1.jpg";
+const projectDetailsTextImg = "/assets/images/project/project-details-text-img.jpg";
+const projectDetailsPointsImg = "/assets/images/project/project-details-points-img.jpg";
 import FooterOne from "@/components/footers/FooterOne";
 import Banner from "@/features/banner/Banner";
 import Link from "next/link";
@@ -87,7 +87,7 @@ const page: React.FC = () => {
                             <div className="project-details__left">
 
                                 <div className="project-details__img">
-                                    <Image src={projectDetailsImg1} style={{width: "auto", height:"auto"}} alt="Project overview - electrical repair work" />
+                                    <Image src={projectDetailsImg1} width={0} height={0} sizes="100vw" style={{width: "auto", height:"auto"}} alt="Project overview - electrical repair work" />
                                 </div>
 
                                 {/* Overview */}
@@ -101,7 +101,7 @@ const page: React.FC = () => {
                                 <div className="project-details__text-and-img">
                                     <p className="project-details__text-3">{challengeInsetText}</p>
                                     <div className="project-details__text-img">
-                                        <Image src={projectDetailsTextImg} style={{width: "auto", height:"auto"}} alt="Technician working on project challenge" />
+                                        <Image src={projectDetailsTextImg} width={0} height={0} sizes="100vw" style={{width: "auto", height:"auto"}} alt="Technician working on project challenge" />
                                     </div>
                                 </div>
 
@@ -111,7 +111,7 @@ const page: React.FC = () => {
 
                                 <div className="project-details__img-and-points">
                                     <div className="project-details__points-img">
-                                        <Image src={projectDetailsPointsImg} style={{width: "auto", height:"auto"}} alt="Project result highlights" />
+                                        <Image src={projectDetailsPointsImg} width={0} height={0} sizes="100vw" style={{width: "auto", height:"auto"}} alt="Project result highlights" />
                                     </div>
                                     <ul className="project-details__points list-unstyled">
                                         {resultPoints.map((point) => (

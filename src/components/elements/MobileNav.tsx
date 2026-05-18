@@ -1,6 +1,6 @@
-﻿"use client";
+"use client";
 import React from 'react';
-import Logo from "@/assets/images/resources/logo-2.png"
+const Logo = "/assets/images/resources/logo-2.png"
 import useBirchmountAutoRepairContext from '../context/useBirchmountAutoRepairContext';
 import MobileManuList from '../menu/MobileManuList';
 import SinglePageManuList from '../menu/SinglePageManuList';

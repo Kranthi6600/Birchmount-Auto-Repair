@@ -1,9 +1,9 @@
 "use client";
 import React, { useState } from 'react'; 
-import project3Img1 from '@/assets/images/project/project-3-1.jpg';
-import project3Img3 from '@/assets/images/project/project-3-3.jpg';
-import project3Img4 from '@/assets/images/project/project-3-4.jpg';
-import project3Img5 from '@/assets/images/project/project-3-5.jpg';
+const project3Img1 = "/assets/images/project/project-3-1.jpg";
+const project3Img3 = "/assets/images/project/project-3-3.jpg";
+const project3Img4 = "/assets/images/project/project-3-4.jpg";
+const project3Img5 = "/assets/images/project/project-3-5.jpg";
 import TextAnimation from '@/components/elements/TextAnimation';
 import FadeInAdvanced, { type AnimationVariant } from '@/components/elements/FadeInAdvanced';
 import Lightbox from 'yet-another-react-lightbox';
@@ -41,7 +41,7 @@ const filterItems: FilterItem[] = [
 const projectItems: ProjectItem[] = [
     {
         id: 1,
-        image: project3Img1.src,
+        image: project3Img1,
         popupImage: project3Img1,
         title: 'Maintenance Service',
         location: 'Los Angeles, USA',
@@ -52,7 +52,7 @@ const projectItems: ProjectItem[] = [
     },
     {
         id: 2,
-        image: project3Img5.src,
+        image: project3Img5,
         popupImage: project3Img1,
         title: 'Lighting & Fixtures',
         location: 'Los Angeles, USA',
@@ -63,7 +63,7 @@ const projectItems: ProjectItem[] = [
     },
     {
         id: 3,
-        image: project3Img3.src,
+        image: project3Img3,
         popupImage: project3Img1,
         title: 'Electric Repair',
         location: 'Los Angeles, USA',
@@ -74,7 +74,7 @@ const projectItems: ProjectItem[] = [
     },
     {
         id: 4,
-        image: project3Img4.src,
+        image: project3Img4,
         popupImage: project3Img1,
         title: 'Debris Stuck',
         location: 'Los Angeles, USA',
@@ -85,7 +85,7 @@ const projectItems: ProjectItem[] = [
     },
     {
         id: 5,
-        image: project3Img5.src,
+        image: project3Img5,
         popupImage: project3Img1,
         title: 'Maintenance Service',
         location: 'Los Angeles, USA',
@@ -96,7 +96,7 @@ const projectItems: ProjectItem[] = [
     },
     {
         id: 6,
-        image: project3Img3.src,
+        image: project3Img3,
         popupImage: project3Img1,
         title: 'Maintenance Service',
         location: 'Los Angeles, USA',

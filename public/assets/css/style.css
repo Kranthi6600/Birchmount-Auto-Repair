@@ -3244,15 +3244,15 @@ ul.shadow-box li.current a {
 
 
 .main-slider-two__bg.one {
-  background-image: url("../images/backgrounds/slider-2-1.jpg");
+  background-image: url("../images/banner/banner1.jpeg");
 }
 
 .main-slider-two__bg.two {
-  background-image: url("../images/backgrounds/slider-2-2.jpg");
+  background-image: url("../images/banner/banner2.jpeg");
 }
 
 .main-slider-two__bg.three {
-  background-image: url("../images/backgrounds/slider-2-3.jpg");
+  background-image: url("../images/banner/banner3.jpeg");
 }
 
 .services-one__bg-color .services-one__bg {

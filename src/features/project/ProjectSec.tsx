@@ -1,13 +1,13 @@
 "use client";
 import React, { useState } from "react";
 
-import project1 from "@/assets/images/project/project-1-1.jpg";
-import project2 from "@/assets/images/project/project-1-2.jpg";
-import project3 from "@/assets/images/project/project-1-3.jpg";
-import project4 from "@/assets/images/project/project-1-4.jpg";
-import project5 from "@/assets/images/project/project-1-5.jpg";
-import project6 from "@/assets/images/project/project-1-6.jpg";
-import project7 from "@/assets/images/project/project-1-7.jpg"; 
+const project1 = "/assets/images/project/project-1-1.jpg";
+const project2 = "/assets/images/project/project-1-2.jpg";
+const project3 = "/assets/images/project/project-1-3.jpg";
+const project4 = "/assets/images/project/project-1-4.jpg";
+const project5 = "/assets/images/project/project-1-5.jpg";
+const project6 = "/assets/images/project/project-1-6.jpg";
+const project7 = "/assets/images/project/project-1-7.jpg"; 
 import Lightbox from "yet-another-react-lightbox";
 import FadeInAdvanced from "@/components/elements/FadeInAdvanced";
 import Image from "next/image";
@@ -25,7 +25,7 @@ interface Project {
 const projects: Project[] = [
     {
         id: 1,
-        image: project1.src,
+        image: project1,
         subTitle: "Express Electric",
         title: "Charging Issues",
         animationDirection: "fadeInLeft",
@@ -33,7 +33,7 @@ const projects: Project[] = [
     },
     {
         id: 2,
-        image: project2.src,
+        image: project2,
         subTitle: "Computer Repair",
         title: "Hardware Update",
         animationDirection: "fadeInLeft",
@@ -41,7 +41,7 @@ const projects: Project[] = [
     },
     {
         id: 3,
-        image: project3.src,
+        image: project3,
         subTitle: "Express Electric",
         title: "Charging Issues",
         animationDirection: "fadeInRight",
@@ -49,7 +49,7 @@ const projects: Project[] = [
     },
     {
         id: 4,
-        image: project4.src,
+        image: project4,
         subTitle: "Recovery",
         title: "Hardware & Software",
         animationDirection: "fadeInRight",
@@ -57,7 +57,7 @@ const projects: Project[] = [
     },
     {
         id: 5,
-        image: project5.src,
+        image: project5,
         subTitle: "Mac Repair",
         title: "Apple iPhone Repair",
         animationDirection: "fadeInLeft",
@@ -65,7 +65,7 @@ const projects: Project[] = [
     },
     {
         id: 6,
-        image: project6.src,
+        image: project6,
         subTitle: "Camera Repair",
         title: "Microphone Faults",
         animationDirection: "fadeInLeft",
@@ -73,7 +73,7 @@ const projects: Project[] = [
     },
     {
         id: 7,
-        image: project7.src,
+        image: project7,
         subTitle: "Express Electric",
         title: "Battery Replacement",
         animationDirection: "fadeInRight",
@@ -81,7 +81,7 @@ const projects: Project[] = [
     },
     {
         id: 8,
-        image: project2.src,
+        image: project2,
         subTitle: "Computer Repair",
         title: "Hardware Update",
         animationDirection: "fadeInRight",

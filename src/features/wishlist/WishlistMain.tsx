@@ -90,7 +90,7 @@ const WishlistMain: React.FC = () => {
                                             </div>
 
                                             <div className="img-box">
-                                                <Image src={item.image} width={120} alt={item.name} />
+                                                <Image src={item.image} width={120} height={0} sizes="100vw" style={{ height: "auto" }} alt={item.name} />
                                             </div>
 
                                             <h3>

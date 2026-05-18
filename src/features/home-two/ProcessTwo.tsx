@@ -1,6 +1,6 @@
 import React from 'react';
 
-import processOneBg from '@/assets/images/backgrounds/process-one-bg.jpg';
+const processOneBg = "/assets/images/backgrounds/process-one-bg.jpg";
 import JarallaxSection from '@/components/elements/JarallaxSection';
 import FadeInAdvanced, { type AnimationVariant } from '@/components/elements/FadeInAdvanced';
 import TextAnimation from '@/components/elements/TextAnimation';
@@ -57,7 +57,7 @@ const processItems: ProcessItem[] = [
 const ProcessTwo: React.FC = () => {
     return (
         <section className="process-one">
-            <JarallaxSection imgSrc={processOneBg.src} className="process-one__bg jarallax" >
+            <JarallaxSection imgSrc={processOneBg} className="process-one__bg jarallax" >
                 <div className=""></div>
             </JarallaxSection>
             <div className="container">

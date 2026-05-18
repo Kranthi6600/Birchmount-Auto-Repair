@@ -1,7 +1,7 @@
 import React from 'react';
-import blog3Img1 from '@/assets/images/blog/blog-3-1.jpg';
-import blog3Img2 from '@/assets/images/blog/blog-3-2.jpg';
-import blog3Img3 from '@/assets/images/blog/blog-3-3.jpg';
+const blog3Img1 = "/assets/images/blog/blog-3-1.jpg";
+const blog3Img2 = "/assets/images/blog/blog-3-2.jpg";
+const blog3Img3 = "/assets/images/blog/blog-3-3.jpg";
 import TextAnimation from '@/components/elements/TextAnimation';
 import type { AnimationVariant } from '@/components/elements/FadeInAdvanced';
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced';

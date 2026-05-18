@@ -1,8 +1,8 @@
-﻿"use client";
+"use client";
 import React from 'react';
 
-import whyChooseOneImg1 from '@/assets/images/resources/why-choose-one-img-1.jpg';
-import whyChooseOneImg2 from '@/assets/images/resources/why-choose-one-img-2.jpg';
+const whyChooseOneImg1 = "/assets/images/resources/why-choose-one-img-1.jpg";
+const whyChooseOneImg2 = "/assets/images/resources/why-choose-one-img-2.jpg";
 import TextAnimation from '@/components/elements/TextAnimation';
 import FadeInAdvanced, { type AnimationVariant } from '@/components/elements/FadeInAdvanced';
 import useBirchmountAutoRepairContext from '@/components/context/useBirchmountAutoRepairContext';
