@@ -23,13 +23,11 @@ export const pagesList: MenuItem[] = [
     { id: 8, menuItem: "404 Error", menuLink: "/404" },
 ];
 export const servicesList: MenuItem[] = [
-    { id: 1, menuItem: "Services", menuLink: "/services" },
-    { id: 2, menuItem: "maintenance-service", menuLink: "/maintenance-service" },
-    { id: 3, menuItem: "Lighting & Fixtures", menuLink: "/lighting-fixtures" },
-    { id: 4, menuItem: "Installing a ceiling fan", menuLink: "/installing-ceiling-fan" },
-    { id: 5, menuItem: "Commercial services", menuLink: "/commercial-services" },
-    { id: 6, menuItem: "Short circuit repair", menuLink: "/short-circuit-repair" },
-    { id: 7, menuItem: "Electric Panel Repair", menuLink: "/electric-panel-repair" },
+    { id: 1, menuItem: "Brake Repair & Service", menuLink: "/services" },
+    { id: 2, menuItem: "Oil Change & Lube", menuLink: "/services" },
+    { id: 3, menuItem: "Engine Diagnostics", menuLink: "/services" },
+    { id: 4, menuItem: "Transmission Service", menuLink: "/services" },
+    { id: 5, menuItem: "Electrical Repair", menuLink: "/services" },
 ];
 export const shopList: MenuItem[] = [
     { id: 1, menuItem: "Products", menuLink: "/products" },
@@ -38,11 +36,4 @@ export const shopList: MenuItem[] = [
     { id: 4, menuItem: "Checkout", menuLink: "/checkout" },
     { id: 5, menuItem: "Sign Up", menuLink: "/sign-up" },
     { id: 6, menuItem: "Login", menuLink: "/login" },
-];
-export const blogList: MenuItem[] = [
-    { id: 1, menuItem: "Blog", menuLink: "/blog" },
-    { id: 2, menuItem: "Blog Standard", menuLink: "/blog-standard" },
-    { id: 3, menuItem: "Blog Left Sidebar", menuLink: "/blog-left-sidebar" },
-    { id: 4, menuItem: "Blog Right Sidebar", menuLink: "/blog-right-sidebar" },
-    { id: 5, menuItem: "Blog Details", menuLink: "/blog-details" },
 ];

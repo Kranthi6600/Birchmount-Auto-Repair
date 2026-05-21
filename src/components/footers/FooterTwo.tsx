@@ -29,25 +29,25 @@ interface SocialLink {
 }
 
 const workingHours: WorkingHour[] = [
-    { id: 1, day: 'Mon - Fri', hours: '9:00 AM - 5:00 PM' },
-    { id: 2, day: 'Saturday', hours: '8:00 AM - 6:00 PM' },
+    { id: 1, day: 'Mon - Fri', hours: '8:00 AM – 6:00 PM' },
+    { id: 2, day: 'Saturday', hours: '9:00 AM – 3:00 PM' },
     { id: 3, day: 'Sunday', hours: 'Closed' },
 ];
 
 const quickLinks: NavLink[] = [
-    { id: 1, label: 'About Us', to: '/about' },
-    { id: 2, label: 'Portfolio', to: '/projects' },
-    { id: 3, label: 'Help & FAQs', to: '/faq' },
+    { id: 1, label: 'Home', to: '/' },
+    { id: 2, label: 'Services', to: '/services' },
+    { id: 3, label: 'About', to: '/about' },
     { id: 4, label: 'Blog', to: '/blog' },
     { id: 5, label: 'Contact', to: '/contact' },
 ];
 
 const serviceLinks: NavLink[] = [
-    { id: 1, label: 'Electric Repair', to: '/electric-panel-repair' },
-    { id: 2, label: 'Smart Watch Repair', to: '/installing-ceiling-fan' },
-    { id: 3, label: 'Smartphone Repair', to: '/commercial-services' },
-    { id: 4, label: 'Laptop Repair', to: '/lighting-fixtures' },
-    { id: 5, label: 'Desktop Repair', to: '/short-circuit-repair' },
+    { id: 1, label: 'Brake Repair & Service', to: '/services' },
+    { id: 2, label: 'Oil Change & Lube', to: '/services' },
+    { id: 3, label: 'Engine Diagnostics', to: '/services' },
+    { id: 4, label: 'Transmission Service', to: '/services' },
+    { id: 5, label: 'Electrical Repair', to: '/services' },
 ];
 
 
@@ -77,10 +77,10 @@ const footerPosts: FooterPost[] = [
 ];
 
 const socialLinks: SocialLink[] = [
-    { id: 1, icon: 'icon-facebook', href: '#' },
-    { id: 2, icon: 'icon-xpa', href: '#' },
-    { id: 3, icon: 'icon-link-in', href: '#' },
-    { id: 4, icon: 'icon-instagram', href: '#' },
+    { id: 1, icon: 'fab fa-twitter', href: '#' },
+    { id: 2, icon: 'fab fa-facebook', href: '#' },
+    { id: 3, icon: 'fab fa-pinterest-p', href: '#' },
+    { id: 4, icon: 'fab fa-instagram', href: '#' },
 ];
 
 const bottomMenuLinks: NavLink[] = [
@@ -112,7 +112,7 @@ const FooterTwo = () => {
                                     <Link href="/"><Image src={footerLogo} width={138} height={40} alt="Birchmount Auto Repair Logo" /></Link>
                                 </div>
                                 <p className="footer-widget__about-text">
-                                    Secure other greater pleasures, or else he endures pains to avoid worse pains selection
+                                    Your neighbourhood auto repair shop, proudly serving Scarborough with honest service, fair pricing, and guaranteed work.
                                 </p>
                                 <div className="footer-widget__working-box">
                                     <h3 className="footer-widget__working-title">Working Hours:</h3>
@@ -231,7 +231,7 @@ const FooterTwo = () => {
                 <div className="container">
                     <div className="site-footer__bottom-inner">
                         <p className="site-footer__bottom-text">
-                            © Copywright 2026 by <Link href="/">Birchmount Auto Repair</Link> All Rights Reserved.
+                            &copy; Copyright 2026 by <Link href="/">Birchmount Auto Repair</Link>. All Rights Reserved.
                         </p>
                         <ul className="list-unstyled site-footer__bottom-menu">
                             {bottomMenuLinks.map((link) => (

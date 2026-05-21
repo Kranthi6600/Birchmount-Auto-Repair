@@ -12,7 +12,7 @@ import TestimonialOne from '@/features/home-one/TestimonialOne';
 const page: React.FC = () => {
     return (
         <>
-            <Banner title='About' subTitle='About' />
+            <Banner title='About' subTitle='About' bgImage='/assets/images/aboutus/aboutbanner.jpg' />
             <AboutOne secClass='about-page' />
             <ServiceOne />
             <SlidingText secClass='sliding-text-two' />

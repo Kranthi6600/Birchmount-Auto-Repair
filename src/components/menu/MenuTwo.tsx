@@ -41,20 +41,7 @@ const MenuTwo: React.FC = () => {
                         </div>
                         <div className="main-menu-two__call-content">
                             <p className="main-menu-two__call-sub-title">Call Anytime</p>
-                            <h5 className="main-menu-two__call-number"><a href="tel:9288006780">+92 ( 8800 ) - 6780</a></h5>
-                        </div>
-                    </div>
-                    <div className="main-menu-two__search-cart-box">
-                        <div className="main-menu-two__search-cart-box">
-                            <div className="main-menu-two__search-box" onClick={handleSearch}>
-                                <Link href="#" className="main-menu-two__search searcher-toggler-box icon-search-interface-symbol"></Link>
-                            </div>
-                            <div className="main-menu-two__cart-box">
-                                <Link href="/cart" className="main-menu-two__cart">
-                                    <span className="far fa-shopping-cart"></span>
-                                    <span className="main-menu-two__cart-count">0{cartCount}</span>
-                                </Link>
-                            </div>
+                            <h5 className="main-menu-two__call-number"><a href="tel:4167578368">(416) 757-8368</a></h5>
                         </div>
                     </div>
                     <div className="main-menu-two__nav-sidebar-icon" onClick={handlSidebar}>

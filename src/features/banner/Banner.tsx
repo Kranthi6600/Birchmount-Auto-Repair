@@ -5,12 +5,12 @@ type BannerProp = {
     subTitle?: string;
     subTitleLink?: string;
     thirdTitle?: string;
-
+    bgImage?: string;
 }
-const Banner: React.FC<BannerProp> = ({ title, subTitle = "", subTitleLink = '/services', thirdTitle }) => {
+const Banner: React.FC<BannerProp> = ({ title, subTitle = "", subTitleLink = '/services', thirdTitle, bgImage }) => {
     return (
         <section className="page-header">
-            <div className="page-header__bg">
+            <div className="page-header__bg" style={bgImage ? { backgroundImage: `url(${bgImage})`, opacity: 1 } : undefined}>
 
             </div>
             <div className="container">

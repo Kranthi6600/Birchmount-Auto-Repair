@@ -37,9 +37,9 @@ const workingHours: WorkingHour[] = [
 ];
 
 const quickLinks: NavLink[] = [
-    { id: 1, label: 'About Us', to: '/about' },
-    { id: 2, label: 'Portfolio', to: '/projects' },
-    { id: 3, label: 'Help & FAQs', to: '/faq' },
+    { id: 1, label: 'Home', to: '/' },
+    { id: 2, label: 'Services', to: '/services' },
+    { id: 3, label: 'About', to: '/about' },
     { id: 4, label: 'Blog', to: '/blog' },
     { id: 5, label: 'Contact', to: '/contact' },
 ];
@@ -75,10 +75,10 @@ const contactItems: ContactItem[] = [
 ];
 
 const socialLinks: SocialLink[] = [
-    { id: 1, icon: 'icon-facebook', href: '#' },
-    { id: 2, icon: 'icon-xpa', href: '#' },
-    { id: 3, icon: 'icon-link-in', href: '#' },
-    { id: 4, icon: 'icon-instagram', href: '#' },
+    { id: 1, icon: 'fab fa-twitter', href: '#' },
+    { id: 2, icon: 'fab fa-facebook', href: '#' },
+    { id: 3, icon: 'fab fa-pinterest-p', href: '#' },
+    { id: 4, icon: 'fab fa-instagram', href: '#' },
 ];
 
 const bottomMenuLinks: NavLink[] = [

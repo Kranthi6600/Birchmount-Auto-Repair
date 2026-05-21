@@ -117,13 +117,13 @@
 .pricing-two__img-1 {
     position: absolute;
     bottom: 20px;
-    right: -189px;
+    right: -300px;
     animation: topBottom 3s ease-in-out infinite;
     z-index: 1;
 }
 
 .pricing-two__img-1 img {
-    width: auto;
+    width: 300px;
     border-bottom-left-radius: 108px;
     border-top-left-radius: 100px;
 }
