@@ -3,9 +3,10 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
-const testimonial3Img1 = "/assets/images/testimonial/testimonial-3-1.jpg";
-const testimonial3Img2 = "/assets/images/testimonial/testimonial-3-2.jpg";
-const testimonial3Img3 = "/assets/images/testimonial/testimonial-3-3.jpg";
+const testimonial3Img1 = "/assets/images/testimonial/testimonial1.png";
+const testimonial3Img4 = "/assets/images/testimonial/testimonial2.jpeg";
+const testimonial3Img3 = "/assets/images/testimonial/testimonial3.jpeg";
+const testimonial3Img5 = "/assets/images/testimonial/testimonial4.jpeg";
 import TextAnimation from '@/components/elements/TextAnimation';
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
@@ -24,37 +25,37 @@ const testimonialItems: TestimonialItem[] = [
     {
         id: 1,
         image: testimonial3Img1,
-        name: 'Dianne Russell',
-        role: 'Founder',
+        name: 'Marcus T.',
+        role: 'Scarborough Resident',
         rating: 5,
-        text: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected.',
+        text: 'Brought my car in for a brake job and they had it done same day. Honest pricing, no upsells — exactly what you want from a local shop.',
         path: '/testimonials',
     },
     {
         id: 2,
-        image: testimonial3Img2,
-        name: 'Stanley Richard',
-        role: 'Co-Founder',
+        image: testimonial3Img4,
+        name: 'Priya S.',
+        role: 'Regular Customer',
         rating: 5,
-        text: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected.',
+        text: 'I\'ve been coming to Birchmount Auto Repair for over two years. They always explain what needs to be done and never pressure you into extras.',
         path: '/testimonials',
     },
     {
         id: 3,
-        image: testimonial3Img3,
-        name: 'Quentin Ambrose',
-        role: 'Manager',
+        image: testimonial3Img5,
+        name: 'David L.',
+        role: 'Local Business Owner',
         rating: 5,
-        text: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected.',
+        text: 'Fast turnaround on my fleet vehicles and fair rates every time. These guys are the real deal — highly recommend them to anyone in Scarborough.',
         path: '/testimonials',
     },
     {
         id: 4,
-        image: testimonial3Img1,
-        name: 'Dianne Russell',
-        role: 'Founder',
+        image: testimonial3Img3,
+        name: 'Sandra K.',
+        role: 'First-Time Customer',
         rating: 5,
-        text: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected.',
+        text: 'Check engine light came on and I was nervous about the cost. They ran the diagnostics, gave me a clear report, and fixed it for a fair price. Will be back!',
         path: '/testimonials',
     },
 ];

@@ -1,8 +1,8 @@
 "use client";
 
 import React from 'react';
-const aboutOneImg1 = "/assets/images/resources/about-one-img-1.jpg";
-const aboutOneImg2 = "/assets/images/resources/about-one-img-2.jpg";
+const aboutOneImg1 = "/assets/images/aboutus/img1.jpeg";
+const aboutOneImg2 = "/assets/images/aboutus/img2.jpeg";
 const aboutOneShape2 = "/assets/images/shapes/about-one-shape-2.png";
 
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced';

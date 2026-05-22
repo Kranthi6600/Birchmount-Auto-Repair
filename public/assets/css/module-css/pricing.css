@@ -117,7 +117,7 @@
 .pricing-two__img-1 {
     position: absolute;
     bottom: 20px;
-    right: -300px;
+    right: -350px;
     animation: topBottom 3s ease-in-out infinite;
     z-index: 1;
 }

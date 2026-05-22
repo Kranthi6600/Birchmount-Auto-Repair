@@ -135,7 +135,7 @@ const PricingTwo: React.FC = () => {
                                             {plan.hasPremiumExtras && (
                                                 <>
                                                     <div className="pricing-two__img-1">
-                                                        <Image src={pricingTwoImg1} width={300} height={300} style={{ width: 300, height: 500 }} alt="" />
+                                                        <Image src={pricingTwoImg1} width={300} height={300} style={{ width: 340, height: 500 }} alt="" />
                                                     </div>
                                                     <div className="pricing-two__shape-1"></div>
                                                 </>

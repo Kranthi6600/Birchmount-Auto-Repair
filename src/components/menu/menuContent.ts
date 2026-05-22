@@ -14,13 +14,11 @@ export const homeList: MenuItem[] = [
 ]
 export const pagesList: MenuItem[] = [
     { id: 1, menuItem: "Team", menuLink: "/team" },
-    { id: 2, menuItem: "Team Details", menuLink: "/team-details" },
-    { id: 3, menuItem: "Projects", menuLink: "/projects" },
-    { id: 4, menuItem: "Project Details", menuLink: "/project-details" },
-    { id: 5, menuItem: "Testimonials", menuLink: "/testimonials" },
-    { id: 6, menuItem: "Pricing", menuLink: "/pricing" },
-    { id: 7, menuItem: "FAQs", menuLink: "/faqs" },
-    { id: 8, menuItem: "404 Error", menuLink: "/404" },
+    { id: 2, menuItem: "Projects", menuLink: "/projects" },
+    { id: 3, menuItem: "Testimonials", menuLink: "/testimonials" },
+    { id: 4, menuItem: "Pricing", menuLink: "/pricing" },
+    { id: 5, menuItem: "FAQs", menuLink: "/faqs" },
+    { id: 6, menuItem: "404 Error", menuLink: "/404" },
 ];
 export const servicesList: MenuItem[] = [
     { id: 1, menuItem: "Brake Repair & Service", menuLink: "/services" },
@@ -31,9 +29,8 @@ export const servicesList: MenuItem[] = [
 ];
 export const shopList: MenuItem[] = [
     { id: 1, menuItem: "Products", menuLink: "/products" },
-    { id: 2, menuItem: "Product Details", menuLink: "/product-details" },
-    { id: 3, menuItem: "Cart", menuLink: "/cart" },
-    { id: 4, menuItem: "Checkout", menuLink: "/checkout" },
-    { id: 5, menuItem: "Sign Up", menuLink: "/sign-up" },
-    { id: 6, menuItem: "Login", menuLink: "/login" },
+    { id: 2, menuItem: "Cart", menuLink: "/cart" },
+    { id: 3, menuItem: "Checkout", menuLink: "/checkout" },
+    { id: 4, menuItem: "Sign Up", menuLink: "/sign-up" },
+    { id: 5, menuItem: "Login", menuLink: "/login" },
 ];

@@ -6,7 +6,7 @@ import FooterOne from '@/components/footers/FooterOne';
 const page: React.FC = () => {
     return (
         <>
-            <Banner title='Services' subTitle='Services' />
+            <Banner title='Services' subTitle='Services' bgImage='/assets/images/services/servicebanner.jpeg'/>
             <ServicesSec />
             <FooterOne />
         </>

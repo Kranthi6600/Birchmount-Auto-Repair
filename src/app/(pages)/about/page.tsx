@@ -6,19 +6,19 @@ import AboutOne from '@/features/home-one/AboutOne';
 import BlogOne from '@/features/home-one/BlogOne';
 import BrandOne from '@/features/home-one/BrandOne';
 import ServiceOne from '@/features/home-one/ServiceOne';
-import TeamOne from '@/features/home-one/TeamOne';
-import TestimonialOne from '@/features/home-one/TestimonialOne';
+import TeamTwo from '@/features/home-two/TeamTwo';
+import TestimonialThree from '@/features/home-three/TestimonialsThree';
  
 const page: React.FC = () => {
     return (
         <>
-            <Banner title='About' subTitle='About' bgImage='/assets/images/aboutus/aboutbanner.jpg' />
+            <Banner title='About' subTitle='About' bgImage='/assets/images/aboutus/aboutbanner1.png' />
             <AboutOne secClass='about-page' />
             <ServiceOne />
             <SlidingText secClass='sliding-text-two' />
-            <TeamOne />
+            <TeamTwo />
             <BrandOne />
-            <TestimonialOne />
+            <TestimonialThree />
             <BlogOne />
             <FooterOne />
         </>
