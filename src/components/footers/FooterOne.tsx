@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 const footerShape1 = "/assets/images/shapes/footer-widget-shape-1.png";
-const footerLogo = "/assets/images/resources/footer-logo.png";
+const footerLogo = "/assets/images/logo1.PNG";
 import FadeInAdvanced from '../elements/FadeInAdvanced';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -107,7 +107,7 @@ const FooterOne: React.FC = () => {
                         <FadeInAdvanced className="col-xl-3" variant='fadeInUp' delay={100}>
                             <div className="footer-widget__column footer-widget__about">
                                 <div className="footer-widget__logo">
-                                    <Link href="/"><Image src={footerLogo} width={138} height={40} alt="Birchmount Auto Repair Logo" /></Link>
+                                    <Link href="/"><Image src={footerLogo} width={200} height={60} style={{ width: 'auto', height: '60px' }} alt="Birchmount Auto Repair Logo" /></Link>
                                 </div>
                                 <p className="footer-widget__about-text">
                                     Your neighbourhood auto repair shop, proudly serving Scarborough with honest service, fair pricing, and guaranteed work.

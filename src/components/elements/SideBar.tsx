@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Swal from 'sweetalert2'
-const logo = "/assets/images/resources/logo-2.png" 
+const logo = "/assets/images/logo1.PNG"
 import useBirchmountAutoRepairContext from '../context/useBirchmountAutoRepairContext';
 import Link from 'next/link';
 import Image from 'next/image';

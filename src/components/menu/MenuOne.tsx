@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-const logo = "/assets/images/resources/logo-1.png"
+const logo = "/assets/images/logo1.PNG"
 import MenuList from './MenuList';
 import useBirchmountAutoRepairContext from '../context/useBirchmountAutoRepairContext';
 import SinglePageManuList from './SinglePageManuList';
@@ -29,7 +29,7 @@ const MenuOne: React.FC = () => {
             <div className="main-menu__wrapper-inner">
                 <div className="main-menu__left">
                     <div className="main-menu__logo">
-                        <Link href="/"><Image src={logo} width={138} height={40} alt="Logo" /></Link>
+                        <Link href="/"><Image src={logo} width={200} height={60} style={{ width: 'auto', height: '60px' }} alt="Birchmount Auto Repair Logo" /></Link>
                     </div>
                 </div>
                 <div className="main-menu__main-menu-box">
