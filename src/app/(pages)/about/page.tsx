@@ -17,7 +17,7 @@ const page: React.FC = () => {
             <ServiceOne />
             <SlidingText secClass='sliding-text-two' />
             <TeamTwo />
-            <BrandOne />
+            {/* <BrandOne /> */}
             <TestimonialThree />
             <BlogOne />
             <FooterOne />

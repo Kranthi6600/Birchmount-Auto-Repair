@@ -2,7 +2,7 @@ import React from 'react';
 import HeaderOne from '@/components/headers/HeaderOne';
 import FooterOne from '@/components/footers/FooterOne';
 import Banner from '@/features/banner/Banner';
-const errorPageImg = "/assets/images/resources/error-page-img1.png";
+const errorPageImg = '/assets/images/error/errorimg.jpeg';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -10,7 +10,7 @@ const Page: React.FC = () => {
     return (
         <div className="page-wrapper">
             <HeaderOne />
-            <Banner title="404 Error" subTitle="404 Error" />
+            <Banner title="404 Error" subTitle="404 Error" bgImage='/assets/images/error/errorbanner1.jpeg'/>
             <section className="error-page">
                 <div className="container">
                     <div className="error-page__inner text-center">

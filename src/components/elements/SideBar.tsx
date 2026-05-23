@@ -47,9 +47,7 @@ const SideBar: React.FC = () => {
                                 <div className="content-box">
                                     <h4>About Us</h4>
                                     <div className="inner-text">
-                                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has
-                                            roots in a piece of classical Latin literature from 45 BC, making it over
-                                            2000 years old.
+                                        <p>Birchmount Auto Repair is Scarborough's trusted local mechanic, providing honest, reliable auto repair services for all vehicle makes and models. From oil changes to engine diagnostics, we've got you covered.
                                         </p>
                                     </div>
                                 </div>
@@ -79,15 +77,15 @@ const SideBar: React.FC = () => {
                                     <h4>Contact Info</h4>
                                     <ul className="list-unstyled">
                                         <li>
-                                            <span className="icon-location"></span> 88 broklyn street, New York
+                                            <span className="icon-location"></span> 1064 Birchmount Rd, Scarborough, ON M1K 1S4
                                         </li>
                                         <li>
                                             <span className="icon-call"></span>
-                                            <a href="tel:123456789">+1 555-9990-153</a>
+                                            <a href="tel:4167578368">(416) 757-8368</a>
                                         </li>
                                         <li>
                                             <span className="icon-envelope"></span>
-                                            <a href="mailto:info@example.com">info@example.com</a>
+                                            <a href="mailto:birchmountautorepair@gmail.com">birchmountautorepair@gmail.com</a>
                                         </li>
                                     </ul>
                                 </div>

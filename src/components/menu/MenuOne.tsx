@@ -45,18 +45,7 @@ const MenuOne: React.FC = () => {
                         </div>
                         <div className="main-menu__call-content">
                             <p className="main-menu__call-sub-title">Call Anytime</p>
-                            <h5 className="main-menu__call-number"><a href="tel:9288006780">+92 ( 8800 ) - 6780</a></h5>
-                        </div>
-                    </div>
-                    <div className="main-menu__search-cart-box">
-                        <div className="main-menu__search-box" onClick={handleSearch}>
-                            <a href="#" className="main-menu__search searcher-toggler-box icon-search-interface-symbol"></a>
-                        </div>
-                        <div className="main-menu__cart-box">
-                            <Link href="/cart" className="main-menu__cart">
-                                <span className="far fa-shopping-cart"></span>
-                                <span className="main-menu__cart-count">0{cartCount}</span>
-                            </Link>
+                            <h5 className="main-menu__call-number"><a href="tel:4167578368">(416) 757-8368</a></h5>
                         </div>
                     </div>
                     <div className="main-menu__nav-sidebar-icon" onClick={handlSidebar}>

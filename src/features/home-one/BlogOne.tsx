@@ -43,7 +43,7 @@ const BlogOne: React.FC = () => {
                                     <div className="blog-one__img">
                                         <Image src={post.image} width={410} height={240} alt={post.title} />
                                         <div className="blog-one__plus">
-                                            <Link href="/blog-details">
+                                            <Link href={`/blog/${post.slug}`}>
                                                 <i className="fa fa-plus"></i>
                                             </Link>
                                         </div>
@@ -64,10 +64,10 @@ const BlogOne: React.FC = () => {
                                         </li>
                                     </ul>
                                     <h3 className="blog-one__title">
-                                        <Link href="/blog-details">{post.title}</Link>
+                                        <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                                     </h3>
                                     <div className="blog-one__read-more">
-                                        <Link href="/blog-details">
+                                        <Link href={`/blog/${post.slug}`}>
                                             Learn More <span className="icon-arrow-right"></span>
                                         </Link>
                                     </div>

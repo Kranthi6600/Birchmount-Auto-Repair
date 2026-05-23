@@ -112,7 +112,7 @@ const TeamTwo: React.FC = () => {
                                         ))}
                                     </div>
                                     <h3 className="team-two__title">
-                                        <Link href={member.to}>{member.name}</Link>
+                                        {member.name}
                                     </h3>
                                     <p className="team-two__sub-title">{member.subTitle}</p>
                                 </div>

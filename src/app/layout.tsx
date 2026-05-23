@@ -21,6 +21,14 @@ const titilliumWeb = Titillium_Web({
 export const metadata: Metadata = {
   title: "Birchmount Auto Repair - Electronics & Gadgets Repair Services NextJs Template",
   description: "Birchmount Auto Repair – Modern Next Js template for gadgets, mobile, AC & computer repair services. Clean, responsive & fully documented",
+  icons: {
+    icon: [
+      { url: '/assets/images/icon/logo.ico', sizes: '32x32' },
+      { url: '/assets/images/icon/logo.ico', sizes: '48x48' },
+      { url: '/assets/images/icon/logo.ico', sizes: '64x64' },
+    ],
+    apple: { url: '/assets/images/icon/logo.ico', sizes: '180x180' },
+  },
 };
 
 export default function RootLayout({

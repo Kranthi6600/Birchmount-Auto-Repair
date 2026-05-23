@@ -7,7 +7,7 @@ import FooterOne from '@/components/footers/FooterOne';
 const page: React.FC = () => {
     return (
         <>
-            <Banner title='Blog & News' />
+            <Banner title='Blog & News' bgImage='/assets/images/blog/blogbanner.jpeg'/>
             <BlogStandartMain />
             <FooterOne />
         </>

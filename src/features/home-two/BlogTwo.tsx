@@ -29,8 +29,8 @@ const BlogTwo: React.FC = () => {
                             <div className="blog-two__single">
                                 <div className="blog-two__img-box">
                                     <div className="blog-two__img">
-                                        <Image src={blog.image} alt="" width={410} height={300}/>
-                                        <Link href={blog.to} className="blog-two__link">
+                                        <Image src={blog.image} alt={blog.title} width={410} height={300}/>
+                                        <Link href={`/blog/${blog.slug}`} className="blog-two__link">
                                             <span className="sr-only"></span>
                                         </Link>
                                         <div className="blog-two__date">
@@ -42,11 +42,11 @@ const BlogTwo: React.FC = () => {
                                 </div>
                                 <div className="blog-two__content">
                                     <h3 className="blog-two__title">
-                                        <Link href={blog.to}>{blog.title}</Link>
+                                        <Link href={`/blog/${blog.slug}`}>{blog.title}</Link>
                                     </h3>
-                                    <p className="blog-two__text">{blog.text}</p>
+                                    <p className="blog-two__text">{blog.excerpt}</p>
                                     <div className="blog-two__read-more">
-                                        <Link href={blog.to}>
+                                        <Link href={`/blog/${blog.slug}`}>
                                             Read More<span className="icon-arrow-right"></span>
                                         </Link>
                                     </div>

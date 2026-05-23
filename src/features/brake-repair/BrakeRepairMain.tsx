@@ -117,9 +117,9 @@ const BrakeRepairMain: React.FC = () => {
                                                     <Image
                                                         src={item.image}
                                                         width={410}
-                                                        height={0}
-                                                        sizes="100vw"
-                                                        style={{ height: 'auto' }}
+                                                        height={260}
+                                                        sizes="(max-width: 768px) 100vw, 410px"
+                                                        style={{ width: '100%', height: '260px', objectFit: 'cover' }}
                                                         alt={item.alt}
                                                     />
                                                 </div>

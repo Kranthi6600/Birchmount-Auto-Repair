@@ -103,7 +103,7 @@ const TestimonialsThree: React.FC = () => {
                                         <div className="testimonial-three__content">
                                             <div className="testimonial-three__name-box">
                                                 <h3>
-                                                    <Link href={item.path}>{item.name}</Link>
+                                                   {item.name}
                                                 </h3>
                                                 <p>{item.role}</p>
                                             </div>

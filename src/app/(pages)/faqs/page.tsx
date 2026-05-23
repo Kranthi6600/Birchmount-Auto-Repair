@@ -6,7 +6,7 @@ import FaqSec from '@/features/faq/FaqSec';
 const page: React.FC = () => {
     return (
         <>
-            <Banner title='Our Faq' subTitle='Faq' />
+            <Banner title='Our Faq' subTitle='Faq' bgImage='/assets/images/faq/faqbanner.jpeg'/>
             <FaqSec />
             <FooterOne />
         </>

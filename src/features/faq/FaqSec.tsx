@@ -13,52 +13,52 @@ interface FaqItem {
 const faqData: FaqItem[] = [
     {
         id: 1,
-        question: 'Why is my air conditioner not cooling properly?',
+        question: 'What services does Birchmount Auto Repair offer?',
         answer:
-            'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.',
+            'We offer a full range of automotive services including brake repair, oil changes and lube, engine diagnostics, transmission service, and electrical repair. Our certified technicians service all domestic and imported vehicle makes and models.',
     },
     {
         id: 2,
-        question: 'How often should I service my air conditioner?',
+        question: 'How often should I change my oil?',
         answer:
-            'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.',
+            'Most modern vehicles require an oil change every 5,000 to 8,000 kilometres for conventional oil, or every 10,000 to 15,000 km for full synthetic. We\'ll recommend the right interval based on your vehicle and driving habits during every visit.',
         isActive: true,
     },
     {
         id: 3,
-        question: 'Why is my AC making strange noises?',
+        question: 'How do I know if my brakes need replacing?',
         answer:
-            'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.',
+            'Common warning signs include squealing or grinding noises when braking, a soft or spongy brake pedal, vibration in the steering wheel, or your vehicle pulling to one side. If you notice any of these, bring your vehicle in for a free brake inspection.',
     },
     {
         id: 4,
-        question: 'What qualifications and certifications do your advisors have?',
+        question: 'What does the check engine light mean?',
         answer:
-            'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.',
+            'The check engine light can signal anything from a loose gas cap to a serious engine or emissions fault. Our OBD-II diagnostic scan reads your vehicle\'s fault codes to identify the exact issue — we\'ll explain the findings clearly before recommending any repairs.',
     },
     {
         id: 5,
-        question: 'How do I know if my AC unit needs to be replaced?',
+        question: 'Do you work on all vehicle makes and models?',
         answer:
-            'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.',
+            'Yes. Our technicians are experienced with all domestic and imported vehicles including Honda, Toyota, Ford, GM, Chrysler, Hyundai, Kia, Nissan, and more. If it drives, we can service it.',
     },
     {
         id: 6,
-        question: 'What is the ideal temperature setting for energy efficiency?',
+        question: 'Do I need an appointment or do you accept walk-ins?',
         answer:
-            'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.',
+            'We welcome walk-ins for most services, including oil changes. For larger repairs such as transmission or electrical work, booking ahead ensures we can dedicate the right time and resources to your vehicle. Call us at (416) 757-8368 to schedule.',
     },
     {
         id: 7,
-        question: 'Can I install an air conditioner myself?',
+        question: 'Do you offer a warranty on your repairs?',
         answer:
-            'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.',
+            'Yes. All repairs at Birchmount Auto Repair are backed by a warranty on parts and labour. We use quality parts and stand behind every job we complete — your satisfaction and safety are our top priorities.',
     },
     {
         id: 8,
-        question: 'How do I clean or replace my AC filter?',
+        question: 'Where are you located and what are your hours?',
         answer:
-            'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.',
+            'We are located at 1064 Birchmount Rd, Scarborough, ON M1K 1S4. Our hours are Monday to Friday 8am–6pm and Saturday 9am–3pm. You can also reach us by phone at (416) 757-8368 or by email at birchmountautorepair@gmail.com.',
     },
 ];
 
