@@ -5,9 +5,9 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import ServiceDetailsSidebar from '../maintenance/ServiceDetailsSidebar';
 
-const heroImg = '/assets/images/services/enginediagnostics.jpeg';
-const boxImg1 = '/assets/images/services/serviceimg5.jpeg';
-const boxImg2 = '/assets/images/services/serviceimg6.jpeg';
+const heroImg = '/assets/images/services/serviceimg13.jpeg';
+const boxImg1 = '/assets/images/services/serviceimg13-1.jpeg';
+const boxImg2 = '/assets/images/services/serviceimg13-2.jpeg';
 
 const pointsList = [
     'OBD-II scanning and advanced computer diagnostics for all makes and models',

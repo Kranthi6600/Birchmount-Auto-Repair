@@ -17,7 +17,7 @@ const MenuList: React.FC = () => {
             </li>
             <li className={`dropdown ${findLocation(servicesList) ? "current" : ""}`}>
                 <Link href="/services">Services</Link>
-                <ul className="shadow-box">
+                <ul className="shadow-box services-mega-dropdown">
                     {
                         servicesList.map((item: MenuItem) => (
                             <li key={item?.id} className={currentPath === item?.menuLink ? "current" : ""}><Link href={item?.menuLink}>{item?.menuItem}</Link></li>

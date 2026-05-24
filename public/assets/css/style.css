@@ -3402,6 +3402,21 @@ ul.shadow-box li.current a {
   cursor: pointer;
 }
 
+/* Services mega dropdown — 2-column grid for 26 items */
+@media (min-width: 1200px) {
+  ul.services-mega-dropdown {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    flex-direction: unset !important;
+    min-width: 500px !important;
+    column-gap: 0;
+    row-gap: 0;
+  }
+  ul.services-mega-dropdown li {
+    width: 100%;
+  }
+}
+
 /*--------------------------------------------------------------
 # End
 --------------------------------------------------------------*/

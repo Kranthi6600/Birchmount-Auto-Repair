@@ -4,11 +4,14 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 const servicesTwoShape1 = "/assets/images/shapes/services-two-shape-1.png";
-const servicesImg1 = "/assets/images/services/brakeandrepair.jpeg";
-const servicesImg2 = "/assets/images/services/oilandlube.jpeg";
+const servicesImg1 = "/assets/images/services/serviceimg1.jpeg";
+const servicesImg2 = "/assets/images/services/serviceimg2.jpeg";
 const servicesImg3 = "/assets/images/services/enginediagnostics.jpeg";
-const servicesImg4 = "/assets/images/services/transmissionservice.jpeg";
-const servicesImg5 = "/assets/images/services/electricalrepair.jpeg";
+const servicesImg4 = "/assets/images/services/serviceimg4.jpeg";
+const servicesImg5 = "/assets/images/services/serviceimg5.jpeg";
+const servicesImg6 = "/assets/images/services/brakeandrepair.jpeg";
+const servicesImg7 = "/assets/images/services/transmissionservice.jpeg";
+const servicesImg8 = "/assets/images/services/serviceimg7.jpeg";
 import TextAnimation from '@/components/elements/TextAnimation';
 import SectionWrapper from '@/components/elements/SectionWrapper';
 import Image from 'next/image';
@@ -27,42 +30,66 @@ const serviceItems: ServiceItem[] = [
     {
         id: 1,
         image: servicesImg1,
-        iconClass: 'icon-setting',
-        title: 'Brake Repair & Service',
-        to: '/services',
-        hoverText: 'Pads, rotors, calipers, and brake fluid flushes — we keep your stopping power in top shape.',
+        iconClass: 'icon-damage',
+        title: 'Auto Body Repair',
+        to: '/auto-body-repair',
+        hoverText: 'From minor dings to major panel damage, we restore your vehicle\'s exterior to factory condition.',
     },
     {
         id: 2,
         image: servicesImg2,
-        iconClass: 'icon-services',
-        title: 'Oil Change & Lube',
-        to: '/services',
-        hoverText: 'Quick, thorough oil and filter changes using quality conventional or synthetic oils.',
+        iconClass: 'icon-affordable-price',
+        title: 'Collision Repair',
+        to: '/collision-repair',
+        hoverText: 'Complete structural and cosmetic collision restoration to get your vehicle back to pre-accident condition.',
     },
     {
         id: 3,
         image: servicesImg3,
-        iconClass: 'icon-technician-1',
+        iconClass: 'icon-laptop',
         title: 'Engine Diagnostics',
-        to: '/services',
+        to: '/engine-diagnostics',
         hoverText: 'Advanced scan tools pinpoint check-engine issues fast so you\'re not guessing at the cause.',
     },
     {
         id: 4,
         image: servicesImg4,
-        iconClass: 'icon-customer-support',
-        title: 'Transmission Service',
-        to: '/services',
-        hoverText: 'Fluid changes, filter replacements, and rebuild service to keep your drivetrain running smoothly.',
+        iconClass: 'icon-services',
+        title: 'Car Paint Services',
+        to: '/car-paint-services',
+        hoverText: 'Colour-matched paint services from spot repairs to full resprays with a lasting clear-coat finish.',
     },
     {
         id: 5,
         image: servicesImg5,
-        iconClass: 'icon-settings-1',
-        title: 'Electrical Repair',
-        to: '/services',
-        hoverText: 'Batteries, alternators, starters, and wiring diagnosis — we trace and fix electrical faults accurately.',
+        iconClass: 'icon-medal',
+        title: 'Insurance Claim Repairs',
+        to: '/insurance-claim-repairs',
+        hoverText: 'We work directly with your insurer — handling paperwork and adjuster coordination from start to finish.',
+    },
+    {
+        id: 6,
+        image: servicesImg6,
+        iconClass: 'icon-damage',
+        title: 'Brake Service',
+        to: '/brake-service',
+        hoverText: 'Pads, rotors, calipers, and fluid flushes — we keep your vehicle\'s most critical safety system in top shape.',
+    },
+    {
+        id: 7,
+        image: servicesImg7,
+        iconClass: 'icon-product-return',
+        title: 'Transmission Repair',
+        to: '/transmission-repair',
+        hoverText: 'Fluid changes, solenoid repairs, and full rebuilds to keep your drivetrain shifting smoothly.',
+    },
+    {
+        id: 8,
+        image: servicesImg8,
+        iconClass: 'icon-settings',
+        title: 'Vehicle Maintenance',
+        to: '/vehicle-maintenance',
+        hoverText: 'Scheduled maintenance services that protect your vehicle\'s reliability and preserve manufacturer warranty.',
     },
 ];
 
