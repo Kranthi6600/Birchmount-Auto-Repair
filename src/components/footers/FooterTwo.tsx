@@ -1,8 +1,8 @@
 "use client";
 
 import React from 'react';
-const footerPostImg1 = "/assets/images/blog/footer-widget-post-img-1.jpg";
-const footerPostImg2 = "/assets/images/blog/footer-widget-post-img-2.jpg";
+const footerPostImg1 = "/assets/images/blog/blog2.jpeg";
+const footerPostImg2 = "/assets/images/blog/blog1.jpeg";
 
 const footerShape1 = "/assets/images/shapes/footer-widget-shape-1.png";
 const footerLogo = "/assets/images/logo1.PNG";
@@ -48,9 +48,6 @@ const serviceLinks: NavLink[] = [
     { id: 3, label: 'Brake Service',           to: '/brake-service' },
     { id: 4, label: 'Engine Diagnostics',      to: '/engine-diagnostics' },
     { id: 5, label: 'Transmission Repair',     to: '/transmission-repair' },
-    { id: 6, label: 'Car Paint Services',      to: '/car-paint-services' },
-    { id: 7, label: 'Vehicle Maintenance',     to: '/vehicle-maintenance' },
-    { id: 8, label: 'Computer Diagnostics',    to: '/computer-diagnostics' },
 ];
 
 
@@ -66,16 +63,16 @@ const footerPosts: FooterPost[] = [
     {
         id: 1,
         image: footerPostImg1,
-        title: 'Great Tips to Choose A Professional Rpaire',
-        date: 'Aug 22, 2025',
-        to: '/blog-details',
+        title: 'How Often Should You Change Your Oil?',
+        date: 'Nov 05, 2025',
+        to: '/blog/how-often-should-you-change-your-oil',
     },
     {
         id: 2,
         image: footerPostImg2,
-        title: 'Revitalising your people in to a retail downturn.',
-        date: 'Nov 17, 2025',
-        to: '/blog-details',
+        title: '5 Signs Your Brakes Need Immediate Attention',
+        date: 'Oct 12, 2025',
+        to: '/blog/5-signs-your-brakes-need-immediate-attention',
     },
 ];
 
@@ -181,6 +178,9 @@ const FooterTwo = () => {
                                                             <Link href={link.to}>{link.label}</Link>
                                                         </li>
                                                     ))}
+                                                    <li>
+                                                        <Link href="/services">More...</Link>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </FadeInAdvanced>
