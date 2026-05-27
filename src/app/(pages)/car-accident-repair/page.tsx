@@ -10,7 +10,7 @@ const page: React.FC = () => {
                 title="Car Accident Repair"
                 subTitle="Services"
                 thirdTitle="Car Accident Repair"
-                bgImage="/assets/images/services/servicebanner5.jpeg"
+                bgImage="/assets/images/services/servicebanner17.jpeg"
             />
             <CarAccidentRepairMain />
             <FooterOne />
