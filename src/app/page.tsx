@@ -7,7 +7,6 @@ import MainSliderTwo from '@/features/home-two/MainSliderTwo';
 import PricingTwo from '@/features/home-two/PricingTwo';
 import ProjectTwo from '@/features/home-two/ProjectTwo';
 import ServiceTwo from '@/features/home-two/ServiceTwo';
-import TeamTwo from '@/features/home-two/TeamTwo';
 import TestimonialThree from '@/features/home-three/TestimonialsThree';
 import WhyChooseTwo from '@/features/home-two/WhyChooseTwo';
 import React from 'react';
@@ -22,7 +21,6 @@ const page: React.FC = () => {
       <ServiceTwo />
       <WhyChooseTwo />
       <ProjectTwo />
-      <TeamTwo />
       <PricingTwo />
       <TestimonialThree />
       <BlogTwo />

@@ -24,20 +24,20 @@ interface PricingPlan {
     hasPremiumExtras?: boolean;
 }
 
-const oilChangeFeatures: PricingFeature[] = [
-    { id: 1, label: 'Conventional or synthetic oil' },
-    { id: 2, label: 'New oil filter included' },
-    { id: 3, label: 'Fluid top-up check' },
-    { id: 4, label: 'Tire pressure inspection' },
-    { id: 5, label: 'Quick multi-point check' },
+const collisionFeatures: PricingFeature[] = [
+    { id: 1, label: 'Frame straightening & alignment' },
+    { id: 2, label: 'Bumper & panel replacement' },
+    { id: 3, label: 'Structural damage repair' },
+    { id: 4, label: 'Insurance claim assistance' },
+    { id: 5, label: 'Free damage assessment' },
 ];
 
-const brakeFeatures: PricingFeature[] = [
-    { id: 1, label: 'Brake pad replacement' },
-    { id: 2, label: 'Rotor inspection & resurfacing' },
-    { id: 3, label: 'Brake fluid check' },
-    { id: 4, label: 'Caliper inspection' },
-    { id: 5, label: 'Road-test after service' },
+const paintDentFeatures: PricingFeature[] = [
+    { id: 1, label: 'Precision paint color matching' },
+    { id: 2, label: 'Dent removal & paintless repair' },
+    { id: 3, label: 'Scratch & scuff restoration' },
+    { id: 4, label: 'Clear coat & finish blending' },
+    { id: 5, label: 'Lifetime paint warranty' },
 ];
 
 const diagnosticFeatures: PricingFeature[] = [
@@ -51,20 +51,20 @@ const diagnosticFeatures: PricingFeature[] = [
 const pricingPlans: PricingPlan[] = [
     {
         id: 1,
-        planName: 'Oil Change Service',
+        planName: 'Collision Repair',
         price: 'Call for',
         pricePeriod: 'Pricing',
-        features: oilChangeFeatures,
+        features: collisionFeatures,
         to: '/contact',
         animationClass: 'fadeInLeft',
         animationDelay: 100,
     },
     {
         id: 2,
-        planName: 'Brake Service',
+        planName: 'Paint & Dent Repair',
         price: 'Call for',
         pricePeriod: 'Estimate',
-        features: brakeFeatures,
+        features: paintDentFeatures,
         to: '/contact',
         animationClass: 'fadeInUp',
         animationDelay: 300,

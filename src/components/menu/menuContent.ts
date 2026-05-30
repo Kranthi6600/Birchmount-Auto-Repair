@@ -4,6 +4,12 @@ export type MenuItem = {
     menuItem: string,
     menuLink: string
 }
+
+export interface ServiceCategory {
+    id: number;
+    title: string;
+    services: MenuItem[];
+}
 export const homeList: MenuItem[] = [
     { id: 1, menuItem: "Home One", menuLink: "/" },
     { id: 2, menuItem: "Home Two", menuLink: "/home-two" },
@@ -44,6 +50,58 @@ export const servicesList: MenuItem[] = [
     { id: 25, menuItem: "Computer Diagnostics",     menuLink: "/computer-diagnostics" },
     { id: 26, menuItem: "Full Service Garage",      menuLink: "/full-service-garage" },
 ];
+export const serviceCategories: ServiceCategory[] = [
+    {
+        id: 1,
+        title: "Collision & Body Repair",
+        services: [
+            { id: 1, menuItem: "Collision Repair", menuLink: "/collision-repair" },
+            { id: 2, menuItem: "Auto Body Repair", menuLink: "/auto-body-repair" },
+            { id: 3, menuItem: "Car Accident Repair", menuLink: "/car-accident-repair" },
+            { id: 4, menuItem: "Frame Straightening", menuLink: "/frame-straightening" },
+            { id: 5, menuItem: "Paint & Dent Repair", menuLink: "/paint-dent-repair" },
+            { id: 6, menuItem: "Scratch & Dent Removal", menuLink: "/scratch-dent-removal" },
+            { id: 7, menuItem: "Dent Removal", menuLink: "/dent-removal" },
+            { id: 8, menuItem: "Bumper Repair", menuLink: "/bumper-repair" },
+            { id: 9, menuItem: "Auto Refinishing", menuLink: "/auto-refinishing" },
+            { id: 10, menuItem: "Car Paint Services", menuLink: "/car-paint-services" },
+        ],
+    },
+    {
+        id: 2,
+        title: "Mechanical & Diagnostics",
+        services: [
+            { id: 11, menuItem: "Mechanical Repair", menuLink: "/mechanical-repair" },
+            { id: 12, menuItem: "Brake Service", menuLink: "/brake-service" },
+            { id: 13, menuItem: "Suspension Repair", menuLink: "/suspension-repair" },
+            { id: 14, menuItem: "Wheel Alignment", menuLink: "/wheel-alignment" },
+            { id: 15, menuItem: "Transmission Repair", menuLink: "/transmission-repair" },
+            { id: 16, menuItem: "Engine Diagnostics", menuLink: "/engine-diagnostics" },
+            { id: 17, menuItem: "Computer Diagnostics", menuLink: "/computer-diagnostics" },
+            { id: 18, menuItem: "Vehicle Maintenance", menuLink: "/vehicle-maintenance" },
+            { id: 19, menuItem: "Complete Auto Care", menuLink: "/complete-auto-care" },
+        ],
+    },
+    {
+        id: 3,
+        title: "Advanced Vehicle Services",
+        services: [
+            { id: 20, menuItem: "Hybrid Vehicle Repair", menuLink: "/hybrid-vehicle-repair" },
+            { id: 21, menuItem: "OEM Parts Repair", menuLink: "/oem-parts-repair" },
+            { id: 22, menuItem: "Certified Auto Repair", menuLink: "/certified-auto-repair" },
+            { id: 23, menuItem: "Windshield Replacement", menuLink: "/windshield-replacement" },
+        ],
+    },
+    {
+        id: 4,
+        title: "Claims & Emergency Services",
+        services: [
+            { id: 24, menuItem: "Insurance Claim Repairs", menuLink: "/insurance-claim-repairs" },
+            { id: 25, menuItem: "Towing & Recovery", menuLink: "/towing-recovery" },
+        ],
+    },
+];
+
 export const shopList: MenuItem[] = [
     { id: 1, menuItem: "Products", menuLink: "/products" },
     { id: 2, menuItem: "Cart", menuLink: "/cart" },

@@ -3402,18 +3402,29 @@ ul.shadow-box li.current a {
   cursor: pointer;
 }
 
-/* Services mega dropdown — 2-column grid for 26 items */
-@media (min-width: 1200px) {
+/* Categorized services mega dropdown — responsive */
+@media (min-width: 992px) {
   ul.services-mega-dropdown {
+    min-width: 520px !important;
+    padding: 16px 20px !important;
+    flex-direction: unset !important;
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
-    flex-direction: unset !important;
-    min-width: 500px !important;
-    column-gap: 0;
+    column-gap: 16px;
     row-gap: 0;
   }
-  ul.services-mega-dropdown li {
+  ul.services-mega-dropdown > li {
     width: 100%;
+    flex: unset;
+  }
+}
+
+@media (min-width: 1400px) {
+  ul.services-mega-dropdown {
+    min-width: 680px !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    column-gap: 18px;
+    padding: 18px 22px !important;
   }
 }
 
