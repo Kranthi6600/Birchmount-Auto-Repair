@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { motion } from "framer-motion"
 import useBirchmountAutoRepairContext from '../context/useBirchmountAutoRepairContext';
-import { pagesList, servicesList, type MenuItem } from './menuContent';
+import { servicesList, type MenuItem } from './menuContent';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
@@ -10,7 +10,6 @@ import Link from 'next/link';
 const MobileManuList: React.FC = () => {
     const { setIsMobileManu } = useBirchmountAutoRepairContext();
     const [isServices, setIsServices] = useState<boolean>(false);
-    const [isPages, setIsPages] = useState<boolean>(false);
     const currentPath = usePathname();
     const findLocation = (array: MenuItem[]): boolean => {
         return array.some(item => item?.menuLink === currentPath);
@@ -18,7 +17,6 @@ const MobileManuList: React.FC = () => {
     const closeMobileManu = () => {
         setIsMobileManu(false);
         setIsServices(false);
-        setIsPages(false);
     };
 
     return (
@@ -56,25 +54,8 @@ const MobileManuList: React.FC = () => {
             <li className={`${currentPath === "/contact" ? "current" : ""}`} onClick={closeMobileManu}>
                 <Link href="/contact">Contact</Link>
             </li>
-            <li className="dropdown">
-                <a href="#" className={`${isPages || findLocation(pagesList) ? "expanded" : ""}`}>
-                    Pages
-                    <button onClick={() => setIsPages((pre) => !pre)} className={`${isPages ? "expanded" : ""}`}><i className="fa fa-angle-down"></i></button>
-                </a>
-                <ul className="shadow-box" style={{ display: `${isPages ? "block" : "none"}` }}>
-                    {pagesList.map((Item: MenuItem) => (
-                        <motion.li
-                            onClick={closeMobileManu}
-                            initial={{ x: -70, opacity: 0 }}
-                            whileInView={{ x: 0, opacity: 1 }}
-                            transition={{ duration: 0.1 * Item?.id, ease: "easeOut" }}
-                            viewport={{ amount: 0.01, once: true }}
-                            key={Item?.id}
-                            className={`${currentPath === Item?.menuLink ? "current" : ""}`}>
-                            <Link href={Item?.menuLink}>{Item?.menuItem}</Link>
-                        </motion.li>
-                    ))}
-                </ul>
+            <li className={`${currentPath === "/faqs" ? "current" : ""}`} onClick={closeMobileManu}>
+                <Link href="/faqs">FAQs</Link>
             </li>
         </ul>
     );

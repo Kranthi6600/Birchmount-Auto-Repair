@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { homeList, pagesList, servicesList, type MenuItem } from './menuContent';
+import { homeList, servicesList, type MenuItem } from './menuContent';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -37,15 +37,8 @@ const MenuList: React.FC = () => {
             <li className={currentPath === "/contact" ? "current" : ""}>
                 <Link href="/contact">Contact</Link>
             </li>
-            <li className={`dropdown ${findLocation(pagesList) ? "current" : ""}`}>
-                <Link href="/pages">Pages</Link>
-                <ul className="shadow-box">
-                    {
-                        pagesList.map((item: MenuItem) => (
-                            <li key={item?.id} className={currentPath === item?.menuLink ? "current" : ""}><Link href={item?.menuLink}>{item?.menuItem}</Link></li>
-                        ))
-                    }
-                </ul>
+            <li className={currentPath === "/faqs" ? "current" : ""}>
+                <Link href="/faqs">FAQs</Link>
             </li>
         </ul>
     );
