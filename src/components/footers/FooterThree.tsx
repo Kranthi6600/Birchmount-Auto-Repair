@@ -40,11 +40,12 @@ const companyLinks: NavLink[] = [
 ];
 
 const serviceLinks: ServiceLink[] = [
-    { id: 1, label: 'Electric Repair', path: '/electric-panel-repair' },
-    { id: 2, label: 'Lighting & Fixture', path: '/lighting-fixtures' },
-    { id: 3, label: 'European Lard Sration', path: '/maintenance-service' },
-    { id: 4, label: 'Electric Maintenance', path: '/maintenance-service' },
-    { id: 5, label: 'Colling Service', path: '/installing-ceiling-fan' },
+    { id: 1, label: 'Complete Auto Body Repair',    path: '/complete-auto-body-repair' },
+    { id: 2, label: 'Collision Repairs',            path: '/collision-repair' },
+    { id: 3, label: 'Mechanical Repair',            path: '/mechanical-repair' },
+    { id: 4, label: 'Towing & Roadside Assistance', path: '/towing-roadside-assistance' },
+    { id: 5, label: 'Insurance',                    path: '/insurance' },
+    { id: 6, label: 'Rentals',                      path: '/rentals' },
 ];
 
 const socialLinks: SocialLink[] = [

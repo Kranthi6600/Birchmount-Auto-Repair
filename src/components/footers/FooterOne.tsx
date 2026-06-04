@@ -45,14 +45,12 @@ const quickLinks: NavLink[] = [
 ];
 
 const serviceLinks: NavLink[] = [
-    { id: 1, label: 'Auto Body Repair',       to: '/auto-body-repair' },
-    { id: 2, label: 'Collision Repair',        to: '/collision-repair' },
-    { id: 3, label: 'Brake Service',           to: '/brake-service' },
-    { id: 4, label: 'Engine Diagnostics',      to: '/engine-diagnostics' },
-    { id: 5, label: 'Transmission Repair',     to: '/transmission-repair' },
-    { id: 6, label: 'Car Paint Services',      to: '/car-paint-services' },
-    { id: 7, label: 'Vehicle Maintenance',     to: '/vehicle-maintenance' },
-    { id: 8, label: 'Computer Diagnostics',    to: '/computer-diagnostics' },
+    { id: 1, label: 'Complete Auto Body Repair',    to: '/complete-auto-body-repair' },
+    { id: 2, label: 'Collision Repairs',            to: '/collision-repair' },
+    { id: 3, label: 'Mechanical Repair',            to: '/mechanical-repair' },
+    { id: 4, label: 'Towing & Roadside Assistance', to: '/towing-roadside-assistance' },
+    { id: 5, label: 'Insurance',                    to: '/insurance' },
+    { id: 6, label: 'Rentals',                      to: '/rentals' },
 ];
 
 const contactItems: ContactItem[] = [

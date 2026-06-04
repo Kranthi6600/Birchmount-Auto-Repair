@@ -43,11 +43,12 @@ const quickLinks: NavLink[] = [
 ];
 
 const serviceLinks: NavLink[] = [
-    { id: 1, label: 'Auto Body Repair',       to: '/auto-body-repair' },
-    { id: 2, label: 'Collision Repair',        to: '/collision-repair' },
-    { id: 3, label: 'Brake Service',           to: '/brake-service' },
-    { id: 4, label: 'Engine Diagnostics',      to: '/engine-diagnostics' },
-    { id: 5, label: 'Transmission Repair',     to: '/transmission-repair' },
+    { id: 1, label: 'Complete Auto Body Repair',    to: '/complete-auto-body-repair' },
+    { id: 2, label: 'Collision Repairs',            to: '/collision-repair' },
+    { id: 3, label: 'Mechanical Repair',            to: '/mechanical-repair' },
+    { id: 4, label: 'Towing & Roadside Assistance', to: '/towing-roadside-assistance' },
+    { id: 5, label: 'Insurance',                    to: '/insurance' },
+    { id: 6, label: 'Rentals',                      to: '/rentals' },
 ];
 
 
@@ -178,9 +179,6 @@ const FooterTwo = () => {
                                                             <Link href={link.to}>{link.label}</Link>
                                                         </li>
                                                     ))}
-                                                    <li>
-                                                        <Link href="/services">More...</Link>
-                                                    </li>
                                                 </ul>
                                             </div>
                                         </FadeInAdvanced>
