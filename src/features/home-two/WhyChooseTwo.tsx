@@ -3,7 +3,7 @@
 import React from 'react'; 
 const whyChooseTwoShape2 = "/assets/images/shapes/why-choose-two-shape-2.png";
 const whyChooseTwoShape3 = "/assets/images/shapes/why-choose-two-shape-3.png";
-const whyChooseTwoImg1 = "/assets/images/whychooseus/whychooseus.jpeg";
+const whyChooseTwoImg1 = "/assets/images/services/banner5.jpg";
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced'; 
 import TextAnimation from '@/components/elements/TextAnimation';
 import useBirchmountAutoRepairContext from '@/components/context/useBirchmountAutoRepairContext';
@@ -23,21 +23,21 @@ interface ProgressItem {
 }
 
 const pointsListOne: PointItem[] = [
-    { id: 1, label: 'Certified Technicians' },
-    { id: 2, label: 'Same-Day Service' },
-    { id: 3, label: 'Upfront Pricing' },
+    { id: 1, label: 'Direct Insurance Billing' },
+    { id: 2, label: 'All Major Insurers Accepted' },
+    { id: 3, label: 'Free Damage Estimates' },
 ];
 
 const pointsListTwo: PointItem[] = [
-    { id: 4, label: 'All Makes & Models' },
-    { id: 5, label: 'Warranty on All Work' },
-    { id: 6, label: '5,000+ Happy Customers' },
+    { id: 4, label: 'OEM Parts Guaranteed' },
+    { id: 5, label: 'Fast Claim Processing' },
+    { id: 6, label: 'Rental Car Assistance' },
 ];
 
 const progressItems: ProgressItem[] = [
-    { id: 1, title: 'Brake & Safety Systems', percent: 96 },
-    { id: 2, title: 'Engine & Transmission', percent: 92 },
-    { id: 3, title: 'Electrical Diagnostics', percent: 88 },
+    { id: 1, title: 'Insurance Claims Approved', percent: 97 },
+    { id: 2, title: 'On-Time Repair Delivery', percent: 94 },
+    { id: 3, title: 'OEM Parts Compliance', percent: 99 },
     { id: 4, title: 'Customer Satisfaction', percent: 98 },
 ];
 
@@ -63,10 +63,10 @@ const WhyChooseTwo: React.FC = () => {
                                     <Image src={whyChooseTwoImg1} width={470} height={483} alt="" />
                                 </div>
                                 <div className="why-choose-two__improve-box">
-                                    <p className="why-choose-two__improve-sub-title">(Based on 4,800+ Reviews)</p>
-                                    <h3 className="why-choose-two__title">Serving Scarborough Drivers</h3>
+                                    <p className="why-choose-two__improve-sub-title">(Approved by All Major Insurers)</p>
+                                    <h3 className="why-choose-two__title">Stress-Free Claims</h3>
                                     <p className="why-choose-two__improve-text">
-                                        Honest auto repair with<br /> guaranteed results.
+                                        We handle the paperwork,<br /> you get back on the road.
                                     </p>
                                 </div>
                                 <div className="why-choose-two__shape-1"></div>
@@ -77,10 +77,10 @@ const WhyChooseTwo: React.FC = () => {
                         <div className="why-choose-two__right wow fadeInRight" data-wow-delay="300ms">
                             <div className="section-title text-left sec-title-animation animation-style2">
                                 <h6 className="section-title__tagline">
-                                    <span className="section-title__tagline-border"></span>Why Choose Us
+                                    <span className="section-title__tagline-border"></span>Insurance Claims
                                 </h6>
                                 <h3 className="section-title__title title-animation">
-                                    <TextAnimation>Birchmount&apos;s Most Trusted<br /> Auto Repair Shop</TextAnimation>
+                                    <TextAnimation>We Work Directly With<br /> Your Insurance Company</TextAnimation>
                                 </h3>
                             </div>
                             <div className="why-choose-two__points-box">
