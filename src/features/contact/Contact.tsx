@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Swal from 'sweetalert2';
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced';
 import CustomSelect from '@/components/elements/CustomSelect';
@@ -15,6 +15,7 @@ const serviceOptions = [
 ];
 
 const Contact: React.FC = () => {
+    const formRef = useRef<HTMLFormElement>(null);
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -147,6 +148,7 @@ const Contact: React.FC = () => {
                                 <div className="contact-page__right">
                                     <h3 className="contact-page__form-title">Get A Free Quote</h3>
                                     <form
+                                        ref={formRef}
                                         className="contact-form-validated contact-page__form"
                                         onSubmit={handleSubmit}
                                     >
@@ -209,13 +211,17 @@ const Contact: React.FC = () => {
                                                     ></textarea>
                                                 </div>
                                                 <div className="contact-page__btn-box">
-                                                    <button
-                                                        type="submit"
+                                                    <a
+                                                        href="#"
                                                         className="footer-widget__newsletter-btn thm-btn"
+                                                        onClick={(e) => {
+                                                            e.preventDefault();
+                                                            formRef.current?.requestSubmit();
+                                                        }}
                                                     >
                                                         Send A Message
                                                         <span><i className="icon-right-arrow"></i></span>
-                                                    </button>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
