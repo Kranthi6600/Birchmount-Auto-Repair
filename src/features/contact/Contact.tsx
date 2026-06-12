@@ -219,7 +219,6 @@ const Contact: React.FC = () => {
                                                         className="footer-widget__newsletter-btn thm-btn"
                                                         onClick={(e) => {
                                                             e.preventDefault();
-                                                            sendContactForm();
                                                         }}
                                                     >
                                                         Send A Message
