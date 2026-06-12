@@ -35,9 +35,7 @@ const Contact: React.FC = () => {
         setFormData((prev) => ({ ...prev, subject: value }));
     };
 
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-
+    const sendContactForm = async () => {
         if (!formData.name.trim() || !formData.email.trim()) {
             Swal.fire({
                 icon: 'warning',
@@ -95,6 +93,11 @@ const Contact: React.FC = () => {
                 confirmButtonColor: '#e74c3c',
             });
         }
+    };
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        await sendContactForm();
     };
 
     return (
@@ -216,7 +219,7 @@ const Contact: React.FC = () => {
                                                         className="footer-widget__newsletter-btn thm-btn"
                                                         onClick={(e) => {
                                                             e.preventDefault();
-                                                            formRef.current?.requestSubmit();
+                                                            sendContactForm();
                                                         }}
                                                     >
                                                         Send A Message
