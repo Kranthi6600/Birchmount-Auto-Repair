@@ -16,6 +16,7 @@ const serviceOptions = [
 
 const Contact: React.FC = () => {
     const formRef = useRef<HTMLFormElement>(null);
+    const [isSubmitting, setIsSubmitting] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -57,6 +58,8 @@ const Contact: React.FC = () => {
             return;
         }
 
+        setIsSubmitting(true);
+
         try {
             const response = await fetch('/api/contact', {
                 method: 'POST',
@@ -92,6 +95,8 @@ const Contact: React.FC = () => {
                 text: 'Something went wrong. Please try again later.',
                 confirmButtonColor: '#e74c3c',
             });
+        } finally {
+            setIsSubmitting(false);
         }
     };
 
@@ -219,10 +224,16 @@ const Contact: React.FC = () => {
                                                         className="footer-widget__newsletter-btn thm-btn"
                                                         onClick={(e) => {
                                                             e.preventDefault();
-                                                            sendContactForm();
+                                                            if (!isSubmitting) {
+                                                                sendContactForm();
+                                                            }
+                                                        }}
+                                                        style={{
+                                                            pointerEvents: isSubmitting ? 'none' : 'auto',
+                                                            opacity: isSubmitting ? 0.7 : 1,
                                                         }}
                                                     >
-                                                        Send A Message
+                                                        {isSubmitting ? 'Sending...' : 'Send A Message'}
                                                         <span><i className="icon-right-arrow"></i></span>
                                                     </a>
                                                 </div>
