@@ -3,6 +3,16 @@
 import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced';
+import CustomSelect from '@/components/elements/CustomSelect';
+
+const serviceOptions = [
+    { id: 1, value: "Complete Auto Body Repair", label: "Complete Auto Body Repair" },
+    { id: 2, value: "Collision Repairs", label: "Collision Repairs" },
+    { id: 3, value: "Mechanical Repair", label: "Mechanical Repair" },
+    { id: 4, value: "Towing & Roadside Assistance", label: "Towing & Roadside Assistance" },
+    { id: 5, value: "Insurance", label: "Insurance" },
+    { id: 6, value: "Rentals", label: "Rentals" },
+];
 
 const Contact: React.FC = () => {
     const [formData, setFormData] = useState({
@@ -18,6 +28,10 @@ const Contact: React.FC = () => {
     ) => {
         const { name, value } = e.target;
         setFormData((prev) => ({ ...prev, [name]: value }));
+    };
+
+    const handleSelectChange = (value: string) => {
+        setFormData((prev) => ({ ...prev, subject: value }));
     };
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -45,25 +59,22 @@ const Contact: React.FC = () => {
         }
 
         try {
-            /*
-             * ─────────────────────────────────────────────
-             *  NOTE: Add your backend / API call here.
-             *  Example:
-             *
-             *  await axios.post('/api/contact', formData);
-             *       — or —
-             *  await fetch('/api/contact', {
-             *      method: 'POST',
-             *      headers: { 'Content-Type': 'application/json' },
-             *      body: JSON.stringify(formData),
-             *  });
-             * ─────────────────────────────────────────────
-             */
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+            });
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.error || 'Something went wrong.');
+            }
 
             Swal.fire({
                 icon: 'success',
                 title: 'Message Sent!',
-                text: 'Thank you for reaching out. We will get back to you shortly.',
+                text: data.message || 'Thank you for reaching out. We will get back to you shortly.',
                 confirmButtonColor: '#75d82fff',
             });
 
@@ -177,13 +188,15 @@ const Contact: React.FC = () => {
                                             </div>
                                             <div className="col-xl-6 col-lg-6 col-md-6">
                                                 <div className="contact-page__input-box">
-                                                    <input
-                                                        type="text"
-                                                        name="subject"
-                                                        placeholder="Subject"
-                                                        value={formData.subject}
-                                                        onChange={handleChange}
-                                                    />
+                                                    <div className="select-box">
+                                                        <CustomSelect
+                                                            value={formData.subject || ''}
+                                                            onChange={handleSelectChange}
+                                                            optionArray={serviceOptions}
+                                                            placeholder="Select a Service"
+                                                            name="subject"
+                                                        />
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div className="col-xl-12">

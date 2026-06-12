@@ -1,5 +1,5 @@
 {
-  "name": "birchmountAutoRepair",
+  "name": "birchmount-auto-repair",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -13,6 +13,7 @@
     "framer-motion": "^12.36.0",
     "jarallax": "^2.2.1",
     "next": "16.2.4",
+    "nodemailer": "^8.0.11",
     "react": "19.2.3",
     "react-countup": "^6.5.3",
     "react-dom": "19.2.3",
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "@types/node": "^20",
+    "@types/nodemailer": "^8.0.1",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "autoprefixer": "^10.5.0",
