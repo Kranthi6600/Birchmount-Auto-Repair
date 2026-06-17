@@ -57,8 +57,6 @@ const socialLinks: SocialLink[] = [
 
 const bottomMenuLinks: BottomMenuLink[] = [
     { id: 1, label: 'Support', path: '/contact' },
-    { id: 2, label: 'Terms and Condition', path: '/about' },
-    { id: 3, label: 'Privacy and Policy', path: '/about' },
 ];
 
 const FooterThree: React.FC = () => {
@@ -182,7 +180,7 @@ const FooterThree: React.FC = () => {
                 <div className="container">
                     <div className="site-footer-two__bottom-inner">
                         <p className="site-footer-two__bottom-text">
-                            © Copywright 2026 by <Link href="/">Birchmount Auto Repair</Link> All Rights Reserved.
+                            © Copywright 2026 by <Link href="/">Birchmount Auto Repair</Link> All Rights Reserved. <span style={{ marginLeft: '8px', opacity: 0.7 }}>Developed by Wehoware.</span>
                         </p>
                         <ul className="list-unstyled site-footer-two__bottom-menu">
                             {bottomMenuLinks.map((link) => (

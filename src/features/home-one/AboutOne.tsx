@@ -127,26 +127,10 @@ const AboutOne: React.FC<SecProp> = ({ secClass = "" }) => {
                                     </li>
                                 ))}
                             </ul>
-                            <div className="about-one__btn-and-video">
-                                <div className="about-one__btn-box">
-                                    <Link href="/about" className="thm-btn">
-                                        Discover More<span className="icon-arrow-right"></span>
-                                    </Link>
-                                </div>
-                                <div className="about-one__video-box">
-                                    <div className="about-one__video-link">
-                                        <span
-                                            onClick={(e) => handleVideoClick(e, "https://www.youtube.com/watch?v=Get7rqXYrbQ")}
-                                            className="video-popup cursor-pointer"
-                                        >
-                                            <div className="about-one__video-icon">
-                                                <span className="icon-play"></span>
-                                                <i className="ripple"></i>
-                                            </div>
-                                        </span>
-                                    </div>
-                                    <p className="about-one__video-text">Watch Our Support</p>
-                                </div>
+                            <div className="about-one__btn-box">
+                                <Link href="/about" className="thm-btn">
+                                    Discover More<span className="icon-arrow-right"></span>
+                                </Link>
                             </div>
                         </div>
                     </div>

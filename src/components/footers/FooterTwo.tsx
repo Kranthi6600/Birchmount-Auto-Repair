@@ -86,8 +86,6 @@ const socialLinks: SocialLink[] = [
 
 const bottomMenuLinks: NavLink[] = [
     { id: 1, label: 'Support', to: '/contact' },
-    { id: 2, label: 'Terms and Condition', to: '/about' },
-    { id: 3, label: 'Privacy and Policy', to: '/about' },
 ];
 
 const FooterTwo = () => {
@@ -232,7 +230,7 @@ const FooterTwo = () => {
                 <div className="container">
                     <div className="site-footer__bottom-inner">
                         <p className="site-footer__bottom-text">
-                            &copy; Copyright 2026 by <Link href="/">Birchmount Auto Repair</Link>. All Rights Reserved.
+                            &copy; Copyright 2026 by <Link href="/">Birchmount Auto Repair</Link>. All Rights Reserved. <span style={{ marginLeft: '8px', opacity: 0.7 }}>Developed by Wehoware.</span>
                         </p>
                         <ul className="list-unstyled site-footer__bottom-menu">
                             {bottomMenuLinks.map((link) => (

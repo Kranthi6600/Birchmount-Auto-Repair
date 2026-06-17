@@ -33,7 +33,7 @@ const serviceItems: ServiceItem[] = [
         iconClass: 'icon-damage',
         title: 'Auto Body Repair',
         to: '/auto-body-repair',
-        hoverText: 'From minor dings to major panel damage, we restore your vehicle\'s exterior to factory condition.',
+        hoverText: 'Minor dings to major panel damage, we restore your exterior to factory condition.',
     },
     {
         id: 2,
@@ -41,7 +41,7 @@ const serviceItems: ServiceItem[] = [
         iconClass: 'icon-affordable-price',
         title: 'Collision Repair',
         to: '/collision-repair',
-        hoverText: 'Complete structural and cosmetic collision restoration to get your vehicle back to pre-accident condition.',
+        hoverText: 'Complete structural and cosmetic collision restoration to return your vehicle to pre-accident condition.',
     },
     {
         id: 3,
@@ -49,7 +49,7 @@ const serviceItems: ServiceItem[] = [
         iconClass: 'icon-laptop',
         title: 'Engine Diagnostics',
         to: '/engine-diagnostics',
-        hoverText: 'Advanced scan tools pinpoint check-engine issues fast so you\'re not guessing at the cause.',
+        hoverText: 'Advanced scan tools pinpoint check-engine issues so you\'re never guessing the real cause.',
     },
     {
         id: 4,
@@ -57,7 +57,7 @@ const serviceItems: ServiceItem[] = [
         iconClass: 'icon-services',
         title: 'Car Paint Services',
         to: '/car-paint-services',
-        hoverText: 'Colour-matched paint services from spot repairs to full resprays with a lasting clear-coat finish.',
+        hoverText: 'Colour-matched paint services from spot repairs to full resprays with lasting clear-coat finish.',
     },
     {
         id: 5,
@@ -65,7 +65,7 @@ const serviceItems: ServiceItem[] = [
         iconClass: 'icon-medal',
         title: 'Insurance Claim Repairs',
         to: '/insurance-claim-repairs',
-        hoverText: 'We work directly with your insurer — handling paperwork and adjuster coordination from start to finish.',
+        hoverText: 'We work directly with your insurer, handling paperwork and adjuster coordination for you.',
     },
     {
         id: 6,
@@ -73,7 +73,7 @@ const serviceItems: ServiceItem[] = [
         iconClass: 'icon-damage',
         title: 'Brake Service',
         to: '/brake-service',
-        hoverText: 'Pads, rotors, calipers, and fluid flushes — we keep your vehicle\'s most critical safety system in top shape.',
+        hoverText: 'Pads, rotors, calipers, and flushes — keep your braking system in top shape.',
     },
     {
         id: 7,
@@ -89,7 +89,7 @@ const serviceItems: ServiceItem[] = [
         iconClass: 'icon-settings',
         title: 'Vehicle Maintenance',
         to: '/vehicle-maintenance',
-        hoverText: 'Scheduled maintenance services that protect your vehicle\'s reliability and preserve manufacturer warranty.',
+        hoverText: 'Scheduled maintenance services that protect your vehicle\'s reliability and preserve its full warranty.',
     },
 ];
 

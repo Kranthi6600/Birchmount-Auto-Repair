@@ -277,6 +277,7 @@
 .about-one__btn-box {
    position: relative;
    display: block;
+   margin-top: 30px;
 }
 
 .about-one__video-box {
@@ -428,8 +429,9 @@
    align-items: center;
    gap: 10px;
    border: 1px solid rgba(var(--birchmountAutoRepair-black-rgb), .20);
-   padding: 9px 30px 11px;
+   padding: 9px 20px 11px;
    border-radius: 10px;
+   flex-shrink: 0;
 }
 
 .about-two__points-list li .icon {
@@ -451,6 +453,7 @@
    line-height: 30px;
    font-family: var(--birchmountAutoRepair-font-two);
    color: var(--birchmountAutoRepair-black);
+   white-space: nowrap;
 }
 
 .about-two__text-2 span {

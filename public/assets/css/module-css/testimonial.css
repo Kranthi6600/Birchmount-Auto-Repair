@@ -420,7 +420,10 @@
 
 .testimonial-three__content {
     position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 350px;
     text-align: center;
     background-color: var(--birchmountAutoRepair-white);
     box-shadow: none;
@@ -463,6 +466,17 @@
     display: inline-block;
     font-size: 14px;
     color: var(--birchmountAutoRepair-base);
+}
+
+.testimonial-three__text {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .testimonial-three__quote {

@@ -161,7 +161,7 @@ const Contact: React.FC = () => {
                                         onSubmit={handleSubmit}
                                     >
                                         <div className="row">
-                                            <div className="col-xl-6 col-lg-6 col-md-6">
+                                            <div className="col-xl-12 col-lg-12 col-md-12">
                                                 <div className="contact-page__input-box">
                                                     <input
                                                         type="text"
@@ -173,7 +173,7 @@ const Contact: React.FC = () => {
                                                     />
                                                 </div>
                                             </div>
-                                            <div className="col-xl-6 col-lg-6 col-md-6">
+                                            <div className="col-xl-12 col-lg-12 col-md-12">
                                                 <div className="contact-page__input-box">
                                                     <input
                                                         type="email"
@@ -185,7 +185,7 @@ const Contact: React.FC = () => {
                                                     />
                                                 </div>
                                             </div>
-                                            <div className="col-xl-6 col-lg-6 col-md-6">
+                                            <div className="col-xl-12 col-lg-12 col-md-12">
                                                 <div className="contact-page__input-box">
                                                     <input
                                                         type="text"
@@ -196,7 +196,7 @@ const Contact: React.FC = () => {
                                                     />
                                                 </div>
                                             </div>
-                                            <div className="col-xl-6 col-lg-6 col-md-6">
+                                            <div className="col-xl-12 col-lg-12 col-md-12">
                                                 <div className="contact-page__input-box">
                                                     <div className="select-box">
                                                         <CustomSelect

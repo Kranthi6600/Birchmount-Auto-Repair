@@ -68,7 +68,7 @@ const ProjectTwo: React.FC = () => {
             </div>
             <div className="project-two__carousel  ">
                 <Swiper
-                    slidesPerView={5}
+                    slidesPerView={4}
                     spaceBetween={30}
                     loop={true}
                     autoplay={{
@@ -82,7 +82,7 @@ const ProjectTwo: React.FC = () => {
                         570: { slidesPerView: 2, spaceBetween: 2 },
                         768: { slidesPerView: 3, spaceBetween: 2 },
                         1000: { slidesPerView: 4, spaceBetween: 2 },
-                        1200: { slidesPerView: 5, spaceBetween: 2 },
+                        1200: { slidesPerView: 4, spaceBetween: 2 },
                     }}
                 >
                     {projectItems.map((project, i) => (

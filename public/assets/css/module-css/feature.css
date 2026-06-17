@@ -181,7 +181,9 @@
 
 .feature-two__single {
     position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    min-height: 280px;
     margin-bottom: 30px;
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
@@ -214,7 +216,10 @@
 
 .feature-two__content {
     position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
     background-color: rgba(var(--birchmountAutoRepair-base-rgb), 0.05);
     border-radius: var(--birchmountAutoRepair-bdr-radius);
     padding: 50px 30px 30px;
