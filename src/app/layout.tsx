@@ -19,8 +19,8 @@ const titilliumWeb = Titillium_Web({
 });
 
 export const metadata: Metadata = {
-  title: "Birchmount Auto Repair - Electronics & Gadgets Repair Services NextJs Template",
-  description: "Birchmount Auto Repair – Modern Next Js template for gadgets, mobile, AC & computer repair services. Clean, responsive & fully documented",
+  title: "Birchmount Auto Repair | Auto Body, Collision & Mechanical Repair in Scarborough",
+  description: "Birchmount Auto Repair provides professional auto body repair, collision repair, mechanical services, towing, insurance assistance, and rentals in Scarborough, Ontario.",
   icons: {
     icon: [
       { url: '/assets/images/icon/logo.ico', sizes: '32x32' },
