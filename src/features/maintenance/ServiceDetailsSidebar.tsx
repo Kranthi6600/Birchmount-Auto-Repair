@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
+import { useServices } from '@/hooks/useServices';
 
 interface ServiceLinkItem {
     id: number;
@@ -16,15 +17,6 @@ interface ContactItem {
     content: React.ReactNode;
 }
 
-
-const serviceLinks: ServiceLinkItem[] = [
-    { id: 1, label: 'Complete Auto Body Repair',    path: '/complete-auto-body-repair' },
-    { id: 2, label: 'Collision Repairs',            path: '/collision-repair' },
-    { id: 3, label: 'Mechanical Repair',            path: '/mechanical-repair' },
-    { id: 4, label: 'Towing & Roadside Assistance', path: '/towing-roadside-assistance' },
-    { id: 5, label: 'Insurance',                    path: '/insurance' },
-    { id: 6, label: 'Rentals',                      path: '/rentals' },
-];
 
 const contactItems: ContactItem[] = [
     {
@@ -51,22 +43,46 @@ const contactItems: ContactItem[] = [
 
 const ServiceDetailsSidebar: React.FC = () => {
     const currentPath = usePathname();
+    const { data: apiServices, isLoading } = useServices();
+
+    const serviceLinks: ServiceLinkItem[] = React.useMemo(() => {
+        if (!apiServices) return [];
+        const seen = new Set<string>();
+        const items: ServiceLinkItem[] = [];
+        apiServices.forEach((s) => {
+            const cat = s.wehoware_service_categories;
+            if (cat && !seen.has(cat.slug)) {
+                seen.add(cat.slug);
+                items.push({
+                    id: items.length + 1,
+                    label: cat.name,
+                    path: `/services/${s.slug}`,
+                });
+            }
+        });
+        return items;
+    }, [apiServices]);
+
     return (
-        <div className="col-xl-4 col-lg-5">
+        <div className="col-xl-4 col-lg-5 d-none d-lg-block">
             <div className="service-details__sidebar">
 
                 {/* Our Services */}
                 <div className="service-details__services-box">
                     <h3 className="service-details__services-title">Our Services</h3>
                     <ul className="service-details__services-list list-unstyled">
-                        {serviceLinks.map((service) => (
-                            <li key={service.id} className={service.path === currentPath ? 'active' : ''}>
-                                <Link href={service.path}>
-                                    {service.label}
-                                    <span className="icon-arrow-right"></span>
-                                </Link>
-                            </li>
-                        ))}
+                        {isLoading ? (
+                            <li><span style={{ padding: '12px 20px', display: 'block' }}>Loading...</span></li>
+                        ) : (
+                            serviceLinks.map((service) => (
+                                <li key={service.id} className={service.path === currentPath ? 'active' : ''}>
+                                    <Link href={service.path}>
+                                        {service.label}
+                                        <span className="icon-arrow-right"></span>
+                                    </Link>
+                                </li>
+                            ))
+                        )}
                     </ul>
                 </div>
 

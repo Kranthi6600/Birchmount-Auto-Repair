@@ -6,8 +6,10 @@ type BannerProp = {
     subTitleLink?: string;
     thirdTitle?: string;
     bgImage?: string;
+    headingTag?: 'h1' | 'h2' | 'h3';
 }
-const Banner: React.FC<BannerProp> = ({ title, subTitle = "", subTitleLink = '/services', thirdTitle, bgImage }) => {
+const Banner: React.FC<BannerProp> = ({ title, subTitle = "", subTitleLink = '/services', thirdTitle, bgImage, headingTag = 'h3' }) => {
+    const Heading = headingTag;
     return (
         <section className="page-header">
             <div className="page-header__bg" style={bgImage ? { backgroundImage: `url(${bgImage})`, opacity: 1 } : undefined}>
@@ -15,7 +17,7 @@ const Banner: React.FC<BannerProp> = ({ title, subTitle = "", subTitleLink = '/s
             </div>
             <div className="container">
                 <div className="page-header__inner">
-                    <h3>{title}</h3>
+                    <Heading style={{ fontWeight: 'bold' }}>{title}</Heading>
                     <div className="thm-breadcrumb__inner">
                         <ul className="thm-breadcrumb list-unstyled">
                             <ul className="thm-breadcrumb list-unstyled">

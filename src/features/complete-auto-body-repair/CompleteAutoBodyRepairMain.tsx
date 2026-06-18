@@ -58,5 +58,5 @@ const data: ServiceDetailProps = {
 };
 
 export default function CompleteAutoBodyRepairMain() {
-    return <ServiceDetailTemplate {...data} />;
+    return <ServiceDetailTemplate {...data} slug="complete-auto-body-repair" />;
 }

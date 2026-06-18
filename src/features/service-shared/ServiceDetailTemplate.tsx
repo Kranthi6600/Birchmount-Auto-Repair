@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import ServiceDetailsSidebar from '../maintenance/ServiceDetailsSidebar';
+import { useService } from '@/hooks/useServices';
+import RichTextRenderer from '@/components/elements/RichTextRenderer';
 
 export interface ImgBoxItem {
     id: number;
@@ -30,6 +32,7 @@ export interface ServiceDetailProps {
     pointsList: string[];
     imgBoxData: ImgBoxItem[];
     faqData: FaqItem[];
+    slug?: string;
 }
 
 const ServiceDetailTemplate: React.FC<ServiceDetailProps> = ({
@@ -41,9 +44,30 @@ const ServiceDetailTemplate: React.FC<ServiceDetailProps> = ({
     pointsList,
     imgBoxData,
     faqData,
+    slug,
 }) => {
+    const { data: apiService } = useService(slug || '');
+
+    const mergedTitle = apiService?.title || title;
+    const mergedText1 = apiService?.description || text1;
+    const mergedText2 = apiService?.content || text2;
+    const mergedHeroImg = apiService?.thumbnail || heroImg;
+    const mergedHeroAlt = apiService?.thumbnail_alt || heroAlt;
+
+    const mergedFaqData: FaqItem[] = React.useMemo(() => {
+        if (slug && apiService?.faqs && apiService.faqs.length > 0) {
+            return apiService.faqs.map((f, idx) => ({
+                id: idx + 1,
+                question: f.question,
+                answer: f.answer,
+                isActive: idx === 0,
+            }));
+        }
+        return faqData;
+    }, [apiService?.faqs, faqData, slug]);
+
     const [openId, setOpenId] = useState<number | null>(
-        faqData.find((item) => item.isActive)?.id ?? null
+        mergedFaqData.find((item) => item.isActive)?.id ?? null
     );
 
     return (
@@ -56,18 +80,18 @@ const ServiceDetailTemplate: React.FC<ServiceDetailProps> = ({
 
                             <div className="service-details__img">
                                 <Image
-                                    src={heroImg}
+                                    src={mergedHeroImg}
                                     width={850}
                                     height={0}
                                     sizes="100vw"
                                     style={{ height: 'auto' }}
-                                    alt={heroAlt}
+                                    alt={mergedHeroAlt}
                                 />
                             </div>
 
-                            <h3 className="service-details__title-1">{title}</h3>
-                            <p className="service-details__text-1">{text1}</p>
-                            <p className="service-details__text-2">{text2}</p>
+                            <h3 className="service-details__title-1">{mergedTitle}</h3>
+                            <RichTextRenderer html={mergedText1} className="service-details__text-1" />
+                            <RichTextRenderer html={mergedText2} className="service-details__text-2" />
 
                             <ul className="service-details__points-list list-unstyled">
                                 {pointsList.map((point, i) => (
@@ -116,7 +140,7 @@ const ServiceDetailTemplate: React.FC<ServiceDetailProps> = ({
 
                             <div className="service-details__faq-box">
                                 <div className="accrodion-grp faq-one-accrodion">
-                                    {faqData.map((item) => (
+                                    {mergedFaqData.map((item) => (
                                         <div
                                             key={item.id}
                                             className={`accrodion${openId === item.id ? ' active' : ''}`}

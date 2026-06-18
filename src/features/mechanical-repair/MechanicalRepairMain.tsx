@@ -56,5 +56,5 @@ const data: ServiceDetailProps = {
 };
 
 export default function MechanicalRepairMain() {
-    return <ServiceDetailTemplate {...data} />;
+    return <ServiceDetailTemplate {...data} slug="mechanical-repair" />;
 }

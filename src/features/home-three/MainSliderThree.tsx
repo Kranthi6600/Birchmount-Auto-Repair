@@ -45,8 +45,8 @@ const MainSliderThree: React.FC = () => {
                             <div className="container">
                                 <div className="main-slider-three__content">
                                     <p className="main-slider-three__sub-title">Welcome to Birchmount Auto Repair Quality Repairs Services</p>
-                                    <h2 className="main-slider-three__title">Lighting the Way to <br />
-                                        <span>Quality Repairs</span></h2>
+                                    <h1 className="main-slider-three__title">Lighting the Way to <br />
+                                        <span>Quality Repairs</span></h1>
                                     <p className="main-slider-three__text">We honestly want our clients to succeed online in their
                                         fields.
                                         We create them high-end websites <br /> that stand out on their market, be seen and

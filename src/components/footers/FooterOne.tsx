@@ -187,15 +187,27 @@ const FooterOne: React.FC = () => {
                                                 </div>
                                                 <ul className="footer-widget__contact list-unstyled">
                                                     {contactItems.map((item) => (
-                                                        <li key={item.id}>
-                                                            <div className="icon">
-                                                                <span className={item.icon}></span>
+                                                        <li key={item.id} style={{ alignItems: 'flex-start', marginBottom: '18px' }}>
+                                                            <div className="icon" style={{
+                                                                width: '44px',
+                                                                height: '44px',
+                                                                minWidth: '44px',
+                                                                borderRadius: '50%',
+                                                                background: 'rgba(42, 185, 126, 0.12)',
+                                                                display: 'flex',
+                                                                alignItems: 'center',
+                                                                justifyContent: 'center',
+                                                                marginRight: '14px',
+                                                                marginTop: '2px',
+                                                                transition: 'all 0.3s ease',
+                                                            }}>
+                                                                <span className={item.icon} style={{ fontSize: '1.1rem', color: '#2AB97E' }}></span>
                                                             </div>
                                                             <div className="content">
                                                                 {item.lines.map((line, i) => (
-                                                                    <p key={i}>
+                                                                    <p key={i} style={{ lineHeight: 1.5, marginBottom: 0 }}>
                                                                         {line.href ? (
-                                                                            <a href={line.href}>{line.text}</a>
+                                                                            <a href={line.href} style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.3s ease' }}>{line.text}</a>
                                                                         ) : (
                                                                             line.text
                                                                         )}

@@ -58,5 +58,5 @@ const data: ServiceDetailProps = {
 };
 
 export default function RentalsMain() {
-    return <ServiceDetailTemplate {...data} />;
+    return <ServiceDetailTemplate {...data} slug="rentals" />;
 }

@@ -1,7 +1,11 @@
+"use client";
 
 import FadeInAdvanced, { AnimationVariant } from '@/components/elements/FadeInAdvanced';
 import Link from 'next/link';
 import React from 'react';
+import { useServices } from '@/hooks/useServices';
+import type { ApiService } from '@/lib/api';
+import { stripHtml } from '@/lib/api';
 
 interface ServiceItem {
     id: number;
@@ -14,82 +18,78 @@ interface ServiceItem {
     animationDelay: number;
 }
 
-const servicesData: ServiceItem[] = [
-    {
-        id: 1,
-        iconClass: 'icon-damage',
-        subTitle: 'Service 01',
-        title: 'Complete Auto Body Repair',
-        text: 'From minor dings to major panel damage, our skilled technicians restore your vehicle\'s exterior to factory condition using proven repair techniques and quality materials.',
-        path: '/complete-auto-body-repair',
-        animationClass: 'fadeInLeft',
-        animationDelay: 100,
-    },
-    {
-        id: 2,
-        iconClass: 'icon-affordable-price',
-        subTitle: 'Service 02',
-        title: 'Collision Repairs',
-        text: 'Complete collision restoration covering structural repairs, panel replacement, and refinishing — getting your vehicle back to pre-accident condition safely.',
-        path: '/collision-repair',
-        animationClass: 'fadeInUp',
-        animationDelay: 200,
-    },
-    {
-        id: 3,
-        iconClass: 'icon-settings',
-        subTitle: 'Service 03',
-        title: 'Mechanical Repair',
-        text: 'Full-service mechanical repairs on all makes and models — from engine and drivetrain work to cooling systems, fuel systems, and beyond.',
-        path: '/mechanical-repair',
-        animationClass: 'fadeInRight',
-        animationDelay: 300,
-    },
-    {
-        id: 4,
-        iconClass: 'icon-customer-support',
-        subTitle: 'Service 04',
-        title: 'Towing & Roadside Assistance',
-        text: 'Professional towing and roadside recovery service to safely transport your disabled vehicle to our shop — available when you need it most.',
-        path: '/towing-roadside-assistance',
-        animationClass: 'fadeInLeft',
-        animationDelay: 100,
-    },
-    {
-        id: 5,
-        iconClass: 'icon-medal',
-        subTitle: 'Service 05',
-        title: 'Insurance',
-        text: 'We work directly with all major insurance providers to handle your claim repairs seamlessly — from adjuster coordination to final delivery.',
-        path: '/insurance',
-        animationClass: 'fadeInUp',
-        animationDelay: 200,
-    },
-    {
-        id: 6,
-        iconClass: 'icon-certified',
-        subTitle: 'Service 06',
-        title: 'Rentals',
-        text: 'Convenient rental vehicle options to keep you on the road while your vehicle is being repaired at our facility.',
-        path: '/rentals',
-        animationClass: 'fadeInRight',
-        animationDelay: 300,
-    },
-];
+function mapApiServiceToItem(service: ApiService, index: number): ServiceItem {
+    const defaultIcons = [
+        'icon-damage', 'icon-affordable-price', 'icon-settings',
+        'icon-customer-support', 'icon-medal', 'icon-certified',
+    ];
+    const defaultAnimations: AnimationVariant[] = ['fadeInLeft', 'fadeInUp', 'fadeInRight'];
+    return {
+        id: index + 1,
+        iconClass: defaultIcons[index % defaultIcons.length],
+        subTitle: `Service 0${index + 1}`,
+        title: service.title,
+        text: stripHtml(service.description),
+        path: `/services/${service.slug}`,
+        animationClass: defaultAnimations[index % defaultAnimations.length],
+        animationDelay: ((index % 3) + 1) * 100,
+    };
+}
 
 const ServicesSec: React.FC = () => {
+    const { data: apiServices, isLoading } = useServices();
+
+    const items: ServiceItem[] = React.useMemo(() => {
+        if (!apiServices) return [];
+        return apiServices.map((s, i) => mapApiServiceToItem(s, i));
+    }, [apiServices]);
+
+    if (isLoading) {
+        return (
+            <section className="services-page">
+                <div className="container">
+                    <div className="row">
+                        {[1, 2, 3, 4].map((n) => (
+                            <div key={n} className="col-xl-6 col-lg-6">
+                                <div className="services-three__single" style={{ minHeight: '280px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                    <div className="spinner-border text-primary" role="status">
+                                        <span className="visually-hidden">Loading...</span>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+        );
+    }
+
+    if (!apiServices || apiServices.length === 0) {
+        return (
+            <section className="services-page">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12 text-center py-5">
+                            <h3>No services available</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        );
+    }
+
     return (
         <section className="services-page">
             <div className="container">
                 <div className="row">
-                    {servicesData.map((service) => (
+                    {items.map((service) => (
                         <FadeInAdvanced
                             key={service.id}
                             className={`col-xl-6 col-lg-6`}
                             variant={service.animationClass}
                             delay={service.animationDelay}
                         >
-                            <div className="services-three__single">
+                            <div className="services-three__single" style={{ height: '390px' }}>
                                 <div className="services-three__icon">
                                     <span className={service.iconClass}></span>
                                 </div>

@@ -1,16 +1,5 @@
-import React from 'react'; 
-import Banner from '@/features/banner/Banner';
-import BlogDetailsMain from '@/features/blog/BlogDetailsMain';
-import FooterOne from '@/components/footers/FooterOne';
+import { redirect } from 'next/navigation';
 
-const BlogDetails: React.FC = () => {
-    return (
-        <>
-            <Banner title='Blog Details'/>
-            <BlogDetailsMain />
-            <FooterOne />
-        </>
-    );
-};
-
-export default BlogDetails;
+export default function BlogDetails() {
+    redirect('/blog');
+}

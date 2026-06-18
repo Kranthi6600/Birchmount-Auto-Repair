@@ -1,59 +1,27 @@
 import React from 'react';
-const blog3Img1 = "/assets/images/blog/blog-3-1.jpg";
-const blog3Img2 = "/assets/images/blog/blog-3-2.jpg";
-const blog3Img3 = "/assets/images/blog/blog-3-3.jpg";
 import TextAnimation from '@/components/elements/TextAnimation';
 import type { AnimationVariant } from '@/components/elements/FadeInAdvanced';
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced';
 import SectionWrapper from '@/components/elements/SectionWrapper';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import Link from 'next/link';
+import { useBlogs } from '@/hooks/useBlogs';
+import type { ApiBlog } from '@/lib/api';
+import { stripHtml } from '@/lib/api';
 
-interface BlogItem {
-    id: number;
-    image: string | StaticImageData;
-    author: string;
-    date: string;
-    title: string;
-    path: string;
-    animation: AnimationVariant;
-    animationDelay: number;
+function formatDate(dateStr: string | null) {
+    if (!dateStr) return '';
+    const d = new Date(dateStr);
+    return d.toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric' });
 }
 
-const blogItems: BlogItem[] = [
-    {
-        id: 1,
-        image: blog3Img1,
-        author: 'By admin',
-        date: '20, June 2024',
-        title: 'Water leakage can be due to a clogged drain line',
-        path: '/blog-details',
-        animation: 'fadeInLeft',
-        animationDelay: 100,
-    },
-    {
-        id: 2,
-        image: blog3Img2,
-        author: 'By admin',
-        date: '20, June 2024',
-        title: 'Regular maintenance cleaning or replacing air filters',
-        path: '/blog-details',
-        animation: 'fadeInUp',
-        animationDelay: 300,
-    },
-    {
-        id: 3,
-        image: blog3Img3,
-        author: 'By admin',
-        date: '20, June 2024',
-        title: 'Elase They Endures Pains to Avoid The Worse Pains Taken',
-        path: '/blog-details',
-        animation: 'fadeInRight',
-        animationDelay: 500,
-    },
-];
+const animationMap: AnimationVariant[] = ['fadeInLeft', 'fadeInUp', 'fadeInRight'];
+const delayMap = [100, 300, 500];
 
 const BlogThree: React.FC = () => {
+    const { data: apiBlogs, isLoading } = useBlogs();
+    const blogs = apiBlogs?.slice(0, 3) ?? [];
+
     return (
         <SectionWrapper id='blog' className="blog-three">
             <div className="container">
@@ -66,48 +34,72 @@ const BlogThree: React.FC = () => {
                     </h3>
                 </div>
 
-                <div className="row">
-                    {blogItems.map((blog) => (
-                        <FadeInAdvanced
-                            key={blog.id}
-                            className={`col-xl-4 col-lg-4 `}
-                            delay={blog.animationDelay}
-                            variant={blog.animation}
-                        >
-                            <div className="blog-three__single">
-                                <div className="blog-three__img-box">
-                                    <div className="blog-three__img">
-                                        <Image src={blog.image} width={410} height={430} alt={blog.title} />
-                                    </div>
-                                    <div className="blog-three__content">
-                                        <ul className="blog-three__meta list-unstyled">
-                                            <li>
-                                                <div className="icon">
-                                                    <span className="fas fa-user"></span>
-                                                </div>
-                                                <p>{blog.author}</p>
-                                            </li>
-                                            <li>
-                                                <div className="icon">
-                                                    <span className="fas fa-calendar-alt"></span>
-                                                </div>
-                                                <p>{blog.date}</p>
-                                            </li>
-                                        </ul>
-                                        <h3 className="blog-three__title">
-                                            <Link href={blog.path}>{blog.title}</Link>
-                                        </h3>
-                                        <div className="blog-three__btn-box">
-                                            <Link href={blog.path} className="thm-btn">
-                                                Read More <span className="icon-arrow-right"></span>
-                                            </Link>
-                                        </div>
+                {isLoading ? (
+                    <div className="row">
+                        {[1, 2, 3].map((n) => (
+                            <div key={n} className="col-xl-4 col-lg-4">
+                                <div className="blog-three__single" style={{ minHeight: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                    <div className="spinner-border text-primary" role="status">
+                                        <span className="visually-hidden">Loading...</span>
                                     </div>
                                 </div>
                             </div>
-                        </FadeInAdvanced>
-                    ))}
-                </div>
+                        ))}
+                    </div>
+                ) : (
+                    <div className="row">
+                        {blogs.map((blog: ApiBlog, index: number) => (
+                            <FadeInAdvanced
+                                key={blog.id}
+                                className={`col-xl-4 col-lg-4`}
+                                delay={delayMap[index] ?? 100}
+                                variant={animationMap[index] ?? 'fadeInUp'}
+                            >
+                                <div className="blog-three__single">
+                                    <div className="blog-three__img-box">
+                                        <div className="blog-three__img">
+                                            <Image
+                                                src={blog.thumbnail || '/assets/images/blog/blog-3-1.jpg'}
+                                                width={410}
+                                                height={430}
+                                                alt={blog.thumbnail_alt || blog.title}
+                                            />
+                                        </div>
+                                        <div className="blog-three__content">
+                                            <ul className="blog-three__meta list-unstyled">
+                                                <li>
+                                                    <div className="icon">
+                                                        <span className="fas fa-user"></span>
+                                                    </div>
+                                                    <p>By Birchmount Auto Repair</p>
+                                                </li>
+                                                <li>
+                                                    <div className="icon">
+                                                        <span className="fas fa-calendar-alt"></span>
+                                                    </div>
+                                                    <p>{formatDate(blog.published_at)}</p>
+                                                </li>
+                                            </ul>
+                                            <h3 className="blog-three__title" style={{ fontSize: '1.25rem', lineHeight: 1.35, marginBottom: '8px' }}>
+                                                <Link href={`/blog/${blog.slug}`}>{blog.title}</Link>
+                                            </h3>
+                                            {blog.excerpt && (
+                                                <p style={{ fontSize: '0.95rem', lineHeight: 1.6, color: '#777f95', marginBottom: '16px' }}>
+                                                    {stripHtml(blog.excerpt).slice(0, 100)}{stripHtml(blog.excerpt).length > 100 ? '...' : ''}
+                                                </p>
+                                            )}
+                                            <div className="blog-three__btn-box">
+                                                <Link href={`/blog/${blog.slug}`} className="thm-btn">
+                                                    Read More <span className="icon-arrow-right"></span>
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </FadeInAdvanced>
+                        ))}
+                    </div>
+                )}
             </div>
         </SectionWrapper>
     );

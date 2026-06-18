@@ -58,5 +58,5 @@ const data: ServiceDetailProps = {
 };
 
 export default function TowingRoadsideAssistanceMain() {
-    return <ServiceDetailTemplate {...data} />;
+    return <ServiceDetailTemplate {...data} slug="towing-roadside-assistance" />;
 }
