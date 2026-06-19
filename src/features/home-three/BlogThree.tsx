@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import TextAnimation from '@/components/elements/TextAnimation';
 import type { AnimationVariant } from '@/components/elements/FadeInAdvanced';
