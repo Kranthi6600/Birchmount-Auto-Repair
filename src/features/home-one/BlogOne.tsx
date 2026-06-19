@@ -1,18 +1,31 @@
-import React from 'react'; 
+"use client";
+
+import React from 'react';
 
 const blogShape1 = "/assets/images/shapes/blog-one-shape-1.png";
 const blogShape2 = "/assets/images/shapes/blog-one-shape-2.png";
 
 import FadeInAdvanced  from '@/components/elements/FadeInAdvanced';
 import TextAnimation from '@/components/elements/TextAnimation';
-import { blogOnePosts } from '@/contents/blog/blogData';
 import SectionWrapper from '@/components/elements/SectionWrapper';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useBlogs } from '@/hooks/useBlogs';
+import type { ApiBlog } from '@/lib/api';
 
-
+function formatDate(dateStr: string | null) {
+    if (!dateStr) return { day: '', month: '' };
+    const d = new Date(dateStr);
+    return {
+        day: d.getDate().toString().padStart(2, '0'),
+        month: d.toLocaleString('en-US', { month: 'short' }),
+    };
+}
 
 const BlogOne: React.FC = () => {
+    const { data: apiBlogs, isLoading } = useBlogs();
+    const blogs = apiBlogs?.slice(0, 3) ?? [];
+
     return (
         <SectionWrapper id='blog' className="blog-one">
             <div className="blog-one__shape-1 float-bob-x">
@@ -30,52 +43,66 @@ const BlogOne: React.FC = () => {
                         <TextAnimation>Auto Tips &amp; News <br /> from Our Team</TextAnimation>
                     </h3>
                 </div>
-                <div className="row">
-                    {blogOnePosts.map((post) => (
-                        <FadeInAdvanced
-                            key={post.id}
-                            className="col-xl-4 col-lg-4"
-                            variant={post.animation}
-                            delay={post.animationDelay}
-                        >
-                            <div className="blog-one__single">
-                                <div className="blog-one__img-box">
-                                    <div className="blog-one__img">
-                                        <Image src={post.image} width={410} height={240} alt={post.title} />
-                                        <div className="blog-one__plus">
-                                            <Link href={`/blog/${post.slug}`}>
-                                                <i className="fa fa-plus"></i>
-                                            </Link>
-                                        </div>
-                                    </div>
-                                    <div className="blog-one__date">
-                                        <p>
-                                            {post.dateDay} <br /> {post.dateMonth}
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="blog-one__content">
-                                    <ul className="blog-one__meta list-unstyled">
-                                        <li>
-                                            <p><span className="icon-user"></span>{post.author}</p>
-                                        </li>
-                                        <li>
-                                            <p><span className="icon-speech-bubbles"></span>{post.comments}</p>
-                                        </li>
-                                    </ul>
-                                    <h3 className="blog-one__title">
-                                        <Link href={`/blog/${post.slug}`}>{post.title}</Link>
-                                    </h3>
-                                    <div className="blog-one__read-more">
-                                        <Link href={`/blog/${post.slug}`}>
-                                            Learn More <span className="icon-arrow-right"></span>
-                                        </Link>
+                {isLoading ? (
+                    <div className="row">
+                        {[1, 2, 3].map((n) => (
+                            <div key={n} className="col-xl-4 col-lg-4">
+                                <div className="blog-one__single" style={{ minHeight: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                    <div className="spinner-border text-primary" role="status">
+                                        <span className="visually-hidden">Loading...</span>
                                     </div>
                                 </div>
                             </div>
-                        </FadeInAdvanced>
-                    ))}
-                </div>
+                        ))}
+                    </div>
+                ) : (
+                    <div className="row">
+                        {blogs.map((blog: ApiBlog) => (
+                            <FadeInAdvanced
+                                key={blog.id}
+                                className="col-xl-4 col-lg-4"
+                                variant="fadeInUp"
+                                delay={100}
+                            >
+                                <div className="blog-one__single">
+                                    <div className="blog-one__img-box">
+                                        <div className="blog-one__img">
+                                            <Image src={blog.thumbnail || '/assets/images/blog/blog-3-1.jpg'} width={410} height={240} alt={blog.thumbnail_alt || blog.title} />
+                                            <div className="blog-one__plus">
+                                                <Link href={`/blog/${blog.slug}`}>
+                                                    <i className="fa fa-plus"></i>
+                                                </Link>
+                                            </div>
+                                        </div>
+                                        <div className="blog-one__date">
+                                            <p>
+                                                {formatDate(blog.published_at).day} <br /> {formatDate(blog.published_at).month}
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="blog-one__content">
+                                        <ul className="blog-one__meta list-unstyled">
+                                            <li>
+                                                <p><span className="icon-user"></span>By Birchmount Auto Repair</p>
+                                            </li>
+                                            <li>
+                                                <p><span className="icon-speech-bubbles"></span>{blog.likes ?? 0}</p>
+                                            </li>
+                                        </ul>
+                                        <h3 className="blog-one__title">
+                                            <Link href={`/blog/${blog.slug}`}>{blog.title}</Link>
+                                        </h3>
+                                        <div className="blog-one__read-more">
+                                            <Link href={`/blog/${blog.slug}`}>
+                                                Learn More <span className="icon-arrow-right"></span>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </div>
+                            </FadeInAdvanced>
+                        ))}
+                    </div>
+                )}
             </div>
         </SectionWrapper>
     );

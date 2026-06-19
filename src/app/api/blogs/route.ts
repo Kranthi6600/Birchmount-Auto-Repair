@@ -15,10 +15,11 @@ export async function GET() {
                 { status: res.status }
             );
         }
-        const data = await res.json();
+        const raw = await res.json();
+        const blogs = raw.blogs ?? raw.data ?? [];
         return NextResponse.json({
-            data: data.blogs ?? data.data ?? [],
-            pagination: data.pagination,
+            data: blogs,
+            pagination: raw.pagination,
         });
     } catch (error) {
         console.error("[API Proxy] Blogs error:", error);
