@@ -3,15 +3,10 @@ import React from 'react';
 const Logo = "/assets/images/logo1.PNG"
 import useBirchmountAutoRepairContext from '../context/useBirchmountAutoRepairContext';
 import MobileManuList from '../menu/MobileManuList';
-import SinglePageManuList from '../menu/SinglePageManuList';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 const MobileNav: React.FC = () => {
     const { isMobileManu, setIsMobileManu } = useBirchmountAutoRepairContext();
-    const currentPath = usePathname();
-    const isOnePage = currentPath.includes("single-page");
-
     return (
         <div className={`mobile-nav__wrapper ${isMobileManu ? "expanded" : ""}`}>
             <div className="mobile-nav__overlay mobile-nav__toggler" onClick={() => setIsMobileManu((pre) => (!pre))}></div>
@@ -25,9 +20,7 @@ const MobileNav: React.FC = () => {
                     </Link>
                 </div>
                 <div className="mobile-nav__container">
-                    {
-                        isOnePage ? <SinglePageManuList /> : <MobileManuList />
-                    }
+                    <MobileManuList />
                 </div>
                 <ul className="mobile-nav__contact list-unstyled">
                     <li>

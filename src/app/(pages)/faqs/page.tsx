@@ -1,6 +1,6 @@
 import React from 'react';
 import Banner from '@/features/banner/Banner';
-import FooterOne from '@/components/footers/FooterOne';
+import Footer from '@/components/footers/Footer';
 import FaqSec from '@/features/faq/FaqSec';
 
 const page: React.FC = () => {
@@ -8,7 +8,7 @@ const page: React.FC = () => {
         <>
             <Banner title='Our Faq' subTitle='Faq' bgImage='/assets/images/faq/faqbanner.jpeg'/>
             <FaqSec />
-            <FooterOne />
+            <Footer />
         </>
     );
 };

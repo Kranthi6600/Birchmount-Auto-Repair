@@ -3,14 +3,10 @@ import React from 'react';
 const logo = "/assets/images/logo1.PNG"
 import MenuList from './MenuList';
 import useBirchmountAutoRepairContext from '../context/useBirchmountAutoRepairContext';
-import SinglePageManuList from './SinglePageManuList';
-import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 const MenuTwo: React.FC = () => {
     const { setIsSearch, setIsSidebar, setIsMobileManu, cartCount } = useBirchmountAutoRepairContext();
-    const currentPath = usePathname();
-    const isOnePage = currentPath.includes("single-page")
     const handleSearch = () => {
         setIsSearch(pre => !pre)
     }
@@ -30,9 +26,7 @@ const MenuTwo: React.FC = () => {
                 </div>
                 <div className="main-menu-two__main-menu-box">
                     <Link href="#" onClick={handlMobileMenu} className="mobile-nav__toggler"><i className="fa fa-bars"></i></Link>
-                    {
-                        isOnePage ? <SinglePageManuList /> : <MenuList />
-                    }
+                    <MenuList />
                 </div>
                 <div className="main-menu-two__right">
                     <div className="main-menu-two__call">

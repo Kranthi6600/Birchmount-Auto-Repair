@@ -2,7 +2,7 @@ import React from 'react';
 import { notFound } from 'next/navigation';
 import Banner from '@/features/banner/Banner';
 import BlogApiDetail from '@/features/blog/BlogApiDetail';
-import FooterOne from '@/components/footers/FooterOne';
+import Footer from '@/components/footers/Footer';
 import type { ApiBlog } from '@/lib/api';
 
 const CLIENT_ID = "1910ea08-b8ae-4968-8e69-c9b7c5e7bc78";
@@ -49,7 +49,7 @@ const BlogPostPage = async ({ params }: { params: Promise<{ slug: string }> }) =
                 bgImage="/assets/images/blog/blogbanner.jpeg"
             />
             <BlogApiDetail post={post} />
-            <FooterOne />
+            <Footer />
         </>
     );
 };

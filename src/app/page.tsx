@@ -1,30 +1,30 @@
-import FooterTwo from '@/components/footers/FooterTwo';
-import HeaderTwo from '@/components/headers/HeaderTwo';
-import AboutTwo from '@/features/home-two/AboutTwo';
-import BlogTwo from '@/features/home-two/BlogTwo';
-import FeatureTwo from '@/features/home-two/FeatureTwo';
-import MainSliderTwo from '@/features/home-two/MainSliderTwo';
-import PricingTwo from '@/features/home-two/PricingTwo';
-import ProjectTwo from '@/features/home-two/ProjectTwo';
-import ServiceTwo from '@/features/home-two/ServiceTwo';
-import TestimonialThree from '@/features/home-three/TestimonialsThree';
-import WhyChooseTwo from '@/features/home-two/WhyChooseTwo';
+import Footer from '@/components/footers/Footer';
+import Header from '@/components/headers/Header';
+import AboutOne from '@/features/home/AboutOne';
+import BlogOne from '@/features/home/BlogOne';
+import Feature from '@/features/home/Feature';
+import MainSlider from '@/features/home/MainSlider';
+import Pricing from '@/features/home/Pricing';
+import Project from '@/features/home/Project';
+import ServiceOne from '@/features/home/ServiceOne';
+import Testimonial from '@/features/testimonials/Testimonial';
+import WhyChoose from '@/features/home/WhyChoose';
 import React from 'react';
 
 const page: React.FC = () => {
   return (
     <div className='page-wrapper'>
-      <HeaderTwo />
-      <MainSliderTwo />
-      <FeatureTwo />
-      <AboutTwo />
-      <ServiceTwo />
-      <WhyChooseTwo />
-      <ProjectTwo />
-      <PricingTwo />
-      <TestimonialThree />
-      <BlogTwo />
-      <FooterTwo />
+      <Header />
+      <MainSlider />
+      <Feature />
+      <AboutOne />
+      <ServiceOne />
+      <WhyChoose />
+      <Project />
+      <Pricing />
+      <Testimonial />
+      <BlogOne />
+      <Footer />
     </div>
   );
 };

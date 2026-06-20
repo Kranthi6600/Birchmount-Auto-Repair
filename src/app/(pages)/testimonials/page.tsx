@@ -1,6 +1,6 @@
 import React from 'react';
 import Banner from '@/features/banner/Banner';
-import FooterOne from '@/components/footers/FooterOne';
+import Footer from '@/components/footers/Footer';
 import TestimonialsSec from '@/features/testimonials/TestimonialsSec';
 
 const page: React.FC = () => {
@@ -8,7 +8,7 @@ const page: React.FC = () => {
         <>
             <Banner title='Testimonials' subTitle='Testimonials' />
             <TestimonialsSec />
-            <FooterOne />
+            <Footer />
         </>
     );
 }; 

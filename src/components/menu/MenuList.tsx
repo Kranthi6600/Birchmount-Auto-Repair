@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { homeList, type MenuItem } from './menuContent';
+import { type MenuItem } from './menuContent';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useServices } from '@/hooks/useServices';
@@ -36,7 +36,7 @@ const MenuList: React.FC = () => {
 
     return (
         <ul className="main-menu__list">
-            <li className={`${findLocation(homeList) ? "current" : ""}`}>
+            <li className={currentPath === "/" ? "current" : ""}>
                 <Link href="/">Home </Link>
             </li>
             <li className={`dropdown ${isInServices ? "current" : ""}`}>

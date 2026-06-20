@@ -1,7 +1,7 @@
  
 import FadeInAdvanced from "@/components/elements/FadeInAdvanced";
 import { teamMembers, type TeamMember } from "@/contents/team/team";
-import FooterOne from "@/components/footers/FooterOne";
+import Footer from "@/components/footers/Footer";
 import Banner from "@/features/banner/Banner";
 import Image from "next/image";
 import Link from "next/link";
@@ -34,7 +34,7 @@ const page: React.FC = () => {
                                             <Link href="#"><span className="icon-xpa"></span></Link>
                                         </div>
                                         <h3 className="team-two__title">
-                                            <Link href="/team-details">{member.name}</Link>
+                                            <Link href="#">{member.name}</Link>
                                         </h3>
                                         <p className="team-two__sub-title">{member.role}</p>
                                     </div>
@@ -44,7 +44,7 @@ const page: React.FC = () => {
                     </div>
                 </div>
             </section>
-            <FooterOne />
+            <Footer />
         </>
     );
 };

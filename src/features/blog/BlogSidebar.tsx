@@ -17,7 +17,7 @@ const BlogSidebar: React.FC<BlogSidebarProps> = ({ wrapper, inner }) => {
 
     return (
         <div className={wrapper}>
-            <div className={inner}>
+            <div className={inner} style={{ position: 'sticky', top: '120px' }}>
                 <FadeInAdvanced variant="fadeInUp" delay={100} className="sidebar__single sidebar__search">
                     <form className="sidebar__search-form" onSubmit={(e) => e.preventDefault()}>
                         <input type="search" placeholder="Search..." />
@@ -25,14 +25,17 @@ const BlogSidebar: React.FC<BlogSidebarProps> = ({ wrapper, inner }) => {
                     </form>
                 </FadeInAdvanced>
 
-                <FadeInAdvanced variant="fadeInUp" delay={100} className="sidebar__single sidebar__category">
-                    <h3 className="sidebar__title">Categories</h3>
-                    <ul className="sidebar__category-list list-unstyled">
-                        <li><Link href="#">Brake Repair <span>(01)</span></Link></li>
-                        <li><Link href="#">Oil Change <span>(01)</span></Link></li>
-                        <li><Link href="#">Engine Diagnostics <span>(01)</span></Link></li>
-                        <li><Link href="#">Seasonal Tips <span>(01)</span></Link></li>
-                        <li><Link href="#">Transmission <span>(01)</span></Link></li>
+                <FadeInAdvanced variant="fadeInUp" delay={100} className="sidebar__single sidebar__tags">
+                    <h3 className="sidebar__title">Tags</h3>
+                    <ul className="sidebar__tags-list clearfix list-unstyled">
+                        <li><Link href="#">Brakes</Link></li>
+                        <li><Link href="#">Oil Change</Link></li>
+                        <li><Link href="#">Engine</Link></li>
+                        <li><Link href="#">Diagnostics</Link></li>
+                        <li><Link href="#">Transmission</Link></li>
+                        <li><Link href="#">Winter Tips</Link></li>
+                        <li><Link href="#">Safety</Link></li>
+                        <li><Link href="#">Maintenance</Link></li>
                     </ul>
                 </FadeInAdvanced>
 
@@ -58,20 +61,6 @@ const BlogSidebar: React.FC<BlogSidebarProps> = ({ wrapper, inner }) => {
                             </div>
                         ))}
                     </div>
-                </FadeInAdvanced>
-
-                <FadeInAdvanced variant="fadeInUp" delay={100} className="sidebar__single sidebar__tags">
-                    <h3 className="sidebar__title">Tags</h3>
-                    <ul className="sidebar__tags-list clearfix list-unstyled">
-                        <li><Link href="#">Brakes</Link></li>
-                        <li><Link href="#">Oil Change</Link></li>
-                        <li><Link href="#">Engine</Link></li>
-                        <li><Link href="#">Diagnostics</Link></li>
-                        <li><Link href="#">Transmission</Link></li>
-                        <li><Link href="#">Winter Tips</Link></li>
-                        <li><Link href="#">Safety</Link></li>
-                        <li><Link href="#">Maintenance</Link></li>
-                    </ul>
                 </FadeInAdvanced>
             </div>
         </div>

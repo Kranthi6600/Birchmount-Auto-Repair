@@ -1,7 +1,7 @@
 import React from 'react';
 import Banner from '@/features/banner/Banner';
 import BlogStandartMain from '@/features/blog/BlogStandartMain';
-import FooterOne from '@/components/footers/FooterOne';
+import Footer from '@/components/footers/Footer';
 
 
 const page: React.FC = () => {
@@ -9,7 +9,7 @@ const page: React.FC = () => {
         <>
             <Banner title='Blog & News' bgImage='/assets/images/blog/blogbanner.jpeg'/>
             <BlogStandartMain />
-            <FooterOne />
+            <Footer />
         </>
     );
 };

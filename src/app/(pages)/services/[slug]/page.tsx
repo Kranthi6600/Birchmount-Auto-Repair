@@ -3,8 +3,8 @@
 import React from 'react';
 import { useParams } from 'next/navigation';
 import Banner from '@/features/banner/Banner';
-import FooterOne from '@/components/footers/FooterOne';
-import ServiceDetailTemplate from '@/features/service-shared/ServiceDetailTemplate';
+import Footer from '@/components/footers/Footer';
+import ServiceDetails from '@/features/service-shared/ServiceDetails';
 import { useService } from '@/hooks/useServices';
 
 export default function ServiceDetailPage() {
@@ -27,7 +27,7 @@ export default function ServiceDetailPage() {
                         </div>
                     </div>
                 </section>
-                <FooterOne />
+                <Footer />
             </>
         );
     }
@@ -46,7 +46,7 @@ export default function ServiceDetailPage() {
                         </div>
                     </div>
                 </section>
-                <FooterOne />
+                <Footer />
             </>
         );
     }
@@ -69,7 +69,7 @@ export default function ServiceDetailPage() {
                 bgImage={apiService.thumbnail || ''}
                 headingTag='h1'
             />
-            <ServiceDetailTemplate
+            <ServiceDetails
                 heroImg={apiService.thumbnail || ''}
                 heroAlt={apiService.thumbnail_alt || apiService.title}
                 title={apiService.title}
@@ -80,7 +80,7 @@ export default function ServiceDetailPage() {
                 faqData={faqData}
                 slug={slug}
             />
-            <FooterOne />
+            <Footer />
         </>
     );
 }
