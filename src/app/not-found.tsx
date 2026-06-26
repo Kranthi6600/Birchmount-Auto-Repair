@@ -1,10 +1,18 @@
-import React from 'react'; 
+import React from 'react';
 import Header from '@/components/headers/Header';
 import Footer from '@/components/footers/Footer';
 import Banner from '@/features/banner/Banner';
+import { SITE_URL } from '@/lib/site';
+import type { Metadata } from 'next';
 const errorPageImg = '/assets/images/error/errorimg.jpeg';
 import Link from 'next/link';
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: `${SITE_URL}/404`,
+  },
+};
 
 const Page: React.FC = () => {
     return (

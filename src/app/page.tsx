@@ -9,7 +9,18 @@ import Project from '@/features/home/Project';
 import ServiceOne from '@/features/home/ServiceOne';
 import Testimonial from '@/features/testimonials/Testimonial';
 import WhyChoose from '@/features/home/WhyChoose';
+import { SITE_URL } from '@/lib/site';
+import type { Metadata } from 'next';
 import React from 'react';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: SITE_URL,
+  },
+  openGraph: {
+    url: SITE_URL,
+  },
+};
 
 const page: React.FC = () => {
   return (

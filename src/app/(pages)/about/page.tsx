@@ -7,7 +7,18 @@ import Blog from '@/features/home/Blog';
 import Service from '@/features/home/Service';
 import Team from '@/features/home/Team';
 import Testimonial from '@/features/testimonials/Testimonial';
- 
+import { SITE_URL } from '@/lib/site';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: `${SITE_URL}/about`,
+  },
+  openGraph: {
+    url: `${SITE_URL}/about`,
+  },
+};
+
 const page: React.FC = () => {
     return (
         <>

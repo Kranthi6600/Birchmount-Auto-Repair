@@ -221,9 +221,25 @@ export interface ApiBlogListResponse {
     };
 }
 
-export async function fetchBlogs(): Promise<ApiBlog[]> {
-    const result = await fetchJson<ApiBlogListResponse>("/api/blogs");
-    return result.data ?? [];
+export async function fetchBlogs(
+    page?: number,
+    limit?: number
+): Promise<ApiBlogListResponse> {
+    const params = new URLSearchParams();
+    if (page) params.set("page", String(page));
+    if (limit) params.set("limit", String(limit));
+    const query = params.toString();
+    const url = `/api/blogs${query ? `?${query}` : ""}`;
+    const result = await fetchJson<ApiBlogListResponse>(url);
+    return {
+        data: result.data ?? [],
+        pagination: result.pagination ?? {
+            totalItems: 0,
+            page: page ?? 1,
+            limit: limit ?? 6,
+            totalPages: 0,
+        },
+    };
 }
 
 export async function fetchBlogBySlug(slug: string): Promise<ApiBlog | null> {

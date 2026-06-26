@@ -10,7 +10,7 @@
 
 .main-slider .item {
     position: relative;
-    padding-top: 217px;
+    padding-top: 120px;
     padding-bottom: 221px;
     background-color: var(--birchmountAutoRepair-black);
     overflow: hidden;
@@ -396,7 +396,7 @@
 
 .main-slider-two .item {
     position: relative;
-    padding-top: 335px;
+    padding-top: 120px;
     padding-bottom: 250px;
     background-color: var(--birchmountAutoRepair-black);
     overflow: hidden;

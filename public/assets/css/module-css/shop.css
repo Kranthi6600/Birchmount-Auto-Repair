@@ -1218,6 +1218,12 @@ Product
     color: var(--birchmountAutoRepair-white);
 }
 
+.styled-pagination li button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
 
 
 

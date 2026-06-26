@@ -18,7 +18,7 @@
     bottom: 0;
     opacity: 0.05;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
     z-index: -1;
 }
@@ -26,8 +26,14 @@
 .page-header__inner {
     position: relative;
     display: block;
-    padding: 149px 0 167px;
+    padding: 60px 0 167px;
     z-index: 15;
+}
+
+@media (min-width: 1320px) {
+    .page-header .container {
+        max-width: 1600px;
+    }
 }
 
 .page-header__inner h3 {
@@ -51,9 +57,9 @@
 .thm-breadcrumb li {
     position: relative;
     display: inline-block;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 700;
-    line-height: 18px;
+    line-height: 24px;
     color: var(--birchmountAutoRepair-white);
     font-family: var(--birchmountAutoRepair-font-2);
     text-transform: uppercase;
@@ -62,15 +68,15 @@
 }
 
 .thm-breadcrumb li+li {
-    margin-left: 5px;
+    margin-left: 12px;
 }
 
 .thm-breadcrumb li a {
     position: relative;
     display: inline-block;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 700;
-    line-height: 18px;
+    line-height: 24px;
     color: var(--birchmountAutoRepair-white);
     font-family: var(--birchmountAutoRepair-font-2);
     text-transform: uppercase;
@@ -84,6 +90,6 @@
 }
 
 .thm-breadcrumb li span {
-    font-size: 12px;
+    font-size: 16px;
     color: var(--birchmountAutoRepair-base);
 }

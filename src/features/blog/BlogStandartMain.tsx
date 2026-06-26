@@ -19,15 +19,16 @@ function formatDate(dateStr: string | null) {
 const BlogStandartMain: React.FC = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const ITEMS_PER_PAGE = 6;
-    const { data: apiBlogs, isLoading, error } = useBlogs();
+    const { data: apiBlogs, pagination, isLoading, error } = useBlogs(currentPage, ITEMS_PER_PAGE);
 
     const publishedBlogs = apiBlogs ?? [];
-    const totalPages = Math.ceil(publishedBlogs.length / ITEMS_PER_PAGE);
-    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-    const currentPosts = publishedBlogs.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+    const totalPages = pagination?.totalPages ?? 1;
 
     const handlePageChange = (page: number) => {
-        if (page >= 1 && page <= totalPages) setCurrentPage(page);
+        if (page >= 1 && page <= totalPages) {
+            setCurrentPage(page);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
     };
 
     if (isLoading) {
@@ -89,7 +90,7 @@ const BlogStandartMain: React.FC = () => {
                 <div className="row">
                     <div className="col-xl-8 col-lg-7">
                         <div className="blog-list__left">
-                            {currentPosts.map((post: ApiBlog) => {
+                            {publishedBlogs.map((post: ApiBlog) => {
                                 const { day, month } = formatDate(post.published_at);
                                 return (
                                     <div className="blog-list__single" key={post.id}>

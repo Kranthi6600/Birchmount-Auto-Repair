@@ -1,86 +1,62 @@
-"use client";
-
 import React from 'react';
-import { useParams } from 'next/navigation';
-import Banner from '@/features/banner/Banner';
-import Footer from '@/components/footers/Footer';
-import ServiceDetails from '@/features/service-shared/ServiceDetails';
-import { useService } from '@/hooks/useServices';
+import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
+import { SITE_URL } from '@/lib/site';
+import type { ApiService } from '@/lib/api';
+import ServiceDetailClient from './ServiceDetailClient';
 
-export default function ServiceDetailPage() {
-    const params = useParams();
-    const slug = typeof params.slug === 'string' ? params.slug : '';
-    const { data: apiService, isLoading } = useService(slug);
+const CLIENT_ID = "1910ea08-b8ae-4968-8e69-c9b7c5e7bc78";
+const API_BASE = "https://wehoware-saas.vercel.app";
 
-    if (isLoading) {
-        return (
-            <>
-                <Banner title="Loading..." subTitle="Services" bgImage="" headingTag='h1' />
-                <section className="service-details">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-12 text-center py-5">
-                                <div className="spinner-border text-primary" role="status">
-                                    <span className="visually-hidden">Loading...</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <Footer />
-            </>
-        );
+async function fetchService(slug: string): Promise<ApiService | null> {
+    try {
+        const url = `${API_BASE}/api/public/services/${slug}?clientId=${CLIENT_ID}`;
+        const res = await fetch(url, {
+            headers: { Accept: "application/json" },
+            next: { revalidate: 60 },
+        });
+        if (!res.ok) return null;
+        const data = await res.json();
+        return data?.service ?? data;
+    } catch {
+        return null;
     }
+}
 
-    if (!apiService) {
-        return (
-            <>
-                <Banner title="Service Not Found" subTitle="Services" bgImage="" headingTag='h1' />
-                <section className="service-details">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-12 text-center py-5">
-                                <h3>Service not found</h3>
-                                <p>The service you are looking for does not exist.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <Footer />
-            </>
-        );
-    }
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+    const { slug } = await params;
+    const service = await fetchService(slug);
+    if (!service) return {};
 
-    const faqData = (apiService.faqs && apiService.faqs.length > 0)
-        ? apiService.faqs.map((f, idx) => ({
-            id: idx + 1,
-            question: f.question,
-            answer: f.answer,
-            isActive: idx === 0,
-        }))
-        : [];
+    const canonical = `${SITE_URL}/services/${slug}`;
 
-    return (
-        <>
-            <Banner
-                title={apiService.title}
-                subTitle="Services"
-                thirdTitle={apiService.title}
-                bgImage={apiService.thumbnail || ''}
-                headingTag='h1'
-            />
-            <ServiceDetails
-                heroImg={apiService.thumbnail || ''}
-                heroAlt={apiService.thumbnail_alt || apiService.title}
-                title={apiService.title}
-                text1={apiService.description || ''}
-                text2={apiService.content || ''}
-                pointsList={apiService.tags || []}
-                imgBoxData={[]}
-                faqData={faqData}
-                slug={slug}
-            />
-            <Footer />
-        </>
-    );
+    return {
+        title: service.meta_title || `${service.title} | Birchmount Auto Repair`,
+        description: service.meta_description || service.description || undefined,
+        keywords: service.meta_keywords || undefined,
+        alternates: {
+            canonical,
+        },
+        openGraph: {
+            title: service.open_graph_title || service.meta_title || service.title,
+            description: service.open_graph_description || service.meta_description || service.description || undefined,
+            images: service.open_graph_image ? [{ url: service.open_graph_image }] : undefined,
+            url: canonical,
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: service.twitter_title || service.meta_title || service.title,
+            description: service.twitter_description || service.meta_description || service.description || undefined,
+            images: service.twitter_image ? [service.twitter_image] : undefined,
+        },
+    };
+}
+
+export default async function ServiceDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = await params;
+    const service = await fetchService(slug);
+
+    if (!service) notFound();
+
+    return <ServiceDetailClient service={service} slug={slug} />;
 }

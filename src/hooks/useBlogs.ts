@@ -2,19 +2,22 @@
 
 import { useEffect, useState } from "react";
 import { fetchBlogs, fetchBlogBySlug, type ApiBlog } from "@/lib/api";
+import type { ApiBlogListResponse } from "@/lib/api";
 
-export function useBlogs() {
+export function useBlogs(page: number = 1, limit: number = 6) {
     const [data, setData] = useState<ApiBlog[] | null>(null);
+    const [pagination, setPagination] = useState<ApiBlogListResponse["pagination"] | null>(null);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState<Error | null>(null);
 
     useEffect(() => {
         let cancelled = false;
         setIsLoading(true);
-        fetchBlogs()
-            .then((blogs) => {
+        fetchBlogs(page, limit)
+            .then((result) => {
                 if (!cancelled) {
-                    setData(blogs);
+                    setData(result.data);
+                    setPagination(result.pagination);
                     setError(null);
                 }
             })
@@ -25,9 +28,9 @@ export function useBlogs() {
                 if (!cancelled) setIsLoading(false);
             });
         return () => { cancelled = true; };
-    }, []);
+    }, [page, limit]);
 
-    return { data, isLoading, error };
+    return { data, pagination, isLoading, error };
 }
 
 export function useBlog(slug: string) {

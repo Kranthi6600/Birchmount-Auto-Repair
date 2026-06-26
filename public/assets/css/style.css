@@ -2484,8 +2484,8 @@ xs sidebar
 # Navigations Two
 --------------------------------------------------------------*/
 .main-header-two {
-  background: transparent;
-  position: absolute;
+  background: #fff;
+  position: relative;
   left: 0;
   right: 0;
   width: 100%;
@@ -2494,14 +2494,7 @@ xs sidebar
 }
 
 .main-header-two:after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  content: "";
-  background-color: rgba(var(--birchmountAutoRepair-white-rgb), 0.02);
-  z-index: -1;
+  display: none;
 }
 
 .main-menu-two__wrapper {

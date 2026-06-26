@@ -5,6 +5,17 @@ import Footer from "@/components/footers/Footer";
 import Banner from "@/features/banner/Banner";
 import Image from "next/image";
 import Link from "next/link";
+import { SITE_URL } from "@/lib/site";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: `${SITE_URL}/team`,
+  },
+  openGraph: {
+    url: `${SITE_URL}/team`,
+  },
+};
 
 const page: React.FC = () => {
     return (
