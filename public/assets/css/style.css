@@ -2571,7 +2571,7 @@ xs sidebar
 .main-menu-two__call-sub-title {
   font-size: 16px;
   font-weight: 600;
-  color: var(--birchmountAutoRepair-white);
+  color: var(--birchmountAutoRepair-black);
   line-height: 16px;
   font-family: var(--birchmountAutoRepair-font-two);
   letter-spacing: 0.03em;
@@ -2593,7 +2593,7 @@ xs sidebar
 }
 
 .main-menu-two__call-number a:hover {
-  color: var(--birchmountAutoRepair-white);
+  color: var(--birchmountAutoRepair-black);
 }
 
 .main-menu-two__search-cart-box {
@@ -2727,15 +2727,16 @@ xs sidebar
 
 .main-menu-two__btn-box .thm-btn {
   color: var(--birchmountAutoRepair-white);
+  background: var(--birchmountAutoRepair-base);
 }
 
 .main-menu-two .main-menu__list>li>a,
 .stricky-header.main-menu-two .main-menu__list>li>a {
-  color: var(--birchmountAutoRepair-white);
+  color: var(--birchmountAutoRepair-black);
 }
 
 .main-menu-two .main-menu__list>li.dropdown>a:after {
-  color: var(--birchmountAutoRepair-white);
+  color: var(--birchmountAutoRepair-black);
 }
 
 .main-menu-two .main-menu__list>li.current>a,
@@ -2754,7 +2755,7 @@ xs sidebar
 
 
 .stricky-header.main-menu-two {
-  background-color: var(--birchmountAutoRepair-black);
+  background-color: var(--birchmountAutoRepair-white);
 }
 
 
