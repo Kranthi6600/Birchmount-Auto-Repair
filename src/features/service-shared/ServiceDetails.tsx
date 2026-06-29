@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import ServiceDetailsSidebar from './ServiceDetailsSidebar';
@@ -48,6 +48,8 @@ const ServiceDetails: React.FC<ServiceDetailProps> = ({
 }) => {
     const { data: apiService } = useService(slug || '');
 
+    const mainRef = useRef<HTMLDivElement>(null);
+
     const mergedTitle = apiService?.title || title;
     const mergedText1 = apiService?.description || text1;
     const mergedText2 = apiService?.content || text2;
@@ -74,8 +76,8 @@ const ServiceDetails: React.FC<ServiceDetailProps> = ({
         <section className="service-details">
             <div className="container">
                 <div className="row">
-                    <ServiceDetailsSidebar />
-                    <div className="col-xl-8 col-lg-7">
+                    <ServiceDetailsSidebar mainRef={mainRef} />
+                    <div className="col-xl-8 col-lg-7" ref={mainRef}>
                         <div className="service-details__left">
 
                             <div className="service-details__img">

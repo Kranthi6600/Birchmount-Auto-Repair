@@ -28,7 +28,7 @@ const BlogOne: React.FC = () => {
             <div className="container">
                 <div className="section-title text-center sec-title-animation animation-style1">
                     <h6 className="section-title__tagline">
-                        <span className="section-title__tagline-border"></span>Blog & News
+                        <span className="section-title__tagline-border"></span>Blog
                     </h6>
                     <h3 className="section-title__title title-animation">
                         <TextAnimation>Auto Tips &amp; Advice from Our Team</TextAnimation>

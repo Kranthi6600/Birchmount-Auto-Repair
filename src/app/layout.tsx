@@ -20,6 +20,7 @@ const titilliumWeb = Titillium_Web({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Birchmount Auto Repair | Auto Body, Collision & Mechanical Repair in Scarborough",
   description: "Birchmount Auto Repair provides professional auto body repair, collision repair, mechanical services, towing, insurance assistance, and rentals in Scarborough, Ontario.",
   alternates: {
@@ -27,6 +28,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: SITE_URL,
+    siteName: "Birchmount Auto Repair",
+    locale: "en_CA",
+    type: "website",
   },
   icons: {
     icon: [

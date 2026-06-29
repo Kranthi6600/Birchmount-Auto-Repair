@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import BlogSidebar from './BlogSidebar';
 import { useBlogs } from '@/hooks/useBlogs';
 import type { ApiBlog } from '@/lib/api';
@@ -20,6 +20,7 @@ const BlogStandartMain: React.FC = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const ITEMS_PER_PAGE = 6;
     const { data: apiBlogs, pagination, isLoading, error } = useBlogs(currentPage, ITEMS_PER_PAGE);
+    const mainRef = useRef<HTMLDivElement>(null);
 
     const publishedBlogs = apiBlogs ?? [];
     const totalPages = pagination?.totalPages ?? 1;
@@ -36,12 +37,12 @@ const BlogStandartMain: React.FC = () => {
             <section className="blog-list">
                 <div className="container">
                     <div className="row">
-                        <div className="col-xl-8 col-lg-7">
+                        <div className="col-xl-8 col-lg-7" ref={mainRef}>
                             <div className="blog-list__left">
                                 <p>Loading blogs...</p>
                             </div>
                         </div>
-                        <BlogSidebar wrapper="col-xl-4 col-lg-5 d-none d-lg-block" inner="sidebar" />
+                        <BlogSidebar wrapper="col-xl-4 col-lg-5 d-none d-lg-block" inner="sidebar" mainRef={mainRef} />
                     </div>
                 </div>
             </section>
@@ -53,13 +54,13 @@ const BlogStandartMain: React.FC = () => {
             <section className="blog-list">
                 <div className="container">
                     <div className="row">
-                        <div className="col-xl-8 col-lg-7">
+                        <div className="col-xl-8 col-lg-7" ref={mainRef}>
                             <div className="blog-list__left text-center py-5">
                                 <h3>Error loading blogs</h3>
                                 <p>Please try again later.</p>
                             </div>
                         </div>
-                        <BlogSidebar wrapper="col-xl-4 col-lg-5 d-none d-lg-block" inner="sidebar" />
+                        <BlogSidebar wrapper="col-xl-4 col-lg-5 d-none d-lg-block" inner="sidebar" mainRef={mainRef} />
                     </div>
                 </div>
             </section>
@@ -71,13 +72,13 @@ const BlogStandartMain: React.FC = () => {
             <section className="blog-list">
                 <div className="container">
                     <div className="row">
-                        <div className="col-xl-8 col-lg-7">
+                        <div className="col-xl-8 col-lg-7" ref={mainRef}>
                             <div className="blog-list__left text-center py-5">
                                 <h3>No blog posts yet</h3>
                                 <p>Check back soon for helpful automotive tips and news.</p>
                             </div>
                         </div>
-                        <BlogSidebar wrapper="col-xl-4 col-lg-5 d-none d-lg-block" inner="sidebar" />
+                        <BlogSidebar wrapper="col-xl-4 col-lg-5 d-none d-lg-block" inner="sidebar" mainRef={mainRef} />
                     </div>
                 </div>
             </section>
@@ -88,12 +89,12 @@ const BlogStandartMain: React.FC = () => {
         <section className="blog-list">
             <div className="container">
                 <div className="row">
-                    <div className="col-xl-8 col-lg-7">
+                    <div className="col-xl-8 col-lg-7" ref={mainRef}>
                         <div className="blog-list__left">
-                            {publishedBlogs.map((post: ApiBlog) => {
+                            {publishedBlogs.map((post: ApiBlog, index: number) => {
                                 const { day, month } = formatDate(post.published_at);
                                 return (
-                                    <div className="blog-list__single" key={post.id}>
+                                    <article className="blog-list__single" key={post.id} itemScope itemType="https://schema.org/BlogPosting">
                                         <div className="blog-list__img">
                                             <Image
                                                 src={post.thumbnail || '/assets/images/blog/blog1.jpeg'}
@@ -101,6 +102,8 @@ const BlogStandartMain: React.FC = () => {
                                                 width={850}
                                                 height={475}
                                                 style={{ width: '100%', height: 'auto' }}
+                                                priority={index === 0}
+                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 850px"
                                             />
                                             <div className="blog-list__date">
                                                 <p>{day}<br />{month}</p>
@@ -113,21 +116,22 @@ const BlogStandartMain: React.FC = () => {
                                                 </div>
                                                 <ul className="blog-list__meta list-unstyled">
                                                     <li>
-                                                        <Link href="#"><span className="fas fa-clock"></span>{post.read_time ? `${post.read_time} Min Read` : '4 Min Read'}</Link>
+                                                        <span className="fas fa-clock"></span>
+                                                        <time dateTime={post.published_at || undefined}>{post.read_time ? `${post.read_time} Min Read` : '4 Min Read'}</time>
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <h3 className="blog-list__title" style={{ fontSize: '1.75rem', lineHeight: 1.3, marginBottom: '12px' }}>
-                                                <Link href={`/blog/${post.slug}`}>{post.title}</Link>
-                                            </h3>
-                                            <p className="blog-list__text" style={{ fontSize: '1rem', lineHeight: 1.7, color: '#777f95', marginBottom: '8px' }}>
+                                            <h2 className="blog-list__title" style={{ fontSize: '1.75rem', lineHeight: 1.3, marginBottom: '12px' }}>
+                                                <Link href={`/blog/${post.slug}`} itemProp="headline">{post.title}</Link>
+                                            </h2>
+                                            <p className="blog-list__text" style={{ fontSize: '1rem', lineHeight: 1.7, color: '#777f95', marginBottom: '8px' }} itemProp="description">
                                                 {post.excerpt ? stripHtml(post.excerpt).slice(0, 160) + (stripHtml(post.excerpt).length > 160 ? '...' : '') : ''}
                                             </p>
-                                            <Link href={`/blog/${post.slug}`} className="blog-list__read-more">
+                                            <Link href={`/blog/${post.slug}`} className="blog-list__read-more" aria-label={`Read more about ${post.title}`}>
                                                 Learn More<span className="icon-arrow-right"></span>
                                             </Link>
                                         </div>
-                                    </div>
+                                    </article>
                                 );
                             })}
                             {totalPages > 1 && (
@@ -157,7 +161,7 @@ const BlogStandartMain: React.FC = () => {
                             )}
                         </div>
                     </div>
-                    <BlogSidebar wrapper="col-xl-4 col-lg-5 d-none d-lg-block" inner="sidebar" />
+                    <BlogSidebar wrapper="col-xl-4 col-lg-5 d-none d-lg-block" inner="sidebar" mainRef={mainRef} />
                 </div>
             </div>
         </section>
