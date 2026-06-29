@@ -106,9 +106,9 @@ const ServiceOne: React.FC = () => {
                     <h6 className="section-title__tagline">
                         <span className="section-title__tagline-border"></span>Our Service
                     </h6>
-                    <h3 className="section-title__title title-animation">
+                    <h2 className="section-title__title title-animation">
                         <TextAnimation>Complete Auto Repair Services <br /> in Scarborough</TextAnimation>
-                    </h3>
+                    </h2>
                 </div>
                 <div className="services-two__carousel  ">
                     <Swiper
@@ -133,7 +133,7 @@ const ServiceOne: React.FC = () => {
                                     <div className="services-two__single">
                                         <div className="services-two__img-box">
                                             <div className="services-two__img">
-                                                <img src={service.image as string} alt="" />
+                                                <img src={service.image as string} alt={`${service.title} at Birchmount Auto Repair in Scarborough`} />
                                             </div>
                                             <div className="services-two__hover-content">
                                                 <p className="services-two__hover-text">{service.hoverText}</p>
@@ -149,7 +149,7 @@ const ServiceOne: React.FC = () => {
                                         </div>
                                         <div className="services-two__content">
                                             <h3 className="services-two__title">
-                                                <Link href={service.to}>{service.title}</Link>
+                                                <Link href={service.to} aria-label={`Learn more about ${service.title}`}>{service.title}</Link>
                                             </h3>
                                         </div>
                                     </div>

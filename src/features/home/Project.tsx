@@ -55,9 +55,9 @@ const Project: React.FC = () => {
                         <h6 className="section-title__tagline">
                             <span className="section-title__tagline-border"></span>Recent Repairs
                         </h6>
-                        <h3 className="section-title__title title-animation">
+                        <h2 className="section-title__title title-animation">
                             <TextAnimation>Recent Repairs We&apos;re <br /> Proud Of</TextAnimation>
-                        </h3>
+                        </h2>
                     </div>
                     <div className="project-two__btn-box">
                         <Link href="#" className="thm-btn">
@@ -91,7 +91,7 @@ const Project: React.FC = () => {
                                 <div className="project-two__single">
                                     <div className="project-two__img-box">
                                         <div className="project-two__img">
-                                            <Image src={project.image} alt="project" width={379} height={583} />
+                                            <Image src={project.image} alt={`${project.title} - ${project.subTitle} repair at Birchmount Auto Repair`} width={379} height={583} />
                                             <div className="project-two__arrow" onClick={() => { setIndex(i); setOpenLightBox((pre: boolean) => !pre) }}>
                                                 <Link href="#" className="img-popup">
                                                     <span className="icon-arrow-right"></span>

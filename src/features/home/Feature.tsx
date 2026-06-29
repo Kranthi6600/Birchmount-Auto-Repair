@@ -67,7 +67,7 @@ const Feature: React.FC = () => {
                     <h6 className="section-title__tagline">
                         <span className="section-title__tagline-border"></span>Our Features
                     </h6>
-                    <h3 className="section-title__title title-animation"><TextAnimation animationStyle='style2'>Why Drivers Trust Birchmount Auto Repair</TextAnimation></h3>
+                    <h2 className="section-title__title title-animation"><TextAnimation animationStyle='style2'>Why Drivers Trust Birchmount Auto Repair</TextAnimation></h2>
                 </div>
                 <div className="row">
                     {featureItems.map((item) => (
@@ -87,7 +87,7 @@ const Feature: React.FC = () => {
                                         style={{ backgroundImage: `url(${featureTwoSingleShape1})` }}
                                     ></div>
                                     <h3 className="feature-two__title">
-                                        <Link href={item.to}>{item.title}</Link>
+                                        <Link href={item.to} aria-label={item.title}>{item.title}</Link>
                                     </h3>
                                     <p className="feature-two__text">{item.text}</p>
                                 </div>

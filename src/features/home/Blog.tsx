@@ -39,9 +39,9 @@ const Blog: React.FC = () => {
                     <h6 className="section-title__tagline">
                         <span className="section-title__tagline-border"></span>Blog
                     </h6>
-                    <h3 className="section-title__title title-animation">
+                    <h2 className="section-title__title title-animation">
                         <TextAnimation>Auto Tips &amp; News <br /> from Our Team</TextAnimation>
-                    </h3>
+                    </h2>
                 </div>
                 {isLoading ? (
                     <div className="row">

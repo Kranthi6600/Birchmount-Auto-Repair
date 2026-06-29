@@ -52,10 +52,10 @@ const MainSlider: React.FC = () => {
                                 <Image src={shapeOne} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="image" className="float-bob-x" />
                             </div>
                             <div className="main-slider-two__img">
-                                <img src={slideImg} alt="image" />
+                                <img src={slideImg} alt="Birchmount Auto Repair technician working on a vehicle in Scarborough" />
                             </div>
                             <div className="main-slider-two__small-img">
-                                <img src={slideImgSmall} alt="image" />
+                                <img src={slideImgSmall} alt="Auto repair specialist at Birchmount Auto Repair" />
                             </div>
                             <div className="container">
                                 <div className="main-slider-two__content">
@@ -63,8 +63,8 @@ const MainSlider: React.FC = () => {
                                         <div className="main-slider-two__sub-title-shape"></div>
                                         <p className="main-slider-two__sub-title">Scarborough&apos;s Trusted Auto Repair Shop</p>
                                     </div>
-                                    <h2 className="main-slider-two__title">Expert Auto <span>Repairs</span> <br /> You Can Count On
-                                    </h2>
+                                    <h1 className="main-slider-two__title">Expert Auto <span>Repairs</span> <br /> You Can Count On
+                                    </h1>
                                     <p className="main-slider-two__text">Honest estimates, certified technicians, and fast turnaround
                                         — right here in Scarborough. <br /> Call us at (416) 757-8368.</p>
                                     <div className="main-slider-two__btn-box">
@@ -86,10 +86,10 @@ const MainSlider: React.FC = () => {
                                 <Image src={shapeOne} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="image" className="float-bob-x" />
                             </div>
                             <div className="main-slider-two__img">
-                                <img src={slideImgTwo} alt="image" />
+                                <img src={slideImgTwo} alt="Birchmount Auto Repair brake service and diagnostics in Scarborough" />
                             </div>
                             <div className="main-slider-two__small-img">
-                                <img src={slideImgSmallTwo} alt="image" />
+                                <img src={slideImgSmallTwo} alt="Certified mechanic performing engine diagnostics" />
                             </div>
                             <div className="container">
                                 <div className="main-slider-two__content">
@@ -120,10 +120,10 @@ const MainSlider: React.FC = () => {
                                 <Image src={shapeOne} width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} alt="image" className="float-bob-x" />
                             </div>
                             <div className="main-slider-two__img">
-                                <img src={slideImgThree} alt="image" />
+                                <img src={slideImgThree} alt="Trusted Scarborough auto repair shop interior at Birchmount Auto Repair" />
                             </div>
                             <div className="main-slider-two__small-img">
-                                <img src={slideImgSmallThree} alt="image" />
+                                <img src={slideImgSmallThree} alt="Auto repair customer receiving vehicle at Birchmount Auto Repair" />
                             </div>
                             <div className="container">
                                 <div className="main-slider-two__content">

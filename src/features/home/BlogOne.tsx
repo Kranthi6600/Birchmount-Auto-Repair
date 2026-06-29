@@ -30,9 +30,9 @@ const BlogOne: React.FC = () => {
                     <h6 className="section-title__tagline">
                         <span className="section-title__tagline-border"></span>Blog
                     </h6>
-                    <h3 className="section-title__title title-animation">
+                    <h2 className="section-title__title title-animation">
                         <TextAnimation>Auto Tips &amp; Advice from Our Team</TextAnimation>
-                    </h3>
+                    </h2>
                 </div>
                 {isLoading ? (
                     <div className="row">
@@ -58,7 +58,7 @@ const BlogOne: React.FC = () => {
                                 <div className="blog-two__single">
                                     <div className="blog-two__img-box">
                                         <div className="blog-two__img">
-                                            <Image src={blog.thumbnail || '/assets/images/blog/blog-3-1.jpg'} alt={blog.thumbnail_alt || blog.title} width={410} height={300}/>
+                                            <Image src={blog.thumbnail || '/assets/images/blog/blog-3-1.jpg'} alt={blog.thumbnail_alt || blog.title} width={410} height={300} sizes="(max-width: 768px) 100vw, 410px"/>
                                             <Link href={`/blog/${blog.slug}`} className="blog-two__link">
                                                 <span className="sr-only"></span>
                                             </Link>

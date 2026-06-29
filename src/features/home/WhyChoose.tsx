@@ -60,7 +60,7 @@ const WhyChoose: React.FC = () => {
                         >
                             <div className="why-choose-two__img-box">
                                 <div className="why-choose-two__img-1">
-                                    <Image src={whyChooseTwoImg1} width={470} height={483} alt="" />
+                                    <Image src={whyChooseTwoImg1} width={470} height={483} alt="Birchmount Auto Repair insurance claim processing for collision repairs" />
                                 </div>
                                 <div className="why-choose-two__improve-box">
                                     <p className="why-choose-two__improve-sub-title">(Approved by All Major Insurers)</p>
@@ -79,9 +79,9 @@ const WhyChoose: React.FC = () => {
                                 <h6 className="section-title__tagline">
                                     <span className="section-title__tagline-border"></span>Insurance Claims
                                 </h6>
-                                <h3 className="section-title__title title-animation">
+                                <h2 className="section-title__title title-animation">
                                     <TextAnimation>We Work Directly With<br /> Your Insurance Company</TextAnimation>
-                                </h3>
+                                </h2>
                             </div>
                             <div className="why-choose-two__points-box">
                                 {[pointsListOne, pointsListTwo].map((list, listIndex) => (

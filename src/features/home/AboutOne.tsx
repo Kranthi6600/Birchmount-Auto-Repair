@@ -42,9 +42,9 @@ const AboutOne: React.FC = () => {
                                 <h6 className="section-title__tagline">
                                     <span className="section-title__tagline-border"></span>About Our Company
                                 </h6>
-                                <h3 className="section-title__title title-animation">
+                                <h2 className="section-title__title title-animation">
                                     <TextAnimation>Scarborough&apos;s Trusted <br /> Auto Repair Shop</TextAnimation>
-                                </h3>
+                                </h2>
                             </div>
                             <p className="about-two__text-1">
                                 Our shop provides the best <span>auto repair</span> service in Scarborough.
@@ -79,10 +79,10 @@ const AboutOne: React.FC = () => {
                         >
                             <div className="about-two__img-box">
                                 <div className="about-two__img">
-                                    <Image src={aboutTwoImg1} width={420} height={0} sizes="420px" style={{ width: "100%", height: "auto", maxHeight: "500px", objectFit: "cover" }} alt="" />
+                                    <Image src={aboutTwoImg1} width={420} height={0} sizes="420px" style={{ width: "100%", height: "auto", maxHeight: "500px", objectFit: "cover" }} alt="Birchmount Auto Repair shop interior with vehicle being serviced" />
                                 </div>
                                 <div className="about-two__img-2">
-                                    <Image src={aboutTwoImg2} width={180} height={0} sizes="180px" style={{ width: "180px", height: "auto" }} alt="" />
+                                    <Image src={aboutTwoImg2} width={180} height={0} sizes="180px" style={{ width: "180px", height: "auto" }} alt="Certified auto repair technician at Birchmount Auto Repair" />
                                 </div>
                                 <div className="about-two__experience-box">
                                     <div className="about-two__count-box">
