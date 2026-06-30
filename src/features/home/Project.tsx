@@ -18,7 +18,6 @@ const projectImg11 = "/assets/images/project/project11.jpeg";
 import TextAnimation from '@/components/elements/TextAnimation';
 import Lightbox from 'yet-another-react-lightbox';
 import SectionWrapper from '@/components/elements/SectionWrapper';
-import Link from 'next/link';
 import Image from 'next/image';
 
 interface ProjectItem {
@@ -26,21 +25,20 @@ interface ProjectItem {
     image: string;
     title: string;
     subTitle: string;
-    to: string;
 }
 
 const projectItems: ProjectItem[] = [
-    { id: 1, image: projectImg1, title: '2018 Honda Civic', subTitle: 'Brake System', to: '#' },
-    { id: 2, image: projectImg2, title: '2015 Ford F-150', subTitle: 'Engine Tune-Up', to: '#' },
-    { id: 3, image: projectImg3, title: '2017 Toyota Camry', subTitle: 'Transmission', to: '#' },
-    { id: 4, image: projectImg4, title: '2016 Chevy Equinox', subTitle: 'Electrical Repair', to: '#' },
-    { id: 5, image: projectImg5, title: '2019 Hyundai Elantra', subTitle: 'Tire & Wheel', to: '#' },
-    { id: 6, image: projectImg6, title: '2014 Dodge Ram 1500', subTitle: 'Oil & Fluid Service', to: '#' },
-    { id: 7, image: projectImg7, title: '2020 Kia Sportage', subTitle: 'Suspension Repair', to: '#' },
-    { id: 8, image: projectImg8, title: '2018 Honda Accord', subTitle: 'Brake Service', to: '#' },
-    { id: 9, image: projectImg9, title: '2016 Nissan Altima', subTitle: 'Engine Diagnostics', to: '#' },
-    { id: 10, image: projectImg10, title: '2019 Mazda CX-5', subTitle: 'Full Inspection', to: '#' },
-    { id: 11, image: projectImg11, title: '2021 Ford Escape', subTitle: 'Transmission Service', to: '#' },
+    { id: 1, image: projectImg1, title: '2018 Honda Civic', subTitle: 'Brake System' },
+    { id: 2, image: projectImg2, title: '2015 Ford F-150', subTitle: 'Engine Tune-Up' },
+    { id: 3, image: projectImg3, title: '2017 Toyota Camry', subTitle: 'Transmission' },
+    { id: 4, image: projectImg4, title: '2016 Chevy Equinox', subTitle: 'Electrical Repair' },
+    { id: 5, image: projectImg5, title: '2019 Hyundai Elantra', subTitle: 'Tire & Wheel' },
+    { id: 6, image: projectImg6, title: '2014 Dodge Ram 1500', subTitle: 'Oil & Fluid Service' },
+    { id: 7, image: projectImg7, title: '2020 Kia Sportage', subTitle: 'Suspension Repair' },
+    { id: 8, image: projectImg8, title: '2018 Honda Accord', subTitle: 'Brake Service' },
+    { id: 9, image: projectImg9, title: '2016 Nissan Altima', subTitle: 'Engine Diagnostics' },
+    { id: 10, image: projectImg10, title: '2019 Mazda CX-5', subTitle: 'Full Inspection' },
+    { id: 11, image: projectImg11, title: '2021 Ford Escape', subTitle: 'Transmission Service' },
 ];
 
 const Project: React.FC = () => {
@@ -58,11 +56,6 @@ const Project: React.FC = () => {
                         <h2 className="section-title__title title-animation">
                             <TextAnimation>Recent Repairs We&apos;re <br /> Proud Of</TextAnimation>
                         </h2>
-                    </div>
-                    <div className="project-two__btn-box">
-                        <Link href="#" className="thm-btn">
-                            View All Projects <span className="icon-arrow-right"></span>
-                        </Link>
                     </div>
                 </div>
             </div>
@@ -93,14 +86,12 @@ const Project: React.FC = () => {
                                         <div className="project-two__img">
                                             <Image src={project.image} alt={`${project.title} - ${project.subTitle} repair at Birchmount Auto Repair`} width={379} height={583} />
                                             <div className="project-two__arrow" onClick={() => { setIndex(i); setOpenLightBox((pre: boolean) => !pre) }}>
-                                                <Link href="#" className="img-popup">
-                                                    <span className="icon-arrow-right"></span>
-                                                </Link>
+                                                <span className="icon-arrow-right"></span>
                                             </div>
                                         </div>
                                         <div className="project-two__content">
-                                            <h3 className="project-two__title">
-                                                <Link href={project.to}>{project.title}</Link>
+                                            <h3 className="project-two__title" style={{ color: '#fff' }}>
+                                                {project.title}
                                             </h3>
                                             <p className="project-two__sub-title">{project.subTitle}</p>
                                         </div>

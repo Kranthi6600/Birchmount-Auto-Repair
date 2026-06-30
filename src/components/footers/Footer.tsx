@@ -53,10 +53,7 @@ interface FooterPost {
 }
 
 const socialLinks: SocialLink[] = [
-    { id: 1, icon: 'fab fa-twitter', href: '#' },
-    { id: 2, icon: 'fab fa-facebook', href: '#' },
-    { id: 3, icon: 'fab fa-pinterest-p', href: '#' },
-    { id: 4, icon: 'fab fa-instagram', href: '#' },
+    { id: 4, icon: 'fab fa-instagram', href: 'https://www.instagram.com/p/DZ_RDrcvByk/?igsh=MWN0MTNzOTVrN2hsYQ==' },
 ];
 
 const bottomMenuLinks: NavLink[] = [
@@ -226,7 +223,7 @@ const Footer = () => {
                                     {/* Social Links */}
                                     <div className="site-footer__social">
                                         {socialLinks.map((social) => (
-                                            <a key={social.id} href={social.href}>
+                                            <a key={social.id} href={social.href} target="_blank" rel="noopener noreferrer">
                                                 <i className={social.icon}></i>
                                             </a>
                                         ))}
