@@ -2,49 +2,54 @@
  * Centralized application configuration.
  * All environment-specific values are read here and exported as typed constants.
  * No other file in the codebase should read process.env directly for API or site config.
+ *
+ * Note: This module is imported by both client and server code (api.ts imports
+ * DEFAULT_BLOG_PAGE_SIZE). Env vars are only populated on the server side, so we
+ * read them without throwing. The orchestrator (server-only) uses these values
+ * where they are guaranteed to be available.
  */
-
-const DEFAULT_API_BASE_URL = "https://wehoware-saas.vercel.app";
-const DEFAULT_CLIENT_ID = "fce75c6e-733c-4f25-a0dd-bf067cdb6bcb";
-const DEFAULT_SITE_URL = "https://www.birchmountautorepair.com";
 
 function normalizeUrl(url: string): string {
     return url.replace(/\/$/, "");
 }
 
+function optionalEnvInt(key: string, fallback: number): number {
+    const value = process.env[key];
+    return value ? Number(value) : fallback;
+}
+
 export const API_BASE_URL: string = normalizeUrl(
-    process.env.NEXT_PUBLIC_API_BASE_URL || DEFAULT_API_BASE_URL
+    process.env.NEXT_PUBLIC_API_BASE_URL || ""
 );
 
-export const CLIENT_ID: string =
-    process.env.NEXT_PUBLIC_CLIENT_ID || DEFAULT_CLIENT_ID;
+export const CLIENT_ID: string = process.env.NEXT_PUBLIC_CLIENT_ID || "";
 
-export const SITE_URL: string =
-    process.env.NEXT_PUBLIC_SITE_URL || DEFAULT_SITE_URL;
+export const SITE_URL: string = normalizeUrl(
+    process.env.NEXT_PUBLIC_SITE_URL || ""
+);
 
 /** Request timeout in milliseconds for all external API calls. */
-export const API_REQUEST_TIMEOUT_MS: number = Number(
-    process.env.NEXT_PUBLIC_API_TIMEOUT_MS
-) || 10000;
+export const API_REQUEST_TIMEOUT_MS: number = optionalEnvInt(
+    "NEXT_PUBLIC_API_TIMEOUT_MS", 10000
+);
 
 /** Maximum retry attempts for failed external API calls. */
-export const API_MAX_RETRIES: number = Number(
-    process.env.NEXT_PUBLIC_API_MAX_RETRIES
-) || 2;
+export const API_MAX_RETRIES: number = optionalEnvInt(
+    "NEXT_PUBLIC_API_MAX_RETRIES", 2
+);
 
 /** Base revalidation time in seconds for ISR cache. */
-export const API_REVALIDATE_SECONDS: number = Number(
-    process.env.NEXT_PUBLIC_API_REVALIDATE_SECONDS
-) || 60;
+export const API_REVALIDATE_SECONDS: number = optionalEnvInt(
+    "NEXT_PUBLIC_API_REVALIDATE_SECONDS", 60
+);
 
 /** Long revalidation for sitemaps and static param generation. */
-export const API_REVALIDATE_LONG_SECONDS: number = Number(
-    process.env.NEXT_PUBLIC_API_REVALIDATE_LONG_SECONDS
-) || 3600;
+export const API_REVALIDATE_LONG_SECONDS: number = optionalEnvInt(
+    "NEXT_PUBLIC_API_REVALIDATE_LONG_SECONDS", 3600
+);
 
 /** Google Tag Manager container ID. */
-export const GTM_CONTAINER_ID: string =
-    process.env.NEXT_PUBLIC_GTM_CONTAINER_ID || "GTM-TGG5L77T";
+export const GTM_CONTAINER_ID: string = process.env.NEXT_PUBLIC_GTM_CONTAINER_ID || "";
 
 /** Default page size for blog list endpoints. */
 export const DEFAULT_BLOG_PAGE_SIZE: number = 6;
