@@ -93,6 +93,8 @@ export interface ApiService {
     related_blogs?: ApiRelatedBlog[];
     faqs?: ApiFaq[];
     faq_schema?: ApiFaqSchema | null;
+    service_schema?: Record<string, unknown> | null;
+    breadcrumb_schema?: Record<string, unknown> | null;
 }
 
 export interface ApiPagination {
@@ -102,9 +104,15 @@ export interface ApiPagination {
     totalPages: number;
 }
 
+export interface ApiServiceListSchema {
+    item_list?: Record<string, unknown> | null;
+    collection_page?: Record<string, unknown> | null;
+}
+
 export interface ApiServiceListResponse {
     data: ApiService[];
     pagination: ApiPagination;
+    schema?: ApiServiceListSchema | null;
 }
 
 export interface ApiCategory {

@@ -303,6 +303,22 @@ export async function getServices(
     }
 }
 
+export async function getServicesWithSchema(
+    options?: OrchestratorOptions
+): Promise<{ data: unknown[]; schema: PaginatedResponse<unknown>["schema"] }> {
+    const url = buildUrl(API_PATHS.SERVICES);
+    try {
+        const raw = await fetchWithRetry<unknown>(url, options);
+        const data = normalizeList<unknown>(raw, "services", "data");
+        const rawObj = raw as Record<string, unknown> | null;
+        const schema = (rawObj?.schema ?? null) as PaginatedResponse<unknown>["schema"];
+        return { data, schema };
+    } catch (error) {
+        log.error(`Failed to fetch services with schema`, { error: (error as Error).message });
+        return { data: [], schema: null };
+    }
+}
+
 export async function getServiceBySlug(
     slug: string,
     options?: OrchestratorOptions

@@ -45,5 +45,85 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
     if (!service) notFound();
 
-    return <ServiceDetailClient service={service} slug={slug} />;
+    const canonical = `${SITE_URL}/services/${slug}`;
+
+    const fallbackServiceSchema: Record<string, unknown> = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": service.title,
+        "description": service.meta_description || service.description || undefined,
+        "image": service.thumbnail || undefined,
+        "provider": {
+            "@type": "Organization",
+            "name": "Birchmount Auto Repair",
+            "url": SITE_URL,
+        },
+        "serviceType": service.wehoware_service_categories?.name || "Auto Repair",
+        "areaServed": {
+            "@type": "Place",
+            "url": SITE_URL,
+        },
+    };
+    if (service.fee != null) {
+        fallbackServiceSchema["offers"] = {
+            "@type": "Offer",
+            "price": service.fee,
+            "priceCurrency": service.fee_currency || "CAD",
+        };
+    }
+    if (service.rating > 0) {
+        fallbackServiceSchema["aggregateRating"] = {
+            "@type": "AggregateRating",
+            "ratingValue": service.rating,
+            "reviewCount": service.reviews_count,
+        };
+    }
+    if (service.meta_keywords || service.tags?.length) {
+        fallbackServiceSchema["keywords"] = service.meta_keywords || service.tags?.join(", ");
+    }
+
+    const fallbackBreadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": SITE_URL,
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services",
+                "item": `${SITE_URL}/services`,
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": service.title,
+                "item": canonical,
+            },
+        ],
+    };
+
+    const schemas: Record<string, unknown>[] = [
+        service.service_schema ?? fallbackServiceSchema,
+        service.breadcrumb_schema ?? fallbackBreadcrumbSchema,
+    ];
+    if (service.faq_schema) {
+        schemas.push(service.faq_schema as unknown as Record<string, unknown>);
+    }
+
+    return (
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(schemas),
+                }}
+            />
+            <ServiceDetailClient service={service} slug={slug} />
+        </>
+    );
 }
