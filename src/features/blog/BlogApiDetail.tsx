@@ -41,7 +41,7 @@ const BlogApiDetail: React.FC<BlogApiDetailProps> = ({ post, prevPost, nextPost,
                 <div className="row">
                     <div className="col-xl-8 col-lg-7" ref={mainRef}>
                         <div className="blog-details__left">
-                            <article itemScope itemType="https://schema.org/BlogPosting">
+                            <article>
                             <div className="blog-details__img">
                                 <Image
                                     src={post.thumbnail || '/assets/images/blog/blog1.jpeg'}
@@ -68,7 +68,7 @@ const BlogApiDetail: React.FC<BlogApiDetailProps> = ({ post, prevPost, nextPost,
                                         </li>
                                     </ul>
                                 </div>
-                                <h1 className="blog-details__title" itemProp="headline">{post.title}</h1>
+                                <h1 className="blog-details__title">{post.title}</h1>
                                 {post.content && (
                                     <RichTextRenderer html={post.content} className="blog-details__text-2" />
                                 )}

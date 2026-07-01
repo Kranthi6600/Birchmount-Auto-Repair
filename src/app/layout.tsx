@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Archivo, Titillium_Web } from "next/font/google";
 import BirchmountAutoRepairLayout from "@/components/layout/BirchmountAutoRepairLayout";
 import { SITE_URL } from "@/lib/site";
+import { GTM_CONTAINER_ID } from "@/lib/config";
 import "swiper/swiper-bundle.css";
 import 'yet-another-react-lightbox/styles.css';
 
@@ -40,6 +42,9 @@ export const metadata: Metadata = {
     ],
     apple: { url: '/assets/images/icon/logo.ico', sizes: '180x180' },
   },
+  verification: {
+    google: "DUBmJPgMIsPj5rdvTyBCWb-MB-GMGu0hsXifJgoyNkw",
+  },
 };
 
 export default function RootLayout({
@@ -51,8 +56,23 @@ export default function RootLayout({
     <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
         <link rel="stylesheet" href="/assets/css/combined.css" />
+        <Script id="gtm-init" strategy="afterInteractive">{`
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','${GTM_CONTAINER_ID}');
+        `}</Script>
       </head>
       <body className={`${archivo.variable} ${titilliumWeb.variable}`}>
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_CONTAINER_ID}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
         <BirchmountAutoRepairLayout>
           {children}
         </BirchmountAutoRepairLayout>

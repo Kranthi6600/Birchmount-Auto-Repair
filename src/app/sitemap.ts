@@ -1,23 +1,18 @@
 import type { MetadataRoute } from 'next';
 import { SITE_URL } from '@/lib/site';
-
-const CLIENT_ID = "1910ea08-b8ae-4968-8e69-c9b7c5e7bc78";
-const API_BASE = "https://wehoware-saas.vercel.app";
+import { getBlogs, getServices, API_REVALIDATE_LONG_SECONDS } from '@/lib/orchestrator';
+import { MAX_LIST_LIMIT } from '@/lib/config';
 
 async function fetchAllBlogSlugs(): Promise<{ slug: string; updated_at: string | null }[]> {
     try {
-        const url = `${API_BASE}/api/public/blogs?clientId=${CLIENT_ID}&limit=100`;
-        const res = await fetch(url, {
-            headers: { Accept: "application/json" },
-            next: { revalidate: 3600 },
+        const result = await getBlogs(1, MAX_LIST_LIMIT, { revalidate: API_REVALIDATE_LONG_SECONDS });
+        return (result.data as unknown[]).map((b) => {
+            const blog = b as { slug: string; updated_at?: string | null };
+            return {
+                slug: blog.slug,
+                updated_at: blog.updated_at ?? null,
+            };
         });
-        if (!res.ok) return [];
-        const raw = await res.json();
-        const blogs = raw.blogs ?? raw.data ?? [];
-        return blogs.map((b: { slug: string; updated_at?: string | null }) => ({
-            slug: b.slug,
-            updated_at: b.updated_at ?? null,
-        }));
     } catch {
         return [];
     }
@@ -25,18 +20,14 @@ async function fetchAllBlogSlugs(): Promise<{ slug: string; updated_at: string |
 
 async function fetchAllServiceSlugs(): Promise<{ slug: string; updated_at: string | null }[]> {
     try {
-        const url = `${API_BASE}/api/public/services?clientId=${CLIENT_ID}&limit=100`;
-        const res = await fetch(url, {
-            headers: { Accept: "application/json" },
-            next: { revalidate: 3600 },
+        const data = await getServices({ revalidate: API_REVALIDATE_LONG_SECONDS });
+        return (data as unknown[]).map((s) => {
+            const service = s as { slug: string; updated_at?: string | null };
+            return {
+                slug: service.slug,
+                updated_at: service.updated_at ?? null,
+            };
         });
-        if (!res.ok) return [];
-        const raw = await res.json();
-        const services = raw.services ?? raw.data ?? [];
-        return services.map((s: { slug: string; updated_at?: string | null }) => ({
-            slug: s.slug,
-            updated_at: s.updated_at ?? null,
-        }));
     } catch {
         return [];
     }

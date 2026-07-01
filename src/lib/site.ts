@@ -1,2 +1,1 @@
-export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.birchmountautorepair.com";
+export { SITE_URL } from "@/lib/config";

@@ -6,42 +6,34 @@ import Footer from '@/components/footers/Footer';
 import type { ApiBlog } from '@/lib/api';
 import { SITE_URL } from '@/lib/site';
 import type { Metadata } from 'next';
+import { getBlogBySlug, getBlogs, API_REVALIDATE_SECONDS, API_REVALIDATE_LONG_SECONDS } from '@/lib/orchestrator';
+import { MAX_LIST_LIMIT } from '@/lib/config';
 
-const CLIENT_ID = "1910ea08-b8ae-4968-8e69-c9b7c5e7bc78";
-const API_BASE = "https://wehoware-saas.vercel.app";
-
-async function fetchBlog(slug: string): Promise<ApiBlog | null> {
-    try {
-        const url = `${API_BASE}/api/public/blogs/${slug}?clientId=${CLIENT_ID}`;
-        const res = await fetch(url, {
-            headers: { Accept: "application/json" },
-            next: { revalidate: 60 },
-        });
-        if (!res.ok) return null;
-        const data = await res.json();
-        return data?.blog ?? data;
-    } catch {
-        return null;
-    }
+interface BlogNavPost {
+    slug: string;
+    title: string;
+    thumbnail: string | null;
+    thumbnail_alt: string | null;
+    published_at: string | null;
 }
 
-async function fetchAllBlogSlugs(): Promise<{ slug: string; title: string; thumbnail: string | null; thumbnail_alt: string | null; published_at: string | null }[]> {
+async function fetchBlog(slug: string): Promise<ApiBlog | null> {
+    return getBlogBySlug(slug, { revalidate: API_REVALIDATE_SECONDS }) as Promise<ApiBlog | null>;
+}
+
+async function fetchAllBlogSlugs(): Promise<BlogNavPost[]> {
     try {
-        const url = `${API_BASE}/api/public/blogs?clientId=${CLIENT_ID}&limit=100`;
-        const res = await fetch(url, {
-            headers: { Accept: "application/json" },
-            next: { revalidate: 60 },
+        const result = await getBlogs(1, MAX_LIST_LIMIT, { revalidate: API_REVALIDATE_SECONDS });
+        return (result.data as unknown[]).map((b) => {
+            const blog = b as Partial<BlogNavPost>;
+            return {
+                slug: blog.slug ?? '',
+                title: blog.title ?? '',
+                thumbnail: blog.thumbnail ?? null,
+                thumbnail_alt: blog.thumbnail_alt ?? null,
+                published_at: blog.published_at ?? null,
+            };
         });
-        if (!res.ok) return [];
-        const raw = await res.json();
-        const blogs = raw.blogs ?? raw.data ?? [];
-        return blogs.map((b: { slug: string; title: string; thumbnail?: string | null; thumbnail_alt?: string | null; published_at?: string | null }) => ({
-            slug: b.slug,
-            title: b.title,
-            thumbnail: b.thumbnail ?? null,
-            thumbnail_alt: b.thumbnail_alt ?? null,
-            published_at: b.published_at ?? null,
-        }));
     } catch {
         return [];
     }
@@ -49,15 +41,11 @@ async function fetchAllBlogSlugs(): Promise<{ slug: string; title: string; thumb
 
 export async function generateStaticParams() {
     try {
-        const url = `${API_BASE}/api/public/blogs?clientId=${CLIENT_ID}&limit=100`;
-        const res = await fetch(url, {
-            headers: { Accept: "application/json" },
-            next: { revalidate: 3600 },
+        const result = await getBlogs(1, MAX_LIST_LIMIT, { revalidate: API_REVALIDATE_LONG_SECONDS });
+        return (result.data as unknown[]).map((b) => {
+            const blog = b as { slug: string };
+            return { slug: blog.slug };
         });
-        if (!res.ok) return [];
-        const raw = await res.json();
-        const blogs = raw.blogs ?? raw.data ?? [];
-        return blogs.map((b: { slug: string }) => ({ slug: b.slug }));
     } catch {
         return [];
     }
@@ -125,67 +113,75 @@ const BlogPostPage = async ({ params }: { params: Promise<{ slug: string }> }) =
     const nextPost = currentIndex >= 0 && currentIndex < allSlugs.length - 1 ? allSlugs[currentIndex + 1] : null;
     const recentBlogs = allSlugs.filter((b) => b.slug !== slug).slice(0, 3);
 
+    const fallbackBlogSchema = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": post.title,
+        "description": post.meta_description || post.excerpt || undefined,
+        "image": post.thumbnail || undefined,
+        "datePublished": post.published_at || undefined,
+        "dateModified": post.updated_at || undefined,
+        "author": {
+            "@type": "Organization",
+            "name": "Birchmount Auto Repair",
+            "url": SITE_URL,
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Birchmount Auto Repair",
+            "url": SITE_URL,
+            "logo": {
+                "@type": "ImageObject",
+                "url": `${SITE_URL}/assets/images/icon/logo.ico`,
+            },
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": `${SITE_URL}/blog/${slug}`,
+        },
+        "articleSection": "Auto Repair",
+        "keywords": post.tags?.join(", ") || post.meta_keywords || undefined,
+    };
+
+    const fallbackBreadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": SITE_URL,
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": `${SITE_URL}/blog`,
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": post.title,
+                "item": `${SITE_URL}/blog/${slug}`,
+            },
+        ],
+    };
+
+    const schemas: Record<string, unknown>[] = [
+        post.blog_schema ?? fallbackBlogSchema,
+        post.breadcrumb_schema ?? fallbackBreadcrumbSchema,
+    ];
+    if (post.faq_schema) {
+        schemas.push(post.faq_schema as unknown as Record<string, unknown>);
+    }
+
     return (
         <>
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
-                    __html: JSON.stringify([
-                        {
-                            "@context": "https://schema.org",
-                            "@type": "Article",
-                            "headline": post.title,
-                            "description": post.meta_description || post.excerpt || undefined,
-                            "image": post.thumbnail || undefined,
-                            "datePublished": post.published_at || undefined,
-                            "dateModified": post.updated_at || undefined,
-                            "author": {
-                                "@type": "Organization",
-                                "name": "Birchmount Auto Repair",
-                                "url": SITE_URL,
-                            },
-                            "publisher": {
-                                "@type": "Organization",
-                                "name": "Birchmount Auto Repair",
-                                "url": SITE_URL,
-                                "logo": {
-                                    "@type": "ImageObject",
-                                    "url": `${SITE_URL}/assets/images/icon/logo.ico`,
-                                },
-                            },
-                            "mainEntityOfPage": {
-                                "@type": "WebPage",
-                                "@id": `${SITE_URL}/blog/${slug}`,
-                            },
-                            "articleSection": "Auto Repair",
-                            "keywords": post.tags?.join(", ") || post.meta_keywords || undefined,
-                        },
-                        {
-                            "@context": "https://schema.org",
-                            "@type": "BreadcrumbList",
-                            "itemListElement": [
-                                {
-                                    "@type": "ListItem",
-                                    "position": 1,
-                                    "name": "Home",
-                                    "item": SITE_URL,
-                                },
-                                {
-                                    "@type": "ListItem",
-                                    "position": 2,
-                                    "name": "Blog",
-                                    "item": `${SITE_URL}/blog`,
-                                },
-                                {
-                                    "@type": "ListItem",
-                                    "position": 3,
-                                    "name": post.title,
-                                    "item": `${SITE_URL}/blog/${slug}`,
-                                },
-                            ],
-                        },
-                        ...(post.faq_schema ? [post.faq_schema] : []),
-                    ]),
+                    __html: JSON.stringify(schemas),
                 }}
             />
             <Banner

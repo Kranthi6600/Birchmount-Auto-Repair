@@ -94,7 +94,7 @@ const BlogStandartMain: React.FC = () => {
                             {publishedBlogs.map((post: ApiBlog, index: number) => {
                                 const { day, month } = formatDate(post.published_at);
                                 return (
-                                    <article className="blog-list__single" key={post.id} itemScope itemType="https://schema.org/BlogPosting">
+                                    <article className="blog-list__single" key={post.id}>
                                         <div className="blog-list__img">
                                             <Image
                                                 src={post.thumbnail || '/assets/images/blog/blog1.jpeg'}
@@ -122,9 +122,9 @@ const BlogStandartMain: React.FC = () => {
                                                 </ul>
                                             </div>
                                             <h2 className="blog-list__title" style={{ fontSize: '1.75rem', lineHeight: 1.3, marginBottom: '12px' }}>
-                                                <Link href={`/blog/${post.slug}`} itemProp="headline">{post.title}</Link>
+                                                <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                                             </h2>
-                                            <p className="blog-list__text" style={{ fontSize: '1rem', lineHeight: 1.7, color: '#777f95', marginBottom: '8px' }} itemProp="description">
+                                            <p className="blog-list__text" style={{ fontSize: '1rem', lineHeight: 1.7, color: '#777f95', marginBottom: '8px' }}>
                                                 {post.excerpt ? stripHtml(post.excerpt).slice(0, 160) + (stripHtml(post.excerpt).length > 160 ? '...' : '') : ''}
                                             </p>
                                             <Link href={`/blog/${post.slug}`} className="blog-list__read-more" aria-label={`Read more about ${post.title}`}>

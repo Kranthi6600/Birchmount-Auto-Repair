@@ -4,23 +4,10 @@ import type { Metadata } from 'next';
 import { SITE_URL } from '@/lib/site';
 import type { ApiService } from '@/lib/api';
 import ServiceDetailClient from './ServiceDetailClient';
-
-const CLIENT_ID = "1910ea08-b8ae-4968-8e69-c9b7c5e7bc78";
-const API_BASE = "https://wehoware-saas.vercel.app";
+import { getServiceBySlug, API_REVALIDATE_SECONDS } from '@/lib/orchestrator';
 
 async function fetchService(slug: string): Promise<ApiService | null> {
-    try {
-        const url = `${API_BASE}/api/public/services/${slug}?clientId=${CLIENT_ID}`;
-        const res = await fetch(url, {
-            headers: { Accept: "application/json" },
-            next: { revalidate: 60 },
-        });
-        if (!res.ok) return null;
-        const data = await res.json();
-        return data?.service ?? data;
-    } catch {
-        return null;
-    }
+    return getServiceBySlug(slug, { revalidate: API_REVALIDATE_SECONDS }) as Promise<ApiService | null>;
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {

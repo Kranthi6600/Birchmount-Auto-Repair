@@ -1,14 +1,16 @@
-const CLIENT_ID = "1910ea08-b8ae-4968-8e69-c9b7c5e7bc78";
+import {
+    getBlogs as orchestratorGetBlogs,
+    getBlogBySlug as orchestratorGetBlogBySlug,
+    getServices as orchestratorGetServices,
+    getServiceBySlug as orchestratorGetServiceBySlug,
+    getServiceFaqs as orchestratorGetServiceFaqs,
+    getServiceCategories as orchestratorGetServiceCategories,
+} from "@/lib/orchestrator";
+import { DEFAULT_BLOG_PAGE_SIZE } from "@/lib/config";
 
 export function stripHtml(html: string | null): string {
     if (!html) return "";
     return html.replace(/<[^>]*>/g, "").replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").trim();
-}
-
-function getExternalBaseUrl(): string | null {
-    const base = process.env.NEXT_PUBLIC_API_BASE_URL || "https://wehoware-saas.vercel.app";
-    if (!base) return null;
-    return base.replace(/\/$/, "");
 }
 
 export interface ApiServiceCategory {
@@ -111,45 +113,20 @@ export interface ApiCategory {
     services: ApiService[];
 }
 
-async function fetchJson<T>(url: string): Promise<T> {
-    const response = await fetch(url, {
-        headers: { Accept: "application/json" },
-    });
-    if (!response.ok) {
-        throw new Error(`API error: ${response.status} ${response.statusText}`);
-    }
-    return response.json();
-}
-
 export async function fetchServices(): Promise<ApiService[]> {
-    const result = await fetchJson<ApiServiceListResponse>("/api/services");
-    return result.data ?? [];
+    return orchestratorGetServices() as Promise<ApiService[]>;
 }
 
 export async function fetchServiceBySlug(slug: string): Promise<ApiService | null> {
-    try {
-        return await fetchJson<ApiService>(`/api/services/${slug}`);
-    } catch {
-        return null;
-    }
+    return orchestratorGetServiceBySlug(slug) as Promise<ApiService | null>;
 }
 
 export async function fetchServiceFaqs(slug: string): Promise<ApiFaq[]> {
-    try {
-        return await fetchJson<ApiFaq[]>(`/api/services/${slug}/faqs`);
-    } catch {
-        return [];
-    }
+    return orchestratorGetServiceFaqs(slug) as Promise<ApiFaq[]>;
 }
 
 export async function fetchServiceCategories(): Promise<ApiCategory[]> {
-    const baseUrl = getExternalBaseUrl();
-    if (!baseUrl) return [];
-    try {
-        return await fetchJson<ApiCategory[]>(`${baseUrl}/api/public/services/categories?clientId=${CLIENT_ID}`);
-    } catch {
-        return [];
-    }
+    return orchestratorGetServiceCategories() as Promise<ApiCategory[]>;
 }
 
 export interface ApiBlogCategory {
@@ -209,6 +186,13 @@ export interface ApiBlog {
     }>;
     faqs?: ApiFaq[];
     faq_schema?: ApiFaqSchema | null;
+    blog_schema?: Record<string, unknown> | null;
+    breadcrumb_schema?: Record<string, unknown> | null;
+}
+
+export interface ApiBlogListSchema {
+    item_list?: Record<string, unknown> | null;
+    collection_page?: Record<string, unknown> | null;
 }
 
 export interface ApiBlogListResponse {
@@ -219,37 +203,30 @@ export interface ApiBlogListResponse {
         limit: number;
         totalPages: number;
     };
+    schema?: ApiBlogListSchema | null;
 }
 
 export async function fetchBlogs(
-    page?: number,
-    limit?: number
+    page: number = 1,
+    limit: number = DEFAULT_BLOG_PAGE_SIZE
 ): Promise<ApiBlogListResponse> {
-    const params = new URLSearchParams();
-    if (page) params.set("page", String(page));
-    if (limit) params.set("limit", String(limit));
-    const query = params.toString();
-    const url = `/api/blogs${query ? `?${query}` : ""}`;
-    const result = await fetchJson<ApiBlogListResponse>(url);
+    const result = await orchestratorGetBlogs(page, limit);
     return {
-        data: result.data ?? [],
+        data: (result.data ?? []) as ApiBlog[],
         pagination: result.pagination ?? {
             totalItems: 0,
-            page: page ?? 1,
-            limit: limit ?? 6,
+            page,
+            limit,
             totalPages: 0,
         },
+        schema: (result.schema ?? null) as ApiBlogListSchema | null,
     };
 }
 
 export async function fetchBlogBySlug(slug: string): Promise<ApiBlog | null> {
-    try {
-        return await fetchJson<ApiBlog>(`/api/blogs/${slug}`);
-    } catch {
-        return null;
-    }
+    return orchestratorGetBlogBySlug(slug) as Promise<ApiBlog | null>;
 }
 
 export function isApiConfigured(): boolean {
-    return !!getExternalBaseUrl();
+    return true;
 }
