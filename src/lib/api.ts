@@ -1,11 +1,3 @@
-import {
-    getBlogs as orchestratorGetBlogs,
-    getBlogBySlug as orchestratorGetBlogBySlug,
-    getServices as orchestratorGetServices,
-    getServiceBySlug as orchestratorGetServiceBySlug,
-    getServiceFaqs as orchestratorGetServiceFaqs,
-    getServiceCategories as orchestratorGetServiceCategories,
-} from "@/lib/orchestrator";
 import { DEFAULT_BLOG_PAGE_SIZE } from "@/lib/config";
 
 export function stripHtml(html: string | null): string {
@@ -122,19 +114,34 @@ export interface ApiCategory {
 }
 
 export async function fetchServices(): Promise<ApiService[]> {
-    return orchestratorGetServices() as Promise<ApiService[]>;
+    const res = await fetch("/api/services", { headers: { Accept: "application/json" } });
+    if (!res.ok) throw new Error(res.statusText || "Failed to fetch services");
+    const data = await res.json();
+    return (data ?? []) as ApiService[];
 }
 
 export async function fetchServiceBySlug(slug: string): Promise<ApiService | null> {
-    return orchestratorGetServiceBySlug(slug) as Promise<ApiService | null>;
+    const res = await fetch(`/api/services/${slug}`, { headers: { Accept: "application/json" } });
+    if (!res.ok) {
+        if (res.status === 404) return null;
+        throw new Error(res.statusText || "Failed to fetch service");
+    }
+    const data = await res.json();
+    return data as ApiService | null;
 }
 
 export async function fetchServiceFaqs(slug: string): Promise<ApiFaq[]> {
-    return orchestratorGetServiceFaqs(slug) as Promise<ApiFaq[]>;
+    const res = await fetch(`/api/services/${slug}/faqs`, { headers: { Accept: "application/json" } });
+    if (!res.ok) throw new Error(res.statusText || "Failed to fetch service FAQs");
+    const data = await res.json();
+    return (data ?? []) as ApiFaq[];
 }
 
 export async function fetchServiceCategories(): Promise<ApiCategory[]> {
-    return orchestratorGetServiceCategories() as Promise<ApiCategory[]>;
+    const res = await fetch("/api/services/categories", { headers: { Accept: "application/json" } });
+    if (!res.ok) throw new Error(res.statusText || "Failed to fetch service categories");
+    const data = await res.json();
+    return (data ?? []) as ApiCategory[];
 }
 
 export interface ApiBlogCategory {
@@ -218,7 +225,11 @@ export async function fetchBlogs(
     page: number = 1,
     limit: number = DEFAULT_BLOG_PAGE_SIZE
 ): Promise<ApiBlogListResponse> {
-    const result = await orchestratorGetBlogs(page, limit);
+    const res = await fetch(`/api/blogs?page=${page}&limit=${limit}`, {
+        headers: { Accept: "application/json" },
+    });
+    if (!res.ok) throw new Error(res.statusText || "Failed to fetch blogs");
+    const result = await res.json();
     return {
         data: (result.data ?? []) as ApiBlog[],
         pagination: result.pagination ?? {
@@ -232,7 +243,13 @@ export async function fetchBlogs(
 }
 
 export async function fetchBlogBySlug(slug: string): Promise<ApiBlog | null> {
-    return orchestratorGetBlogBySlug(slug) as Promise<ApiBlog | null>;
+    const res = await fetch(`/api/blogs/${slug}`, { headers: { Accept: "application/json" } });
+    if (!res.ok) {
+        if (res.status === 404) return null;
+        throw new Error(res.statusText || "Failed to fetch blog");
+    }
+    const data = await res.json();
+    return data as ApiBlog | null;
 }
 
 export function isApiConfigured(): boolean {
