@@ -7,11 +7,13 @@ import ServiceDetails from '@/features/service-shared/ServiceDetails';
 import type { ApiService } from '@/lib/api';
 
 interface ServiceDetailClientProps {
-    service: ApiService | null;
+    service: Omit<ApiService, 'content' | 'description'> | null;
     slug: string;
+    text1Slot?: React.ReactNode;
+    text2Slot?: React.ReactNode;
 }
 
-export default function ServiceDetailClient({ service, slug }: ServiceDetailClientProps) {
+export default function ServiceDetailClient({ service, slug, text1Slot, text2Slot }: ServiceDetailClientProps) {
     if (!service) {
         return (
             <>
@@ -53,8 +55,10 @@ export default function ServiceDetailClient({ service, slug }: ServiceDetailClie
                 heroImg={service.thumbnail || ''}
                 heroAlt={service.thumbnail_alt || service.title}
                 title={service.title}
-                text1={service.description || ''}
-                text2={service.content || ''}
+                text1=""
+                text2=""
+                text1Slot={text1Slot}
+                text2Slot={text2Slot}
                 pointsList={service.tags || []}
                 imgBoxData={[]}
                 faqData={faqData}

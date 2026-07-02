@@ -8,6 +8,7 @@ import { SITE_URL } from '@/lib/site';
 import type { Metadata } from 'next';
 import { getBlogBySlug, getBlogs, API_REVALIDATE_SECONDS, API_REVALIDATE_LONG_SECONDS } from '@/lib/orchestrator';
 import { MAX_LIST_LIMIT } from '@/lib/config';
+import ServerContent from '@/components/elements/ServerContent';
 
 interface BlogNavPost {
     slug: string;
@@ -176,6 +177,9 @@ const BlogPostPage = async ({ params }: { params: Promise<{ slug: string }> }) =
         schemas.push(post.faq_schema as unknown as Record<string, unknown>);
     }
 
+    const { content, ...postWithoutContent } = post;
+    const contentSlot = <ServerContent html={content || ''} className="blog-details__text-2" />;
+
     return (
         <>
             <script
@@ -191,7 +195,7 @@ const BlogPostPage = async ({ params }: { params: Promise<{ slug: string }> }) =
                 subTitleLink="/blog"
                 bgImage="/assets/images/blog/blogbanner.jpeg"
             />
-            <BlogApiDetail post={post} prevPost={prevPost} nextPost={nextPost} recentBlogs={recentBlogs} />
+            <BlogApiDetail post={postWithoutContent} contentSlot={contentSlot} prevPost={prevPost} nextPost={nextPost} recentBlogs={recentBlogs} />
             <Footer />
         </>
     );

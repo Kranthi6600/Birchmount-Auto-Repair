@@ -5,7 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import BlogSidebar from './BlogSidebar';
 import type { ApiBlog } from '@/lib/api';
-import RichTextRenderer from '@/components/elements/RichTextRenderer';
 
 interface BlogNavPost {
     slug: string;
@@ -16,7 +15,8 @@ interface BlogNavPost {
 }
 
 interface BlogApiDetailProps {
-    post: ApiBlog;
+    post: Omit<ApiBlog, 'content'>;
+    contentSlot: React.ReactNode;
     prevPost: BlogNavPost | null;
     nextPost: BlogNavPost | null;
     recentBlogs: BlogNavPost[];
@@ -31,7 +31,7 @@ function formatDate(dateStr: string | null) {
     };
 }
 
-const BlogApiDetail: React.FC<BlogApiDetailProps> = ({ post, prevPost, nextPost, recentBlogs }) => {
+const BlogApiDetail: React.FC<BlogApiDetailProps> = ({ post, contentSlot, prevPost, nextPost, recentBlogs }) => {
     const { day, month } = formatDate(post.published_at);
     const mainRef = useRef<HTMLDivElement>(null);
 
@@ -69,9 +69,7 @@ const BlogApiDetail: React.FC<BlogApiDetailProps> = ({ post, prevPost, nextPost,
                                     </ul>
                                 </div>
                                 <h1 className="blog-details__title">{post.title}</h1>
-                                {post.content && (
-                                    <RichTextRenderer html={post.content} className="blog-details__text-2" />
-                                )}
+                                {contentSlot}
                                 {post.faqs && post.faqs.length > 0 && (
                                     <>
                                         <h2 className="blog-details__title-2" style={{ marginTop: '40px' }}>Frequently Asked Questions</h2>

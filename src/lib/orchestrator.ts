@@ -16,6 +16,7 @@
 import {
     API_BASE_URL,
     CLIENT_ID,
+    SITE_URL,
     API_REQUEST_TIMEOUT_MS,
     API_MAX_RETRIES,
     API_REVALIDATE_SECONDS,
@@ -124,6 +125,34 @@ function sleep(ms: number): Promise<void> {
 }
 
 /**
+ * Foreign domains that must never appear in any content or schema on this site.
+ * The external CMS occasionally emits schema/URLs generated for other tenants;
+ * any occurrence is rewritten to this site's own URL.
+ */
+const FOREIGN_DOMAIN_PATTERN = /https?:\/\/(?:www\.)?rapidfixauto\.ca(\/[^\s"'<>)]*)?/gi;
+
+/**
+ * Recursively rewrites any foreign-tenant domain references in an API response
+ * to this site's own SITE_URL. Operates on the serialized JSON so it covers
+ * every nested field (schemas, canonical URLs, content, etc.).
+ */
+function sanitizeForeignDomains<T>(data: T): T {
+    if (data == null || typeof data !== "object") return data;
+    try {
+        const json = JSON.stringify(data);
+        if (!FOREIGN_DOMAIN_PATTERN.test(json)) return data;
+        FOREIGN_DOMAIN_PATTERN.lastIndex = 0;
+        const sanitized = json.replace(FOREIGN_DOMAIN_PATTERN, (_match, path: string | undefined) => {
+            return `${SITE_URL}${path ?? ""}`;
+        });
+        log.warn("Sanitized foreign domain references from API response");
+        return JSON.parse(sanitized) as T;
+    } catch {
+        return data;
+    }
+}
+
+/**
  * Core fetch with timeout, retry, and error handling.
  * This is the single point through which all external HTTP calls flow.
  */
@@ -158,7 +187,7 @@ async function fetchWithRetry<T>(
 
             const data = await response.json();
             log.info(`Fetch succeeded`, { url, attempt });
-            return data as T;
+            return sanitizeForeignDomains(data as T);
         } catch (error) {
             clearTimeout(timeoutId);
 

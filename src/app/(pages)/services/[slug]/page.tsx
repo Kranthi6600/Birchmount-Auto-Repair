@@ -5,6 +5,7 @@ import { SITE_URL } from '@/lib/site';
 import type { ApiService } from '@/lib/api';
 import ServiceDetailClient from './ServiceDetailClient';
 import { getServiceBySlug, API_REVALIDATE_SECONDS } from '@/lib/orchestrator';
+import ServerContent from '@/components/elements/ServerContent';
 
 async function fetchService(slug: string): Promise<ApiService | null> {
     return getServiceBySlug(slug, { revalidate: API_REVALIDATE_SECONDS }) as Promise<ApiService | null>;
@@ -115,6 +116,10 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
         schemas.push(service.faq_schema as unknown as Record<string, unknown>);
     }
 
+    const { content, description, ...serviceWithoutContent } = service;
+    const text1Slot = <ServerContent html={description || ''} className="service-details__text-1" />;
+    const text2Slot = <ServerContent html={content || ''} className="service-details__text-2" />;
+
     return (
         <>
             <script
@@ -123,7 +128,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                     __html: JSON.stringify(schemas),
                 }}
             />
-            <ServiceDetailClient service={service} slug={slug} />
+            <ServiceDetailClient service={serviceWithoutContent} slug={slug} text1Slot={text1Slot} text2Slot={text2Slot} />
         </>
     );
 }

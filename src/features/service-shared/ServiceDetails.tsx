@@ -29,6 +29,8 @@ export interface ServiceDetailProps {
     title: string;
     text1: string;
     text2: string;
+    text1Slot?: React.ReactNode;
+    text2Slot?: React.ReactNode;
     pointsList: string[];
     imgBoxData: ImgBoxItem[];
     faqData: FaqItem[];
@@ -41,6 +43,8 @@ const ServiceDetails: React.FC<ServiceDetailProps> = ({
     title,
     text1,
     text2,
+    text1Slot,
+    text2Slot,
     pointsList,
     imgBoxData,
     faqData,
@@ -92,8 +96,12 @@ const ServiceDetails: React.FC<ServiceDetailProps> = ({
                             </div>
 
                             <h3 className="service-details__title-1">{mergedTitle}</h3>
-                            <RichTextRenderer html={mergedText1} className="service-details__text-1" />
-                            <RichTextRenderer html={mergedText2} className="service-details__text-2" />
+                            {apiService?.description
+                                ? <RichTextRenderer html={apiService.description} className="service-details__text-1" />
+                                : (text1Slot ?? <RichTextRenderer html={text1} className="service-details__text-1" />)}
+                            {apiService?.content
+                                ? <RichTextRenderer html={apiService.content} className="service-details__text-2" />
+                                : (text2Slot ?? <RichTextRenderer html={text2} className="service-details__text-2" />)}
 
                             <ul className="service-details__points-list list-unstyled">
                                 {pointsList.map((point, i) => (
