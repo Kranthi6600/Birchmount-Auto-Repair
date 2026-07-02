@@ -219,6 +219,47 @@ function normalizeItem<T>(raw: unknown, ...keys: string[]): T | null {
     return raw as T;
 }
 
+/**
+ * Normalizes a single-item response and merges any schema fields that the API
+ * returns at the top level (alongside the envelope key) into the unwrapped item.
+ * This handles response shapes like:
+ *   { service: { ... }, service_schema: {...}, breadcrumb_schema: {...} }
+ *   { data: { ... }, service_schema: {...}, breadcrumb_schema: {...} }
+ * as well as flat responses where schemas are already inside the item.
+ */
+function normalizeItemWithSchemas<T extends Record<string, unknown>>(
+    raw: unknown,
+    keys: string[],
+    schemaFields: string[]
+): T | null {
+    if (!raw || typeof raw !== "object") return null;
+    const rawObj = raw as Record<string, unknown>;
+
+    // Try to find the item via the provided envelope keys (including "data" fallback)
+    let item: Record<string, unknown> | null = null;
+    for (const key of [...keys, "data"]) {
+        const candidate = rawObj[key];
+        if (candidate && typeof candidate === "object" && !Array.isArray(candidate)) {
+            item = candidate as Record<string, unknown>;
+            break;
+        }
+    }
+
+    // If no envelope key matched, treat the raw object itself as the item
+    if (!item) {
+        item = rawObj;
+    }
+
+    // Merge any schema fields from the top level that are not already on the item
+    for (const field of schemaFields) {
+        if (rawObj[field] != null && item[field] == null) {
+            item[field] = rawObj[field];
+        }
+    }
+
+    return item as T;
+}
+
 // ─── Public API: Blog Endpoints ────────────────────────────────
 
 export async function getBlogs(
@@ -253,7 +294,11 @@ export async function getBlogBySlug(
     const url = buildUrl(API_PATHS.BLOG_BY_SLUG(slug));
     try {
         const raw = await fetchWithRetry<unknown>(url, options);
-        return normalizeItem<unknown>(raw, "blog");
+        return normalizeItemWithSchemas<Record<string, unknown>>(raw, ["blog"], [
+            "blog_schema",
+            "breadcrumb_schema",
+            "faq_schema",
+        ]);
     } catch (error) {
         log.error(`Failed to fetch blog by slug`, { slug, error: (error as Error).message });
         return null;
@@ -327,7 +372,11 @@ export async function getServiceBySlug(
     const url = buildUrl(API_PATHS.SERVICE_BY_SLUG(slug));
     try {
         const raw = await fetchWithRetry<unknown>(url, options);
-        return normalizeItem<unknown>(raw, "service");
+        return normalizeItemWithSchemas<Record<string, unknown>>(raw, ["service"], [
+            "service_schema",
+            "breadcrumb_schema",
+            "faq_schema",
+        ]);
     } catch (error) {
         log.error(`Failed to fetch service by slug`, { slug, error: (error as Error).message });
         return null;
