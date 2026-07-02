@@ -65,22 +65,12 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             "url": SITE_URL,
         },
     };
-    if (service.fee != null) {
-        fallbackServiceSchema["offers"] = {
-            "@type": "Offer",
-            "price": service.fee,
-            "priceCurrency": service.fee_currency || "CAD",
-        };
-    }
     if (service.rating > 0) {
         fallbackServiceSchema["aggregateRating"] = {
             "@type": "AggregateRating",
             "ratingValue": service.rating,
             "reviewCount": service.reviews_count,
         };
-    }
-    if (service.meta_keywords || service.tags?.length) {
-        fallbackServiceSchema["keywords"] = service.meta_keywords || service.tags?.join(", ");
     }
 
     const fallbackBreadcrumbSchema = {
@@ -108,8 +98,18 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
         ],
     };
 
+    let serviceSchema: Record<string, unknown> = fallbackServiceSchema;
+    if (service.service_schema) {
+        // Strip properties not valid for schema.org Service (keywords)
+        // and unwanted properties (offers) from the API-provided schema.
+        const { keywords, offers, ...cleanedSchema } = service.service_schema as Record<string, unknown>;
+        void keywords;
+        void offers;
+        serviceSchema = cleanedSchema;
+    }
+
     const schemas: Record<string, unknown>[] = [
-        service.service_schema ?? fallbackServiceSchema,
+        serviceSchema,
         service.breadcrumb_schema ?? fallbackBreadcrumbSchema,
     ];
     if (service.faq_schema) {
