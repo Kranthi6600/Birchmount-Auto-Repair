@@ -4,11 +4,23 @@ import type { Metadata } from 'next';
 import { SITE_URL } from '@/lib/site';
 import type { ApiService } from '@/lib/api';
 import ServiceDetailClient from './ServiceDetailClient';
-import { getServiceBySlug, API_REVALIDATE_SECONDS } from '@/lib/orchestrator';
+import { getServiceBySlug, getServices, API_REVALIDATE_SECONDS, API_REVALIDATE_LONG_SECONDS } from '@/lib/orchestrator';
 import ServerContent from '@/components/elements/ServerContent';
 
 async function fetchService(slug: string): Promise<ApiService | null> {
     return getServiceBySlug(slug, { revalidate: API_REVALIDATE_SECONDS }) as Promise<ApiService | null>;
+}
+
+export async function generateStaticParams() {
+    try {
+        const data = await getServices({ revalidate: API_REVALIDATE_LONG_SECONDS });
+        return (data as unknown[]).map((s) => {
+            const service = s as { slug: string };
+            return { slug: service.slug };
+        });
+    } catch {
+        return [];
+    }
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -36,6 +48,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
             title: service.twitter_title || service.meta_title || service.title,
             description: service.twitter_description || service.meta_description || service.description || undefined,
             images: service.twitter_image ? [service.twitter_image] : undefined,
+        },
+        robots: {
+            index: true,
+            follow: true,
+            googleBot: {
+                index: true,
+                follow: true,
+                'max-image-preview': 'large',
+                'max-snippet': -1,
+                'max-video-preview': -1,
+            },
         },
     };
 }

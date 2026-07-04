@@ -2,15 +2,15 @@ import React from 'react';
 import Header from '@/components/headers/Header';
 import Footer from '@/components/footers/Footer';
 import Banner from '@/features/banner/Banner';
-import { SITE_URL } from '@/lib/site';
 import type { Metadata } from 'next';
 const errorPageImg = '/assets/images/error/errorimg.jpeg';
 import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  alternates: {
-    canonical: `${SITE_URL}/404`,
+  robots: {
+    index: false,
+    follow: true,
   },
 };
 
@@ -23,7 +23,7 @@ const Page: React.FC = () => {
                 <div className="container">
                     <div className="error-page__inner text-center">
                         <div className="error-page__img float-bob-y">
-                            <Image src={errorPageImg} width={903} height={524} alt="404 error illustration" />
+                            <Image src={errorPageImg} width={903} height={524} style={{ width: '100%', height: 'auto' }} sizes="(max-width: 768px) 100vw, 903px" alt="404 error illustration" />
                         </div>
 
                         <div className="error-page__content">

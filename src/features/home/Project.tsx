@@ -84,7 +84,7 @@ const Project: React.FC = () => {
                                 <div className="project-two__single">
                                     <div className="project-two__img-box">
                                         <div className="project-two__img">
-                                            <Image src={project.image} alt={`${project.title} - ${project.subTitle} repair at Birchmount Auto Repair`} width={379} height={583} />
+                                            <Image src={project.image} alt={`${project.title} - ${project.subTitle} repair at Birchmount Auto Repair`} width={379} height={583} style={{ width: '100%', height: 'auto' }} sizes="(max-width: 768px) 100vw, 379px" />
                                             <div className="project-two__arrow" onClick={() => { setIndex(i); setOpenLightBox((pre: boolean) => !pre) }}>
                                                 <span className="icon-arrow-right"></span>
                                             </div>

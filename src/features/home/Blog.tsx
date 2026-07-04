@@ -29,10 +29,10 @@ const Blog: React.FC = () => {
     return (
         <SectionWrapper id='blog' className="blog-one">
             <div className="blog-one__shape-1 float-bob-x">
-                <Image src={blogShape1} width={600} height={600} alt="shape 1" />
+                <Image src={blogShape1} width={600} height={600} style={{ width: 'auto', height: 'auto' }} alt="shape 1" />
             </div>
             <div className="blog-one__shape-2 rotate-me">
-                <Image src={blogShape2} width={300} height={300} alt="shape 2" />
+                <Image src={blogShape2} width={300} height={300} style={{ width: 'auto', height: 'auto' }} alt="shape 2" />
             </div>
             <div className="container">
                 <div className="section-title text-center sec-title-animation animation-style1">
@@ -67,7 +67,7 @@ const Blog: React.FC = () => {
                                 <div className="blog-one__single">
                                     <div className="blog-one__img-box">
                                         <div className="blog-one__img">
-                                            <Image src={blog.thumbnail || '/assets/images/blog/blog-3-1.jpg'} width={410} height={240} alt={blog.thumbnail_alt || blog.title} />
+                                            <Image src={blog.thumbnail || '/assets/images/blog/blog-3-1.jpg'} width={410} height={240} style={{ width: '100%', height: 'auto' }} sizes="(max-width: 768px) 100vw, 410px" alt={blog.thumbnail_alt || blog.title} />
                                             <div className="blog-one__plus">
                                                 <Link href={`/blog/${blog.slug}`}>
                                                     <i className="fa fa-plus"></i>

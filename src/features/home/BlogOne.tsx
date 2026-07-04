@@ -58,7 +58,7 @@ const BlogOne: React.FC = () => {
                                 <div className="blog-two__single">
                                     <div className="blog-two__img-box">
                                         <div className="blog-two__img">
-                                            <Image src={blog.thumbnail || '/assets/images/blog/blog-3-1.jpg'} alt={blog.thumbnail_alt || blog.title} width={410} height={300} sizes="(max-width: 768px) 100vw, 410px"/>
+                                            <Image src={blog.thumbnail || '/assets/images/blog/blog-3-1.jpg'} alt={blog.thumbnail_alt || blog.title} width={410} height={300} sizes="(max-width: 768px) 100vw, 410px" style={{ width: '100%', height: 'auto' }}/>
                                             <Link href={`/blog/${blog.slug}`} className="blog-two__link">
                                                 <span className="sr-only"></span>
                                             </Link>

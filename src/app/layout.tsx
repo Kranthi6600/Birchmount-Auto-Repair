@@ -6,6 +6,7 @@ import { SITE_URL } from "@/lib/site";
 import { GTM_CONTAINER_ID } from "@/lib/config";
 import "swiper/swiper-bundle.css";
 import 'yet-another-react-lightbox/styles.css';
+import './combined.css';
 
 const archivo = Archivo({
   variable: "--font-archivo",
@@ -42,6 +43,7 @@ export const metadata: Metadata = {
     ],
     apple: { url: '/assets/images/icon/logo.ico', sizes: '180x180' },
   },
+  manifest: '/manifest.json',
   verification: {
     google: "DUBmJPgMIsPj5rdvTyBCWb-MB-GMGu0hsXifJgoyNkw",
   },
@@ -55,7 +57,6 @@ export default function RootLayout({
   return (
     <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
-        <link rel="stylesheet" href="/assets/css/combined.css" />
         <Script id="gtm-init" strategy="afterInteractive">{`
           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

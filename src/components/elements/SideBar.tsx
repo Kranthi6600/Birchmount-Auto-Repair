@@ -42,7 +42,7 @@ const SideBar: React.FC = () => {
 
                             <div className="content-inner">
                                 <div className="logo">
-                                    <Link href="/"><Image src={logo} width={138} height={40} alt="" /></Link>
+                                    <Link href="/"><Image src={logo} width={138} height={40} style={{ width: 'auto', height: 'auto' }} alt="" /></Link>
                                 </div>
                                 <div className="content-box">
                                     <h4>About Us</h4>

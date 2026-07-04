@@ -64,13 +64,13 @@ const About: React.FC<SecProp> = ({ secClass = "" }) => {
                         >
                             <div className="about-one__img-box">
                                 <div className="about-one__img">
-                                    <Image src={aboutOneImg1} alt="" width={370} height={532} />
+                                    <Image src={aboutOneImg1} alt="" width={370} height={532} style={{ width: '100%', height: 'auto' }} sizes="(max-width: 768px) 100vw, 370px" />
                                 </div>
                                 <div className="about-one__img-2">
-                                    <Image src={aboutOneImg2} alt="" width={280} height={380} />
+                                    <Image src={aboutOneImg2} alt="" width={280} height={380} style={{ width: '100%', height: 'auto' }} sizes="(max-width: 576px) 100vw, 280px" />
                                 </div>
                                 <div className="about-one__shape-2 float-bob-y">
-                                    <Image src={aboutOneShape2} alt="" width={100} height={100} />
+                                    <Image src={aboutOneShape2} alt="" width={100} height={100} style={{ width: 'auto', height: 'auto' }} />
                                 </div>
                                 <div className="about-one__experience-box">
                                     <div className="about-one__count-box">

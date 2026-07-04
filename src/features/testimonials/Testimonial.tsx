@@ -97,7 +97,7 @@ const Testimonial: React.FC = () => {
                                     <div className="testimonial-three__single">
                                         <div className="testimonial-three__img-box">
                                             <div className="testimonial-three__img">
-                                                <Image src={item.image} width={150} height={150} alt={item.name} />
+                                                <Image src={item.image} width={150} height={150} style={{ width: 'auto', height: 'auto' }} alt={item.name} />
                                             </div>
                                         </div>
                                         <div className="testimonial-three__content">

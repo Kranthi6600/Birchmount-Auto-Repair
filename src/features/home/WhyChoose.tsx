@@ -60,7 +60,7 @@ const WhyChoose: React.FC = () => {
                         >
                             <div className="why-choose-two__img-box">
                                 <div className="why-choose-two__img-1">
-                                    <Image src={whyChooseTwoImg1} width={470} height={483} alt="Birchmount Auto Repair insurance claim processing for collision repairs" />
+                                    <Image src={whyChooseTwoImg1} width={470} height={483} style={{ width: '100%', height: 'auto' }} sizes="(max-width: 768px) 100vw, 470px" alt="Birchmount Auto Repair insurance claim processing for collision repairs" />
                                 </div>
                                 <div className="why-choose-two__improve-box">
                                     <p className="why-choose-two__improve-sub-title">(Approved by All Major Insurers)</p>

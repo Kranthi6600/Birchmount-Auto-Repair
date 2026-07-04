@@ -1,73 +1,7 @@
 import React from "react";
-const testimonialImg1 = "/assets/images/testimonial/testimonial-1-1.jpg";
-const testimonialImg2 = "/assets/images/testimonial/testimonial-1-2.jpg";
-const testimonialImg3 = "/assets/images/testimonial/testimonial-1-3.jpg";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import Link from "next/link";
-
-// ─── Types ────────────────────────────────────────────────────────────────────
-
-interface Testimonial {
-    id: number;
-    name: string;
-    subTitle: string;
-    image: string | StaticImageData;
-    rating: number;
-    text: string;
-}
-
-// ─── Data ─────────────────────────────────────────────────────────────────────
-
-const testimonials: Testimonial[] = [
-    {
-        id: 1,
-        name: "Adam Smith",
-        subTitle: "Co-Founder",
-        image: testimonialImg1,
-        rating: 5,
-        text: '"Adipiscing elit, sed do eiusmod tempor incididunt ut labored etos dolore magna aliquant. Ut enim ad minim veniam nostrud exercitation ullamco laboris nisi ut aliquip',
-    },
-    {
-        id: 2,
-        name: "Robert Son",
-        subTitle: "Co-Founder",
-        image: testimonialImg2,
-        rating: 5,
-        text: '"Adipiscing elit, sed do eiusmod tempor incididunt ut labored etos dolore magna aliquant. Ut enim ad minim veniam nostrud exercitation ullamco laboris nisi ut aliquip',
-    },
-    {
-        id: 3,
-        name: "Alisha Martin",
-        subTitle: "Co-Founder",
-        image: testimonialImg3,
-        rating: 5,
-        text: '"Adipiscing elit, sed do eiusmod tempor incididunt ut labored etos dolore magna aliquant. Ut enim ad minim veniam nostrud exercitation ullamco laboris nisi ut aliquip',
-    },
-    {
-        id: 4,
-        name: "Adam Smith",
-        subTitle: "Co-Founder",
-        image: testimonialImg1,
-        rating: 5,
-        text: '"Adipiscing elit, sed do eiusmod tempor incididunt ut labored etos dolore magna aliquant. Ut enim ad minim veniam nostrud exercitation ullamco laboris nisi ut aliquip',
-    },
-    {
-        id: 5,
-        name: "Robert Son",
-        subTitle: "Co-Founder",
-        image: testimonialImg2,
-        rating: 5,
-        text: '"Adipiscing elit, sed do eiusmod tempor incididunt ut labored etos dolore magna aliquant. Ut enim ad minim veniam nostrud exercitation ullamco laboris nisi ut aliquip',
-    },
-    {
-        id: 6,
-        name: "Alisha Martin",
-        subTitle: "Co-Founder",
-        image: testimonialImg3,
-        rating: 5,
-        text: '"Adipiscing elit, sed do eiusmod tempor incididunt ut labored etos dolore magna aliquant. Ut enim ad minim veniam nostrud exercitation ullamco laboris nisi ut aliquip',
-    },
-];
+import { testimonialData as testimonials } from "@/contents/testimonials/testimonialData";
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
@@ -91,6 +25,7 @@ const TestimonialsSec: React.FC = () => {
                                                     src={testimonial.image}
                                                     alt={`${testimonial.name} - ${testimonial.subTitle}`}
                                                     width={80} height={80}
+                                                    style={{ width: 'auto', height: 'auto' }}
                                                 />
                                             </div>
                                         </div>

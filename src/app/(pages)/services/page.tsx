@@ -7,11 +7,46 @@ import type { Metadata } from 'next';
 import { getServicesWithSchema, API_REVALIDATE_SECONDS } from '@/lib/orchestrator';
 
 export const metadata: Metadata = {
+  title: "Our Services | Birchmount Auto Repair - Scarborough, ON",
+  description: "Explore our full range of auto repair services in Scarborough including auto body repair, collision repair, engine diagnostics, brake service, transmission repair, towing, insurance assistance, and vehicle maintenance.",
+  keywords: [
+    "auto repair services Scarborough",
+    "auto body repair Scarborough",
+    "collision repair Ontario",
+    "engine diagnostics Scarborough",
+    "brake service Scarborough",
+    "transmission repair",
+    "car maintenance Scarborough",
+    "towing service Scarborough",
+    "insurance claim repairs",
+    "vehicle repair services",
+  ],
   alternates: {
     canonical: `${SITE_URL}/services`,
   },
   openGraph: {
+    title: "Our Services | Birchmount Auto Repair - Scarborough, ON",
+    description: "Explore our full range of auto repair services in Scarborough including auto body repair, collision repair, engine diagnostics, brake service, transmission repair, towing, and more.",
     url: `${SITE_URL}/services`,
+    type: "website",
+    siteName: "Birchmount Auto Repair",
+    locale: "en_CA",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Our Services | Birchmount Auto Repair - Scarborough, ON",
+    description: "Explore our full range of auto repair services in Scarborough including auto body repair, collision repair, engine diagnostics, brake service, transmission repair, towing, and more.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
   },
 };
 

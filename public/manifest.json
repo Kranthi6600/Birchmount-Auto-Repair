@@ -1,0 +1,26 @@
+{
+  "name": "Birchmount Auto Repair | Auto Body, Collision & Mechanical Repair in Scarborough",
+  "short_name": "Birchmount Auto Repair",
+  "description": "Trusted auto repair shop in Scarborough, ON. Expert auto body repair, collision repair, engine diagnostics, brake service, and vehicle maintenance.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0d6efd",
+  "icons": [
+    {
+      "src": "/assets/images/icon/logo.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/assets/images/icon/logo.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/assets/images/icon/logo.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    }
+  ]
+}

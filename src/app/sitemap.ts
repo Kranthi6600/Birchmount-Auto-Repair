@@ -70,6 +70,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             changeFrequency: 'monthly',
             priority: 0.8,
         },
+        {
+            url: `${SITE_URL}/faqs`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.6,
+        },
+        {
+            url: `${SITE_URL}/testimonials`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.6,
+        },
     ];
 
     const blogPages: MetadataRoute.Sitemap = blogSlugs.map((b) => ({

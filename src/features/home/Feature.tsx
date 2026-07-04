@@ -31,7 +31,7 @@ const featureItems: FeatureItem[] = [
         id: 2,
         iconClass: 'icon-technician-1',
         title: 'Certified Technicians',
-        to: '/team',
+        to: '/about',
         text: 'Our mechanics hold industry certifications and bring decades of hands-on experience to every repair.',
         animationClass: 'fadeInUp',
         animationDelay: 300,

@@ -136,18 +136,18 @@ const Footer = () => {
                         {/* Right Columns */}
                         <div className="col-xl-9">
                             <div className="footer-widget__right">
-                                {/* Newsletter */}
+                                {/* Get a Quote */}
                                 <div className="footer-widget__column footer-widget__newsletter">
                                     <div className="footer-widget__newsletter-bg" ></div>
                                     <h3 className="footer-widget__newsletter-title">
-                                        Subscribe To Our Newsletter To<br /> Get Latest Update
+                                        Need Auto Repair Services?<br /> Get a Free Quote Today
                                     </h3>
                                     <form className="footer-widget__newsletter-form mc-form" onSubmit={handleSubmit}>
                                         <div className="footer-widget__newsletter-form-input-box">
                                             <input type="email" placeholder="Enter email" name="EMAIL" />
                                         </div>
                                         <button type="submit" className="footer-widget__newsletter-btn thm-btn">
-                                            Subscribe
+                                            Get a Quote
                                         </button>
                                     </form>
                                 </div>
@@ -202,7 +202,7 @@ const Footer = () => {
                                                     {footerPosts.map((post) => (
                                                         <li key={post.id}>
                                                             <div className="footer-widget__post-img">
-                                                                <Image src={post.image} width={75} height={75} alt="Image" />
+                                                                <Image src={post.image} width={75} height={75} style={{ width: 'auto', height: 'auto' }} alt="Image" />
                                                             </div>
                                                             <div className="footer-widget__post-content">
                                                                 <h3 className="footer-widget__post-title">

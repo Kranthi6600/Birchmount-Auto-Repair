@@ -34,7 +34,7 @@ const SlidingText: React.FC<SecProp> = ({secClass}) => {
                     {slidingTextItems.map((item) => (
                         <li key={item.id}>
                             <div className="icon">
-                                <Image src={slidingTextImg1} width={30} height={30} alt="icon" />
+                                <Image src={slidingTextImg1} width={30} height={30} style={{ width: 'auto', height: 'auto' }} alt="icon" />
                             </div>
                            <p>{item.label}</p>
                         </li>
