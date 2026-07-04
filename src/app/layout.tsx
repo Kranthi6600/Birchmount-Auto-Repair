@@ -6,7 +6,6 @@ import { SITE_URL } from "@/lib/site";
 import { GTM_CONTAINER_ID } from "@/lib/config";
 import "swiper/swiper-bundle.css";
 import 'yet-another-react-lightbox/styles.css';
-import './combined.css';
 
 const archivo = Archivo({
   variable: "--font-archivo",
@@ -57,6 +56,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
+        <link rel="stylesheet" href="/assets/css/combined.css" />
         <Script id="gtm-init" strategy="afterInteractive">{`
           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
