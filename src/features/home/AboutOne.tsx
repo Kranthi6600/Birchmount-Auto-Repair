@@ -7,7 +7,7 @@ const aboutTwoImg2 = "/assets/images/shop/shop1.jpeg";
 import TextAnimation from '@/components/elements/TextAnimation';
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced';
 import CounterUp from '@/components/elements/CounterUp';
-import useBirchmountAutoRepairContext from '@/components/context/useBirchmountAutoRepairContext';
+
 import SectionWrapper from '@/components/elements/SectionWrapper';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -25,7 +25,6 @@ const pointsList: PointItem[] = [
 ];
 
 const AboutOne: React.FC = () => {
-    const { handleVideoClick } = useBirchmountAutoRepairContext()
     return (
         <SectionWrapper id='about' className="about-two">
             <div className="about-two__shape-1 rotate-me">

@@ -56,6 +56,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
+        {/* eslint-disable-next-line @next/next/no-css-tags -- static theme CSS in public/ served as-is */}
         <link rel="stylesheet" href="/assets/css/combined.css" />
         <Script id="gtm-init" strategy="afterInteractive">{`
           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

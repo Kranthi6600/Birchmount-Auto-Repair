@@ -6,7 +6,7 @@ import useBirchmountAutoRepairContext from '../context/useBirchmountAutoRepairCo
 import Link from 'next/link';
 import Image from 'next/image';
 const MenuTwo: React.FC = () => {
-    const { setIsSearch, setIsSidebar, setIsMobileManu, cartCount } = useBirchmountAutoRepairContext();
+    const { setIsSearch, setIsSidebar, setIsMobileManu } = useBirchmountAutoRepairContext();
     const handleSearch = () => {
         setIsSearch(pre => !pre)
     }

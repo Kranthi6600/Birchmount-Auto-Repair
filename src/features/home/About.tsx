@@ -7,7 +7,7 @@ const aboutOneShape2 = "/assets/images/shapes/about-one-shape-2.png";
 
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced';
 import SectionWrapper from '@/components/elements/SectionWrapper';
-import useBirchmountAutoRepairContext from '@/components/context/useBirchmountAutoRepairContext';
+
 import CounterUp from '@/components/elements/CounterUp';
 import TextAnimation from '@/components/elements/TextAnimation';
 import Link from 'next/link';
@@ -51,7 +51,6 @@ export type SecProp = {
     secClass?: string
 }
 const About: React.FC<SecProp> = ({ secClass = "" }) => {
-    const { handleVideoClick } = useBirchmountAutoRepairContext();
     return (
         <SectionWrapper id='about' className={`about-one ${secClass}`}>
             <div className="container">

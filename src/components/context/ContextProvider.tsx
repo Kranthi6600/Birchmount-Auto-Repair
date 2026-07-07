@@ -9,20 +9,7 @@ const ContextProvider: React.FC<{ children: React.ReactNode }> = ({ children }) 
     const [isMobileManu, setIsMobileManu] = useState<boolean>(false);
     const [isSidebar, setIsSidebar] = useState(false);
     const [isSearch, setIsSearch] = useState(false)
-    const [showVideoPopup, setShowVideoPopup] = useState<boolean>(false);
-    const [currentVideoUrl, setCurrentVideoUrl] = useState<string>("");
     const [activeSection, setActiveSection] = useState<string>("home");
-    const [cartCount, setCartCount] = useState<number>(4);
-
-    const handleVideoClick = useCallback((
-        e: React.MouseEvent<HTMLElement>,
-        videoUrl: string = "https://www.youtube.com/watch?v=Get7rqXYrbQ"
-    ): void => {
-        e.preventDefault();
-        setCurrentVideoUrl(videoUrl);
-        setShowVideoPopup(true);
-    }, [setCurrentVideoUrl, setShowVideoPopup]);
-
 
     const registerSection = useCallback((id: string, element: HTMLElement | null): void => {
         sectionRefs.current[id] = element;
@@ -43,22 +30,14 @@ const ContextProvider: React.FC<{ children: React.ReactNode }> = ({ children }) 
         isMobileManu, setIsMobileManu,
         isSidebar, setIsSidebar,
         isSearch, setIsSearch,
-        showVideoPopup, setShowVideoPopup,
-        currentVideoUrl, setCurrentVideoUrl,
-        handleVideoClick,
         activeSection, setActiveSection,
-        cartCount, setCartCount,
         scrollToSection,
         registerSection
     }), [
         isMobileManu, setIsMobileManu,
         isSidebar, setIsSidebar,
         isSearch, setIsSearch,
-        showVideoPopup, setShowVideoPopup,
-        currentVideoUrl, setCurrentVideoUrl,
-        handleVideoClick,
         activeSection, setActiveSection,
-        cartCount, setCartCount,
         scrollToSection,
         registerSection
     ])

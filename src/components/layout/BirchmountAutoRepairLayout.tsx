@@ -5,7 +5,6 @@ import SideBar from '../elements/SideBar';
 import MobileNav from '../elements/MobileNav';
 import ChatPopup from '../elements/ChatPopup';
 import ScrollToTop from '../elements/ScrollToTop';
-import VideoPopup from '../elements/VideoPopup';
 import ContextProvider from '../context/ContextProvider';
 
 const BirchmountAutoRepairLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -19,7 +18,6 @@ const BirchmountAutoRepairLayout: React.FC<{ children: React.ReactNode }> = ({ c
                 <MobileNav />
                 <ChatPopup />
                 <ScrollToTop />
-                <VideoPopup />
             </div>
         </ContextProvider>
     );
