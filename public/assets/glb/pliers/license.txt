@@ -1,0 +1,11 @@
+Model Information:
+* title:	Pliers
+* source:	https://sketchfab.com/3d-models/pliers-27090e998e4947d69bea68738864393e
+* author:	Sviatoslav Semenov (https://sketchfab.com/svyasem)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Pliers" (https://sketchfab.com/3d-models/pliers-27090e998e4947d69bea68738864393e) by Sviatoslav Semenov (https://sketchfab.com/svyasem) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
