@@ -121,10 +121,10 @@ const BlogStandartMain: React.FC = () => {
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <h2 className="blog-list__title" style={{ fontSize: '1.75rem', lineHeight: 1.3, marginBottom: '12px' }}>
+                                            <h2 className="blog-list__title">
                                                 <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                                             </h2>
-                                            <p className="blog-list__text" style={{ fontSize: '1rem', lineHeight: 1.7, color: '#777f95', marginBottom: '8px' }}>
+                                            <p className="blog-list__text">
                                                 {post.excerpt ? stripHtml(post.excerpt).slice(0, 160) + (stripHtml(post.excerpt).length > 160 ? '...' : '') : ''}
                                             </p>
                                             <Link href={`/blog/${post.slug}`} className="blog-list__read-more" aria-label={`Read more about ${post.title}`}>

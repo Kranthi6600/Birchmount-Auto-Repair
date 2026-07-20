@@ -89,7 +89,7 @@ const ServicesSec: React.FC = () => {
                             variant={service.animationClass}
                             delay={service.animationDelay}
                         >
-                            <div className="services-three__single" style={{ height: '390px' }}>
+                            <div className="services-three__single">
                                 <div className="services-three__icon">
                                     <span className={service.iconClass}></span>
                                 </div>

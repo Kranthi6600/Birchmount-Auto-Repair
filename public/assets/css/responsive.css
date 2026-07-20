@@ -113,8 +113,10 @@
     }
 
     .services-three__single {
-        padding: 34px 20px 26px;
-        padding-left: 100px;
+        min-height: 260px;
+        padding: 28px 20px 24px;
+        padding-left: 90px;
+        margin-left: 20px;
     }
 
     .blog-three__title {
@@ -311,22 +313,40 @@
     }
 
     .services-three__single {
-        padding: 34px 15px 26px;
+        min-height: 240px;
+        padding: 24px 16px 22px;
         padding-left: 70px;
+        margin-left: 10px;
+        margin-bottom: 24px;
     }
 
     .services-three__icon {
-        height: 68px;
-        width: 80px;
+        height: 60px;
+        width: 70px;
+        left: -20px;
     }
 
     .services-three__icon span {
-        font-size: 38px;
+        font-size: 32px;
     }
 
     .services-three__title {
-        font-size: 20px;
-        line-height: 30px;
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 14px;
+    }
+
+    .services-three__sub-title {
+        font-size: 13px;
+    }
+
+    .services-three__text {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .services-page {
+        padding: 60px 0 50px;
     }
 
     .project-three__single:hover .project-three__arrow {
@@ -815,8 +835,8 @@
     }
 
     .feature-two__title {
-        font-size: 22px;
-        line-height: 30px;
+        font-size: 18px;
+        line-height: 26px;
     }
 
 
@@ -981,8 +1001,8 @@
     }
 
     .testimonial-one__text {
-        font-size: 18px;
-        line-height: 28px;
+        font-size: 16px;
+        line-height: 26px;
     }
 
     .testimonial-one__shape-1 {
@@ -993,17 +1013,66 @@
         display: none;
     }
 
+    .blog-one__single {
+        margin-bottom: 24px;
+        background-color: var(--birchmountAutoRepair-white);
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: var(--birchmountAutoRepair-bdr-radius);
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+    }
+
+    .blog-one__img {
+        border-radius: 0;
+    }
+
     .blog-one__title {
-        font-size: 20px;
-        line-height: 30px;
+        font-size: 18px;
+        line-height: 26px;
+        margin: 8px 0 16px;
     }
 
     .blog-one__content {
-        padding: 36px 25px 33px;
+        padding: 24px 20px 22px;
+        box-shadow: none;
+        border-radius: 0;
     }
 
     .blog-one__shape-1 {
         display: none;
+    }
+
+    .blog-one__date {
+        width: 48px;
+        height: 48px;
+        top: 15px;
+        right: 15px;
+        border-width: 5px;
+        border-radius: 10px;
+    }
+
+    .blog-one__date p {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .blog-one__meta li p {
+        font-size: 12px;
+    }
+
+    .blog-one__meta {
+        gap: 14px;
+    }
+
+    .blog-one__read-more a {
+        font-size: 13px;
+    }
+
+    .blog-one__plus a {
+        height: 42px;
+        width: 42px;
+        line-height: 42px;
+        font-size: 14px;
     }
 
     .footer-widget__newsletter {
@@ -1021,9 +1090,9 @@
     }
 
     .footer-widget__newsletter-title {
-        font-size: 20px;
-        line-height: 30px;
-        margin-bottom: 20px;
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 15px;
     }
 
     .footer-widget__about {
@@ -1071,8 +1140,8 @@
     }
 
     .about-two__points-list li p {
-        font-size: 17px;
-        line-height: 26px;
+        font-size: 14px;
+        line-height: 22px;
     }
 
     .about-two__img-2 {
@@ -1109,12 +1178,13 @@
     }
 
     .about-two__text-1 {
-        font-size: 16px;
+        font-size: 14px;
+        line-height: 22px;
     }
 
     .about-two__text-2 {
-        font-size: 15px;
-        line-height: 1.6em;
+        font-size: 14px;
+        line-height: 22px;
     }
 
     .about-two__btn-box {
@@ -1140,8 +1210,8 @@
     }
 
     .services-two .section-title__title {
-        font-size: 28px;
-        line-height: 1.3em;
+        font-size: 26px;
+        line-height: 36px;
     }
 
     .services-two__single {
@@ -1154,9 +1224,9 @@
     }
 
     .services-two__title {
-        font-size: 20px;
-        line-height: 28px;
-        min-height: 28px;
+        font-size: 18px;
+        line-height: 26px;
+        min-height: 26px;
     }
 
     .services-two__hover-content {
@@ -1196,7 +1266,13 @@
     }
 
     .why-choose-two__intro-text {
-        font-size: 15px;
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .why-choose-two__title {
+        font-size: 18px;
+        line-height: 26px;
     }
 
     .why-choose-two__video-link {
@@ -1227,12 +1303,13 @@
     }
 
     .why-choose-two__points-list li p {
-        font-size: 16px;
+        font-size: 14px;
+        line-height: 22px;
     }
 
     .why-choose-two__progress-title {
-        font-size: 17px;
-        line-height: 26px;
+        font-size: 15px;
+        line-height: 24px;
     }
 
     .why-choose-two__btn-box {
@@ -1241,7 +1318,7 @@
     }
 
     .why-choose-two__btn-secondary {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .why-choose-two {
@@ -1332,7 +1409,7 @@
     }
 
     .pricing-two__price-sub-title {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .pricing-two__price-box {
@@ -1359,7 +1436,7 @@
 
     .pricing-two__btn-box .thm-btn {
         padding: 14px 20px;
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .testimonial-two__right {
@@ -1413,20 +1490,58 @@
     }
 
     .blog-two__single {
-        min-height: 400px;
+        min-height: 380px;
+        margin-bottom: 24px;
+        background-color: var(--birchmountAutoRepair-white);
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: var(--birchmountAutoRepair-bdr-radius);
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
     }
 
     .blog-two__img {
         height: 180px;
+        border-radius: 0;
+    }
+
+    .blog-two__img img {
+        border-radius: 0;
     }
 
     .blog-two__content {
         padding: 18px 18px 20px;
+        box-shadow: none;
+        border-radius: 0;
     }
 
     .blog-two__title {
         font-size: 18px;
         line-height: 26px;
+    }
+
+    .blog-two__text {
+        font-size: 14px;
+        line-height: 22px;
+        margin: 8px 0 10px;
+    }
+
+    .blog-two__date {
+        width: 56px;
+        height: 56px;
+        border-width: 4px;
+    }
+
+    .blog-two__date p {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .blog-two__read-more a {
+        font-size: 13px;
+    }
+
+    .blog-two__read-more a span {
+        font-size: 13px;
     }
 
     /* === Footer Mobile Enhancement === */
@@ -1646,22 +1761,40 @@
     }
 
     .services-three__single {
-        padding: 34px 15px 26px;
-        padding-left: 70px;
+        min-height: 220px;
+        padding: 20px 14px 20px;
+        padding-left: 60px;
+        margin-left: 5px;
+        margin-bottom: 20px;
     }
 
     .services-three__icon {
-        height: 68px;
-        width: 80px;
+        height: 54px;
+        width: 60px;
+        left: -18px;
     }
 
     .services-three__icon span {
-        font-size: 38px;
+        font-size: 28px;
     }
 
     .services-three__title {
-        font-size: 20px;
-        line-height: 30px;
+        font-size: 17px;
+        line-height: 24px;
+        margin-bottom: 12px;
+    }
+
+    .services-three__sub-title {
+        font-size: 12px;
+    }
+
+    .services-three__text {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .services-page {
+        padding: 50px 0 40px;
     }
 
     .services-three {
@@ -1928,7 +2061,29 @@
 
 
     .blog-page {
-        padding: 80px 0 80px;
+        padding: 60px 0 60px;
+    }
+
+    .blog-list__single {
+        margin-bottom: 30px;
+        background-color: var(--birchmountAutoRepair-white);
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: var(--birchmountAutoRepair-bdr-radius);
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+    }
+
+    .blog-list__img {
+        border-radius: 0;
+    }
+
+    .blog-list__img img {
+        border-radius: 0;
+    }
+
+    .blog-list__content {
+        margin-top: 0;
+        padding: 20px 20px 24px;
     }
 
     .blog-list__date {
@@ -1937,13 +2092,23 @@
     }
 
     .blog-list__user-and-meta {
-        gap: 15px;
+        gap: 10px;
         flex-direction: column;
     }
 
     .blog-list__title {
-        font-size: 35px;
-        line-height: 45px;
+        font-size: 26px;
+        line-height: 36px;
+        margin-bottom: 12px;
+    }
+
+    .blog-list__text {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .blog-list__read-more {
+        font-size: 13px;
     }
 
     .sidebar {
@@ -1994,8 +2159,8 @@
     }
 
     .blog-details__title {
-        font-size: 30px;
-        line-height: 40px;
+        font-size: 26px;
+        line-height: 36px;
     }
 
     .blog-details__author-box {
@@ -2033,8 +2198,8 @@
     }
 
     .blog-details__title-2 {
-        font-size: 30px;
-        line-height: 40px;
+        font-size: 26px;
+        line-height: 36px;
     }
 
     .blog-details {
@@ -2042,18 +2207,18 @@
     }
 
     .project-details__title-1 {
-        font-size: 30px;
-        line-height: 40px;
+        font-size: 26px;
+        line-height: 36px;
     }
 
     .project-details__title-2 {
-        font-size: 30px;
-        line-height: 40px;
+        font-size: 26px;
+        line-height: 36px;
     }
 
     .project-details__title-3 {
-        font-size: 30px;
-        line-height: 40px;
+        font-size: 26px;
+        line-height: 36px;
     }
 
     .project-details__text-and-img {
@@ -2133,17 +2298,36 @@
 
 
 
+    .contact-info {
+        padding: 50px 0 30px;
+    }
+
     .contact-info__single {
-        padding: 40px 15px 41px;
+        padding: 28px 15px 28px;
+        height: auto;
+        min-height: 180px;
+        margin-bottom: 20px;
+    }
+
+    .contact-info__icon {
+        width: 56px;
+        height: 56px;
+    }
+
+    .contact-info__icon span {
+        font-size: 24px;
+    }
+
+    .contact-info__single p {
+        margin-top: 14px;
+        margin-bottom: 4px;
+        font-size: 13px;
     }
 
     .contact-info__single h3 {
-        font-size: 19px;
-        line-height: 29px;
-    }
-
-    .contact-info {
-        padding: 80px 0 50px;
+        font-size: 16px;
+        line-height: 24px;
+        min-height: 48px;
     }
 
     .contact-page__left {
@@ -2154,15 +2338,55 @@
     .contact-page__right {
         margin-left: 0;
         margin-right: 0;
-        margin-top: 50px;
+        margin-top: 30px;
     }
 
     .contact-page__inner {
-        padding: 30px 15px 30px;
+        padding: 25px 15px 30px;
     }
 
     .contact-page__form-title {
-        font-size: 35px;
+        font-size: 26px;
+        line-height: 36px;
+        margin-bottom: 20px;
+    }
+
+    .google-map__one {
+        height: 250px;
+        border-radius: var(--birchmountAutoRepair-bdr-radius);
+    }
+
+    .contact-page__input-box {
+        margin-bottom: 12px;
+    }
+
+    .contact-page__input-box input[type="text"],
+    .contact-page__input-box input[type="email"],
+    .contact-page__input-box input[type="number"] {
+        height: 48px;
+        font-size: 14px;
+        padding: 0 16px;
+    }
+
+    .contact-page__input-box .nice-select {
+        height: 48px;
+        font-size: 14px;
+        line-height: 48px;
+    }
+
+    .contact-page__input-box textarea {
+        height: 110px;
+        font-size: 14px;
+        padding: 14px 16px;
+    }
+
+    .contact-page__input-box.text-message-box {
+        height: 110px;
+    }
+
+    .contact-page__btn-box .thm-btn {
+        padding: 14px 24px;
+        font-size: 14px;
     }
 
     .faq-page {
@@ -2738,7 +2962,7 @@
     }
 
     .main-slider__sub-title {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .main-slider__title {
@@ -2781,7 +3005,7 @@
     }
 
     .main-slider-two__sub-title {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .main-slider-two__title {
@@ -2791,7 +3015,7 @@
     }
 
     .main-slider-two__text {
-        font-size: 15px;
+        font-size: 14px;
         line-height: 1.6em;
     }
 

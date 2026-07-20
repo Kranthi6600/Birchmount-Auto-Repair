@@ -1491,6 +1491,13 @@
     color: var(--birchmountAutoRepair-base);
 }
 
+.blog-list__text {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777f95;
+    margin-bottom: 8px;
+}
+
 .blog-list__read-more {
     position: relative;
     display: inline-flex;
