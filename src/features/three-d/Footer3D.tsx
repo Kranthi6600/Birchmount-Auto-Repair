@@ -91,11 +91,15 @@ const Footer3D: React.FC = () => {
                             expert craftsmanship, and honest service since day one.
                         </p>
                         <div style={{ display: "flex", gap: "0.8rem", marginTop: "1.5rem" }}>
-                            {["facebook", "instagram", "twitter"].map((social) => (
+                            {[
+                                { name: "instagram", href: "https://www.instagram.com/birchmountautorepair?igsh=djZrMGN6bzgxYmho" },
+                            ].map((social) => (
                                 <a
-                                    key={social}
-                                    href="#"
-                                    onMouseEnter={() => setHoveredLink(social)}
+                                    key={social.name}
+                                    href={social.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    onMouseEnter={() => setHoveredLink(social.name)}
                                     onMouseLeave={() => setHoveredLink(null)}
                                     style={{
                                         width: 36,
@@ -104,16 +108,16 @@ const Footer3D: React.FC = () => {
                                         display: "flex",
                                         alignItems: "center",
                                         justifyContent: "center",
-                                        border: `1px solid ${hoveredLink === social ? "rgba(0,0,0,0.4)" : "rgba(0,0,0,0.12)"}`,
-                                        background: hoveredLink === social ? "rgba(0,0,0,0.06)" : "transparent",
-                                        color: hoveredLink === social ? "#000" : "rgba(0,0,0,0.4)",
+                                        border: `1px solid ${hoveredLink === social.name ? "rgba(0,0,0,0.4)" : "rgba(0,0,0,0.12)"}`,
+                                        background: hoveredLink === social.name ? "rgba(0,0,0,0.06)" : "transparent",
+                                        color: hoveredLink === social.name ? "#000" : "rgba(0,0,0,0.4)",
                                         fontSize: "0.7rem",
                                         textDecoration: "none",
                                         transition: "all 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
-                                        transform: hoveredLink === social ? "translateY(-3px)" : "translateY(0)",
+                                        transform: hoveredLink === social.name ? "translateY(-3px)" : "translateY(0)",
                                     }}
                                 >
-                                    <i className={`fab fa-${social}`} />
+                                    <i className={`fab fa-${social.name}`} />
                                 </a>
                             ))}
                         </div>

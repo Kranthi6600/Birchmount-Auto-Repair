@@ -1661,7 +1661,7 @@
     }
 
     .site-footer__social {
-        justify-content: center;
+        justify-content: flex-start;
         padding-bottom: 20px;
     }
 

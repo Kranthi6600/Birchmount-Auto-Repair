@@ -92,7 +92,7 @@ const SideBar: React.FC = () => {
                                 <div className="thm-social-link1">
                                     <ul className="social-box list-unstyled">
                                         <li>
-                                            <a href="https://www.instagram.com/p/DZ_RDrcvByk/?igsh=MWN0MTNzOTVrN2hsYQ==" target="_blank" rel="noopener noreferrer"><i className="icon-instagram" aria-hidden="true"></i></a>
+                                            <a href="https://www.instagram.com/birchmountautorepair?igsh=djZrMGN6bzgxYmho" target="_blank" rel="noopener noreferrer"><i className="icon-instagram" aria-hidden="true"></i></a>
                                         </li>
                                     </ul>
                                 </div>

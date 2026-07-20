@@ -34,7 +34,7 @@ const MobileNav: React.FC = () => {
                 </ul>
                 <div className="mobile-nav__top">
                     <div className="mobile-nav__social">
-                        <a href="https://www.instagram.com/p/DZ_RDrcvByk/?igsh=MWN0MTNzOTVrN2hsYQ==" target="_blank" rel="noopener noreferrer" className="fab fa-instagram"></a>
+                        <a href="https://www.instagram.com/birchmountautorepair?igsh=djZrMGN6bzgxYmho" target="_blank" rel="noopener noreferrer" className="fab fa-instagram"></a>
                     </div>
                 </div>
             </div>
