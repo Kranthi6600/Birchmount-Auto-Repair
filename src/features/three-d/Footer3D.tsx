@@ -27,6 +27,7 @@ const Footer3D: React.FC = () => {
 
     return (
         <footer
+            className="footer3d-section"
             style={{
                 position: "relative",
                 width: "100%",
@@ -319,6 +320,14 @@ const Footer3D: React.FC = () => {
                     </p>
                 </motion.div>
             </div>
+
+            <style>{`
+                @media (max-width: 768px) {
+                    .footer3d-section {
+                        padding-top: 0.5rem !important;
+                    }
+                }
+            `}</style>
         </footer>
     );
 };

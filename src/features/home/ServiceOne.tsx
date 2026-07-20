@@ -104,10 +104,10 @@ const ServiceOne: React.FC = () => {
             <div className="container">
                 <div className="section-title text-center sec-title-animation animation-style1">
                     <h6 className="section-title__tagline">
-                        <span className="section-title__tagline-border"></span>Our Service
+                        <span className="section-title__tagline-border"></span>Our Services
                     </h6>
                     <h2 className="section-title__title title-animation">
-                        <TextAnimation>Complete Auto Repair Services <br /> in Scarborough</TextAnimation>
+                        <TextAnimation>Complete Auto Repair Services in Scarborough</TextAnimation>
                     </h2>
                 </div>
                 <div className="services-two__carousel  ">

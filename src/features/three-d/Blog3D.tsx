@@ -208,6 +208,7 @@ const Blog3D: React.FC = () => {
 
     return (
         <section
+            className="blog3d-section"
             style={{
                 position: "relative",
                 width: "100%",
@@ -231,7 +232,7 @@ const Blog3D: React.FC = () => {
                         style={{
                             display: "flex",
                             alignItems: "flex-end",
-                            justifyContent: "flex-start",
+                            justifyContent: "space-between",
                             flexWrap: "wrap",
                             gap: "1rem",
                         }}
@@ -250,6 +251,34 @@ const Blog3D: React.FC = () => {
                                 From Our Blog
                             </h2>
                         </div>
+                        <Link
+                            href="/blog"
+                            onMouseEnter={() => setViewAllHovered(true)}
+                            onMouseLeave={() => setViewAllHovered(false)}
+                            style={{
+                                display: "inline-flex",
+                                alignItems: "center",
+                                gap: "0.4rem",
+                                fontSize: "0.6rem",
+                                fontWeight: 700,
+                                letterSpacing: "0.1em",
+                                textTransform: "uppercase",
+                                color: viewAllHovered ? "#000000" : "rgba(0,0,0,0.5)",
+                                textDecoration: "none",
+                                padding: "0.6rem 1.4rem",
+                                borderRadius: 30,
+                                border: `1px solid ${viewAllHovered ? "rgba(0,0,0,0.8)" : "rgba(0,0,0,0.15)"}`,
+                                background: viewAllHovered ? "rgba(0,0,0,0.08)" : "transparent",
+                                boxShadow: viewAllHovered ? "0 8px 30px rgba(0,0,0,0.15)" : "none",
+                                transform: viewAllHovered ? "translateY(-3px) scale(1.03)" : "translateY(0) scale(1)",
+                                filter: viewAllHovered ? "brightness(1.1)" : "brightness(1)",
+                                transition: "all 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
+                                whiteSpace: "nowrap",
+                            }}
+                        >
+                            View All
+                            <span>&rarr;</span>
+                        </Link>
                     </div>
                     <div
                         style={{
@@ -263,8 +292,8 @@ const Blog3D: React.FC = () => {
                     />
                 </motion.div>
 
-                {/* Cards + View All */}
-                <div ref={sectionRef} style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "2rem", flexWrap: "wrap", width: "100%" }}>
+                {/* Cards */}
+                <div ref={sectionRef} className="blog3d-cards-row" style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "2rem", flexWrap: "wrap", width: "100%" }}>
                     <div
                         style={{
                             display: "flex",
@@ -304,39 +333,19 @@ const Blog3D: React.FC = () => {
                                   />
                               ))}
                     </div>
-
-                    <div style={{ display: "flex", alignItems: "center", height: 360, marginLeft: "2rem" }}>
-                        <Link
-                            href="/blog"
-                            onMouseEnter={() => setViewAllHovered(true)}
-                            onMouseLeave={() => setViewAllHovered(false)}
-                            style={{
-                                display: "inline-flex",
-                                alignItems: "center",
-                                gap: "0.4rem",
-                                fontSize: "0.6rem",
-                                fontWeight: 700,
-                                letterSpacing: "0.1em",
-                                textTransform: "uppercase",
-                                color: viewAllHovered ? "#000000" : "rgba(0,0,0,0.5)",
-                                textDecoration: "none",
-                                padding: "0.6rem 1.4rem",
-                                borderRadius: 30,
-                                border: `1px solid ${viewAllHovered ? "rgba(0,0,0,0.8)" : "rgba(0,0,0,0.15)"}`,
-                                background: viewAllHovered ? "rgba(0,0,0,0.08)" : "transparent",
-                                boxShadow: viewAllHovered ? "0 8px 30px rgba(0,0,0,0.15)" : "none",
-                                transform: viewAllHovered ? "translateY(-3px) scale(1.03)" : "translateY(0) scale(1)",
-                                filter: viewAllHovered ? "brightness(1.1)" : "brightness(1)",
-                                transition: "all 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
-                                whiteSpace: "nowrap",
-                            }}
-                        >
-                            View All
-                            <span>&rarr;</span>
-                        </Link>
-                    </div>
                 </div>
             </div>
+
+            <style>{`
+                @media (max-width: 768px) {
+                    .blog3d-section {
+                        padding-bottom: 0 !important;
+                    }
+                    .blog3d-cards-row {
+                        gap: 0.5rem !important;
+                    }
+                }
+            `}</style>
         </section>
     );
 };

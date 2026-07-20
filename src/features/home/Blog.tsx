@@ -40,7 +40,7 @@ const Blog: React.FC = () => {
                         <span className="section-title__tagline-border"></span>Blog
                     </h6>
                     <h2 className="section-title__title title-animation">
-                        <TextAnimation>Auto Tips &amp; News <br /> from Our Team</TextAnimation>
+                        <TextAnimation>Auto Tips &amp; News from Our Team</TextAnimation>
                     </h2>
                 </div>
                 {isLoading ? (

@@ -12,6 +12,7 @@ import Services3D from "./Services3D";
 import Contact3D from "./Contact3D";
 import Blog3D from "./Blog3D";
 import Footer3D from "./Footer3D";
+import MobileHero3D from "./MobileHero3D";
 
 const ScrollCamera: React.FC<{ scrollProgress: React.MutableRefObject<number> }> = ({ scrollProgress }) => {
     const { camera } = useThree();
@@ -114,52 +115,76 @@ const Scene3D: React.FC = () => {
                 background: "linear-gradient(180deg, #ffffff 0%, #f5f5f5 40%, #fafafa 70%, #ffffff 100%)",
             }}
         >
-            {/* Scrollable height — 3 viewport heights */}
-            <div ref={heroRef} style={{ height: "300vh", width: "100%", pointerEvents: "none" }} />
+            {/* 3D Hero — hidden on mobile */}
+            <div className="hero-3d-wrapper">
+                {/* Scrollable height — 3 viewport heights */}
+                <div ref={heroRef} style={{ height: "300vh", width: "100%", pointerEvents: "none" }} />
 
-            {/* Fixed full-screen Canvas */}
-            <div
-                style={{
-                    position: "fixed",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    height: "100vh",
-                    pointerEvents: "none",
-                    zIndex: 1,
-                    opacity: canvasOpacity,
-                    transition: "opacity 0.1s linear",
-                }}
-            >
-                <Canvas
-                    camera={{ position: [0, 3, 14], fov: 50 }}
-                    gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
-                    dpr={[1, 2]}
-                    shadows="basic"
+                {/* Fixed full-screen Canvas */}
+                <div
+                    style={{
+                        position: "fixed",
+                        top: 0,
+                        left: 0,
+                        width: "100%",
+                        height: "100vh",
+                        pointerEvents: "none",
+                        zIndex: 1,
+                        opacity: canvasOpacity,
+                        transition: "opacity 0.1s linear",
+                    }}
                 >
-                    <Suspense fallback={null}>
-                        <ScrollCamera scrollProgress={scrollProgress} />
-                        <SceneManager scrollProgress={scrollProgress} />
-                        <EffectComposer multisampling={0}>
-                            <Bloom
-                                intensity={0.4}
-                                luminanceThreshold={0.6}
-                                luminanceSmoothing={0.9}
-                                mipmapBlur
-                            />
-                            <ChromaticAberration
-                                blendFunction={BlendFunction.NORMAL}
-                                offset={new THREE.Vector2(0.0005, 0.0005)}
-                            />
-                            <Vignette eskil={false} offset={0.3} darkness={0} />
-                            <SMAA />
-                        </EffectComposer>
-                    </Suspense>
-                </Canvas>
+                    <Canvas
+                        camera={{ position: [0, 3, 14], fov: 50 }}
+                        gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
+                        dpr={[1, 2]}
+                        shadows="basic"
+                    >
+                        <Suspense fallback={null}>
+                            <ScrollCamera scrollProgress={scrollProgress} />
+                            <SceneManager scrollProgress={scrollProgress} />
+                            <EffectComposer multisampling={0}>
+                                <Bloom
+                                    intensity={0.4}
+                                    luminanceThreshold={0.6}
+                                    luminanceSmoothing={0.9}
+                                    mipmapBlur
+                                />
+                                <ChromaticAberration
+                                    blendFunction={BlendFunction.NORMAL}
+                                    offset={new THREE.Vector2(0.0005, 0.0005)}
+                                />
+                                <Vignette eskil={false} offset={0.3} darkness={0} />
+                                <SMAA />
+                            </EffectComposer>
+                        </Suspense>
+                    </Canvas>
+                </div>
+
+                <div style={{ opacity: canvasOpacity, transition: "opacity 0.1s linear" }}>
+                    <ScrollOverlay scrollProgress={scrollProgress} />
+                </div>
             </div>
 
-            <div style={{ opacity: canvasOpacity, transition: "opacity 0.1s linear" }}>
-                <ScrollOverlay scrollProgress={scrollProgress} />
+            <style>{`
+                @media (max-width: 768px) {
+                    .hero-3d-wrapper {
+                        display: none !important;
+                    }
+                    .mobile-hero-3d-wrapper {
+                        display: block !important;
+                    }
+                }
+                @media (min-width: 769px) {
+                    .mobile-hero-3d-wrapper {
+                        display: none !important;
+                    }
+                }
+            `}</style>
+
+            {/* Mobile hero — visible only on mobile */}
+            <div className="mobile-hero-3d-wrapper" style={{ display: "none" }}>
+                <MobileHero3D />
             </div>
 
             <Services3D />

@@ -23,7 +23,7 @@ const Page: React.FC = () => {
                 <div className="container">
                     <div className="error-page__inner text-center">
                         <div className="error-page__img float-bob-y">
-                            <Image src={errorPageImg} width={903} height={524} style={{ width: '100%', height: 'auto' }} sizes="(max-width: 768px) 100vw, 903px" alt="404 error illustration" />
+                            <Image src={errorPageImg} width={903} height={524} style={{ width: '100%', height: 'auto' }} sizes="(max-width: 768px) 100vw, 903px" alt="404 error illustration" loading="eager" />
                         </div>
 
                         <div className="error-page__content">

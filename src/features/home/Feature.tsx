@@ -1,5 +1,5 @@
-
-import React from 'react'; 
+"use client";
+import React, { useState, useEffect } from 'react'; 
 const featureTwoShape1 = "/assets/images/shapes/feature-two-shape-1.png";
 const featureTwoSingleShape1 = "/assets/images/shapes/feature-two-single-shape-1.png";
 import FadeInAdvanced, { type AnimationVariant } from '@/components/elements/FadeInAdvanced';
@@ -57,6 +57,15 @@ const featureItems: FeatureItem[] = [
 ];
 
 const Feature: React.FC = () => {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth < 768);
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
     return (
         <section className="feature-two">
             <div className="feature-two__shape-1 rotate-me">
@@ -75,7 +84,8 @@ const Feature: React.FC = () => {
                             key={item.id}
                             className={`col-xl-3 col-lg-6 col-md-6`}
                             variant={item?.animationClass}
-                            delay={item.animationDelay}
+                            delay={isMobile ? 0 : item.animationDelay}
+                            duration={isMobile ? 400 : 600}
                         >
                             <div className="feature-two__single">
                                 <div className="feature-two__icon">

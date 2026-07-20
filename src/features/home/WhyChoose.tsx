@@ -63,6 +63,9 @@ const WhyChoose: React.FC = () => {
                                     <Image src={whyChooseTwoImg1} width={470} height={483} style={{ width: '100%', height: 'auto' }} sizes="(max-width: 768px) 100vw, 470px" alt="Birchmount Auto Repair insurance claim processing for collision repairs" />
                                 </div>
                                 <div className="why-choose-two__improve-box">
+                                    <div className="why-choose-two__improve-icon">
+                                        <span className="icon-certified"></span>
+                                    </div>
                                     <p className="why-choose-two__improve-sub-title">(Approved by All Major Insurers)</p>
                                     <h3 className="why-choose-two__title">Stress-Free Claims</h3>
                                     <p className="why-choose-two__improve-text">
@@ -80,9 +83,13 @@ const WhyChoose: React.FC = () => {
                                     <span className="section-title__tagline-border"></span>Insurance Claims
                                 </h6>
                                 <h2 className="section-title__title title-animation">
-                                    <TextAnimation>We Work Directly With<br /> Your Insurance Company</TextAnimation>
+                                    <TextAnimation>We Work Directly With Your Insurance Company</TextAnimation>
                                 </h2>
                             </div>
+                            <p className="why-choose-two__intro-text">
+                                From initial estimate to final inspection, we manage the entire claims process
+                                so you don&apos;t have to deal with the back-and-forth.
+                            </p>
                             <div className="why-choose-two__points-box">
                                 {[pointsListOne, pointsListTwo].map((list, listIndex) => (
                                     <ul key={listIndex} className="why-choose-two__points-list list-unstyled">
@@ -103,6 +110,14 @@ const WhyChoose: React.FC = () => {
                                         <Progresbar key={item.id} title={item?.title} value={item?.percent}/>
                                     ))}
                                 </ul>
+                            </div>
+                            <div className="why-choose-two__btn-box">
+                                <Link href="/contact" className="thm-btn">
+                                    Start Your Claim<span className="icon-arrow-right"></span>
+                                </Link>
+                                <Link href="/services" className="why-choose-two__btn-secondary">
+                                    View All Services
+                                </Link>
                             </div>
                         </div>
                     </div>

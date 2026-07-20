@@ -85,7 +85,7 @@ const Service: React.FC = () => {
                                 </h6>
                                 <h3 className="section-title__title title-animation">
                                     <TextAnimation animationStyle='style1'>
-                                        Complete Auto Repair<br />Services in Scarborough
+                                        Complete Auto Repair Services in Scarborough
                                     </TextAnimation>
                                 </h3>
                             </div>

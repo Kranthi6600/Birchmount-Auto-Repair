@@ -1,4 +1,5 @@
-import React from 'react'; 
+"use client";
+import React, { useState, useEffect } from 'react'; 
 const pricingTwoShape2 = "/assets/images/shapes/pricing-two-shape-2.png";
 const pricingTwoImg1 = "/assets/images/shop/pricing1.jpeg";
 import type { AnimationVariant } from '@/components/elements/FadeInAdvanced';
@@ -83,6 +84,15 @@ const pricingPlans: PricingPlan[] = [
 ];
 
 const Pricing: React.FC = () => {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth < 768);
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
     return (
         <section className="pricing-two">
             <div className="pricing-two__shape-2">
@@ -94,7 +104,7 @@ const Pricing: React.FC = () => {
                         <span className="section-title__tagline-border"></span>Pricing Plan
                     </h6>
                     <h3 className="section-title__title title-animation">
-                        <TextAnimation>Transparent, Fair <br /> Pricing on All Services.</TextAnimation>
+                        <TextAnimation>Transparent, Fair Pricing on All Services.</TextAnimation>
                     </h3>
                 </div>
                 <div className="row">
@@ -106,7 +116,8 @@ const Pricing: React.FC = () => {
                                         key={plan.id}
                                         className={`col-xl-4 col-lg-4 col-md-6 `}
                                         variant={plan?.animationClass}
-                                        delay={plan.animationDelay}
+                                        delay={isMobile ? 0 : plan.animationDelay}
+                                        duration={isMobile ? 400 : 600}
                                     >
                                         <div className="pricing-two__single">
                                             <div className="pricing-two__plan-box">

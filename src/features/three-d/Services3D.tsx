@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 // Services3D — horizontal scroll card gallery
 import Link from "next/link";
 import Image from "next/image";
@@ -20,7 +20,8 @@ const ServiceCard: React.FC<{
     index: number;
     total: number;
     progress: MotionValue<number>;
-}> = ({ service, index, total, progress }) => {
+    isMobile?: boolean;
+}> = ({ service, index, total, progress, isMobile }) => {
     const dur = 1 / ((total - 1) * (1 - OVERLAP) + 1);
     const start = index * dur * (1 - OVERLAP);
     const end = start + dur;
@@ -33,8 +34,12 @@ const ServiceCard: React.FC<{
 
     const desc = service.description ? stripHtml(service.description) : "";
 
+    const motionStyle = isMobile
+        ? { opacity: 1, y: 0, rotate: 0, scale: 1, flexShrink: 0 }
+        : { y, opacity, rotate, scale, flexShrink: 0 };
+
     return (
-        <motion.div style={{ y, opacity, rotate, scale, flexShrink: 0 }}>
+        <motion.div style={motionStyle}>
             <Link
                 href={`/services/${service.slug}`}
                 style={{ textDecoration: "none", display: "block" }}
@@ -178,6 +183,15 @@ const Services3D: React.FC = () => {
     const { data: services, isLoading } = useServices();
     const ref = useRef<HTMLDivElement>(null);
     const [viewAllHovered, setViewAllHovered] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const mq = window.matchMedia("(max-width: 768px)");
+        const update = () => setIsMobile(mq.matches);
+        update();
+        mq.addEventListener("change", update);
+        return () => mq.removeEventListener("change", update);
+    }, []);
 
     const { scrollYProgress } = useScroll({
         target: ref,
@@ -189,6 +203,7 @@ const Services3D: React.FC = () => {
     const visibleW = typeof window !== "undefined" ? window.innerWidth - 64 : 1024;
     const slideDistance = Math.max(trackW - visibleW, 0);
     const x = useTransform(scrollYProgress, [0, 0.4, 1], ["0%", "0%", `-${slideDistance}px`]);
+    const trackX = isMobile ? "0%" : x;
 
     return (
         <section
@@ -199,7 +214,7 @@ const Services3D: React.FC = () => {
                 zIndex: 10,
             }}
         >
-            <div ref={ref} style={{ height: "250vh", position: "relative" }}>
+            <div ref={ref} className="services3d-scroll-area" style={{ height: "250vh", position: "relative" }}>
                 <div
                     style={{
                         position: "sticky",
@@ -281,8 +296,8 @@ const Services3D: React.FC = () => {
                     </div>
 
                     {/* Horizontal track — auto-scrolls based on vertical scroll */}
-                    <div style={{ position: "relative", overflow: "hidden", flex: 1, display: "flex", alignItems: "center" }}>
-                        <motion.div style={{ display: "flex", gap: `${GAP}px`, x, paddingLeft: "2rem" }}>
+                    <div className="services3d-track-overflow" style={{ position: "relative", overflow: "hidden", flex: 1, display: "flex", alignItems: "center" }}>
+                        <motion.div className="services3d-track" style={{ display: "flex", gap: `${GAP}px`, x: trackX, paddingLeft: "2rem", paddingRight: "2rem" }}>
                             {isLoading
                                 ? Array.from({ length: 6 }).map((_, i) => (
                                       <div
@@ -304,6 +319,7 @@ const Services3D: React.FC = () => {
                                           index={index}
                                           total={services.length}
                                           progress={scrollYProgress}
+                                          isMobile={isMobile}
                                       />
                                   ))}
                         </motion.div>
@@ -311,6 +327,32 @@ const Services3D: React.FC = () => {
                 </div>
             </div>
             {/* end ref */}
+
+            <style>{`
+                @media (max-width: 768px) {
+                    .services3d-scroll-area {
+                        height: auto !important;
+                    }
+                    .services3d-scroll-area > div {
+                        position: static !important;
+                        height: auto !important;
+                        paddingTop: 3rem !important;
+                    }
+                    .services3d-track-overflow {
+                        overflow-x: auto !important;
+                        -webkit-overflow-scrolling: touch;
+                        scrollbar-width: none;
+                    }
+                    .services3d-track-overflow::-webkit-scrollbar {
+                        display: none;
+                    }
+                    .services3d-track {
+                        x: 0 !important;
+                        transform: none !important;
+                        padding-right: 1.5rem !important;
+                    }
+                }
+            `}</style>
         </section>
     );
 };

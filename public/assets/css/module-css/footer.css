@@ -446,6 +446,58 @@
     color: var(--birchmountAutoRepair-base);
 }
 
+/* === Footer Mobile Toggle & Collapsible === */
+.footer-mobile-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-toggle-icon {
+    display: none;
+    width: 12px;
+    height: 12px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.footer-toggle-icon::before,
+.footer-toggle-icon::after {
+    content: "";
+    position: absolute;
+    background-color: var(--birchmountAutoRepair-white);
+    transition: all 300ms ease;
+}
+
+.footer-toggle-icon::before {
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: translateY(-50%);
+}
+
+.footer-toggle-icon::after {
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    transform: translateX(-50%);
+}
+
+.footer-collapsible--open .footer-toggle-icon::after {
+    transform: translateX(-50%) rotate(90deg);
+    opacity: 0;
+}
+
+/* Quick Links Grid */
+.footer-widget__link--grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px 16px;
+}
+
 .footer-widget__post-box {
     position: relative;
     display: block;

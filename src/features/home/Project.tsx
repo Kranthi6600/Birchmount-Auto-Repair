@@ -54,7 +54,7 @@ const Project: React.FC = () => {
                             <span className="section-title__tagline-border"></span>Recent Repairs
                         </h6>
                         <h2 className="section-title__title title-animation">
-                            <TextAnimation>Recent Repairs We&apos;re <br /> Proud Of</TextAnimation>
+                            <TextAnimation>Recent Repairs We&apos;re Proud Of</TextAnimation>
                         </h2>
                     </div>
                 </div>

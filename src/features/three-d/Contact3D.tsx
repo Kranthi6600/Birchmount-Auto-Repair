@@ -215,8 +215,9 @@ const Contact3D: React.FC = () => {
                         </a>
                     </motion.div>
 
-                    {/* Right — 3D model */}
+                    {/* Right — 3D model (hidden on mobile) */}
                     <motion.div
+                        className="contact3d-model-wrapper"
                         initial={{ opacity: 0, scale: 0.8 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true, amount: 0.3 }}
@@ -250,6 +251,14 @@ const Contact3D: React.FC = () => {
                     </motion.div>
                 </div>
             </div>
+
+            <style>{`
+                @media (max-width: 768px) {
+                    .contact3d-model-wrapper {
+                        display: none !important;
+                    }
+                }
+            `}</style>
         </section>
     );
 };

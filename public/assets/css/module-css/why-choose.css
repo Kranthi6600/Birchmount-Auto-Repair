@@ -260,7 +260,7 @@
 .why-choose-two {
     position: relative;
     display: block;
-    padding: 120px 0 120px;
+    padding: 80px 0 60px;
     z-index: 1;
 }
 
@@ -291,10 +291,31 @@
     bottom: 0;
     right: -100px;
     padding: 34px 40px 35px;
-    background-color: var(--birchmountAutoRepair-black);
+    background: linear-gradient(135deg, var(--birchmountAutoRepair-black) 0%, rgba(var(--birchmountAutoRepair-black-rgb), 0.92) 100%);
     border-radius: var(--birchmountAutoRepair-bdr-radius);
     border-bottom-left-radius: 0;
     z-index: 1;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    border-left: 3px solid var(--birchmountAutoRepair-base);
+}
+
+.why-choose-two__improve-icon {
+    position: absolute;
+    top: -25px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--birchmountAutoRepair-base);
+    border-radius: 50%;
+    box-shadow: 0 8px 20px rgba(var(--birchmountAutoRepair-base-rgb), 0.4);
+}
+
+.why-choose-two__improve-icon span {
+    font-size: 24px;
+    color: var(--birchmountAutoRepair-white);
 }
 
 .why-choose-two__improve-sub-title {
@@ -388,7 +409,15 @@
 }
 
 .why-choose-two__right .section-title {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.why-choose-two__intro-text {
+    font-size: 16px;
+    line-height: 1.7em;
+    color: var(--birchmountAutoRepair-gray);
+    margin-bottom: 25px;
+    max-width: 500px;
 }
 
 .why-choose-two__points-box {
@@ -408,6 +437,18 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    padding: 6px 12px 6px 0;
+    border-radius: 8px;
+    transition: all 300ms ease;
+}
+
+.why-choose-two__points-list li:hover {
+    padding-left: 12px;
+    background-color: rgba(var(--birchmountAutoRepair-base-rgb), 0.05);
+}
+
+.why-choose-two__points-list li:hover .icon span {
+    transform: scale(1.2);
 }
 
 .why-choose-two__points-list li+li {
@@ -424,6 +465,7 @@
     display: inline-block;
     font-size: 16px;
     color: var(--birchmountAutoRepair-base);
+    transition: transform 300ms ease;
 }
 
 .why-choose-two__progress-box {
@@ -505,6 +547,28 @@
 
 .why-choose-two__progress .bar.marb-0 {
     margin-bottom: 0;
+}
+
+.why-choose-two__btn-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
+
+.why-choose-two__btn-secondary {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--birchmountAutoRepair-black);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color 300ms ease;
+}
+
+.why-choose-two__btn-secondary:hover {
+    color: var(--birchmountAutoRepair-base);
 }
 
 .why-choose-two__shape-1 {

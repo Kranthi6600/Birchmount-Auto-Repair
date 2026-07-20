@@ -79,6 +79,7 @@ const MenuList3D: React.FC = () => {
 
 const Header3D: React.FC = () => {
     const [quoteHovered, setQuoteHovered] = useState(false);
+    const [mobileOpen, setMobileOpen] = useState(false);
     const headerStyle: React.CSSProperties = {
         position: "fixed",
         top: "1rem",
@@ -150,6 +151,107 @@ const Header3D: React.FC = () => {
                     pointer-events: none;
                     z-index: -1;
                 }
+                .header3d-desktop-nav { display: flex; }
+                .header3d-desktop-actions { display: flex; }
+                .header3d-hamburger { display: none; }
+                .header3d-mobile-menu { display: none; }
+
+                @media (max-width: 768px) {
+                    .header3d-desktop-nav { display: none !important; }
+                    .header3d-desktop-actions { display: none !important; }
+                    .header3d-hamburger {
+                        display: flex !important;
+                        align-items: center;
+                        justify-content: center;
+                        width: 40px;
+                        height: 40px;
+                        border: 1px solid rgba(0,0,0,0.12);
+                        border-radius: 12px;
+                        background: transparent;
+                        cursor: pointer;
+                        flexShrink: 0;
+                        transition: background 0.3s ease;
+                    }
+                    .header3d-hamburger:hover {
+                        background: rgba(0,0,0,0.05);
+                    }
+                    .header3d-hamburger span {
+                        display: block;
+                        position: relative;
+                        width: 18px;
+                        height: 2px;
+                        background: #000;
+                        border-radius: 2px;
+                        transition: all 0.3s ease;
+                    }
+                    .header3d-hamburger span::before,
+                    .header3d-hamburger span::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        width: 18px;
+                        height: 2px;
+                        background: #000;
+                        border-radius: 2px;
+                        transition: all 0.3s ease;
+                    }
+                    .header3d-hamburger span::before { top: -6px; }
+                    .header3d-hamburger span::after { top: 6px; }
+                    .header3d-hamburger.open span { background: transparent; }
+                    .header3d-hamburger.open span::before {
+                        top: 0;
+                        transform: rotate(45deg);
+                    }
+                    .header3d-hamburger.open span::after {
+                        top: 0;
+                        transform: rotate(-45deg);
+                    }
+                    .header3d-mobile-menu {
+                        display: flex !important;
+                        flex-direction: column;
+                        gap: 0.3rem;
+                        padding: 1rem 0 0.5rem;
+                        border-top: 1px solid rgba(0,0,0,0.08);
+                        margin-top: 0.6rem;
+                    }
+                    .header3d-mobile-menu a {
+                        color: rgba(0,0,0,0.7) !important;
+                        textDecoration: none;
+                        fontSize: 0.85rem;
+                        fontWeight: 600;
+                        padding: 0.7rem 0.5rem;
+                        borderRadius: 10px;
+                        transition: all 0.2s ease;
+                    }
+                    .header3d-mobile-menu a:hover {
+                        background: rgba(0,0,0,0.05);
+                        color: #000 !important;
+                    }
+                    .header3d-mobile-menu .header3d-mobile-quote {
+                        background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%) !important;
+                        color: #fff !important;
+                        textAlign: center;
+                        borderRadius: 30px;
+                        padding: 0.7rem 1.4rem;
+                        marginTop: 0.5rem;
+                    }
+                    .header3d-mobile-menu .header3d-mobile-call {
+                        display: flex;
+                        align-items: center;
+                        gap: 0.6rem;
+                        padding: 0.7rem 0.5rem;
+                        color: rgba(0,0,0,0.5) !important;
+                        fontSize: 0.8rem;
+                    }
+                    .header3d-mobile-menu .header3d-mobile-call a {
+                        color: #000 !important;
+                        fontWeight: 700;
+                        padding: 0;
+                    }
+                    .header3d-mobile-menu .header3d-mobile-call a:hover {
+                        background: transparent !important;
+                    }
+                }
             `}</style>
             <header style={headerStyle} className="glass-nav-3d">
                 <div style={innerStyle}>
@@ -175,11 +277,11 @@ const Header3D: React.FC = () => {
                         </span>
                     </Link>
 
-                    <nav style={{ flex: 1, display: "flex", justifyContent: "center" }}>
+                    <nav className="header3d-desktop-nav" style={{ flex: 1, display: "flex", justifyContent: "center" }}>
                         <MenuList3D />
                     </nav>
 
-                    <div style={{ display: "flex", alignItems: "center", gap: "1.5rem", flexShrink: 0 }}>
+                    <div className="header3d-desktop-actions" style={{ display: "flex", alignItems: "center", gap: "1.5rem", flexShrink: 0 }}>
                         <div style={callStyle}>
                             <i className="icon-call" style={{ color: "#000000", fontSize: "1rem" }} />
                             <div>
@@ -212,7 +314,36 @@ const Header3D: React.FC = () => {
                             <span style={{ fontSize: "0.7rem" }}>&rarr;</span>
                         </Link>
                     </div>
+
+                    {/* Mobile hamburger */}
+                    <button
+                        className={`header3d-hamburger ${mobileOpen ? "open" : ""}`}
+                        onClick={() => setMobileOpen(!mobileOpen)}
+                        aria-label="Toggle menu"
+                    >
+                        <span />
+                    </button>
                 </div>
+
+                {/* Mobile menu */}
+                {mobileOpen && (
+                    <div className="header3d-mobile-menu">
+                        <Link href="/" onClick={() => setMobileOpen(false)}>Home</Link>
+                        <Link href="/services" onClick={() => setMobileOpen(false)}>Services</Link>
+                        <Link href="/about" onClick={() => setMobileOpen(false)}>About</Link>
+                        <Link href="/blog" onClick={() => setMobileOpen(false)}>Blog</Link>
+                        <Link href="/contact" onClick={() => setMobileOpen(false)}>Contact</Link>
+                        <Link href="/faqs" onClick={() => setMobileOpen(false)}>FAQs</Link>
+                        <Link href="/3d" onClick={() => setMobileOpen(false)}>3D</Link>
+                        <div className="header3d-mobile-call">
+                            <i className="icon-call" style={{ color: "rgba(0,0,0,0.5)", fontSize: "0.9rem" }} />
+                            <a href="tel:4167578368" onClick={() => setMobileOpen(false)}>(416) 757-8368</a>
+                        </div>
+                        <Link href="/contact" className="header3d-mobile-quote" onClick={() => setMobileOpen(false)}>
+                            Get A Quote &rarr;
+                        </Link>
+                    </div>
+                )}
             </header>
         </>
     );

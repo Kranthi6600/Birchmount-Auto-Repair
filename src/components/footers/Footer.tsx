@@ -101,6 +101,12 @@ const Footer = () => {
 
         // Handle form submission logic here
     };
+
+    const [expandedSection, setExpandedSection] = React.useState<string | null>(null);
+    const toggleSection = (section: string) => {
+        setExpandedSection(expandedSection === section ? null : section);
+    };
+
     return (
         <footer className="site-footer">
             <div className="site-footer__bg-color">
@@ -161,7 +167,7 @@ const Footer = () => {
                                                     <h3 className="footer-widget__title">Quick Links</h3>
                                                 </div>
                                                 <div className="footer-widget__link-box">
-                                                    <ul className="footer-widget__link list-unstyled">
+                                                    <ul className="footer-widget__link footer-widget__link--grid list-unstyled">
                                                         {quickLinks.map((link) => (
                                                             <li key={link.id}>
                                                                 <Link href={link.to}>{link.label}</Link>
@@ -175,10 +181,11 @@ const Footer = () => {
                                         {/* Services */}
                                         <FadeInAdvanced className="col-xl-4 col-lg-4 col-md-4 " variant='fadeInUp' delay={300}>
                                             <div className="footer-widget__column footer-widget__services">
-                                                <div className="footer-widget__title-box">
+                                                <div className="footer-widget__title-box footer-mobile-toggle" onClick={() => toggleSection('services')}>
                                                     <h3 className="footer-widget__title">Our Services</h3>
+                                                    <span className="footer-toggle-icon"></span>
                                                 </div>
-                                                <ul className="footer-widget__link list-unstyled">
+                                                <ul className={`footer-widget__link list-unstyled footer-collapsible ${expandedSection === 'services' ? 'footer-collapsible--open' : ''}`}>
                                                     {serviceLinks.slice(0, 4).map((link) => (
                                                         <li key={link.id}>
                                                             <Link href={link.to}>{link.label}</Link>
@@ -197,12 +204,12 @@ const Footer = () => {
                                                 <div className="footer-widget__title-box">
                                                     <h3 className="footer-widget__title">Recent Posts</h3>
                                                 </div>
-                                                <ul className="footer-widget__contact list-unstyled">
+                                                <ul className="footer-widget__post list-unstyled">
 
                                                     {footerPosts.map((post) => (
                                                         <li key={post.id}>
                                                             <div className="footer-widget__post-img">
-                                                                <Image src={post.image} width={75} height={75} style={{ width: 'auto', height: 'auto' }} alt="Image" />
+                                                                <Image src={post.image} width={70} height={70} style={{ width: '70px', height: '70px', objectFit: 'cover', borderRadius: '10px' }} alt={post.title} />
                                                             </div>
                                                             <div className="footer-widget__post-content">
                                                                 <h3 className="footer-widget__post-title">
