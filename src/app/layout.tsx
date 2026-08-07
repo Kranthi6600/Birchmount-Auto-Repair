@@ -78,6 +78,14 @@ export default function RootLayout({
           fbq('init', '1021355107157228');
           fbq('track', 'PageView');
         `}</Script>
+        {/* Google Ads gtag.js */}
+        <Script id="google-ads-gtag" strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=AW-18309681466" />
+        <Script id="google-ads-config" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-18309681466');
+        `}</Script>
       </head>
       <body className={`${archivo.variable} ${titilliumWeb.variable}`}>
         <noscript>
