@@ -1,0 +1,228 @@
+/*==============================================
+    Legal Content (Privacy Policy / Terms)
+===============================================*/
+.legal-content {
+    position: relative;
+    display: block;
+    padding: 120px 0 120px;
+    z-index: 1;
+}
+
+.legal-content__sidebar {
+    position: relative;
+    display: block;
+}
+
+.legal-content__toc {
+    position: sticky;
+    top: 120px;
+    background-color: var(--birchmountAutoRepair-primary);
+    border-radius: var(--birchmountAutoRepair-bdr-radius);
+    padding: 30px 30px 30px;
+    border: 1px solid rgba(var(--birchmountAutoRepair-gray-rgb), .12);
+}
+
+.legal-content__toc-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--birchmountAutoRepair-black);
+    margin: 0 0 20px;
+    position: relative;
+    padding-bottom: 14px;
+}
+
+.legal-content__toc-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 3px;
+    background-color: var(--birchmountAutoRepair-base);
+    border-radius: 3px;
+}
+
+.legal-content__toc-list li {
+    position: relative;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.legal-content__toc-list li:last-child {
+    margin-bottom: 0;
+}
+
+.legal-content__toc-list li a {
+    display: block;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 500;
+    color: var(--birchmountAutoRepair-gray);
+    padding: 8px 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+.legal-content__toc-list li a:hover,
+.legal-content__toc-list li a.active {
+    color: var(--birchmountAutoRepair-base);
+    background-color: rgba(var(--birchmountAutoRepair-base-rgb), .10);
+}
+
+.legal-content__main {
+    position: relative;
+    display: block;
+    margin-left: 30px;
+}
+
+.legal-content__head {
+    position: relative;
+    display: block;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(var(--birchmountAutoRepair-gray-rgb), .15);
+}
+
+.legal-content__title {
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 700;
+    letter-spacing: -1.2px;
+    color: var(--birchmountAutoRepair-black);
+    margin: 0 0 16px;
+}
+
+.legal-content__summary {
+    font-size: 17px;
+    line-height: 28px;
+    color: var(--birchmountAutoRepair-gray);
+    margin: 0 0 14px;
+}
+
+.legal-content__updated {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--birchmountAutoRepair-base);
+    margin: 0;
+}
+
+.legal-content__updated span {
+    margin-right: 6px;
+}
+
+.legal-content__sections {
+    position: relative;
+    display: block;
+}
+
+.legal-content__section {
+    position: relative;
+    display: block;
+    margin-bottom: 40px;
+    scroll-margin-top: 120px;
+}
+
+.legal-content__section:last-child {
+    margin-bottom: 0;
+}
+
+.legal-content__section-title {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    color: var(--birchmountAutoRepair-black);
+    margin: 0 0 18px;
+}
+
+.legal-content__section-intro {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 600;
+    color: var(--birchmountAutoRepair-black);
+    margin: 0 0 16px;
+}
+
+.legal-content__paragraph {
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--birchmountAutoRepair-gray);
+    margin: 0 0 16px;
+}
+
+.legal-content__points {
+    position: relative;
+    display: block;
+    margin: 10px 0 0;
+    padding: 0;
+}
+
+.legal-content__points li {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--birchmountAutoRepair-gray);
+    padding-left: 4px;
+    margin-bottom: 12px;
+}
+
+.legal-content__points li span {
+    color: var(--birchmountAutoRepair-base);
+    font-size: 18px;
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+/*--------------------------------------------------------------
+# Legal Responsive
+--------------------------------------------------------------*/
+@media (max-width: 1199px) {
+    .legal-content__main {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .legal-content {
+        padding: 90px 0 90px;
+    }
+
+    .legal-content__toc {
+        position: relative;
+        top: 0;
+        margin-bottom: 40px;
+    }
+
+    .legal-content__title {
+        font-size: 34px;
+        line-height: 42px;
+    }
+}
+
+@media (max-width: 767px) {
+    .legal-content {
+        padding: 70px 0 70px;
+    }
+
+    .legal-content__title {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .legal-content__section-title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .legal-content__toc {
+        padding: 24px 20px;
+    }
+}
+
+/*--------------------------------------------------------------
+# End
+--------------------------------------------------------------*/

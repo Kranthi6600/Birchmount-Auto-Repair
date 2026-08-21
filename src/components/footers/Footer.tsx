@@ -58,6 +58,7 @@ const socialLinks: SocialLink[] = [
 
 const bottomMenuLinks: NavLink[] = [
     { id: 1, label: 'Support', to: '/contact' },
+    { id: 2, label: 'Privacy Policy', to: '/privacy' },
 ];
 
 const Footer = () => {
