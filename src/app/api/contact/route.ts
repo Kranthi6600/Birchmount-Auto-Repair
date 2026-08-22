@@ -30,9 +30,9 @@ export async function POST(request: NextRequest) {
         });
 
         const mailOptions = {
-            from: `"${name}" <${email}>`,
+            from: `"Birchmount Auto Repair Contact Form" <${process.env.GMAIL_USER}>`,
             to: process.env.GMAIL_USER,
-            replyTo: email,
+            replyTo: `"${name}" <${email}>`,
             subject: subject
                 ? `Contact Form: ${subject}`
                 : "New Contact Form Submission",

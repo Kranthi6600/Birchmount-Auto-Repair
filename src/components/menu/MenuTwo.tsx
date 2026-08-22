@@ -43,7 +43,7 @@ const MenuTwo: React.FC = () => {
                         </a>
                     </div>
                     <div className="main-menu-two__btn-box">
-                        <Link href="/contact" className="thm-btn">Get A Quote<span className="icon-arrow-right"></span></Link>
+                        <a href="tel:4167578368" className="thm-btn"><span className="icon-call"></span> Call Now</a>
                     </div>
                 </div>
             </div>

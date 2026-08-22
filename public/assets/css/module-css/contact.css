@@ -681,7 +681,10 @@
 
 .contact-page__btn-box {
     position: relative;
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 .contact-page__btn-box .thm-btn {
@@ -695,6 +698,23 @@
 .contact-page__btn-box .thm-btn::before,
 .contact-page__btn-box .thm-btn::after {
     background-color: var(--birchmountAutoRepair-white);
+}
+
+.contact-page__call-btn {
+    background-color: var(--birchmountAutoRepair-black);
+    color: var(--birchmountAutoRepair-white);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-page__call-btn::before,
+.contact-page__call-btn::after {
+    background-color: var(--birchmountAutoRepair-base);
+}
+
+.contact-page__call-btn:hover {
+    color: var(--birchmountAutoRepair-white);
 }
 
 

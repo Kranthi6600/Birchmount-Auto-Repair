@@ -97,12 +97,6 @@ const Footer = () => {
         }));
     }, [apiBlogs]);
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-
-        // Handle form submission logic here
-    };
-
     const [expandedSection, setExpandedSection] = React.useState<string | null>(null);
     const toggleSection = (section: string) => {
         setExpandedSection(expandedSection === section ? null : section);
@@ -155,20 +149,16 @@ const Footer = () => {
                         {/* Right Columns */}
                         <div className="col-xl-9">
                             <div className="footer-widget__right">
-                                {/* Get a Quote */}
+                                {/* Call CTA */}
                                 <div className="footer-widget__column footer-widget__newsletter">
                                     <div className="footer-widget__newsletter-bg" ></div>
                                     <h3 className="footer-widget__newsletter-title">
-                                        Need Auto Repair Services?<br /> Get a Free Quote Today
+                                        Need Auto Repair Services?<br /> Call Us Today
                                     </h3>
-                                    <form className="footer-widget__newsletter-form mc-form" onSubmit={handleSubmit}>
-                                        <div className="footer-widget__newsletter-form-input-box">
-                                            <input type="email" placeholder="Enter email" name="EMAIL" />
-                                        </div>
-                                        <button type="submit" className="footer-widget__newsletter-btn thm-btn">
-                                            Get a Quote
-                                        </button>
-                                    </form>
+                                    <a href="tel:4167578368" className="footer-widget__newsletter-btn thm-btn">
+                                        <span className="icon-call"></span>
+                                        Call (416) 757-8368
+                                    </a>
                                 </div>
 
                                 <div className="footer-widget__right-bottom">

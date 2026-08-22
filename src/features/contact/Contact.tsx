@@ -227,22 +227,25 @@ const Contact: React.FC = () => {
                                                     ></textarea>
                                                 </div>
                                                 <div className="contact-page__btn-box">
-                                                    <a
-                                                        href="#"
+                                                    <button
+                                                        type="button"
                                                         className="footer-widget__newsletter-btn thm-btn"
-                                                        onClick={(e) => {
-                                                            e.preventDefault();
+                                                        onClick={() => {
                                                             if (!isSubmitting) {
                                                                 sendContactForm();
                                                             }
                                                         }}
+                                                        disabled={isSubmitting}
                                                         style={{
-                                                            pointerEvents: isSubmitting ? 'none' : 'auto',
                                                             opacity: isSubmitting ? 0.7 : 1,
                                                         }}
                                                     >
-                                                        {isSubmitting ? 'Sending...' : 'Send A Message'}
+                                                        {isSubmitting ? 'Sending...' : 'Send'}
                                                         <span><i className="icon-right-arrow"></i></span>
+                                                    </button>
+                                                    <a href="tel:4167578368" className="contact-page__call-btn thm-btn">
+                                                        <span className="icon-call"></span>
+                                                        Call
                                                     </a>
                                                 </div>
                                             </div>

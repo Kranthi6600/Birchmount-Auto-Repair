@@ -299,8 +299,8 @@ const Header3D: React.FC = () => {
                                 </a>
                             </div>
                         </div>
-                        <Link 
-                            href="/contact" 
+                        <a
+                            href="tel:4167578368"
                             onMouseEnter={() => setQuoteHovered(true)}
                             onMouseLeave={() => setQuoteHovered(false)}
                             style={{
@@ -310,9 +310,9 @@ const Header3D: React.FC = () => {
                                 filter: quoteHovered ? "brightness(1.1)" : "brightness(1)",
                             }}
                         >
-                            Get A Quote
+                            Call Now
                             <span style={{ fontSize: "0.7rem" }}>&rarr;</span>
-                        </Link>
+                        </a>
                     </div>
 
                     {/* Mobile hamburger */}
@@ -339,9 +339,9 @@ const Header3D: React.FC = () => {
                             <i className="icon-call" style={{ color: "rgba(0,0,0,0.5)", fontSize: "0.9rem" }} />
                             <a href="tel:4167578368" onClick={() => setMobileOpen(false)}>(416) 757-8368</a>
                         </div>
-                        <Link href="/contact" className="header3d-mobile-quote" onClick={() => setMobileOpen(false)}>
-                            Get A Quote &rarr;
-                        </Link>
+                        <a href="tel:4167578368" className="header3d-mobile-quote" onClick={() => setMobileOpen(false)}>
+                            Call Now &rarr;
+                        </a>
                     </div>
                 )}
             </header>

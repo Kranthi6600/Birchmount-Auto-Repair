@@ -91,7 +91,9 @@ const Footer3D: React.FC = () => {
                             expert craftsmanship, and honest service since day one.
                         </p>
                         <div style={{ display: "flex", gap: "0.8rem", marginTop: "1.5rem" }}>
-                            {[
+                            I have reviewed the status of your Google Ads account (447-308-6294) and found that it has been suspended for violating our Circumventing systems policy, specifically due to Cloaking.
+
+Cloaking refers to the practice of showing different content on your website to users than what is shown to Google's review systems. This is often done to hide content that might break Google Ads rules.{[
                                 { name: "instagram", href: "https://www.instagram.com/birchmountautorepair?igsh=djZrMGN6bzgxYmho" },
                             ].map((social) => (
                                 <a

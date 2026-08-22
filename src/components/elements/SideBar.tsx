@@ -64,10 +64,13 @@ const SideBar: React.FC = () => {
                                         <div className="form-group">
                                             <textarea name="message" placeholder="Message..." required></textarea>
                                         </div>
-                                        <div className="form-group message-btn">
+                                        <div className="form-group message-btn sidebar-btn-box">
                                             <button className="thm-btn" type="submit" data-loading-text="Please wait...">
                                                 Submit Now <span className="icon-arrow-right"></span>
                                             </button>
+                                            <a href="tel:4167578368" className="thm-btn sidebar-call-btn">
+                                                <span className="icon-call"></span> Call Now
+                                            </a>
                                         </div>
                                         <div className="result"></div>
                                     </form>

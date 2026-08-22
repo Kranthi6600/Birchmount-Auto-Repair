@@ -1,4 +1,4 @@
-﻿/*--------------------------------------------------------------
+/*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Utility
@@ -535,6 +535,28 @@ xs sidebar
 }
 
 .xs-sidebar-group .content-inner .form-inner .form-group button.thm-btn:hover {
+  color: var(--birchmountAutoRepair-black);
+}
+
+.xs-sidebar-group .content-inner .form-inner .sidebar-btn-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.xs-sidebar-group .content-inner .form-inner .sidebar-call-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.xs-sidebar-group .content-inner .form-inner .sidebar-call-btn::before,
+.xs-sidebar-group .content-inner .form-inner .sidebar-call-btn::after {
+  background-color: var(--birchmountAutoRepair-white);
+}
+
+.xs-sidebar-group .content-inner .form-inner .sidebar-call-btn:hover {
   color: var(--birchmountAutoRepair-black);
 }
 
