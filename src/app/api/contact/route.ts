@@ -31,6 +31,24 @@ export async function POST(request: NextRequest) {
             },
         });
 
+        // Verify SMTP connection before sending (surfaces auth/config errors clearly)
+        try {
+            await transporter.verify();
+        } catch (verifyError) {
+            console.error("[contact] SMTP verify failed:", {
+                message: verifyError instanceof Error ? verifyError.message : String(verifyError),
+                code: (verifyError as { code?: string }).code,
+                response: (verifyError as { response?: string }).response,
+                responseCode: (verifyError as { responseCode?: number }).responseCode,
+                hasGmailUser: !!process.env.GMAIL_USER,
+                hasGmailAppPassword: !!process.env.GMAIL_APP_PASSWORD,
+            });
+            return NextResponse.json(
+                { error: "Email server authentication failed. Check Gmail credentials." },
+                { status: 500 }
+            );
+        }
+
         const mailOptions = {
             from: `"Birchmount Auto Repair Contact Form" <${process.env.GMAIL_USER}>`,
             to: process.env.GMAIL_USER,
@@ -66,7 +84,15 @@ ${message}`,
             { status: 200 }
         );
     } catch (error) {
-        console.error("Error sending email:", error);
+        console.error("[contact] Failed to send email:", {
+            message: error instanceof Error ? error.message : String(error),
+            code: (error as { code?: string }).code,
+            stack: error instanceof Error ? error.stack : undefined,
+            response: (error as { response?: string }).response,
+            responseCode: (error as { responseCode?: number }).responseCode,
+            hasGmailUser: !!process.env.GMAIL_USER,
+            hasGmailAppPassword: !!process.env.GMAIL_APP_PASSWORD,
+        });
         return NextResponse.json(
             { error: "Failed to send email. Please try again later." },
             { status: 500 }

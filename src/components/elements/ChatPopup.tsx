@@ -37,7 +37,8 @@ const ChatPopup: React.FC = () => {
                 timer: 1500
             });
             form.reset();
-        } catch {
+        } catch (err) {
+            console.error("[ChatPopup] contact form error:", err);
             Swal.fire({
                 position: "top-end",
                 icon: "error",

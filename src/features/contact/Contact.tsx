@@ -88,7 +88,8 @@ const Contact: React.FC = () => {
                 message: '',
             });
 
-        } catch {
+        } catch (err) {
+            console.error("[Contact] contact form error:", err);
             Swal.fire({
                 icon: 'error',
                 title: 'Submission Failed',

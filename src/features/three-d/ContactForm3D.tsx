@@ -38,7 +38,8 @@ const ContactForm3D: React.FC = () => {
             setSubmitted(true);
             setFormData({ name: "", email: "", message: "" });
             setTimeout(() => setSubmitted(false), 4000);
-        } catch {
+        } catch (err) {
+            console.error("[ContactForm3D] contact form error:", err);
             setSubmitError(true);
             setTimeout(() => setSubmitError(false), 4000);
         } finally {
