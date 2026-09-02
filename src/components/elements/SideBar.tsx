@@ -8,21 +8,44 @@ import Link from 'next/link';
 import Image from 'next/image';
 const SideBar: React.FC = () => {
     const { isSidebar, setIsSidebar } = useBirchmountAutoRepairContext();
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const [isSubmitting, setIsSubmitting] = React.useState(false);
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
             e.preventDefault();
             const form = e.currentTarget;
             const email = form.email.value;
             const name = form.fullName.value;
             const message = form.message.value;
-            if (email && name && message) {
+            if (!email || !name || !message) return;
+
+            setIsSubmitting(true);
+            try {
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, email, message }),
+                });
+                const data = await response.json();
+                if (!response.ok) {
+                    throw new Error(data.error || 'Something went wrong.');
+                }
                 Swal.fire({
                     position: "top-end",
                     icon: "success",
-                    title: "Your message has been send",
+                    title: "Your message has been sent",
                     showConfirmButton: false,
                     timer: 1500
                 });
-                form.reset()
+                form.reset();
+            } catch {
+                Swal.fire({
+                    position: "top-end",
+                    icon: "error",
+                    title: "Submission Failed",
+                    text: "Something went wrong. Please try again later.",
+                    confirmButtonColor: '#e74c3c',
+                });
+            } finally {
+                setIsSubmitting(false);
             }
         }
     return (
@@ -65,8 +88,8 @@ const SideBar: React.FC = () => {
                                             <textarea name="message" placeholder="Message..." required></textarea>
                                         </div>
                                         <div className="form-group message-btn sidebar-btn-box">
-                                            <button className="thm-btn" type="submit" data-loading-text="Please wait...">
-                                                Submit Now <span className="icon-arrow-right"></span>
+                                            <button className="thm-btn" type="submit" disabled={isSubmitting} data-loading-text="Please wait...">
+                                                {isSubmitting ? "Sending..." : "Submit Now"} <span className="icon-arrow-right"></span>
                                             </button>
                                             <a href="tel:4167578368" className="thm-btn sidebar-call-btn">
                                                 <span className="icon-call"></span> Call Now

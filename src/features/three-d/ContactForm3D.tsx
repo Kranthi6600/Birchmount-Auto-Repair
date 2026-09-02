@@ -6,6 +6,7 @@ import Scene3DStyles from "./Scene3DStyles";
 const ContactForm3D: React.FC = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitted, setSubmitted] = useState(false);
+    const [submitError, setSubmitError] = useState(false);
     const [isHovered, setIsHovered] = useState(false);
     const [formData, setFormData] = useState({
         name: "",
@@ -26,16 +27,20 @@ const ContactForm3D: React.FC = () => {
 
         setIsSubmitting(true);
         try {
-            await fetch("/api/contact", {
+            const response = await fetch("/api/contact", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
             });
+            if (!response.ok) {
+                throw new Error("Failed to send message");
+            }
             setSubmitted(true);
             setFormData({ name: "", email: "", message: "" });
             setTimeout(() => setSubmitted(false), 4000);
         } catch {
-            // silently fail
+            setSubmitError(true);
+            setTimeout(() => setSubmitError(false), 4000);
         } finally {
             setIsSubmitting(false);
         }
@@ -135,6 +140,22 @@ const ContactForm3D: React.FC = () => {
                     </p>
                     <p style={{ color: "rgba(0,0,0,0.6)", fontSize: "0.65rem", marginTop: "0.4rem" }}>
                         We'll get back to you shortly.
+                    </p>
+                </div>
+            ) : submitError ? (
+                <div style={{
+                    padding: "1.5rem",
+                    textAlign: "center",
+                    background: "rgba(231,76,60,0.06)",
+                    border: "1px solid rgba(231,76,60,0.3)",
+                    borderRadius: "12px",
+                    animation: "contact3d-fade-in 0.4s ease",
+                }}>
+                    <p style={{ color: "#e74c3c", fontSize: "0.75rem", fontWeight: 700, marginTop: 0, marginRight: 0, marginBottom: 0, marginLeft: 0 }}>
+                        Submission Failed
+                    </p>
+                    <p style={{ color: "rgba(0,0,0,0.6)", fontSize: "0.65rem", marginTop: "0.4rem" }}>
+                        Something went wrong. Please try again later.
                     </p>
                 </div>
             ) : (

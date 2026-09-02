@@ -5,25 +5,48 @@ import Swal from 'sweetalert2'
 
 const ChatPopup: React.FC = () => {
     const [openChat, setOpenChat] = useState<boolean>(false);
+    const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
 
     const closeChatProp: (value: boolean) => void = (value): void => {
         setOpenChat(value);
     }
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const form = e.currentTarget;
         const email = form.email.value;
         const name = form.fullName.value;
         const message = form.message.value;
-        if (email && name && message) {
+        if (!email || !name || !message) return;
+
+        setIsSubmitting(true);
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, email, message }),
+            });
+            const data = await response.json();
+            if (!response.ok) {
+                throw new Error(data.error || 'Something went wrong.');
+            }
             Swal.fire({
                 position: "top-end",
                 icon: "success",
-                title: "Your message has been send",
+                title: "Your message has been sent",
                 showConfirmButton: false,
                 timer: 1500
             });
-            form.reset()
+            form.reset();
+        } catch {
+            Swal.fire({
+                position: "top-end",
+                icon: "error",
+                title: "Submission Failed",
+                text: "Something went wrong. Please try again later.",
+                confirmButtonColor: '#e74c3c',
+            });
+        } finally {
+            setIsSubmitting(false);
         }
     }
 
@@ -48,8 +71,8 @@ const ChatPopup: React.FC = () => {
                                 <textarea name="message" placeholder="Your Text" required={true}></textarea>
                             </div>
                             <div className="form-group message-btn">
-                                <button type="submit" className="thm-btn">
-                                    Submit Now
+                                <button type="submit" className="thm-btn" disabled={isSubmitting}>
+                                    {isSubmitting ? "Sending..." : "Submit Now"}
                                     <span className="icon-arrow-right"></span>
                                 </button>
                             </div>
